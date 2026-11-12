@@ -523,6 +523,27 @@ details.card summary{font-family:var(--f-display);font-weight:600}
   input[type=range]{min-height:44px}
   details>summary{padding-block:12px}
 }
+/* Téléphone en paysage (peu de hauteur) : en-tête non collant, barre du bas sur une ligne, cartes compactes */
+@media (max-height:500px) and (orientation:landscape){
+  .mtop{position:static}
+  main{padding-block:10px 84px}
+  .bottom{padding-top:4px;padding-bottom:calc(4px + env(safe-area-inset-bottom,0px))}
+  .bottom a,.bottom button{flex-direction:row;justify-content:center;gap:8px;font-size:.78rem;min-height:44px}
+  .bottom .g{height:28px;width:34px;font-size:1.15rem}
+  .head{min-height:0}
+  .b-hero{min-height:0}
+  .prompt{padding:14px 18px;gap:6px}
+  .prompt .h{font-size:clamp(2.4rem,11vh,3.4rem)}
+  .quiz{gap:12px}
+  .options{grid-template-columns:1fr 1fr}
+  .opt{min-height:48px;padding:10px 14px}
+}
+/* Très petits écrans : les sélecteurs à plusieurs choix prennent toute la largeur et leurs libellés peuvent passer à la ligne */
+@media (max-width:420px){
+  .seg{display:flex;width:100%}
+  .seg button{flex:1 1 0;min-width:0;white-space:normal;padding:8px 10px;line-height:1.2}
+}
+form.settings>*,.field{min-width:0}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
