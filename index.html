@@ -2794,6 +2794,43 @@ const uniqBy = (a, f) => { const seen = new Set(); return a.filter(x => { const 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const app = $('#app');
+
+// ---------- Langue des contenus ----------
+// La page est en français ; tout passage en chinois reçoit lang="zh-CN", pour que les lecteurs d'écran
+// le lisent avec une voix chinoise et que le navigateur choisisse la bonne police.
+document.documentElement.lang = 'fr';
+const HAS_ZH = /[㐀-鿿豈-﫿]/;
+const ZH_ONLY = /^[\s　-〿㐀-鿿豈-﫿＀-￯·…—0-9]+$/;
+const ZH_RUN = /[㐀-鿿豈-﫿][㐀-鿿豈-﫿　-〿＀-￯·…]*/g;
+const NO_TAG = 'script,style,svg,textarea,select,input,[lang="zh-CN"]';
+function tagZh(root) {
+  if (root.nodeType !== 1 || root.closest(NO_TAG)) return;
+  // 1. Les éléments entièrement en chinois
+  for (const el of [root, ...root.querySelectorAll('*')]) {
+    if (el.closest(NO_TAG) || !HAS_ZH.test(el.textContent)) continue;
+    if (ZH_ONLY.test(el.textContent.trim())) el.setAttribute('lang', 'zh-CN');
+  }
+  // 2. Le chinois glissé dans une phrase en français : on l'entoure d'un <span lang="zh-CN">
+  const todo = [], walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  while (walk.nextNode()) { const n = walk.currentNode; if (HAS_ZH.test(n.data) && !n.parentElement?.closest(NO_TAG)) todo.push(n); }
+  for (const n of todo) {
+    const frag = document.createDocumentFragment(); let last = 0;
+    n.data.replace(ZH_RUN, (m, i) => {
+      if (i > last) frag.append(n.data.slice(last, i));
+      const sp = document.createElement('span'); sp.lang = 'zh-CN'; sp.textContent = m; frag.append(sp);
+      last = i + m.length; return m;
+    });
+    if (last < n.data.length) frag.append(n.data.slice(last));
+    n.replaceWith(frag);
+  }
+}
+new MutationObserver(ms => {
+  for (const m of ms) for (const n of m.addedNodes) {
+    if (n.nodeType === 1) tagZh(n);
+    else if (n.nodeType === 3 && n.parentElement && HAS_ZH.test(n.data)) tagZh(n.parentElement);
+  }
+}).observe(document.body, {childList: true, subtree: true});
+tagZh(document.body);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const pick = (a, n) => shuffle(a).slice(0, n);
