@@ -468,6 +468,19 @@ body.toneline .t1{text-decoration-style:solid} body.toneline .t2{text-decoration
 .plan{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px;font-size:.95rem}
 .plan span{font-weight:500}
 .meter{height:10px;background:var(--sunk);border-radius:99px;overflow:hidden}
+.meter2{position:relative;height:10px;background:var(--sunk);border-radius:99px;overflow:hidden}
+.meter2 i,.meter2 b{position:absolute;left:0;top:0;bottom:0;border-radius:99px}
+.meter2 i{background:color-mix(in oklab,var(--c,var(--teal)) 40%,var(--surface))}
+.meter2 b{background:var(--c,var(--teal))}
+.lvms{display:flex;flex-direction:column;gap:10px}
+.lvm{display:grid;grid-template-columns:4.2em minmax(0,1fr) 5.5em;gap:10px;align-items:center}
+.lvm-l{font:700 .82rem var(--f-display);color:var(--c-text,var(--ink))}
+.lvm-n{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.lvm-n small{color:var(--muted);font-weight:500}
+.key{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:-1px;margin-left:6px}
+.key-seen{background:color-mix(in oklab,var(--teal) 40%,var(--surface))} .key-ok{background:var(--teal)}
+.lesson.is-next{box-shadow:inset 0 0 0 2.5px var(--c)}
+.lvl-head{gap:12px}
 .meter i{display:block;height:100%;background:var(--teal);border-radius:99px}
 .dots span.rest{background:transparent;outline:1.5px dashed color-mix(in oklab,var(--coral-ink) 30%,transparent)}
 .seance-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -2915,6 +2928,22 @@ function seanceEnd(box) {
   $('#again2', box).addEventListener('click', () => { seance = null; render('seance'); });
   seance = null; wire(box);
 }
+// Progression par niveau HSK : mots vus, mots maîtrisés (stables ≥ 21 jours)
+function levelStats(l) {
+  const ws = WORDS.filter(w => w.l === l), seen = ws.filter(w => S.srs[w.id]);
+  return {total: ws.length, seen: seen.length, mastered: seen.filter(w => fsrsCard(S.srs[w.id]).s >= 21).length};
+}
+// Étapes : nombre de mots (cumul HSK 2.0) et ce qu'on sait faire, d'après les descriptions officielles des niveaux
+const MILESTONES = [
+  [150, 'HSK 1', 'comprendre et utiliser des phrases très simples : te présenter, compter, commander'],
+  [300, 'HSK 2', 'échanger simplement sur la vie de tous les jours : ta journée, les achats, ton chemin'],
+  [600, 'HSK 3', 'te débrouiller au quotidien, en voyage, en cours ou au travail'],
+  [1200, 'HSK 4', 'discuter de sujets variés avec des natifs, de façon assez fluide'],
+  [2500, 'HSK 5', 'lire des journaux, suivre des films et des émissions'],
+  [5000, 'HSK 6', 'comprendre ce que tu lis ou entends et t\'exprimer avec aisance, à l\'oral comme à l\'écrit'],
+];
+const nextMilestone = () => { const n = learned().length; return MILESTONES.find(m => m[0] > n) || MILESTONES[MILESTONES.length - 1]; };
+const levelMeters = () => [1, 2, 3, 4].map(l => { const st = levelStats(l); return `<div class="lvm" ${tint(LV_COL[l])}><span class="lvm-l">HSK ${l}</span><div class="meter2" role="img" aria-label="HSK ${l} : ${st.seen} mots vus sur ${st.total}, ${st.mastered} maîtrisés"><i style="width:${st.seen / st.total * 100}%"></i><b style="width:${st.mastered / st.total * 100}%"></b></div><span class="lvm-n">${st.seen}<small> / ${st.total}</small></span></div>`; }).join('');
 const knownChars = () => new Set(learned().filter(id => S.srs[id].b >= 1).flatMap(id => [...W[id].h])).size;
 
 // ---------- Écrans « Apprendre » et « Pratiquer » ----------
@@ -3273,6 +3302,11 @@ function vHome() {
         <span class="num">${streak} <span style="font-size:1.1rem">jour${streak > 1 ? 's' : ''}</span></span>
         <div class="dots">${wk.map((k, i) => `<span class="${minutesOn(k) > 0 ? 'on' : S.goal.days.includes(i) ? '' : 'rest'}" title="${DAYS_FR[i]} : ${minutesOn(k)} min${S.goal.days.includes(i) ? '' : ' (repos)'}">${DAYS_FR[i][0]}</span>`).join('')}</div>
       </div>
+      <div class="b w4 b-levels">
+        <div class="row" style="justify-content:space-between"><span class="label">Ta progression</span><span class="muted" style="font-size:.82rem"><i class="key key-seen"></i> vus <i class="key key-ok"></i> maîtrisés</span></div>
+        <div class="lvms">${levelMeters()}</div>
+        ${(() => { const [n, lv, can] = nextMilestone(), k = learned().length; return `<p style="font-size:.92rem"><strong>Prochaine étape : ${n} mots (${lv})</strong>, il t'en manque ${Math.max(0, n - k)}. À ce stade, on peut ${esc(can)}.</p>`; })()}
+      </div>
       <div class="b b-word">
         <div class="big">${hanHTML(w.h, w.p)}</div>
         <div class="stack" style="gap:3px"><span class="label">Mot du jour · HSK ${w.l}</span><span class="py pyx">${esc(w.p)}</span><span style="font-weight:600">${esc(w.f)}</span>${MNEMO[w.h] ? `<span style="font-size:.88rem">${esc(MNEMO[w.h])}</span>` : ''}</div>
@@ -3364,11 +3398,18 @@ function vLessons(id) {
   const s = view(`
     <div class="head"><span class="label">Leçons</span><h1>Apprendre par thèmes</h1><p>Chaque leçon se fait par paquets de 5 mots : tu les découvres, tu les reconnais à l'oreille, puis tu retrouves leur prononciation. Les mots appris entrent dans tes révisions.${S.profile?.reasons?.length ? ' Les leçons sont rangées selon tes raisons d\'apprendre.' : ''}</p></div>
     <div class="lvl-tabs" role="group" aria-label="Niveau">${[1,2,3,4].map(n => `<button class="chip" data-l="${n}" aria-pressed="${n === lv}">HSK ${n}</button>`).join('')}</div>
+    <div class="card stack lvl-head" ${tint(LV_COL[lv])} id="lvh"></div>
     <div class="grid" id="ll"></div>`);
   $$('.chip', s).forEach(b => b.addEventListener('click', () => { lessonLevel = +b.dataset.l; render('lecons'); }));
-  $('#ll', s).innerHTML = lessonOrder().filter(l => l.l === lv).map(l => `
-    <button class="card lesson tint" data-lesson="${l.id}" ${tint(LV_COL[l.l])}>
-      <span class="label">HSK ${l.l} · ${l.w.split(' ').length} mots</span>
+  const list = lessonOrder().filter(l => l.l === lv), st = levelStats(lv);
+  const isDone = l => (S.chunks[l.id] || []).length >= chunksOf(l).length || l.id in S.lessons;
+  const nextL = list.find(l => !isDone(l));
+  $('#lvh', s).innerHTML = `<div class="row" style="justify-content:space-between"><strong class="ttl">HSK ${lv} · ${list.filter(isDone).length} / ${list.length} leçons terminées</strong><span class="muted" style="font-size:.88rem">${st.seen} / ${st.total} mots vus · ${st.mastered} maîtrisés</span></div>
+    <div class="meter2" aria-hidden="true"><i style="width:${st.seen / st.total * 100}%"></i><b style="width:${st.mastered / st.total * 100}%"></b></div>
+    ${nextL ? `<button class="btn primary" data-lesson="${nextL.id}" style="align-self:flex-start">Continuer : ${esc(nextL.t)} →</button>` : '<span class="done-tag">✓ Toutes les leçons du niveau sont faites</span>'}`;
+  $('#ll', s).innerHTML = list.map((l, k) => `
+    <button class="card lesson tint ${l === nextL ? 'is-next' : ''}" data-lesson="${l.id}" ${tint(LV_COL[l.l])}>
+      <span class="label">${l === nextL ? '▶ À suivre · ' : ''}Leçon ${k + 1} · ${l.w.split(' ').length} mots</span>
       <strong class="ttl">${esc(l.t)}</strong>
       <span class="han-row">${l.w.split(' ').slice(0, 6).join(' ')}</span>
       <span class="muted" style="font-size:.9rem">${esc(l.d)}</span>
@@ -3783,6 +3824,7 @@ function vGoals() {
     </div>
     <div class="card stack">
       <h2>Ma progression</h2>
+      <div class="lvms">${levelMeters()}</div>
       <p class="muted">${S.level ? `Niveau conseillé : HSK ${S.level}. ` : ''}${learned().length} mots vus, ${mastered()} maîtrisés, ${knownChars()} caractères reconnus, ${Object.keys(S.written).length} tracés dont ${Object.keys(S.recall).length} de mémoire.</p>
       <div class="row"><button class="btn" data-go="test">Refaire le test de niveau</button><button class="btn ghost" id="reset">Tout remettre à zéro</button></div>
       <p class="muted" id="resetc" hidden>Confirmer l'effacement de toute ta progression ? <button class="btn accent small" id="resety">Oui, effacer</button> <button class="btn small" id="resetn">Annuler</button></p>
