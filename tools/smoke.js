@@ -48,6 +48,7 @@ async function drawChar(page, ch) {
   if (!data) return false;
   const svg = await page.$('.pad .target svg, .pad svg:not(.grid-bg)');
   if (!svg) return false;
+  await svg.evaluate(e => e.scrollIntoView({ block: 'center' })); await page.waitForTimeout(100);
   const box = await svg.boundingBox();
   const size = box.width, pad = 14, scale = (size - 2 * pad) / 1024;
   for (const med of data.medians) {
