@@ -537,7 +537,7 @@ const RAW = {
 打电话|dǎ diànhuà|téléphoner
 大|dà|grand
 的|de|(particule possessive)
-点|diǎn|heure (sur l'horloge)
+点|diǎn|heure (sur l'horloge) ; un peu (一点儿)
 电脑|diànnǎo|ordinateur
 电视|diànshì|télévision
 电影|diànyǐng|film
@@ -564,7 +564,7 @@ const RAW = {
 很|hěn|très
 后面|hòumiàn|derrière
 回|huí|retourner
-会|huì|savoir (faire)
+会|huì|savoir (faire) ; il est probable que
 几|jǐ|combien (petit nombre)
 家|jiā|maison, famille
 叫|jiào|s'appeler
@@ -573,7 +573,7 @@ const RAW = {
 开|kāi|ouvrir, conduire
 看|kàn|regarder
 看见|kànjiàn|voir
-块|kuài|yuan (à l'oral)
+块|kuài|yuan (à l'oral) ; morceau
 来|lái|venir
 老师|lǎoshī|professeur
 了|le|(particule d'action accomplie)
@@ -627,11 +627,11 @@ const RAW = {
 岁|suì|an (âge)
 他|tā|il, lui
 她|tā|elle
-太|tài|trop
+太|tài|trop ; très (太好了 !)
 天气|tiānqì|météo
 听|tīng|écouter
 同学|tóngxué|camarade de classe
-喂|wèi|allô
+喂|wèi|allô (au téléphone, on dit plutôt wéi)
 我|wǒ|je, moi
 我们|wǒmen|nous
 五|wǔ|cinq
@@ -643,7 +643,7 @@ const RAW = {
 现在|xiànzài|maintenant
 想|xiǎng|vouloir, penser
 小|xiǎo|petit
-小姐|xiǎojiě|mademoiselle
+小姐|xiǎojiě|mademoiselle (à éviter pour appeler quelqu'un en Chine continentale)
 些|xiē|quelques
 写|xiě|écrire
 谢谢|xièxie|merci
@@ -730,7 +730,7 @@ const RAW = {
 快|kuài|rapide
 快乐|kuàilè|joyeux
 累|lèi|fatigué
-离|lí|loin de (distance)
+离|lí|à (telle distance) de, par rapport à
 两|liǎng|deux (quantité)
 路|lù|route, chemin
 旅游|lǚyóu|voyager
@@ -799,7 +799,7 @@ const RAW = {
 远|yuǎn|loin
 运动|yùndòng|sport
 再|zài|à nouveau
-早上|zǎoshang|tôt le matin
+早上|zǎoshang|le matin
 丈夫|zhàngfu|mari
 找|zhǎo|chercher
 着|zhe|(particule de durée)
@@ -1099,8 +1099,8 @@ RAW[3] = `阿姨|āyí|tante, nounou
 照片|zhàopiàn|photo
 只|zhī|(classificateur des animaux)
 只有|zhǐyǒu|seulement si
-才|cái|seulement alors
-中文|Zhōngwén|chinois (écrit)
+才|cái|seulement (à ce moment-là), pas avant
+中文|Zhōngwén|chinois (la langue)
 终于|zhōngyú|enfin
 重要|zhòngyào|important
 主要|zhǔyào|principal
@@ -1181,7 +1181,7 @@ RAW[4] = `爱情|àiqíng|amour
 粗心|cūxīn|étourdi
 错误|cuòwù|erreur
 打招呼|dǎ zhāohu|saluer
-打扮|dǎban|se pomponner
+打扮|dǎban|s'habiller, se faire beau
 打扰|dǎrǎo|déranger
 打印|dǎyìn|imprimer
 打折|dǎzhé|faire une remise
@@ -1439,7 +1439,7 @@ RAW[4] = `爱情|àiqíng|amour
 难受|nánshòu|mal à l'aise
 内容|nèiróng|contenu
 年龄|niánlíng|âge
-暖和|nuǎnhuo|tiède, doux
+暖和|nuǎnhuo|doux, agréablement chaud
 排队|páiduì|faire la queue
 判断|pànduàn|juger
 批评|pīpíng|critiquer
@@ -1818,7 +1818,7 @@ const MNEMO = {
   '语':'Les mots 讠 + cinq 五 + bouche 口 : la langue parlée.',
   '谢':'Les mots 讠 + le corps 身 + le pouce 寸 : remercier de tout son corps.',
   '星':'Le soleil 日 au-dessus de ce qui naît 生 : les étoiles.',
-  '早':'Le soleil 日 au-dessus du dixième 十 : il se lève tôt.',
+  '早':'Le soleil 日 qui se lève au-dessus d\'une jeune pousse 十 : c\'est tôt le matin.',
   '林':'Deux arbres 木木 : un bois. Trois 森 : une forêt.',
   '朋':'Deux lunes 月月 côte à côte : deux amis inséparables.',
   '笑':'Bambou 竹 en haut, un dos courbé en bas : on se plie de rire.',
@@ -1965,7 +1965,7 @@ const ORIGIN = {
   '子': ['xiang', [], 'Un bébé emmailloté : une grosse tête, les bras qui dépassent, les jambes enveloppées en un seul trait.'],
   '火': ['xiang', [], 'Des flammes qui montent. En bas d\'un caractère, le feu devient quatre points : 灬, comme dans 热 (chaud) ou 点.'],
   '雨': ['xiang', [], 'Le ciel en haut, des gouttes qui tombent dessous. Il coiffe tous les phénomènes météo : 雪 neige, 雷 tonnerre, 零.'],
-  '鱼': ['xiang', [], 'Un poisson dessiné verticalement : la tête, les écailles, la queue. Le 灬 du bas n\'est pas du feu, c\'est la queue simplifiée.'],
+  '鱼': ['xiang', [], 'Un poisson dessiné verticalement : la tête, les écailles, la queue. Dans la forme traditionnelle 魚, les quatre points du bas 灬 ne sont pas du feu : c\'est la queue. Le simplifié 鱼 les a réduits à un seul trait.'],
   '门': ['xiang', [], 'Une porte à deux battants. La forme traditionnelle 門 le montre encore très bien ; la simplifiée en garde l\'esquisse.'],
   '田': ['xiang', [], 'Un champ divisé en parcelles par des chemins et des canaux d\'irrigation.'],
   '车': ['xiang', [], 'Un char vu du dessus : la caisse au centre, les deux roues de chaque côté, l\'essieu. La forme traditionnelle 車 en garde la symétrie.'],
@@ -2056,7 +2056,7 @@ const RADICALS = [
 const SCRIPTS = [
   ['甲骨文','jiǎgǔwén','vers −1250','Inscriptions sur os','Gravées sur carapaces de tortue et omoplates de bœuf pour interroger les ancêtres. Les plus anciens textes chinois connus : des dessins encore très reconnaissables.'],
   ['金文','jīnwén','vers −1000','Écriture des bronzes','Coulée dans les vases rituels des Zhou. Les traits deviennent plus épais et arrondis.'],
-  ['小篆','xiǎozhuàn','−221','Petite sigillaire','L\'empereur Qin Shi Huang unifie la Chine et impose une seule écriture. Elle survit aujourd\'hui sur les sceaux, comme le logo de cette appli.'],
+  ['小篆','xiǎozhuàn','−221','Petite sigillaire','L\'empereur Qin Shi Huang unifie la Chine et impose une seule écriture. Elle survit aujourd\'hui sur les sceaux (印章 yìnzhāng), que l\'on trempe dans l\'encre rouge.'],
   ['隶书','lìshū','dynastie Han','Écriture des clercs','Les fonctionnaires écrivent vite au pinceau : les courbes deviennent des traits droits. C\'est la vraie rupture avec le dessin.'],
   ['楷书','kǎishū','IIIe–VIIe siècle','Écriture régulière','La forme « standard » que tu apprends : chaque trait est net, l\'ordre des traits est fixé.'],
   ['简体字','jiǎntǐzì','1956 et 1964','Caractères simplifiés','La Chine populaire simplifie environ 2 000 caractères pour faciliter l\'alphabétisation. Taïwan, Hong Kong et Macao gardent les traditionnels.'],

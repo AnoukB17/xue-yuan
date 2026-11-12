@@ -56,7 +56,7 @@ async function drawChar(page, ch) {
     await page.mouse.down();
     for (let i = 1; i < pts.length; i++) {
       const [a, b] = [pts[i - 1], pts[i]];
-      for (let k = 1; k <= 4; k++) await page.mouse.move(a[0] + (b[0] - a[0]) * k / 4, a[1] + (b[1] - a[1]) * k / 4);
+      const n = Math.max(4, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / 4)); for (let k = 1; k <= n; k++) await page.mouse.move(a[0] + (b[0] - a[0]) * k / n, a[1] + (b[1] - a[1]) * k / n);
     }
     await page.mouse.up();
     await page.waitForTimeout(120);
