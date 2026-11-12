@@ -1718,12 +1718,17 @@ RAW[4] = `爱情|àiqíng|amour
 作用|zuòyòng|rôle, effet`;
 
 const WORDS = [];
+// Chaque sens a son identifiant : le premier garde les caractères seuls (花), les suivants prennent un suffixe (花#2).
+// Ainsi 长 cháng / zhǎng, 还 hái / huán, 得 de / děi, 花 « fleur » / « dépenser » ont chacun leur propre fiche de révision,
+// et la progression déjà enregistrée sous les caractères seuls reste attachée au premier sens.
+const SENSES = {};
 for (const lvl of [1,2,3,4]) RAW[lvl].split('\n').forEach(line => {
   const [h,p,f] = line.split('|');
-  WORDS.push({h, p, f, l: lvl});
+  const n = SENSES[h] = (SENSES[h] || 0) + 1;
+  WORDS.push({h, p, f, l: lvl, id: n === 1 ? h : `${h}#${n}`});
 });
-// Quelques caractères ont plusieurs lectures selon le niveau (长 cháng / zhǎng…) : W garde la première
-const W = {}; WORDS.forEach(w => { if (!W[w.h]) W[w.h] = w; });
+// W[id] : fiche d'un sens. W[caractères] renvoie donc le premier sens.
+const W = {}; WORDS.forEach(w => { W[w.id] = w; });
 
 // Leçons thématiques
 const LESSONS = [
@@ -2518,7 +2523,7 @@ function learnFlow(box, words, {title, onDone}) {
       <div class="row" style="justify-content:center"><button class="btn ghost" id="idk">Je ne sais pas</button></div><div id="fbk"></div>`;
     const inp = $('#ti', box); inp.focus();
     const finish = right => {
-      grade(w.h, right); if (right) ok++;
+      grade(w.id, right); if (right) ok++;
       $('#tf', box).classList.add(right ? 'good' : 'bad'); inp.disabled = true; $('#idk', box).remove();
       showFeedback($('#fbk', box), w, right, right ? null : `Réponse : ${w.p}`, next);
       speak(w.h);
@@ -2571,7 +2576,7 @@ function duel(box, key, onDone) {
         <div class="card prompt"><span class="q">${kind === 'listen' ? 'Lequel entends-tu ?' : `Lequel veut dire « ${esc(w.f)} » ?`}</span>${kind === 'listen' ? `<button class="btn primary" data-say="${w.h}">${SPEAK_ICON} Réécouter</button>` : ''}</div>
         <div class="options">${shuffle([a.h, b.h]).map(o => `<button class="opt hanopt" data-o="${o}">${o}</button>`).join('')}</div><div id="fbk"></div>`;
       if (kind === 'listen') setTimeout(() => speak(w.h), 250);
-      answerHandler(box, w.h, w, r => { if (r) ok++; grade(w.h, r); }, () => { i++; step(); });
+      answerHandler(box, w.h, w, r => { if (r) ok++; grade(w.id, r); }, () => { i++; step(); });
     };
     step();
   });
@@ -2636,7 +2641,7 @@ function writePad(el, c, {memory, onDone}) {
 // ---------- Séance du jour ----------
 const perDayMinutes = () => S.goal.mode === 'day' ? S.goal.minutes : Math.max(5, Math.round(S.goal.minutes / Math.max(1, S.goal.days.length)));
 const daysAway = () => S.lastStudy ? dayNum() - dayNum(new Date(S.lastStudy + 'T12:00')) : 0;
-function dueSorted() { return dueWords().sort((a, b) => (S.srs[a.h].due - S.srs[b.h].due) || (S.srs[a.h].b - S.srs[b.h].b)); }
+function dueSorted() { return dueWords().sort((a, b) => (S.srs[a.id].due - S.srs[b.id].due) || (S.srs[a.id].b - S.srs[b.id].b)); }
 function nextChunk() {
   for (const L of lessonOrder().filter(l => l.l >= (S.level || 1)).concat(lessonOrder())) {
     const cs = chunksOf(L); const i = cs.findIndex((_, k) => !chunkDone(L, k));
@@ -2693,7 +2698,7 @@ function seanceEnd(box) {
   $('#again2', box).addEventListener('click', () => { seance = null; render('seance'); });
   seance = null; wire(box);
 }
-const knownChars = () => new Set(learned().filter(h => S.srs[h].b >= 1).flatMap(h => [...h])).size;
+const knownChars = () => new Set(learned().filter(id => S.srs[id].b >= 1).flatMap(id => [...W[id].h])).size;
 
 // ---------- Écrans « Apprendre » et « Pratiquer » ----------
 function hubTile(v, title, desc, col, glyph) { return `<a class="hub-tile tint" href="#${v}" data-go="${v}" ${tint(col)}><span class="g" aria-hidden="true">${glyph}</span><span class="stack" style="gap:2px"><strong class="ttl">${title}</strong><span class="muted">${desc}</span></span><span class="arrow" aria-hidden="true">→</span></a>`; }
@@ -2871,15 +2876,15 @@ function goalProgress() {
 
 // ---------- Répétition espacée (boîtes de Leitner) ----------
 const INTERVALS = [0, 1, 2, 4, 7, 15, 30];
-function grade(h, ok) {
-  const c = S.srs[h] || {b: 0, due: dayNum()};
+function grade(id, ok) { // id : identifiant du sens (voir WORDS)
+  const c = S.srs[id] || {b: 0, due: dayNum()};
   c.b = ok ? Math.min(c.b + 1, INTERVALS.length - 1) : 0;
   c.due = dayNum() + INTERVALS[c.b];
-  S.srs[h] = c;
+  S.srs[id] = c;
 }
-const learned = () => Object.keys(S.srs).filter(h => W[h]);
-const dueWords = () => learned().filter(h => S.srs[h].due <= dayNum()).map(h => W[h]);
-const mastered = () => learned().filter(h => S.srs[h].b >= 4).length;
+const learned = () => Object.keys(S.srs).filter(id => W[id]);
+const dueWords = () => learned().filter(id => S.srs[id].due <= dayNum()).map(id => W[id]);
+const mastered = () => learned().filter(id => S.srs[id].b >= 4).length;
 
 // ---------- Audio (synthèse vocale du navigateur) ----------
 let zhVoice = null;
@@ -3166,11 +3171,11 @@ function runQuizIn(box, words, {title, n, kinds = ['mean','hanzi','pinyin','list
     const nextQ = () => { i++; step(); };
     if (timer) {
       $$('.opt', box).forEach(b => b.addEventListener('click', () => {
-        const right = b.dataset.o === q.ans; if (right) ok++; grade(q.w.h, right);
+        const right = b.dataset.o === q.ans; if (right) ok++; grade(q.w.id, right);
         $$('.opt', box).forEach(x => { x.disabled = true; if (x.dataset.o === q.ans) x.classList.add('ok'); }); if (!right) b.classList.add('ko');
         setTimeout(nextQ, right ? 400 : 1000);
       }));
-    } else answerHandler(box, q.ans, q.w, right => { if (right) ok++; grade(q.w.h, right); }, nextQ, o => findWord(q, o));
+    } else answerHandler(box, q.ans, q.w, right => { if (right) ok++; grade(q.w.id, right); }, nextQ, o => findWord(q, o));
   };
   if (timer) tick = setInterval(() => { const c = $('#cnt', box); if (c) c.textContent = `${Math.max(0, Math.ceil((end - Date.now()) / 1000))} s · ${ok} pts`; if (Date.now() >= end) done(); }, 250);
   step();
