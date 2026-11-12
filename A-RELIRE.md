@@ -10,3 +10,4 @@ Cocher une ligne une fois relue.
 - [ ] Traduction de 才 cái : « seulement (à ce moment-là), pas avant ».
 - [ ] Astuce mnémotechnique de 早 : « le soleil 日 qui se lève au-dessus d'une jeune pousse 十 » (moyen mnémotechnique, pas une étymologie).
 - [ ] Exercice sur les changements de ton (Mémo) : les 12 mots et leurs prononciations réelles, en particulier 一月 yī yuè et 第一 dì yī (一 non modifié).
+- [ ] Classificateurs précisés : 件 (vêtements du haut, affaires), 口 (membres d'une famille), 条 (rue, pantalon, poisson), 只 (animaux, un objet d'une paire), 场 (matchs, spectacles, averses).
