@@ -2501,18 +2501,18 @@ function lessonOrder() {
 
 // Flux d'apprentissage : découvrir → reconnaître à l'oreille → retrouver le pinyin
 function learnFlow(box, words, {title, onDone}) {
-  let phase = 'intro', i = 0, ok = 0;
+  let phase = 'intro', i = 0, ok = 0, order = words;
   const steps = words.length * 3;
   const bar = () => `<div class="row" style="justify-content:space-between"><span class="label">${esc(title)}</span><span class="label">${{intro: 'Découvrir', listen: 'Reconnaître', produce: 'Retrouver'}[phase]} · ${i + 1} / ${words.length}</span></div>
     <div class="progress"><i style="width:${(({intro: 0, listen: 1, produce: 2}[phase]) * words.length + i) / steps * 100}%"></i></div>`;
   const next = () => {
     i++;
-    if (i >= words.length) { i = 0; phase = {intro: 'listen', listen: 'produce', produce: 'end'}[phase]; }
+    if (i >= words.length) { i = 0; phase = {intro: 'listen', listen: 'produce', produce: 'end'}[phase]; order = reorder(words, order); }
     if (phase === 'end') return onDone(ok, words.length);
     draw();
   };
   const draw = () => {
-    const w = words[i];
+    const w = order[i];
     if (phase === 'intro') {
       box.innerHTML = `${bar()}
         <div class="card prompt intro">
@@ -2796,6 +2796,8 @@ const app = $('#app');
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const pick = (a, n) => shuffle(a).slice(0, n);
+// Nouvel ordre au hasard, différent de l'ordre précédent (sinon on devine la réponse par sa position)
+const reorder = (a, prev) => { if (a.length < 2) return [...a]; let o; for (let k = 0; k < 8; k++) { o = shuffle(a); if (o[0] !== prev[0] && o.some((x, j) => x !== prev[j])) break; } return o; };
 const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const dayNum = (d = new Date()) => Math.floor((d - d.getTimezoneOffset()*60000) / 86400000);
 const DAYS_FR = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
@@ -3155,7 +3157,7 @@ function vQuiz() {
 function runQuiz(words, opts) { const s = view(`<div class="quiz" id="qz"></div>`); runQuizIn($('#qz', s), words, opts); }
 function runQuizIn(box, words, {title, n, kinds = ['mean','hanzi','pinyin','listen','tone'], lesson, timer, onDone}) {
   const pool = WORDS.filter(w => w.l === (words[0]?.l || 1));
-  const items = (onDone ? [...words] : shuffle(words)).slice(0, n);
+  const items = onDone ? shuffle(words.slice(0, n)) : shuffle(words).slice(0, n); // séance : les plus urgents d'abord, puis dans le désordre
   while (timer && items.length < 99) items.push(...shuffle(words));
   let i = 0, ok = 0, end = timer ? Date.now() + timer * 1000 : 0, tick, finished = false;
   const findWord = (q, o) => q.han ? W[o] : q.k === 'mean' ? WORDS.find(x => x.f === o) : q.k === 'pinyin' ? WORDS.find(x => x.p === o) : null;
