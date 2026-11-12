@@ -467,7 +467,16 @@ body.toneline .t1{text-decoration-style:solid} body.toneline .t2{text-decoration
 .ghost-on{background:transparent;box-shadow:inset 0 0 0 1.5px currentColor;color:inherit}
 .tipline{background:var(--surface);box-shadow:var(--shadow);border-radius:14px;padding:10px 14px;font-size:.92rem}
 .tipline .han{font-size:1.2rem;margin-right:6px}
-.errcard{display:flex;flex-direction:column;gap:12px;background:var(--surface);box-shadow:var(--shadow),inset 0 0 0 2px var(--bad);border-radius:20px;padding:18px;margin-top:4px}
+/* Pendant un exercice, sur mobile, la barre du bas disparaît : plus de place, et rien ne cache le bouton « Continuer » */
+@media (max-width:900px){
+  body.in-flow .bottom{display:none}
+  body.in-flow main{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+  body.in-flow .toast{bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+  html{scroll-padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  body.in-flow{scroll-padding-bottom:24px}
+}
+.quit{align-self:flex-start}
+.errcard{scroll-margin-bottom:16px;display:flex;flex-direction:column;gap:12px;background:var(--surface);box-shadow:var(--shadow),inset 0 0 0 2px var(--bad);border-radius:20px;padding:18px;margin-top:4px}
 .errcard.win{box-shadow:var(--shadow),inset 0 0 0 2px var(--good)}
 .errcard .big{font-size:2.4rem;line-height:1}
 .errcard .btn{align-self:flex-end}
@@ -2589,6 +2598,7 @@ function lessonOrder() {
 
 // Flux d'apprentissage : découvrir → reconnaître à l'oreille → retrouver le pinyin
 function learnFlow(box, words, {title, onDone}) {
+  flow(true);
   let phase = 'intro', i = 0, ok = 0, order = words;
   const steps = words.length * 3;
   const bar = () => `<div class="row" style="justify-content:space-between"><span class="label">${esc(title)}</span><span class="label">${{intro: 'Découvrir', listen: 'Reconnaître', produce: 'Retrouver'}[phase]} · ${i + 1} / ${words.length}</span></div>
@@ -2656,7 +2666,8 @@ function showFeedback(el, w, right, extra, next) {
   const tips = [...w.h].filter(c => MNEMO[c] || ORIGIN[c]).map(c => `<div class="tipline"><strong class="han">${c}</strong> ${esc(MNEMO[c] || ORIGIN[c][2])}</div>`).join('');
   el.innerHTML = `<div class="errcard"><div class="row" style="gap:14px"><span class="han big">${hanHTML(w.h, w.p)}</span><div class="stack" style="gap:2px"><strong>${pyHTML(w.p)}</strong><span>${esc(w.f)}</span>${extra ? `<span class="muted">${esc(extra)}</span>` : ''}</div>${speakBtn(w.h)}</div>${tips}
     <button class="btn inkbtn" id="cont">Continuer →</button></div>`;
-  const c = $('#cont', el); c.focus(); c.addEventListener('click', next);
+  const c = $('#cont', el); c.focus({preventScroll: true}); c.addEventListener('click', next);
+  el.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
 }
 
 // ---------- Paires de confusion ----------
@@ -2774,6 +2785,7 @@ function buildSeance() {
 }
 let seance = null;
 function vSeance() {
+  flow(true);
   if (!seance) seance = {...buildSeance(), i: 0, res: []};
   const s = view(`<div class="seance-top"><button class="btn ghost small" id="sq">✕ Quitter</button><div class="steps-dots">${seance.steps.map((st, k) => `<span class="${k < seance.i ? 'done' : k === seance.i ? 'cur' : ''}">${st.t}</span>`).join('')}</div></div><div class="quiz" id="sb"></div>`);
   $('#sq', s).addEventListener('click', () => { seance = null; go('accueil'); });
@@ -3063,11 +3075,13 @@ const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer:
 let current = 'accueil';
 function go(view, arg) { current = view; render(view, arg); try { history.replaceState(null, '', '#' + view); } catch {} }
 function route() { const h = location.hash.slice(1); go(VIEWS[h] ? h : 'accueil'); }
+// Mode exercice : masque la barre du bas sur mobile (remis à zéro à chaque changement d'écran)
+const flow = on => document.body.classList.toggle('in-flow', on);
 function render(view, arg) {
   const tab = (NAV.find(([v, , subs]) => v === view || subs.includes(view)) || NAV[0])[0];
   $$('[data-nav]').forEach(a => (a.dataset.nav === tab || a.dataset.nav === view) ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
   stopSong(); if ('speechSynthesis' in window) speechSynthesis.cancel();
-  app.innerHTML = ''; window.scrollTo(0, 0);
+  app.innerHTML = ''; window.scrollTo(0, 0); flow(false);
   VIEWS[view](arg);
 }
 
@@ -3145,8 +3159,9 @@ function wire(s) {
 // ---------- Test de niveau ----------
 function vTest() {
   let lvl = 1, i = 0, score = 0, answers = [];
-  const s = view(`<div class="head"><span class="label">Test de niveau</span><h1>Où en es-tu ?</h1><p>5 questions par niveau. Avec 4 bonnes réponses sur 5, tu passes au niveau suivant. Pas de stress : « Je ne sais pas » est une réponse honnête.</p></div><div class="quiz" id="tq"></div>`);
-  const box = $('#tq', s);
+  flow(true);
+  const s = view(`<button class="btn ghost small quit" data-go="accueil">✕ Quitter</button><div class="head"><span class="label">Test de niveau</span><h1>Où en es-tu ?</h1><p>5 questions par niveau. Avec 4 bonnes réponses sur 5, tu passes au niveau suivant. Pas de stress : « Je ne sais pas » est une réponse honnête.</p></div><div class="quiz" id="tq"></div>`);
+  const box = $('#tq', s); wire(s);
   const step = () => {
     const qs = PLACEMENT.filter(q => q.l === lvl);
     if (i >= qs.length) {
@@ -3244,7 +3259,7 @@ function vLesson(L, chunk) {
   $('#back', s).addEventListener('click', () => render('lecons'));
   if (L.l === 2 && !Object.keys(EXAMPLES).length) examplesReady.then(() => { if (s.isConnected && Object.keys(EXAMPLES).length) render('lecons', L.id); });
   $$('[data-ch]', s).forEach(b => b.addEventListener('click', () => render('lecons', L.id + '#' + b.dataset.ch)));
-  $('#lq', s).addEventListener('click', () => { app.innerHTML = ''; runQuiz(words, {title: L.t, n: Math.min(10, words.length), lesson: L.id}); });
+  $('#lq', s).addEventListener('click', () => { app.innerHTML = ''; runQuiz(words, {title: L.t, n: Math.min(10, words.length), lesson: L.id, back: () => render('lecons', L.id)}); });
   $('#lw', s).addEventListener('click', () => { writeChars = [...new Set(words.flatMap(w => [...w.h]))]; current = 'ecriture'; render('ecriture'); });
   wire(s);
 }
@@ -3284,7 +3299,12 @@ function vQuiz() {
     if (m === 'sprint') runQuiz(WORDS.filter(w => w.l <= lv), {title: 'Sprint', n: 99, kinds: ['mean','hanzi'], timer: 60});
   }));
 }
-function runQuiz(words, opts) { const s = view(`<div class="quiz" id="qz"></div>`); runQuizIn($('#qz', s), words, opts); }
+function runQuiz(words, opts) {
+  const back = opts.back || (v => () => go(v))(current);
+  const s = view(`<button class="btn ghost small quit" id="qq">✕ Quitter</button><div class="quiz" id="qz"></div>`);
+  $('#qq', s).addEventListener('click', back);
+  flow(true); runQuizIn($('#qz', s), words, opts);
+}
 function runQuizIn(box, words, {title, n, kinds = ['mean','hanzi','pinyin','listen','tone'], lesson, timer, onDone}) {
   const pool = WORDS.filter(w => w.l === (words[0]?.l || 1));
   const items = onDone ? shuffle(words.slice(0, n)) : shuffle(words).slice(0, n); // séance : les plus urgents d'abord, puis dans le désordre
