@@ -2977,7 +2977,7 @@ document.documentElement.lang = 'fr';
 const HAS_ZH = /[㐀-鿿豈-﫿]/;
 const ZH_ONLY = /^[\s　-〿㐀-鿿豈-﫿＀-￯·…—0-9]+$/;
 const ZH_RUN = /[㐀-鿿豈-﫿][㐀-鿿豈-﫿　-〿＀-￯·…]*/g;
-const NO_TAG = 'script,style,svg,textarea,select,input,[lang="zh-CN"]';
+const NO_TAG = 'script,style,title,noscript,svg,textarea,select,input,[lang="zh-CN"]'; // <title> : pas de balise dedans (le titre de l'onglet perdrait 学园)
 function tagZh(root) {
   if (root.nodeType !== 1 || root.closest(NO_TAG)) return;
   // 1. Les éléments entièrement en chinois
