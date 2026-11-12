@@ -1734,7 +1734,8 @@ const W = {}; WORDS.forEach(w => { W[w.id] = w; });
 const LESSONS = [
   {id:'1a', l:1, t:'Saluer et se présenter', d:'Les premières phrases : bonjour, merci, comment tu t\'appelles.', w:'你 好 我 是 叫 名字 什么 谢谢 不客气 再见 对不起 没关系 认识 高兴 先生 小姐',
    g:[['你好！我叫安娜。','Nǐ hǎo! Wǒ jiào Ānnà.','Bonjour ! Je m\'appelle Anna.'],['你叫什么名字？','Nǐ jiào shénme míngzi?','Comment tu t\'appelles ?'],['认识你很高兴。','Rènshi nǐ hěn gāoxìng.','Ravie de te connaître.']],
-   tip:'Le chinois ne conjugue pas : 我是, 你是, 他是 gardent le même verbe 是. Et pas de « est » devant un adjectif : on dit 我很高兴 (« je très content »).'},
+   tip:'Le chinois ne conjugue pas : 我是, 你是, 他是 gardent le même verbe 是. Et pas de « est » devant un adjectif : on dit 我很高兴 (« je très content »).',
+   tip2:'你好 s\'écrit nǐ hǎo mais se dit ní hǎo : quand deux 3e tons se suivent, le premier remonte en 2e ton. Et 不客气 se dit bú kèqi : 不 devient bú devant un 4e ton. Ces changements ne sont pas toujours écrits.'},
   {id:'1b', l:1, t:'Les nombres et l\'âge', d:'Compter de 1 à 99, demander l\'âge et une quantité.', w:'一 二 三 四 五 六 七 八 九 十 几 多少 岁 个',
    g:[['你几岁？','Nǐ jǐ suì?','Tu as quel âge ? (enfant)'],['我二十五岁。','Wǒ èrshíwǔ suì.','J\'ai vingt-cinq ans.'],['多少钱？','Duōshao qián?','Combien ça coûte ?']],
    tip:'Les nombres se construisent comme un calcul : 二十五 = 2×10+5. 几 sert pour une petite quantité supposée (moins de 10), 多少 pour tout le reste.'},
@@ -1840,6 +1841,22 @@ const TONE_TIPS = [
   ['Règle 3 + 3','Deux 3e tons de suite : le premier devient un 2e ton. 你好 se dit ní hǎo.'],
   ['Règle de 不','不 bù devient bú devant un 4e ton : 不是 bú shì, 不对 bú duì. Ailleurs, il reste bù : 不好 bù hǎo.'],
   ['Règle de 一','一 yī se dit yí devant un 4e ton (一个 yí gè) et yì devant les autres tons (一起 yìqǐ). Seul, ou en comptant, il reste yī.'],
+  ['Ce qu\'écrit Xué Yuán','Pour 一 et 不, l\'appli écrit le ton tel qu\'on le prononce : 不客气 bú kèqi, 一起 yìqǐ. Les dictionnaires et les listes officielles du HSK écrivent le ton d\'origine (bù kèqi, yīqǐ) : ne sois pas surpris. Le changement 3 + 3, lui, n\'est jamais écrit : 你好 s\'écrit nǐ hǎo mais se dit ní hǎo.'],
+];
+// Exercice sur les changements de ton : [mot, explication, bonne prononciation, autres propositions…]
+const SANDHI = [
+  ['你好', 'Deux 3e tons de suite : le premier devient un 2e ton.', 'ní hǎo', 'nǐ hǎo', 'nǐ háo', 'nì hǎo'],
+  ['很好', 'Deux 3e tons de suite : le premier devient un 2e ton.', 'hén hǎo', 'hěn hǎo', 'hěn háo', 'hèn hǎo'],
+  ['可以', 'Deux 3e tons de suite : le premier devient un 2e ton.', 'kéyǐ', 'kěyǐ', 'kěyí', 'kèyǐ'],
+  ['水果', 'Deux 3e tons de suite : le premier devient un 2e ton.', 'shuíguǒ', 'shuǐguǒ', 'shuǐguó', 'shuìguǒ'],
+  ['不是', '不 devient bú devant un 4e ton.', 'bú shì', 'bù shì', 'bǔ shì', 'bū shì'],
+  ['不对', '不 devient bú devant un 4e ton.', 'bú duì', 'bù duì', 'bǔ duì', 'bū duì'],
+  ['不好', '不 ne change pas devant un 3e ton : il reste bù.', 'bù hǎo', 'bú hǎo', 'bǔ hǎo', 'bù háo'],
+  ['一个', '一 devient yí devant un 4e ton (个 se prononce gè).', 'yí gè', 'yī gè', 'yì gè', 'yǐ gè'],
+  ['一起', '一 devient yì devant un 3e ton.', 'yìqǐ', 'yīqǐ', 'yíqǐ', 'yǐqǐ'],
+  ['一天', '一 devient yì devant un 1er ton.', 'yì tiān', 'yī tiān', 'yí tiān', 'yǐ tiān'],
+  ['第一', 'Un nombre ordinal : 一 garde son 1er ton.', 'dì yī', 'dì yí', 'dì yì', 'dí yī'],
+  ['一月', 'Dans une date (janvier), 一 garde son 1er ton.', 'yī yuè', 'yí yuè', 'yì yuè', 'yǐ yuè'],
 ];
 
 // Devinettes : charades de caractères (字谜) et devinettes de vocabulaire
@@ -3088,6 +3105,7 @@ function vLesson(L, chunk) {
     <div class="chunks">${cs.map((c, k) => `<button class="chunk ${chunkDone(L, k) ? 'done' : ''}" data-ch="${k}"><span class="label">Paquet ${k + 1}${chunkDone(L, k) ? ' · fait' : ''}</span><span class="han">${c.map(w => w.h).join(' ')}</span><span class="go">${chunkDone(L, k) ? 'Refaire' : 'Apprendre'} →</span></button>`).join('')}</div>
     ${L.g.length ? `<div class="card dialog"><h2>Phrases modèles</h2>${L.g.map(([zh, py, fr]) => `<div class="line">${speakBtn(zh)}<div><div class="zh">${zh}</div><div class="pyx" style="font-size:.95rem;font-weight:600">${pyHTML(py)}</div><div class="muted" style="font-size:.92rem">${esc(fr)}</div></div></div>`).join('')}</div>` : ''}
     ${L.tip ? `<div class="tipbox"><span class="label">Astuce grammaire</span><p style="margin-top:4px">${esc(L.tip)}</p></div>` : ''}
+    ${L.tip2 ? `<div class="tipbox"><span class="label">Prononciation</span><p style="margin-top:4px">${esc(L.tip2)}</p><button class="btn small" data-go="memo" style="margin-top:10px">S'entraîner aux changements de ton →</button></div>` : ''}
     <details class="card"><summary>Voir les ${words.length} mots de la leçon</summary><div class="wordlist" style="margin-top:14px">${words.map(w => `
       <div class="word"><span class="h ${w.h.length > 3 ? 'xl' : w.h.length > 2 ? 'l' : ''}">${hanHTML(w.h, w.p)}</span><div class="stack" style="gap:0"><span class="p pyx">${pyHTML(w.p)}</span><span class="f">${esc(w.f)}</span></div>${speakBtn(w.h, w.p)}</div>`).join('')}
     </div></details>
@@ -3096,6 +3114,7 @@ function vLesson(L, chunk) {
   $$('[data-ch]', s).forEach(b => b.addEventListener('click', () => render('lecons', L.id + '#' + b.dataset.ch)));
   $('#lq', s).addEventListener('click', () => { app.innerHTML = ''; runQuiz(words, {title: L.t, n: Math.min(10, words.length), lesson: L.id}); });
   $('#lw', s).addEventListener('click', () => { writeChars = [...new Set(words.flatMap(w => [...w.h]))]; current = 'ecriture'; render('ecriture'); });
+  wire(s);
 }
 
 // ---------- Quiz ----------
@@ -3294,6 +3313,11 @@ function vMemo() {
     <div class="head"><span class="label">Mémo</span><h1>Retenir sans s'épuiser</h1><p>Les caractères sont faits de briques qui reviennent sans cesse. Une petite histoire par caractère vaut mieux que cent répétitions.</p></div>
     <h2>Les quatre tons</h2>
     <div class="tones">${TONE_TIPS.map(([t, d], k) => `<div class="card stack tint" style="gap:6px;--c:var(--t${k < 5 ? k + 1 : 3});--c-ink:#fff"><div class="row" style="justify-content:space-between"><h3 class="t${k + 1}">${t}</h3>${k < 5 ? speakBtn(['妈','麻','马','骂','吗'][k], t) : speakBtn(['你好','不是','一个'][k - 5] || '你好')}</div><span class="muted" style="font-size:.92rem">${esc(d)}</span>${k < 5 ? `<span style="font-size:1.05rem"><span class="han" style="font-size:1.3rem">${'妈麻马骂吗'[k]}</span> <strong class="t${k + 1}">${['mā','má','mǎ','mà','ma'][k]}</strong> · ${['maman','chanvre','cheval','gronder','question ?'][k]}</span>` : ''}</div>`).join('')}</div>
+    <div class="card stack" id="sandhi">
+      <h2>Entraîne-toi : les changements de ton</h2>
+      <p class="muted">Le pinyin des dictionnaires ne dit pas toujours comment on prononce vraiment. Écoute le mot et choisis la prononciation réelle.</p>
+      <div id="sbx" class="quiz" style="margin:0"><div class="row"><button class="btn primary" id="sgo">Commencer (8 mots)</button></div></div>
+    </div>
     <div class="card stack" id="ai" hidden>
       <h2>Demande une astuce à Claude</h2>
       <p class="muted">Tape un mot ou un caractère : Claude invente une histoire mnémotechnique à partir de ses composants.</p>
@@ -3309,6 +3333,24 @@ function vMemo() {
       .map(([c, t]) => `<div class="card mnemo"><span class="h ${W[c] ? 't' + toneOf(W[c].p) : ''}">${c}</span><div class="stack" style="gap:4px"><div class="row" style="justify-content:space-between;flex-wrap:nowrap"><strong>${W[c] ? pyHTML(W[c].p) + ' · ' + esc(W[c].f) : ''}</strong>${speakBtn(c)}</div><span style="font-size:.93rem">${esc(t)}</span></div></div>`).join('') || '<p class="muted">Aucun résultat. Essaie la recherche avec Claude ci-dessus.</p>';
   };
   fill(); $('#mq', s).addEventListener('input', e => fill(e.target.value));
+  const sbx = $('#sbx', s);
+  const sandhiRun = () => {
+    const qs = pick(SANDHI, 8); let i = 0, ok = 0;
+    const step = () => {
+      if (i >= qs.length) {
+        addXP(ok);
+        sbx.innerHTML = `<p class="feedback ${ok >= 6 ? 'ok' : ''}">${ok} / ${qs.length} : ${ok === qs.length ? 'sans faute, tes oreilles sont prêtes !' : ok >= 6 ? 'très bien.' : 'relis les règles ci-dessus et recommence.'}</p><div class="row"><button class="btn primary" id="sgo">Recommencer</button></div>`;
+        $('#sgo', sbx).addEventListener('click', sandhiRun); return;
+      }
+      const [h, why, ans, ...others] = qs[i];
+      sbx.innerHTML = `<div class="progress"><i style="width:${i / qs.length * 100}%"></i></div>
+        <div class="card prompt"><span class="q">Comment se prononce vraiment ce mot ?</span><span class="h" lang="zh-CN">${h}</span><button class="btn primary" data-say="${h}">${SPEAK_ICON} Écouter</button></div>
+        <div class="options">${shuffle([ans, ...others]).map(o => `<button class="opt" data-o="${o}">${pyHTML(o)}</button>`).join('')}</div><div id="fbk"></div>`;
+      answerHandler(sbx, ans, {h, p: ans, f: why}, r => { if (r) ok++; }, () => { i++; step(); });
+    };
+    step();
+  };
+  $('#sgo', sbx).addEventListener('click', sandhiRun);
   sampleReady.then(sm => {
     if (!sm || !s.isConnected) return;
     $('#ai', s).hidden = false;
