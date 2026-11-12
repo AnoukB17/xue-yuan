@@ -15,7 +15,7 @@
   --plum:#9A3DBA; --plum-ink:#FFFFFF; --gold:#FFB224; --gold-ink:#2A1A00; --coral:#FF6F59; --coral-ink:#2B0A04;
   --bamboo:#2DB55D; --bamboo-ink:#04210F; --rose:#C8326A; --rose-ink:#FFFFFF; --bronze:#9A5716; --bronze-ink:#FFFFFF;
   --t1:#A84600; --t2:#006E52; --t3:#005D96; --t4:#993A77; --t5:#5D5F6E;
-  --good:#1E9440; --bad:#D92D2D; --outline:#D4D4E0;
+  --good:#1E9440; --bad:#C0153D; --outline:#D4D4E0;
   --f-display:"Unbounded", "Avenir Next", system-ui, sans-serif;
   --f-body:"Figtree", "Helvetica Neue", system-ui, sans-serif;
   --f-han:"Noto Serif SC", "Songti SC", "STSong", serif;
@@ -30,7 +30,7 @@
   --plum:#D687F2; --plum-ink:#250A2E; --gold:#FFC54D; --gold-ink:#2A1A00; --coral:#FF8A77; --coral-ink:#2B0A04;
   --bamboo:#55D687; --bamboo-ink:#04210F; --rose:#FF7BA6; --rose-ink:#2B0614; --bronze:#E6A15F; --bronze-ink:#2A1503;
   --t1:#FF9A4D; --t2:#3DD6AE; --t3:#62B8FF; --t4:#F29BCF; --t5:#A0A2B2;
-  --good:#5DD37A; --bad:#FF6B6B; --outline:#3C3C4E; color-scheme:dark}}
+  --good:#5DD37A; --bad:#FF7A93; --outline:#3C3C4E; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0F0F16; --surface:#1A1A24; --sunk:#0A0A10; --ink:#EDEDF5; --muted:#A3A3B8; --line:#2B2B38;
   --shadow:0 0 0 1px #2B2B38;
@@ -39,7 +39,7 @@
   --plum:#D687F2; --plum-ink:#250A2E; --gold:#FFC54D; --gold-ink:#2A1A00; --coral:#FF8A77; --coral-ink:#2B0A04;
   --bamboo:#55D687; --bamboo-ink:#04210F; --rose:#FF7BA6; --rose-ink:#2B0614; --bronze:#E6A15F; --bronze-ink:#2A1503;
   --t1:#FF9A4D; --t2:#3DD6AE; --t3:#62B8FF; --t4:#F29BCF; --t5:#A0A2B2;
-  --good:#5DD37A; --bad:#FF6B6B; --outline:#3C3C4E; color-scheme:dark}
+  --good:#5DD37A; --bad:#FF7A93; --outline:#3C3C4E; color-scheme:dark}
 
 *{box-sizing:border-box}
 html,body{min-height:100%}
@@ -238,6 +238,15 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .opt[disabled]{cursor:default}
 .feedback{min-height:1.5em;text-align:center;font-weight:600}
 .feedback.ok{color:var(--good)} .feedback.ko{color:var(--bad)}
+/* Juste / faux : une icône en plus de la couleur (daltonisme), et un cramoisi bien distinct du vermillon de la marque */
+.opt{position:relative}
+.opt.ok,.opt.ko{padding-right:44px}
+.opt.ok::after,.opt.ko::after{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:700 .85rem/1 var(--f-body);color:#fff}
+.opt.ok::after{content:"✓";background:var(--good)}
+.opt.ko::after{content:"✕";background:var(--bad)}
+.feedback.ok::before{content:"✓ "} .feedback.ko::before{content:"✕ "}
+.errcard::before{content:"✕ À retenir";font:700 .75rem var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--bad)}
+.errcard.win::before{content:"✓ Bien joué";color:var(--good)}
 .modes{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
 
 /* ---------- Écriture ---------- */
