@@ -372,11 +372,9 @@ S = {
 }
 
 # ---------- Vérifications ----------
-def load_app_words(level):
-    html = open(os.path.join(ROOT, 'index.html'), encoding='utf8').read()
-    if level == 1: m = re.search(r"^1: `(.*?)`", html, re.S | re.M)
-    else: m = re.search(r"^%d: `(.*?)`" % level, html, re.S | re.M)
-    return [l.split('|') for l in m.group(1).split('\n')]
+def load_app_words(level):  # mots enseignés à ce niveau par l'appli, depuis data/vocab.json
+    rows = json.load(open(os.path.join(ROOT, 'data', 'vocab.json'), encoding='utf8'))
+    return [[r['h'], r['p'], r['fr']] for r in rows if r['app'] == level]
 
 def official():
     words = {1: set(), 2: set()}
