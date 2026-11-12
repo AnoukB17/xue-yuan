@@ -30,7 +30,7 @@ const STATES = {
         const r = await p.evaluate(() => {
           const W = document.documentElement.clientWidth, out = [];
           for (const el of document.querySelectorAll('#app *, .mtop *, .bottom *')) {
-            const rc = el.getBoundingClientRect(); if (!rc.width || getComputedStyle(el).position === 'fixed') continue;
+            const rc = el.getBoundingClientRect(); const cs = getComputedStyle(el); if (!rc.width || cs.position === 'fixed' || +cs.opacity === 0) continue; // invisible : ignoré
             if (rc.right > W + 1 || rc.left < -1) out.push(`${(el.className || el.tagName).toString().split(' ')[0]} (${Math.round(rc.left)}→${Math.round(rc.right)})`);
           }
           return { scroll: document.documentElement.scrollWidth > W + 1, out: [...new Set(out)].slice(0, 4) };
