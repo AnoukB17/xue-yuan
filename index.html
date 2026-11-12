@@ -3828,8 +3828,9 @@ const isIOS = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.p
 if (canSW) navigator.serviceWorker.addEventListener('message', e => {
   if (e.data?.type === 'offline-all-done') { S.offlineAll = e.data.ok === e.data.total; save(); toast(S.offlineAll ? 'C\'est prêt : tu peux écrire tous les caractères sans connexion.' : 'Une partie des tracés n\'a pas pu être téléchargée, réessaie avec une meilleure connexion.'); if (current === 'objectifs') render('objectifs'); }
 });
-header(); route();
-if (!S.onboarded) onboarding(0);
+// Première visite : le questionnaire couvre tout l'écran, inutile de dessiner l'accueil derrière
+header();
+if (!S.onboarded) onboarding(0); else route();
 addEventListener('keydown', e => { if (e.key === 'Enter' && document.activeElement?.tagName !== 'INPUT') $('#cont')?.click(); });
 
 </script>
