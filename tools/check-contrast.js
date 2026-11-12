@@ -54,6 +54,8 @@ const STATES = {
   'confusions (duel)': p => p.evaluate(() => { S.conf['他|她'] = 0; S.conf['买|卖'] = 3; current = 'confusions'; render('confusions', '买|卖'); }),
   'objectifs': p => p.evaluate(() => go('objectifs')),
   'actus': p => p.evaluate(() => go('actus')),
+  'listes (A à Z)': async p => { await p.evaluate(() => { listMode = 'az'; go('listes'); }); await p.waitForSelector('.lgrid'); },
+  'listes (thèmes)': async p => { await p.evaluate(() => { listMode = 'theme'; go('listes'); }); await p.waitForSelector('.lth'); },
   'leçons HSK 3': p => p.evaluate(() => { lessonLevel = 3; go('lecons'); }),
   'questionnaire': p => p.evaluate(() => { onboarding(0); document.querySelectorAll('#onb .ch').forEach((b, i) => i % 2 && b.click()); }),
 };

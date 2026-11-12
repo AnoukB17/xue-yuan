@@ -15,6 +15,8 @@ Le français et le pinyin sont la référence de l'appli. Niveau du nouvel HSK :
 Niveau HSK 2.0, fréquence, catégories et classificateurs : tools/content/hsk-reference.json (voir build-reference.py).
 """
 import json, os, re, sys, unicodedata
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'content'))
+from themes import THEMES  # thèmes de l'écran « Listes » (tools/content/themes.py)
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 VOCAB = os.path.join(ROOT, 'data', 'vocab.json')
 REF = json.load(open(os.path.join(ROOT, 'tools', 'content', 'hsk-reference.json'), encoding='utf8'))
@@ -49,11 +51,12 @@ def enrich(rows):
     return missing
 
 def js_block(rows):
-    # Ligne compacte : [caractères, pinyin, français, niveau appli, niveau 3.0, niveau 2.0, fréquence, classificateurs]
-    data = [[r['h'], r['p'], r['fr'], r['app'], r['hsk3'] or 0, r['hsk2'] or 0, r['freq'] or 99999, ''.join(r['cl'])] for r in rows]
+    # Ligne compacte : [caractères, pinyin, français, niveau appli, niveau 3.0, niveau 2.0, fréquence, classificateurs, thème]
+    data = [[r['h'], r['p'], r['fr'], r['app'], r['hsk3'] or 0, r['hsk2'] or 0, r['freq'] or 99999, ''.join(r['cl']), r.get('th', 'idees')] for r in rows]
     body = ',\n'.join(json.dumps(d, ensure_ascii=False, separators=(',', ':')) for d in data)
     return ('// <vocab> (généré par tools/build-vocab.py depuis data/vocab.json : ne pas modifier à la main)\n'
-            'const VOCAB = [\n' + body + '\n];\n// </vocab>')
+            'const VOCAB = [\n' + body + '\n];\n'
+            'const THEMES = ' + json.dumps([list(t) for t in THEMES], ensure_ascii=False) + ';\n// </vocab>')
 
 def report(rows):
     lines = ['# Couverture du vocabulaire HSK', '', 'Généré par `tools/build-vocab.py --report`. Un mot est « couvert » s\'il a une traduction française dans `data/vocab.json`.', '']
@@ -86,6 +89,14 @@ def main():
         html = html[:start] + block + '\n' + html[end:]
     open(HTML, 'w', encoding='utf8').write(html)
     print(f'{len(rows)} sens → data/vocab.json et index.html')
+    # Liste officielle des niveaux 1 à 6 (programme 2025) pour l'écran « Listes » : [n°, niveau, mot, pinyin], ordre officiel
+    off = []
+    for line in open(os.path.join(ROOT, 'tools', 'content', 'hsk30-vocabulaire.tsv'), encoding='utf8'):
+        if line.startswith('#'): continue
+        n, lvl, word, _, py, *_ = line.rstrip('\n').split('\t')
+        if lvl[0] in '123456': off.append([int(n), int(lvl[0]), word, py.replace('’', "'")])
+    json.dump(off, open(os.path.join(ROOT, 'data', 'hsk-officiel.json'), 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
+    print(f'{len(off)} mots officiels (niveaux 1-6) → data/hsk-officiel.json')
     if '--report' in sys.argv: report(rows)
 
 if __name__ == '__main__': main()

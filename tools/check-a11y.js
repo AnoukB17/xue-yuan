@@ -21,6 +21,9 @@ const STATES = {
   'test de niveau': p => p.evaluate(() => go('test')),
   'objectifs': p => p.evaluate(() => go('objectifs')),
   'actus': p => p.evaluate(() => go('actus')),
+  'dictionnaire': async p => { await p.evaluate(() => go('dico')); await p.fill('#dq', 'gare'); },
+  'listes (A à Z)': async p => { await p.evaluate(() => { listMode = 'az'; go('listes'); }); await p.waitForSelector('.lgrid'); },
+  'listes (thèmes)': async p => { await p.evaluate(() => { listMode = 'theme'; go('listes'); }); await p.waitForSelector('.lth'); },
 };
 (async () => {
   const b = await chromium.launch();
