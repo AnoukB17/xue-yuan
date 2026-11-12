@@ -251,6 +251,8 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .ws-h.l{font-size:2.6rem} .ws-h.xl{font-size:2.1rem}
 .ws-p{font:600 1.25rem var(--f-display)}
 .ws-f{font-size:1.05rem}
+.ws-facts{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.92rem;color:var(--muted)}
+.ws-facts .han{color:var(--ink);font-size:1.05rem}
 .ws-char{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--sunk);border-radius:16px;padding:12px}
 .ws-c{font-size:2.4rem;line-height:1.1;min-width:1.2em;text-align:center}
 .ws-others{display:flex;flex-wrap:wrap;gap:6px}
@@ -2684,7 +2686,10 @@ function searchWords(q) {
   if (sy.length > 1) { const per = uniqBy(sy.flatMap(x => WORDS.filter(w => normPy(w.p) === x).sort((a, b) => a.l - b.l)), w => w.id); per.split = true; return per; }
   return r;
 }
-const wordCard = w => `<div class="word"><button class="h wbtn ${w.h.length > 3 ? 'xl' : w.h.length > 2 ? 'l' : ''}" data-word="${esc(w.id)}" aria-label="Fiche de ${esc(w.h)}">${hanHTML(w.h, w.p)}</button><div class="stack" style="gap:0"><span class="p pyx">${pyHTML(w.p)}</span><span class="f">${esc(w.f)}</span><span class="lv-tag">HSK ${w.l}</span></div>${speakBtn(w.h, w.p)}</div>`;
+// « HSK 2 · niveau 1 du nouveau HSK » : niveau d'enseignement (HSK 2.0) et niveau officiel HSK 3.0
+const levelLabel = w => `HSK ${w.l}${w.l3 && w.l3 !== w.l ? ` · nouveau HSK ${w.l3 === 7 ? '7-9' : w.l3}` : ''}`;
+const freqLabel = q => q <= 500 ? 'Parmi les 500 mots les plus courants' : q <= 1000 ? 'Parmi les 1 000 mots les plus courants' : 'Parmi les 3 000 mots les plus courants';
+const wordCard = w => `<div class="word"><button class="h wbtn ${w.h.length > 3 ? 'xl' : w.h.length > 2 ? 'l' : ''}" data-word="${esc(w.id)}" aria-label="Fiche de ${esc(w.h)}">${hanHTML(w.h, w.p)}</button><div class="stack" style="gap:0"><span class="p pyx">${pyHTML(w.p)}</span><span class="f">${esc(w.f)}</span><span class="lv-tag">${levelLabel(w)}</span></div>${speakBtn(w.h, w.p)}</div>`;
 let dicoQuery = '';
 function vDico() {
   const s = view(`<div class="head"><span class="label">Dictionnaire</span><h1>Chercher un mot</h1><p>En caractères (路), en pinyin, avec ou sans les tons (lu, ni hao, nihao), ou en français (gare). Touche un mot pour ouvrir sa fiche.</p></div>
@@ -2712,8 +2717,9 @@ function openWord(id) {
   }).join('') : '';
   const others = WORDS.filter(x => x.id !== id && cs.some(ch => x.h.includes(ch))).slice(0, 8);
   d.innerHTML = `<div class="ws">
-    <div class="row" style="justify-content:space-between"><span class="label">HSK ${w.l}</span><button class="btn ghost small" id="ws-x" aria-label="Fermer">✕ Fermer</button></div>
+    <div class="row" style="justify-content:space-between"><span class="label">${levelLabel(w)}</span><button class="btn ghost small" id="ws-x" aria-label="Fermer">✕ Fermer</button></div>
     <div class="ws-top"><span class="han ws-h ${cs.length > 3 ? 'xl' : cs.length > 2 ? 'l' : ''}" id="ws-title">${hanHTML(w.h, w.p)}</span><div class="stack" style="gap:2px"><span class="ws-p">${pyHTML(w.p).replace(/<\/span><span/g, '</span><wbr><span')}</span><span class="ws-f">${esc(w.f)}</span></div>${speakBtn(w.h, w.p)}</div>
+    ${w.cl || w.q < 3000 ? `<div class="ws-facts">${w.cl ? `<span>Se compte avec <span class="han">${[...w.cl].join(' / ')}</span> : <span class="han">一${[...w.cl][0]}${esc(w.h)}</span></span>` : ''}${w.q < 3000 ? `<span>${freqLabel(w.q)}</span>` : ''}</div>` : ''}
     <div class="tipline">${esc(state)}${!c ? ' <button class="btn small primary" id="ws-add" style="margin-left:6px">Ajouter à mes révisions</button>' : ''}</div>
     ${chars ? `<h3>Caractère${cs.length > 1 ? 's' : ''}</h3><div class="stack">${chars}</div>` : ''}
     ${EXAMPLES[id] ? `<h3>Exemples</h3><div class="stack">${EXAMPLES[id].map(e => exampleHTML(e, w.h)).join('')}</div>` : ''}
@@ -2963,7 +2969,7 @@ function writePad(el, c, {memory, onDone}) {
 const perDayMinutes = () => S.goal.mode === 'day' ? S.goal.minutes : Math.max(5, Math.round(S.goal.minutes / Math.max(1, S.goal.days.length)));
 const daysAway = () => S.lastStudy ? dayNum() - dayNum(new Date(S.lastStudy + 'T12:00')) : 0;
 function dueSorted() {
-  const score = w => retrievability(fsrsCard(S.srs[w.id])) + .05 * (w.l - 1);
+  const score = w => retrievability(fsrsCard(S.srs[w.id])) + .03 * Math.log10(w.q || 1e5); // rang de fréquence : 1 à ~10 000
   return dueWords().sort((a, b) => score(a) - score(b)).slice(0, Math.max(0, REVIEWS_PER_DAY - doneToday('revDay')));
 }
 function nextChunk() {
