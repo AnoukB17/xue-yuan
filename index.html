@@ -238,7 +238,7 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .b-word .big.wbtn{font:500 4.4rem/1 var(--f-han)}
 .lv-tag{font-size:.72rem;font-weight:700;color:var(--muted)}
 .pill-ico{display:inline-grid;place-items:center;color:var(--ink);text-decoration:none;min-width:44px}
-.wbtn{min-width:44px;min-height:44px;display:inline-grid;place-items:center}
+.wbtn{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap} /* flex et non grille : les caractères restent sur une ligne */
 /* Très petit écran : le niveau quitte l'en-tête (il reste sur l'accueil et dans « Moi ») */
 @media (max-width:380px){.mtop .st-level{display:none}}
 #wsheet{border:0;padding:0;width:min(560px,calc(100% - 24px));max-height:min(86vh,900px);border-radius:24px;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.45);overflow:auto}
