@@ -2519,7 +2519,7 @@ function learnFlow(box, words, {title, onDone}) {
       return;
     }
     box.innerHTML = `${bar()}<div class="card prompt"><span class="q">Comment se prononce-t-il ? Tape le pinyin, sans les tons</span><span class="h">${w.h}</span><span class="muted-on">${esc(w.f)}</span></div>
-      <form class="row typein" id="tf"><input id="ti" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="par exemple : ${esc(normPy(words[(i + 1) % words.length].p))}" aria-label="Pinyin"><button class="btn primary">Valider</button></form>
+      <form class="row typein" id="tf"><input id="ti" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="par exemple : nihao" aria-label="Pinyin"><button class="btn primary">Valider</button></form>
       <div class="row" style="justify-content:center"><button class="btn ghost" id="idk">Je ne sais pas</button></div><div id="fbk"></div>`;
     const inp = $('#ti', box); inp.focus();
     const finish = right => {
