@@ -11,10 +11,10 @@
   --bg:#F2F2F7; --surface:#FFFFFF; --sunk:#E8E8F0; --ink:#15151F; --muted:#626378; --line:#E1E1EA;
   --shadow:0 1px 2px rgba(21,21,40,.05), 0 12px 32px -18px rgba(21,21,40,.22);
   --side:#15151F; --side-ink:#F3F3F8; --side-muted:#9A9AB0; --side-hover:#24242F;
-  --teal:#00A88F; --teal-ink:#04201B; --verm:#F2452D; --verm-ink:#FFFFFF; --indigo:#4C55F5; --indigo-ink:#FFFFFF;
-  --plum:#B04ACF; --plum-ink:#FFFFFF; --gold:#FFB224; --gold-ink:#2A1A00; --coral:#FF6F59; --coral-ink:#2B0A04;
-  --bamboo:#2DB55D; --bamboo-ink:#04210F; --rose:#E8457E; --rose-ink:#FFFFFF; --bronze:#B0651E; --bronze-ink:#FFFFFF;
-  --t1:#C25100; --t2:#00805F; --t3:#0068A8; --t4:#B0478A; --t5:#6E7080;
+  --teal:#00A88F; --teal-ink:#04201B; --verm:#D63A20; --verm-ink:#FFFFFF; --indigo:#4C55F5; --indigo-ink:#FFFFFF;
+  --plum:#9A3DBA; --plum-ink:#FFFFFF; --gold:#FFB224; --gold-ink:#2A1A00; --coral:#FF6F59; --coral-ink:#2B0A04;
+  --bamboo:#2DB55D; --bamboo-ink:#04210F; --rose:#C8326A; --rose-ink:#FFFFFF; --bronze:#9A5716; --bronze-ink:#FFFFFF;
+  --t1:#A84600; --t2:#006E52; --t3:#005D96; --t4:#993A77; --t5:#5D5F6E;
   --good:#1E9440; --bad:#D92D2D; --outline:#D4D4E0;
   --f-display:"Unbounded", "Avenir Next", system-ui, sans-serif;
   --f-body:"Figtree", "Helvetica Neue", system-ui, sans-serif;
@@ -58,6 +58,8 @@ a{color:var(--c-text,var(--indigo))}
 .muted{color:var(--muted)}
 .ttl{font:600 1rem/1.25 var(--f-display);letter-spacing:-.01em}
 body:not(.notone) .t1{color:var(--t1)} body:not(.notone) .t2{color:var(--t2)} body:not(.notone) .t3{color:var(--t3)} body:not(.notone) .t4{color:var(--t4)} body:not(.notone) .t5{color:var(--t5)}
+/* Sur un fond de couleur plein, une couleur de ton serait illisible : le texte garde la couleur du bloc (le soulignement « tons + traits » reste) */
+:is(.b-word,.b-hero,.og-new,.fam-ph,.type,.done-tag,.lang,.ch[aria-pressed="true"],.chip[aria-pressed="true"],.rad[aria-pressed="true"],.steps-dots .cur) :is(.t1,.t2,.t3,.t4,.t5){color:inherit!important}
 
 /* ---------- Coquille : barre latérale + contenu ---------- */
 .shell{display:grid;grid-template-columns:268px minmax(0,1fr);min-height:100vh}
@@ -107,7 +109,7 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .pill .fire{color:var(--coral)}
 
 /* ---------- En-tête de section ---------- */
-.view{--c:var(--teal);--c-ink:var(--teal-ink);--c-soft:color-mix(in oklab,var(--c) 14%,var(--surface));--c-text:color-mix(in oklab,var(--c) 70%,var(--ink));display:flex;flex-direction:column;gap:26px;animation:rise .35s ease-out both}
+.view{--c:var(--teal);--c-ink:var(--teal-ink);--c-soft:color-mix(in oklab,var(--c) 14%,var(--surface));--c-text:color-mix(in oklab,var(--c) 50%,var(--ink));display:flex;flex-direction:column;gap:26px;animation:rise .35s ease-out both}
 @keyframes rise{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}
 .head{position:relative;display:flex;flex-direction:column;gap:10px;padding-top:6px;padding-right:min(26%,220px);min-height:120px}
 .head::after{content:attr(data-g);position:absolute;right:0;top:-18px;font:10.5rem/1 var(--f-brush);color:transparent;-webkit-text-stroke:1.6px var(--c);opacity:.55;pointer-events:none;z-index:0}
@@ -118,7 +120,7 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 
 /* ---------- Briques ---------- */
 .card{background:var(--surface);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);border:0}
-.card.tint,.tint{--c-soft:color-mix(in oklab,var(--c) 14%,var(--surface));--c-text:color-mix(in oklab,var(--c) 70%,var(--ink));background:var(--c-soft);box-shadow:none}
+.card.tint,.tint{--c-soft:color-mix(in oklab,var(--c) 14%,var(--surface));--c-text:color-mix(in oklab,var(--c) 50%,var(--ink));background:var(--c-soft);box-shadow:none}
 .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .stack{display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -146,7 +148,7 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .b{border-radius:26px;padding:22px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;min-width:0;background:var(--surface);box-shadow:var(--shadow)}
 .b-hero{grid-column:span 2;grid-row:span 2;background:var(--c);color:var(--c-ink);box-shadow:none;justify-content:flex-end;padding:28px;min-height:340px}
 .b-hero .big{position:absolute;right:-10px;top:-24px;font:700 13rem/1 var(--f-han);opacity:.16;pointer-events:none}
-.b-hero .label{color:inherit;opacity:.75}
+.b-hero .label{color:inherit}
 .b-hero h2{font-size:clamp(1.5rem,2.6vw,2.1rem)}
 .b-hero .preview{font:500 1.35rem var(--f-han);letter-spacing:.12em;opacity:.85}
 .b-hero .btn{align-self:flex-start;background:var(--ink);color:var(--surface);box-shadow:none;margin-top:6px}
@@ -157,20 +159,20 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .ring span{font-size:.72rem;color:var(--muted)}
 .b-streak{background:var(--coral);color:var(--coral-ink);box-shadow:none}
 .b-streak .num{font:700 3rem/1 var(--f-display)}
-.b-streak .label{color:inherit;opacity:.75}
+.b-streak .label{color:inherit}
 .dots{display:flex;gap:5px;margin-top:auto}
 .dots span{flex:1;height:26px;border-radius:8px;background:color-mix(in oklab,var(--coral-ink) 14%,transparent);display:grid;place-items:center;font-size:.62rem;font-weight:700}
 .dots span.on{background:var(--coral-ink);color:var(--coral)}
 .b-word{grid-column:span 2;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;background:var(--gold);color:var(--gold-ink);box-shadow:none;--c:var(--gold-ink);--c-ink:var(--gold);--c-text:var(--gold-ink)}
 .b-word .big{font:500 4.4rem/1 var(--f-han)}
-.b-word .label{color:inherit;opacity:.7}
+.b-word .label{color:inherit}
 .b-word .py{font:600 1.25rem var(--f-display)}
 .b-word .speak{background:var(--gold-ink);color:var(--gold)}
 .w2{grid-column:span 2} .w4{grid-column:span 4}
 .b-mini .num{font:600 2.4rem/1 var(--f-display);font-variant-numeric:tabular-nums}
 .b-mini .btn{margin-top:auto;align-self:flex-start}
 .b-test{background:var(--indigo);color:var(--indigo-ink);box-shadow:none}
-.b-test .label{color:inherit;opacity:.75}
+.b-test .label{color:inherit}
 .b-test .btn{background:var(--indigo-ink);color:var(--indigo);box-shadow:none}
 .b-write{grid-column:span 2;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
 .tzg{width:104px;height:104px;flex:none;border:2px solid var(--c);border-radius:10px;display:grid;place-items:center;font-size:3.8rem;line-height:1;color:var(--ink);background-image:linear-gradient(to right,transparent calc(50% - .5px),color-mix(in oklab,var(--c) 45%,transparent) calc(50% - .5px) calc(50% + .5px),transparent 0),linear-gradient(to bottom,transparent calc(50% - .5px),color-mix(in oklab,var(--c) 45%,transparent) calc(50% - .5px) calc(50% + .5px),transparent 0);background-color:var(--surface)}
@@ -222,11 +224,10 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .quiz{max-width:660px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:18px}
 .progress{height:10px;background:var(--sunk);border-radius:99px;overflow:hidden}
 .progress>i{display:block;height:100%;background:var(--c);border-radius:99px;transition:width .3s}
-.prompt{background:var(--c);color:var(--c-ink);box-shadow:none;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;padding:34px 18px;border-radius:28px}
-.prompt .label{color:inherit;opacity:.75}
+.prompt{background:var(--c-soft);color:var(--ink);box-shadow:inset 0 0 0 2px color-mix(in oklab,var(--c) 40%,transparent);text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;padding:34px 18px;border-radius:28px}
+.prompt .label{color:var(--c-text)}
 .prompt .h{font-family:var(--f-han);font-size:clamp(3.2rem,12vw,5rem);line-height:1.1}
 .prompt .q{font:600 1.05rem/1.4 var(--f-display);max-width:40ch}
-.prompt .btn.primary{background:var(--c-ink);color:var(--c)}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .opt{appearance:none;text-align:left;background:var(--surface);border:0;box-shadow:var(--shadow),inset 0 0 0 2px transparent;border-radius:18px;padding:16px;cursor:pointer;font-weight:600;min-height:62px;transition:transform .12s,box-shadow .15s}
 .opt.hanopt{font-family:var(--f-han);font-size:1.7rem;text-align:center;font-weight:500}
@@ -320,7 +321,7 @@ body.onb-open{overflow:hidden}
 .onb-body h1{font-size:clamp(1.8rem,4.4vw,3rem)}
 .choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:6px}
 .ch{appearance:none;border:0;background:var(--surface);box-shadow:var(--shadow);border-radius:20px;padding:16px;display:flex;align-items:center;gap:14px;text-align:left;font-weight:600;cursor:pointer;transition:transform .12s,background .15s}
-.ch .g{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;font:1.6rem/1 var(--f-brush);background:color-mix(in oklab,var(--c) 16%,var(--surface));color:var(--c)}
+.ch .g{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;font:1.6rem/1 var(--f-brush);background:color-mix(in oklab,var(--c) 16%,var(--surface));color:color-mix(in oklab,var(--c) 50%,var(--ink))}
 .ch:hover{transform:translateY(-2px)}
 .ch[aria-pressed="true"]{background:var(--c);color:var(--c-ink)}
 .ch[aria-pressed="true"] .g{background:var(--c-ink);color:var(--c)}
@@ -438,7 +439,7 @@ body.toneline .t1{text-decoration-style:solid} body.toneline .t2{text-decoration
 
 /* ---------- Séance, apprentissage, erreurs ---------- */
 .plan{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px;font-size:.95rem}
-.plan span{opacity:.8}
+.plan span{font-weight:500}
 .meter{height:10px;background:var(--sunk);border-radius:99px;overflow:hidden}
 .meter i{display:block;height:100%;background:var(--teal);border-radius:99px}
 .dots span.rest{background:transparent;outline:1.5px dashed color-mix(in oklab,var(--coral-ink) 30%,transparent)}
@@ -2988,7 +2989,7 @@ function vHome() {
       </div>
       <div class="b b-word">
         <div class="big">${hanHTML(w.h, w.p)}</div>
-        <div class="stack" style="gap:3px"><span class="label">Mot du jour · HSK ${w.l}</span><span class="py pyx">${esc(w.p)}</span><span style="font-weight:600">${esc(w.f)}</span>${MNEMO[w.h] ? `<span style="font-size:.88rem;opacity:.85">${esc(MNEMO[w.h])}</span>` : ''}</div>
+        <div class="stack" style="gap:3px"><span class="label">Mot du jour · HSK ${w.l}</span><span class="py pyx">${esc(w.p)}</span><span style="font-weight:600">${esc(w.f)}</span>${MNEMO[w.h] ? `<span style="font-size:.88rem">${esc(MNEMO[w.h])}</span>` : ''}</div>
         ${speakBtn(w.h)}
       </div>
       ${pl ? `<div class="b b-mini ${S.placement ? 'w4' : 'w2'}">
@@ -3000,7 +3001,7 @@ function vHome() {
       ${S.placement ? '' : `<div class="b b-test ${pl ? 'w2' : 'w4'}">
         <span class="label">Test de niveau</span>
         <strong style="font:600 1.05rem/1.3 var(--f-display)">Tu connais déjà un peu de chinois ?</strong>
-        <span style="font-size:.88rem;opacity:.85">Le test adapte tes leçons à ton niveau.</span>
+        <span style="font-size:.88rem">Le test adapte tes leçons à ton niveau.</span>
         <button class="btn small" data-go="test">Faire le test</button>
       </div>`}
     </div>
@@ -3057,7 +3058,7 @@ function vTest() {
       : top === 0 ? 'Tu démarres : parfait, les leçons HSK 1 sont faites pour toi. Commence par « Saluer et se présenter ».'
       : `Tu as validé le HSK ${top}. On continue avec le HSK ${rec}, et le quiz de révision gardera ton acquis en mémoire.`;
     box.innerHTML = `
-      <div class="card prompt"><span class="label">Résultat</span><span class="h" style="font-family:var(--f-brush);color:var(--c)">HSK ${rec}</span><p class="q">${msg}</p></div>
+      <div class="card prompt"><span class="label">Résultat</span><span class="h" style="font-family:var(--f-brush);color:var(--c-text)">HSK ${rec}</span><p class="q">${msg}</p></div>
       <div class="stack">${answers.map(a => `<div class="row" style="justify-content:space-between"><span>HSK ${a.l}</span><strong>${a.score} / 5 ${a.score >= 4 ? '· validé' : ''}</strong></div>`).join('')}</div>
       <div class="row" style="justify-content:center"><button class="btn primary" id="tgo">Voir mes leçons HSK ${rec}</button><button class="btn" data-go="objectifs">Régler mon objectif de temps</button></div>`;
     $('#tgo', box).addEventListener('click', () => { lessonLevel = rec; go('lecons'); });
