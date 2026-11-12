@@ -2636,20 +2636,23 @@ function kaiFont() {
   } catch { kaiFontCache = false; }
   return kaiFontCache;
 }
+// Pinyin « auto » : il s'efface à mesure que le niveau monte (HSK 1-2 visible, 3-4 au toucher, 5-6 caché)
+const pyAuto = () => { const l = S.level || 1; return l <= 2 ? 'show' : l <= 4 ? 'tap' : 'hide'; };
+const pyMode = () => S.pinyin === 'auto' ? pyAuto() : S.pinyin;
 function applyPrefs() {
   const b = document.body;
   document.documentElement.style.fontSize = (S.textScale || 1) * 100 + '%';
   b.classList.toggle('kai', !!S.kai && kaiFont());
   prepPyx(document.body);
-  b.classList.toggle('py-tap', S.pinyin === 'tap');
-  b.classList.toggle('py-hide', S.pinyin === 'hide');
+  b.classList.toggle('py-tap', pyMode() === 'tap');
+  b.classList.toggle('py-hide', pyMode() === 'hide');
   b.classList.toggle('notone', S.tones === 'off');
   b.classList.toggle('toneline', S.tones === 'line');
-  $$('.st-py').forEach(e => e.textContent = e.classList.contains('st-py-short') ? {show: 'Pinyin ✓', tap: 'Pinyin ◐', hide: 'Pinyin ✕'}[S.pinyin] : {show: 'Pinyin visible', tap: 'Pinyin au toucher', hide: 'Pinyin caché'}[S.pinyin]);
+  $$('.st-py').forEach(e => e.textContent = e.classList.contains('st-py-short') ? {show: 'Pinyin ✓', tap: 'Pinyin ◐', hide: 'Pinyin ✕'}[pyMode()] : (S.pinyin === 'auto' ? 'Pinyin auto · ' : '') + {show: 'visible', tap: 'au toucher', hide: 'caché'}[pyMode()]);
 }
 // Pinyin masqué : chaque pinyin devient un bouton accessible au clavier (Entrée ou Espace)
 function prepPyx(root) {
-  const on = S.pinyin !== 'show';
+  const on = pyMode() !== 'show';
   for (const el of (root.matches?.('.pyx') ? [root] : []).concat([...(root.querySelectorAll?.('.pyx') || [])])) {
     if (on) { el.tabIndex = 0; el.setAttribute('role', 'button'); el.setAttribute('aria-label', el.classList.contains('revealed') ? el.textContent : 'Afficher le pinyin'); }
     else { el.removeAttribute('tabindex'); el.removeAttribute('role'); el.removeAttribute('aria-label'); }
@@ -2659,9 +2662,12 @@ new MutationObserver(ms => { for (const m of ms) for (const n of m.addedNodes) i
 document.addEventListener('keydown', e => { const p = e.target.closest?.('.pyx[role="button"]'); if (p && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); p.click(); } });
 document.addEventListener('click', e => {
   const p = e.target.closest('.pyx');
-  if (p && S.pinyin !== 'show') { p.classList.toggle('revealed'); prepPyx(p); e.stopPropagation(); }
+  if (p && pyMode() !== 'show') { p.classList.toggle('revealed'); prepPyx(p); e.stopPropagation(); }
   const t = e.target.closest('.st-py');
-  if (t) { S.pinyin = {show: 'tap', tap: 'hide', hide: 'show'}[S.pinyin]; save(); applyPrefs(); toast({show: 'Pinyin visible', tap: 'Pinyin flouté : touche-le pour le voir', hide: 'Pinyin caché : touche « pinyin » pour le voir'}[S.pinyin]); }
+  if (t) {
+    S.pinyin = {auto: 'show', show: 'tap', tap: 'hide', hide: 'auto'}[S.pinyin] || 'auto'; save(); applyPrefs();
+    toast(S.pinyin === 'auto' ? `Pinyin automatique : ${{show: 'visible', tap: 'flouté', hide: 'caché'}[pyAuto()]} au niveau HSK ${S.level || 1}` : {show: 'Pinyin visible', tap: 'Pinyin flouté : touche-le pour le voir', hide: 'Pinyin caché : touche « pinyin » pour le voir'}[S.pinyin]);
+  }
 }, true);
 const normPy = p => p.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/v/g, 'u').replace(/[^a-z]/g, '');
 
@@ -3043,7 +3049,7 @@ const DEFAULT = {
   secs: {}, goal: {mode: 'day', minutes: 15, days: [0,1,2,3,4,5,6]},
   reminder: {time: '19:00', days: [0,1,2,3,4]}, rate: 0.8,
   srs: {}, lessons: {}, riddles: {}, written: {},
-  pinyin: 'show', tones: 'color', textScale: 1, kai: false, sound: true, haptics: true, chunks: {}, conf: {}, detect: {}, recall: {}, profile: null
+  pinyin: 'auto', tones: 'color', textScale: 1, kai: false, sound: true, haptics: true, chunks: {}, conf: {}, detect: {}, recall: {}, profile: null
 };
 let S = structuredClone(DEFAULT);
 const LS_KEY = 'hsk-jardin-v1';
@@ -3707,8 +3713,8 @@ function vGoals() {
       <div class="field"><label class="label" for="gm">Durée : <span id="gmv">${g.minutes}</span> min ${g.mode === 'day' ? 'par jour' : 'par semaine'}</label>
         <input type="range" id="gm" min="${g.mode === 'day' ? 5 : 30}" max="${g.mode === 'day' ? 90 : 600}" step="5" value="${g.minutes}"></div>
       <div class="field"><span class="label">Jours d'étude</span><div class="days" id="gd">${DAYS_FR.map((d, k) => `<button type="button" data-d="${k}" aria-pressed="${g.days.includes(k)}" aria-label="${d}">${d[0]}</button>`).join('')}</div></div>
-      <div class="field"><span class="label">Pinyin</span><div class="seg" role="group"><button type="button" data-py="show" aria-pressed="${S.pinyin === 'show'}">Visible</button><button type="button" data-py="tap" aria-pressed="${S.pinyin === 'tap'}">Au toucher</button><button type="button" data-py="hide" aria-pressed="${S.pinyin === 'hide'}">Caché</button></div>
-        <span class="muted" style="font-size:.88rem">« Au toucher » floute le pinyin : ton œil lit d'abord le caractère, et tu touches pour vérifier. Tu peux aussi changer ce réglage depuis le bouton « Pinyin » en haut.</span></div>
+      <div class="field"><span class="label">Pinyin</span><div class="seg" role="group"><button type="button" data-py="auto" aria-pressed="${S.pinyin === 'auto'}">Auto</button><button type="button" data-py="show" aria-pressed="${S.pinyin === 'show'}">Visible</button><button type="button" data-py="tap" aria-pressed="${S.pinyin === 'tap'}">Au toucher</button><button type="button" data-py="hide" aria-pressed="${S.pinyin === 'hide'}">Caché</button></div>
+        <span class="muted" style="font-size:.88rem">« Auto » le retire peu à peu : visible en HSK 1-2, flouté en HSK 3-4, caché en HSK 5-6. « Au toucher » floute le pinyin : ton œil lit d'abord le caractère, et tu touches pour vérifier. Tu peux aussi changer ce réglage depuis le bouton « Pinyin » en haut.</span></div>
       <div class="field"><span class="label">Tons</span><div class="seg" role="group"><button type="button" data-tc="color" aria-pressed="${S.tones === 'color'}">Couleurs</button><button type="button" data-tc="line" aria-pressed="${S.tones === 'line'}">Couleurs + traits</button><button type="button" data-tc="off" aria-pressed="${S.tones === 'off'}">Sans</button></div>
         <span class="muted tone-legend" style="font-size:.88rem"><span class="t1">mā 1er</span> · <span class="t2">má 2e</span> · <span class="t3">mǎ 3e</span> · <span class="t4">mà 4e</span> · <span class="t5">ma neutre</span>. Couleurs choisies pour rester distinctes en cas de daltonisme ; « + traits » ajoute un soulignement différent par ton.</span></div>
       ${kaiFont() ? `<div class="field"><span class="label">Style des caractères</span><div class="seg" role="group" aria-label="Style des caractères"><button type="button" data-kai="0" aria-pressed="${!S.kai}">Imprimé <span class="han" style="font-family:'Noto Serif SC',serif">字</span></button><button type="button" data-kai="1" aria-pressed="${!!S.kai}">Manuscrit <span class="han" style="font-family:var(--f-kai)">字</span></button></div>
