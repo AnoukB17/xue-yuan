@@ -15,7 +15,7 @@ const VIEWS = ['accueil', 'apprendre', 'pratiquer', 'lecons', 'quiz', 'ecriture'
   const check = async name => {
     const r = await p.evaluate(() => {
       const bad = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-      while (w.nextNode()) { const n = w.currentNode, el = n.parentElement; if (!/[㐀-鿿]/.test(n.data) || el.closest('script,style,svg,select,textarea,[hidden]')) continue; if (el.closest('[lang]')?.lang !== 'zh-CN') bad.push(n.data.trim().slice(0, 30)); }
+      while (w.nextNode()) { const n = w.currentNode, el = n.parentElement; if (!/[㐀-鿿]/.test(n.data) || el.closest('script,style,title,noscript,svg,select,textarea,[hidden]')) continue; if (el.closest('[lang]')?.lang !== 'zh-CN') bad.push(n.data.trim().slice(0, 30)); }
       return { bad, zh: document.querySelectorAll('[lang="zh-CN"]').length };
     });
     total += r.bad.length;

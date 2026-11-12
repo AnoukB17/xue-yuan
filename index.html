@@ -3122,8 +3122,8 @@ const mastered = () => learned().filter(id => S.srs[id].b >= 4).length;
 let zhVoice = null, ZH_VOICES = [], voicesKnown = false;
 // Voix connues des principaux systèmes (l'API ne donne pas le genre)
 const VOICE_GENDER = {tingting: 'femme', meijia: 'femme', lili: 'femme', limu: 'homme', yushu: 'femme', sinji: 'femme', shasha: 'femme', yue: 'femme', xiaoxiao: 'femme', xiaoyi: 'femme', xiaohan: 'femme', xiaomo: 'femme', yunxi: 'homme', yunjian: 'homme', yunyang: 'homme', yunxia: 'homme', kangkang: 'homme', huihui: 'femme', yaoyao: 'femme', hanhan: 'femme', zhiwei: 'homme', '普通话': 'femme'};
-const voiceGender = v => { const n = v.name.toLowerCase().replace(/[\s-]/g, ''); const k = Object.keys(VOICE_GENDER).find(k => n.includes(k)); return k ? VOICE_GENDER[k] : ''; };
-const voiceLabel = v => `${v.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*\(.*\)$/, '')}${voiceGender(v) ? ' · ' + voiceGender(v) : ''}${/TW/i.test(v.lang) ? ' · Taïwan' : ''}`;
+const voiceGender = v => { const n = (v.name || '').toLowerCase().replace(/[\s-]/g, ''); const k = Object.keys(VOICE_GENDER).find(k => n.includes(k)); return k ? VOICE_GENDER[k] : ''; };
+const voiceLabel = v => `${(v.name || v.lang || 'Voix').replace(/^(Microsoft|Google)\s+/, '').replace(/\s*\(.*\)$/, '')}${voiceGender(v) ? ' · ' + voiceGender(v) : ''}${/TW/i.test(v.lang) ? ' · Taïwan' : ''}`;
 function loadVoice() {
   if (!('speechSynthesis' in window)) { voicesKnown = true; return; }
   // Mandarin seulement (zh-HK et yue = cantonais) ; Chine continentale et voix de l'appareil d'abord
