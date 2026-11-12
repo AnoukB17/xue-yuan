@@ -66,7 +66,7 @@
 "fr": "Pékin",
 "app": 1,
 "hsk2": 1,
-"hsk3": 1,
+"hsk3": null,
 "freq": 4799,
 "pos": [
 "ns"
@@ -165,7 +165,7 @@
 "fr": "taxi",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 2677,
 "pos": [
 "n"
@@ -428,7 +428,7 @@
 "fr": "minute",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 465,
 "pos": [
 "qt"
@@ -487,7 +487,7 @@
 "fr": "chien",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 620,
 "pos": [
 "n"
@@ -593,7 +593,7 @@
 "fr": "derrière",
 "app": 1,
 "hsk2": 1,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 1300,
 "pos": [
 "f"
@@ -893,7 +893,7 @@
 "fr": "chat",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 1150,
 "pos": [
 "n",
@@ -1104,7 +1104,7 @@
 "fr": "joli, beau",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 915,
 "pos": [
 "a"
@@ -1117,7 +1117,7 @@
 "fr": "pomme",
 "app": 1,
 "hsk2": 1,
-"hsk3": 3,
+"hsk3": 1,
 "freq": 2562,
 "pos": [
 "n"
@@ -1163,7 +1163,7 @@
 "fr": "devant",
 "app": 1,
 "hsk2": 1,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 1789,
 "pos": [
 "f"
@@ -1573,7 +1573,7 @@
 "fr": "allô (au téléphone, on dit plutôt wéi)",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 1301,
 "pos": [
 "v",
@@ -1738,7 +1738,7 @@
 "fr": "mademoiselle (à éviter pour appeler quelqu'un en Chine continentale)",
 "app": 1,
 "hsk2": 1,
-"hsk3": 1,
+"hsk3": 5,
 "freq": 1575,
 "pos": [
 "n"
@@ -1754,7 +1754,7 @@
 "fr": "quelques",
 "app": 1,
 "hsk2": 1,
-"hsk3": 4,
+"hsk3": 1,
 "freq": 611,
 "pos": [
 "q"
@@ -1913,7 +1913,7 @@
 "fr": "chaise",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 4472,
 "pos": [
 "n"
@@ -2000,7 +2000,7 @@
 "fr": "comment ça va ?",
 "app": 1,
 "hsk2": 1,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 1367,
 "pos": [
 "r"
@@ -2148,7 +2148,7 @@
 "fr": "blanc",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 5,
 "freq": 930,
 "pos": [
 "a",
@@ -2180,7 +2180,7 @@
 "fr": "aider",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 499,
 "pos": [
 "v",
@@ -2194,7 +2194,7 @@
 "fr": "journal",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2232,
 "pos": [
 "n"
@@ -2210,7 +2210,7 @@
 "fr": "que (comparaison)",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 155,
 "pos": [
 "p",
@@ -2226,7 +2226,7 @@
 "fr": "ne… pas (défense)",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 214,
 "pos": [
 "d",
@@ -2242,7 +2242,7 @@
 "fr": "hôtel",
 "app": 2,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 4994,
 "pos": [
 "n"
@@ -2274,7 +2274,7 @@
 "fr": "chanter",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": null,
 "freq": 2876,
 "pos": [
 "v",
@@ -2288,7 +2288,7 @@
 "fr": "sortir",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 85,
 "pos": [
 "v",
@@ -2315,7 +2315,7 @@
 "fr": "fois",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 99,
 "pos": [
 "qv",
@@ -2330,7 +2330,7 @@
 "fr": "depuis, à partir de",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 70,
 "pos": [
 "p",
@@ -2344,7 +2344,7 @@
 "fr": "faux, erreur",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 531,
 "pos": [
 "v",
@@ -2369,7 +2369,7 @@
 "fr": "tout le monde",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 189,
 "pos": [
 "r",
@@ -2424,7 +2424,7 @@
 "fr": "attendre",
 "app": 2,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 83,
 "pos": [
 "v",
@@ -2510,7 +2510,7 @@
 "fr": "serveur",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": null,
 "freq": 5531,
 "pos": [
 "n"
@@ -2526,7 +2526,7 @@
 "fr": "haut, grand",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 290,
 "pos": [
 "a",
@@ -2542,7 +2542,7 @@
 "fr": "dire à, informer",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 252,
 "pos": [
 "v"
@@ -2586,7 +2586,7 @@
 "fr": "bus",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": null,
 "freq": 13591,
 "pos": [],
 "cl": []
@@ -2597,7 +2597,7 @@
 "fr": "entreprise",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 220,
 "pos": [
 "n"
@@ -2668,7 +2668,7 @@
 "fr": "noir",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 5,
 "freq": 724,
 "pos": [
 "a",
@@ -2683,7 +2683,7 @@
 "fr": "rouge",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 5,
 "freq": 794,
 "pos": [
 "a",
@@ -2711,7 +2711,7 @@
 "fr": "aéroport",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 2308,
 "pos": [
 "n"
@@ -2743,7 +2743,7 @@
 "fr": "(classificateur des vêtements du haut et des affaires : 一件事)",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 292,
 "pos": [
 "q",
@@ -2787,7 +2787,7 @@
 "fr": "présenter",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 779,
 "pos": [
 "v",
@@ -2801,7 +2801,7 @@
 "fr": "entrer",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 338,
 "pos": [
 "v"
@@ -2828,7 +2828,7 @@
 "fr": "justement, dès",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 15,
 "pos": [
 "d",
@@ -2857,7 +2857,7 @@
 "fr": "café",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 1698,
 "pos": [
 "n"
@@ -2872,7 +2872,7 @@
 "fr": "commencer",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 132,
 "pos": [
 "v",
@@ -2886,7 +2886,7 @@
 "fr": "examen",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1718,
 "pos": [
 "vn",
@@ -2916,7 +2916,7 @@
 "fr": "pouvoir (permission)",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 58,
 "pos": [
 "v"
@@ -2945,7 +2945,7 @@
 "fr": "rapide",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 153,
 "pos": [
 "a",
@@ -2974,7 +2974,7 @@
 "fr": "fatigué",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1197,
 "pos": [
 "a",
@@ -3017,7 +3017,7 @@
 "fr": "route, chemin",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 409,
 "pos": [
 "n",
@@ -3047,7 +3047,7 @@
 "fr": "vendre",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 590,
 "pos": [
 "v"
@@ -3060,7 +3060,7 @@
 "fr": "lent",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1770,
 "pos": [
 "a",
@@ -3091,7 +3091,7 @@
 "fr": "chaque",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 340,
 "pos": [
 "r"
@@ -3119,7 +3119,7 @@
 "fr": "porte",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 422,
 "pos": [
 "n",
@@ -3136,7 +3136,7 @@
 "fr": "homme",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 415,
 "pos": [
 "n"
@@ -3180,7 +3180,7 @@
 "fr": "femme",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 383,
 "pos": [
 "n"
@@ -3193,7 +3193,7 @@
 "fr": "courir",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 7199,
 "pos": [
 "v"
@@ -3206,7 +3206,7 @@
 "fr": "bon marché",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 2814,
 "pos": [
 "a",
@@ -3221,7 +3221,7 @@
 "fr": "billet",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 956,
 "pos": [
 "n",
@@ -3250,7 +3250,7 @@
 "fr": "mille",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 1728,
 "pos": [
 "m",
@@ -3317,7 +3317,7 @@
 "fr": "corps, santé",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 731,
 "pos": [
 "n"
@@ -3346,7 +3346,7 @@
 "fr": "anniversaire",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1506,
 "pos": [
 "n"
@@ -3424,7 +3424,7 @@
 "fr": "offrir, raccompagner",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 370,
 "pos": [
 "v"
@@ -3450,7 +3450,7 @@
 "fr": "il, elle (objet, animal)",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 114,
 "pos": [
 "r"
@@ -3491,7 +3491,7 @@
 "fr": "danser",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 3920,
 "pos": [
 "v",
@@ -3531,7 +3531,7 @@
 "fr": "jouer, s'amuser",
 "app": 2,
 "hsk2": 2,
-"hsk3": null,
+"hsk3": 1,
 "freq": 415,
 "pos": [
 "v"
@@ -3585,7 +3585,7 @@
 "fr": "question, problème",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 109,
 "pos": [
 "n"
@@ -3600,7 +3600,7 @@
 "fr": "pastèque",
 "app": 2,
 "hsk2": 2,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 9098,
 "pos": [
 "n"
@@ -3616,7 +3616,7 @@
 "fr": "espérer",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 182,
 "pos": [
 "v",
@@ -3633,7 +3633,7 @@
 "fr": "laver",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1298,
 "pos": [
 "v"
@@ -3662,7 +3662,7 @@
 "fr": "rire, sourire",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 382,
 "pos": [
 "v",
@@ -3721,7 +3721,7 @@
 "fr": "neige",
 "app": 2,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 1971,
 "pos": [
 "n"
@@ -3833,7 +3833,7 @@
 "fr": "ensemble",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 172,
 "pos": [
 "s",
@@ -3894,7 +3894,7 @@
 "fr": "nager",
 "app": 2,
 "hsk2": 2,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 3695,
 "pos": [
 "v",
@@ -3908,7 +3908,7 @@
 "fr": "à droite",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 2906,
 "pos": [
 "f"
@@ -3937,7 +3937,7 @@
 "fr": "loin",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 635,
 "pos": [
 "a",
@@ -3995,7 +3995,7 @@
 "fr": "mari",
 "app": 2,
 "hsk2": 2,
-"hsk3": 4,
+"hsk3": 2,
 "freq": 1376,
 "pos": [
 "n"
@@ -4023,7 +4023,7 @@
 "fr": "(particule de durée)",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 38,
 "pos": [
 "u",
@@ -4080,7 +4080,7 @@
 "fr": "préparer",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 333,
 "pos": [
 "v",
@@ -4094,7 +4094,7 @@
 "fr": "marcher, partir",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 109,
 "pos": [
 "v"
@@ -4107,7 +4107,7 @@
 "fr": "le plus",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 89,
 "pos": [
 "d",
@@ -4121,7 +4121,7 @@
 "fr": "à gauche",
 "app": 2,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 4584,
 "pos": [
 "f"
@@ -4134,7 +4134,7 @@
 "fr": "tante, nounou",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 4355,
 "pos": [
 "n"
@@ -4163,7 +4163,7 @@
 "fr": "passe-temps",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 4902,
 "pos": [
 "n",
@@ -4208,7 +4208,7 @@
 "fr": "petit (de taille)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 3952,
 "pos": [
 "a",
@@ -4222,7 +4222,7 @@
 "fr": "calme",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2501,
 "pos": [
 "a"
@@ -4235,7 +4235,7 @@
 "fr": "classe",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1238,
 "pos": [
 "n",
@@ -4265,7 +4265,7 @@
 "fr": "moyen, solution",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 538,
 "pos": [
 "n"
@@ -4281,7 +4281,7 @@
 "fr": "donner un coup de main",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1860,
 "pos": [
 "v",
@@ -4295,7 +4295,7 @@
 "fr": "rassasié",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 4742,
 "pos": [
 "a",
@@ -4310,7 +4310,7 @@
 "fr": "bureau",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1162,
 "pos": [
 "n"
@@ -4325,7 +4325,7 @@
 "fr": "sac, envelopper",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 755,
 "pos": [
 "v",
@@ -4343,7 +4343,7 @@
 "fr": "le nord",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 4879,
 "pos": [
 "s",
@@ -4387,7 +4387,7 @@
 "fr": "carnet, ordinateur portable",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3935,
 "pos": [
 "n"
@@ -4402,7 +4402,7 @@
 "fr": "nez",
 "app": 3,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3484,
 "pos": [
 "n"
@@ -4432,7 +4432,7 @@
 "fr": "devoir absolument",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 241,
 "pos": [
 "d"
@@ -4459,7 +4459,7 @@
 "fr": "réfrigérateur",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 4168,
 "pos": [
 "n"
@@ -4475,7 +4475,7 @@
 "fr": "participer",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 355,
 "pos": [
 "v"
@@ -4488,7 +4488,7 @@
 "fr": "étage",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1202,
 "pos": [
 "qv",
@@ -4502,7 +4502,7 @@
 "fr": "supermarché",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 4427,
 "pos": [
 "n"
@@ -4517,7 +4517,7 @@
 "fr": "résultats, notes",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1888,
 "pos": [
 "n"
@@ -4533,7 +4533,7 @@
 "fr": "être en retard",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 3667,
 "pos": [
 "v",
@@ -4547,7 +4547,7 @@
 "fr": "bateau",
 "app": 3,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1346,
 "pos": [
 "n"
@@ -4560,7 +4560,7 @@
 "fr": "dictionnaire",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 18663,
 "pos": [
 "n"
@@ -4576,7 +4576,7 @@
 "fr": "nettoyer",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 6258,
 "pos": [
 "v"
@@ -4589,7 +4589,7 @@
 "fr": "apporter, emmener",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 177,
 "pos": [
 "v"
@@ -4602,7 +4602,7 @@
 "fr": "les autres",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 397,
 "pos": [
 "r"
@@ -4615,7 +4615,7 @@
 "fr": "menu",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 7509,
 "pos": [
 "n"
@@ -4631,7 +4631,7 @@
 "fr": "herbe",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2467,
 "pos": [
 "n"
@@ -4644,7 +4644,7 @@
 "fr": "manquer, mauvais",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 968,
 "pos": [
 "a",
@@ -4715,7 +4715,7 @@
 "fr": "intelligent",
 "app": 3,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 1918,
 "pos": [
 "a",
@@ -4729,7 +4729,7 @@
 "fr": "avoir l'intention de",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1374,
 "pos": [
 "v",
@@ -4746,7 +4746,7 @@
 "fr": "s'inquiéter",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 277,
 "pos": [
 "v",
@@ -4760,7 +4760,7 @@
 "fr": "gâteau",
 "app": 3,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 2650,
 "pos": [
 "n"
@@ -4776,7 +4776,7 @@
 "fr": "(particule adverbiale)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 132,
 "pos": [
 "u",
@@ -4790,7 +4790,7 @@
 "fr": "endroit",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 254,
 "pos": [
 "n"
@@ -4803,7 +4803,7 @@
 "fr": "carte (géographique)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 3548,
 "pos": [
 "n"
@@ -4833,7 +4833,7 @@
 "fr": "lampe",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2001,
 "pos": [
 "n"
@@ -4861,7 +4861,7 @@
 "fr": "ascenseur",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 3894,
 "pos": [
 "n"
@@ -4877,7 +4877,7 @@
 "fr": "e-mail",
 "app": 3,
 "hsk2": null,
-"hsk3": 3,
+"hsk3": null,
 "freq": 9822,
 "pos": [],
 "cl": []
@@ -4901,7 +4901,7 @@
 "fr": "court",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 983,
 "pos": [
 "a"
@@ -4914,7 +4914,7 @@
 "fr": "faire de l'exercice",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 3764,
 "pos": [
 "v",
@@ -4928,7 +4928,7 @@
 "fr": "avoir faim",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1477,
 "pos": [
 "v",
@@ -4942,7 +4942,7 @@
 "fr": "est",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1509,
 "pos": [
 "f",
@@ -4956,7 +4956,7 @@
 "fr": "animal",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1438,
 "pos": [
 "n"
@@ -4972,7 +4972,7 @@
 "fr": "section, passage",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 647,
 "pos": [
 "q",
@@ -4986,7 +4986,7 @@
 "fr": "comme, combien (exclamation)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1940,
 "pos": [
 "d",
@@ -5000,7 +5000,7 @@
 "fr": "non seulement",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 4161,
 "pos": [
 "c"
@@ -5013,7 +5013,7 @@
 "fr": "mais aussi, de plus",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 239,
 "pos": [
 "c"
@@ -5026,7 +5026,7 @@
 "fr": "oreille",
 "app": 3,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 3451,
 "pos": [
 "n"
@@ -5042,7 +5042,7 @@
 "fr": "envoyer",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 400,
 "pos": [
 "v",
@@ -5056,7 +5056,7 @@
 "fr": "avoir de la fièvre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 5836,
 "pos": [
 "v",
@@ -5071,7 +5071,7 @@
 "fr": "découvrir",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 189,
 "pos": [
 "v",
@@ -5085,7 +5085,7 @@
 "fr": "pratique",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2014,
 "pos": [
 "v",
@@ -5100,7 +5100,7 @@
 "fr": "être rassuré",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2458,
 "pos": [
 "v",
@@ -5114,7 +5114,7 @@
 "fr": "à proximité",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 1020,
 "pos": [
 "f"
@@ -5127,7 +5127,7 @@
 "fr": "propre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 2430,
 "pos": [
 "a",
@@ -5168,7 +5168,7 @@
 "fr": "selon, d'après",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 694,
 "pos": [
 "p",
@@ -5185,7 +5185,7 @@
 "fr": "kilogramme",
 "app": 3,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 4784,
 "pos": [
 "q"
@@ -5198,7 +5198,7 @@
 "fr": "histoire, conte",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 772,
 "pos": [
 "n"
@@ -5211,7 +5211,7 @@
 "fr": "fermer, éteindre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1129,
 "pos": [
 "v",
@@ -5226,7 +5226,7 @@
 "fr": "se soucier de",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1190,
 "pos": [
 "v",
@@ -5240,7 +5240,7 @@
 "fr": "poser, mettre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 280,
 "pos": [
 "v"
@@ -5271,7 +5271,7 @@
 "fr": "réviser",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 6867,
 "pos": [
 "v",
@@ -5285,7 +5285,7 @@
 "fr": "s'intéresser à",
 "app": 3,
 "hsk2": null,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 11617,
 "pos": [
 "a"
@@ -5298,7 +5298,7 @@
 "fr": "tout à l'heure",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1149,
 "pos": [
 "t"
@@ -5311,7 +5311,7 @@
 "fr": "avec, suivre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 135,
 "pos": [
 "p",
@@ -5325,7 +5325,7 @@
 "fr": "encore plus",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 127,
 "pos": [
 "d"
@@ -5338,7 +5338,7 @@
 "fr": "parc",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2134,
 "pos": [
 "n"
@@ -5354,7 +5354,7 @@
 "fr": "le vent souffle",
 "app": 3,
 "hsk2": null,
-"hsk3": 7,
+"hsk3": null,
 "freq": 35620,
 "pos": [
 "v"
@@ -5383,7 +5383,7 @@
 "fr": "au sujet de",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 478,
 "pos": [
 "p"
@@ -5396,7 +5396,7 @@
 "fr": "pays",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 356,
 "pos": [
 "n"
@@ -5411,7 +5411,7 @@
 "fr": "passer, traverser",
 "app": 3,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 60,
 "pos": [
 "u",
@@ -5441,7 +5441,7 @@
 "fr": "ensuite, plus tard",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1055,
 "pos": [
 "t"
@@ -5454,7 +5454,7 @@
 "fr": "dépenser",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 435,
 "pos": [
 "v",
@@ -5490,7 +5490,7 @@
 "fr": "bienvenue, accueillir",
 "app": 3,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 796,
 "pos": [
 "v",
@@ -5546,7 +5546,7 @@
 "fr": "presque",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 1001,
 "pos": [
 "d"
@@ -5573,7 +5573,7 @@
 "fr": "ou bien (question)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 160,
 "pos": [
 "c",
@@ -5588,7 +5588,7 @@
 "fr": "tableau noir",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 15524,
 "pos": [
 "n"
@@ -5604,7 +5604,7 @@
 "fr": "passeport",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 7152,
 "pos": [
 "n"
@@ -5620,7 +5620,7 @@
 "fr": "fleur",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 435,
 "pos": [
 "v",
@@ -5638,7 +5638,7 @@
 "fr": "mauvais, cassé",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 1239,
 "pos": [
 "a",
@@ -5666,7 +5666,7 @@
 "fr": "changer, échanger",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 618,
 "pos": [
 "v"
@@ -5679,7 +5679,7 @@
 "fr": "répondre",
 "app": 3,
 "hsk2": 2,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1100,
 "pos": [
 "v",
@@ -5693,7 +5693,7 @@
 "fr": "ou (bien)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 382,
 "pos": [
 "c",
@@ -5707,7 +5707,7 @@
 "fr": "occasion",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 393,
 "pos": [
 "n"
@@ -5722,7 +5722,7 @@
 "fr": "extrêmement",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 1404,
 "pos": [
 "d",
@@ -5736,7 +5736,7 @@
 "fr": "saison",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 4724,
 "pos": [
 "n"
@@ -5765,7 +5765,7 @@
 "fr": "se rencontrer",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1876,
 "pos": [
 "v"
@@ -5778,7 +5778,7 @@
 "fr": "enseigner",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 988,
 "pos": [
 "v",
@@ -5792,7 +5792,7 @@
 "fr": "pied",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1024,
 "pos": [
 "n",
@@ -5838,7 +5838,7 @@
 "fr": "fête",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3477,
 "pos": [
 "n"
@@ -5853,7 +5853,7 @@
 "fr": "emprunter, prêter",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1495,
 "pos": [
 "v",
@@ -5867,7 +5867,7 @@
 "fr": "passer par",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 867,
 "pos": [
 "p",
@@ -5884,7 +5884,7 @@
 "fr": "se souvenir",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 699,
 "pos": [
 "v"
@@ -5897,7 +5897,7 @@
 "fr": "vérifier, examiner",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 659,
 "pos": [
 "v",
@@ -5911,7 +5911,7 @@
 "fr": "santé, en bonne santé",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 952,
 "pos": [
 "a",
@@ -5926,7 +5926,7 @@
 "fr": "expliquer, raconter",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 555,
 "pos": [
 "v"
@@ -5939,7 +5939,7 @@
 "fr": "angle ; 0,1 yuan",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2370,
 "pos": [
 "n",
@@ -5956,7 +5956,7 @@
 "fr": "aller chercher, recevoir",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 425,
 "pos": [
 "v"
@@ -5983,7 +5983,7 @@
 "fr": "programme, émission",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 951,
 "pos": [
 "n"
@@ -6027,7 +6027,7 @@
 "fr": "directeur",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1838,
 "pos": [
 "n"
@@ -6058,7 +6058,7 @@
 "fr": "phrase",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 10428,
 "pos": [
 "n"
@@ -6073,7 +6073,7 @@
 "fr": "avoir soif",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 9442,
 "pos": [
 "a",
@@ -6087,7 +6087,7 @@
 "fr": "quart d'heure",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3756,
 "pos": [
 "v",
@@ -6147,7 +6147,7 @@
 "fr": "mignon",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 799,
 "pos": [
 "a"
@@ -6160,7 +6160,7 @@
 "fr": "invité, client",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2750,
 "pos": [
 "n"
@@ -6189,7 +6189,7 @@
 "fr": "pleurer",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 898,
 "pos": [
 "v"
@@ -6202,7 +6202,7 @@
 "fr": "pantalon",
 "app": 3,
 "hsk2": 3,
-"hsk3": 3,
+"hsk3": 2,
 "freq": 3765,
 "pos": [
 "n"
@@ -6215,7 +6215,7 @@
 "fr": "baguettes",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 10486,
 "pos": [
 "n"
@@ -6231,7 +6231,7 @@
 "fr": "vieux",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 266,
 "pos": [
 "a",
@@ -6246,7 +6246,7 @@
 "fr": "cadeau",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1673,
 "pos": [
 "n"
@@ -6262,7 +6262,7 @@
 "fr": "visage",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 629,
 "pos": [
 "n",
@@ -6279,7 +6279,7 @@
 "fr": "s'exercer, exercice",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3084,
 "pos": [
 "v",
@@ -6293,7 +6293,7 @@
 "fr": "bleu",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1615,
 "pos": [
 "a",
@@ -6307,7 +6307,7 @@
 "fr": "quitter",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 557,
 "pos": [
 "v"
@@ -6320,7 +6320,7 @@
 "fr": "histoire (passé)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 882,
 "pos": [
 "n"
@@ -6350,7 +6350,7 @@
 "fr": "(classificateur des véhicules)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 699,
 "pos": [
 "q"
@@ -6363,7 +6363,7 @@
 "fr": "comprendre, connaître",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 336,
 "pos": [
 "v",
@@ -6391,7 +6391,7 @@
 "fr": "vert",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": null,
 "freq": 2608,
 "pos": [
 "a",
@@ -6405,7 +6405,7 @@
 "fr": "tout de suite",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 847,
 "pos": [
 "d",
@@ -6450,7 +6450,7 @@
 "fr": "prendre, tenir",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 287,
 "pos": [
 "v"
@@ -6463,7 +6463,7 @@
 "fr": "sud",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1709,
 "pos": [
 "b",
@@ -6477,7 +6477,7 @@
 "fr": "triste",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2714,
 "pos": [
 "a"
@@ -6490,7 +6490,7 @@
 "fr": "jeune",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1100,
 "pos": [
 "a"
@@ -6503,7 +6503,7 @@
 "fr": "faire des efforts",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 505,
 "pos": [
 "ad",
@@ -6518,7 +6518,7 @@
 "fr": "voisin",
 "app": 3,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 3360,
 "pos": [
 "n"
@@ -6533,7 +6533,7 @@
 "fr": "bâtiment, étage",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 765,
 "pos": [
 "n"
@@ -6566,7 +6566,7 @@
 "fr": "satisfait",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1761,
 "pos": [
 "v",
@@ -6580,7 +6580,7 @@
 "fr": "mètre ; riz",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 663,
 "pos": [
 "n",
@@ -6596,7 +6596,7 @@
 "fr": "comprendre, clair",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 676,
 "pos": [
 "v",
@@ -6611,7 +6611,7 @@
 "fr": "grand-mère (paternelle)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 2809,
 "pos": [
 "n"
@@ -6626,7 +6626,7 @@
 "fr": "difficile",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 544,
 "pos": [
 "ad",
@@ -6642,7 +6642,7 @@
 "fr": "année scolaire",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 7644,
 "pos": [
 "n"
@@ -6673,7 +6673,7 @@
 "fr": "faire de la montagne",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": null,
 "freq": 15470,
 "pos": [
 "v",
@@ -6687,7 +6687,7 @@
 "fr": "assiette",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 9039,
 "pos": [
 "n"
@@ -6718,7 +6718,7 @@
 "fr": "bouteille",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 6741,
 "pos": [
 "n"
@@ -6733,7 +6733,7 @@
 "fr": "autre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 267,
 "pos": [
 "r"
@@ -6760,7 +6760,7 @@
 "fr": "décoller",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 5419,
 "pos": [
 "v",
@@ -6774,7 +6774,7 @@
 "fr": "demander un congé",
 "app": 3,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 10134,
 "pos": [
 "v"
@@ -6802,7 +6802,7 @@
 "fr": "chaleureux",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2149,
 "pos": [
 "an",
@@ -6817,7 +6817,7 @@
 "fr": "sérieux, consciencieux",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1020,
 "pos": [
 "a",
@@ -6831,7 +6831,7 @@
 "fr": "si (condition)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 89,
 "pos": [
 "c",
@@ -6858,7 +6858,7 @@
 "fr": "chaussures en cuir",
 "app": 3,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 11265,
 "pos": [
 "n"
@@ -6884,7 +6884,7 @@
 "fr": "monter (vélo, cheval)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2231,
 "pos": [
 "v"
@@ -6897,7 +6897,7 @@
 "fr": "se lever",
 "app": 3,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 172,
 "pos": [
 "v"
@@ -6910,7 +6910,7 @@
 "fr": "clair",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 766,
 "pos": [
 "a",
@@ -6939,7 +6939,7 @@
 "fr": "ensuite",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 275,
 "pos": [
 "c"
@@ -6952,7 +6952,7 @@
 "fr": "considérer, penser",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 168,
 "pos": [
 "v"
@@ -6979,7 +6979,7 @@
 "fr": "parapluie",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 6101,
 "pos": [
 "n"
@@ -6994,7 +6994,7 @@
 "fr": "aller sur Internet",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 4061,
 "pos": [
 "v",
@@ -7008,7 +7008,7 @@
 "fr": "son, voix",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 841,
 "pos": [
 "n"
@@ -7051,7 +7051,7 @@
 "fr": "arbre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1481,
 "pos": [
 "n",
@@ -7067,7 +7067,7 @@
 "fr": "se brosser les dents",
 "app": 3,
 "hsk2": null,
-"hsk3": 4,
+"hsk3": null,
 "freq": 10112,
 "pos": [
 "v"
@@ -7080,7 +7080,7 @@
 "fr": "niveau",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1490,
 "pos": [
 "n"
@@ -7093,7 +7093,7 @@
 "fr": "soleil",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2001,
 "pos": [
 "n"
@@ -7122,7 +7122,7 @@
 "fr": "sport, éducation physique",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2354,
 "pos": [
 "n"
@@ -7148,7 +7148,7 @@
 "fr": "se fâcher",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 2113,
 "pos": [
 "a",
@@ -7164,7 +7164,7 @@
 "fr": "essayer",
 "app": 3,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 938,
 "pos": [
 "v",
@@ -7178,7 +7178,7 @@
 "fr": "mince",
 "app": 3,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 2595,
 "pos": [
 "a"
@@ -7191,7 +7191,7 @@
 "fr": "oncle",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 3510,
 "pos": [
 "n"
@@ -7206,7 +7206,7 @@
 "fr": "mathématiques",
 "app": 3,
 "hsk2": 3,
-"hsk3": null,
+"hsk3": 3,
 "freq": 3024,
 "pos": [
 "n"
@@ -7233,7 +7233,7 @@
 "fr": "chauffeur",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1804,
 "pos": [
 "n"
@@ -7246,7 +7246,7 @@
 "fr": "particulièrement",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 541,
 "pos": [
 "d",
@@ -7260,7 +7260,7 @@
 "fr": "améliorer",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1724,
 "pos": [
 "v",
@@ -7287,7 +7287,7 @@
 "fr": "collègue",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2337,
 "pos": [
 "n"
@@ -7331,7 +7331,7 @@
 "fr": "jambe",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1216,
 "pos": [
 "n"
@@ -7346,7 +7346,7 @@
 "fr": "bol",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2866,
 "pos": [
 "n",
@@ -7360,7 +7360,7 @@
 "fr": "oublier",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1335,
 "pos": [
 "v"
@@ -7403,7 +7403,7 @@
 "fr": "habitude, s'habituer",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1251,
 "pos": [
 "n",
@@ -7419,7 +7419,7 @@
 "fr": "se laver, prendre un bain",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3512,
 "pos": [
 "v",
@@ -7433,7 +7433,7 @@
 "fr": "d'abord",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 306,
 "pos": [
 "d",
@@ -7447,7 +7447,7 @@
 "fr": "croire, faire confiance",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 431,
 "pos": [
 "v"
@@ -7460,7 +7460,7 @@
 "fr": "cheveux",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1533,
 "pos": [
 "n"
@@ -7473,7 +7473,7 @@
 "fr": "bibliothèque",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 3836,
 "pos": [
 "n"
@@ -7489,7 +7489,7 @@
 "fr": "accomplir",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 486,
 "pos": [
 "v",
@@ -7517,7 +7517,7 @@
 "fr": "pour",
 "app": 3,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 58,
 "pos": [
 "p",
@@ -7545,7 +7545,7 @@
 "fr": "ouest",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 958,
 "pos": [
 "f",
@@ -7559,7 +7559,7 @@
 "fr": "toilettes",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 9674,
 "pos": [
 "n"
@@ -7603,7 +7603,7 @@
 "fr": "vers",
 "app": 3,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 165,
 "pos": [
 "p",
@@ -7618,7 +7618,7 @@
 "fr": "ressembler à",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 151,
 "pos": [
 "v",
@@ -7634,7 +7634,7 @@
 "fr": "directeur d'école",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3365,
 "pos": [
 "n"
@@ -7650,7 +7650,7 @@
 "fr": "frais",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 2651,
 "pos": [
 "a"
@@ -7691,7 +7691,7 @@
 "fr": "exiger, exigence",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 409,
 "pos": [
 "v",
@@ -7707,7 +7707,7 @@
 "fr": "sûrement, absolument",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 198,
 "pos": [
 "d",
@@ -7721,7 +7721,7 @@
 "fr": "un moment",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 2207,
 "pos": [
 "mq"
@@ -7734,7 +7734,7 @@
 "fr": "avant",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 524,
 "pos": [
 "f"
@@ -7747,7 +7747,7 @@
 "fr": "tout en (faisant)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1241,
 "pos": [
 "d",
@@ -7761,7 +7761,7 @@
 "fr": "musique",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 742,
 "pos": [
 "n"
@@ -7777,7 +7777,7 @@
 "fr": "faire attention",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1411,
 "pos": [
 "a",
@@ -7792,7 +7792,7 @@
 "fr": "informations, actualité",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 805,
 "pos": [
 "n"
@@ -7808,7 +7808,7 @@
 "fr": "carte de crédit",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3960,
 "pos": [
 "n"
@@ -7837,7 +7837,7 @@
 "fr": "choisir",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 373,
 "pos": [
 "v",
@@ -7851,7 +7851,7 @@
 "fr": "grand-père (paternel)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 3099,
 "pos": [
 "n"
@@ -7866,7 +7866,7 @@
 "fr": "en tout",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 4765,
 "pos": [
 "d"
@@ -7879,7 +7879,7 @@
 "fr": "pareil",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 235,
 "pos": [
 "u",
@@ -7894,7 +7894,7 @@
 "fr": "généralement",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 798,
 "pos": [
 "a",
@@ -7909,7 +7909,7 @@
 "fr": "toujours, tout droit",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 203,
 "pos": [
 "d"
@@ -7922,7 +7922,7 @@
 "fr": "banque",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 769,
 "pos": [
 "n"
@@ -7938,7 +7938,7 @@
 "fr": "boisson",
 "app": 3,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 3463,
 "pos": [
 "n"
@@ -7951,7 +7951,7 @@
 "fr": "influencer",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 598,
 "pos": [
 "v",
@@ -7981,7 +7981,7 @@
 "fr": "de nouveau",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 91,
 "pos": [
 "d",
@@ -8009,7 +8009,7 @@
 "fr": "la lune",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 4781,
 "pos": [
 "n"
@@ -8022,7 +8022,7 @@
 "fr": "devoir (conseil)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 174,
 "pos": [
 "v"
@@ -8035,7 +8035,7 @@
 "fr": "utiliser",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 79,
 "pos": [
 "v",
@@ -8050,7 +8050,7 @@
 "fr": "célèbre",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 6219,
 "pos": [
 "a"
@@ -8063,7 +8063,7 @@
 "fr": "rencontrer (par hasard)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 1063,
 "pos": [
 "v"
@@ -8076,7 +8076,7 @@
 "fr": "être prêt à, vouloir bien",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 738,
 "pos": [
 "v"
@@ -8089,7 +8089,7 @@
 "fr": "plus… plus",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 574,
 "pos": [
 "d",
@@ -8104,7 +8104,7 @@
 "fr": "se tenir debout ; station",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 399,
 "pos": [
 "v",
@@ -8135,7 +8135,7 @@
 "fr": "s'occuper de",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1631,
 "pos": [
 "v",
@@ -8165,7 +8165,7 @@
 "fr": "seulement",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 98,
 "pos": [
 "d",
@@ -8195,7 +8195,7 @@
 "fr": "s'impatienter, s'inquiéter",
 "app": 3,
 "hsk2": 3,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 4461,
 "pos": [
 "a",
@@ -8209,7 +8209,7 @@
 "fr": "photo",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 766,
 "pos": [
 "n"
@@ -8225,7 +8225,7 @@
 "fr": "(classificateur des animaux, et d'un objet d'une paire : 一只手)",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 98,
 "pos": [
 "d",
@@ -8254,7 +8254,7 @@
 "fr": "seulement (à ce moment-là), pas avant",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 133,
 "pos": [
 "d",
@@ -8295,7 +8295,7 @@
 "fr": "important",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 240,
 "pos": [
 "a"
@@ -8308,7 +8308,7 @@
 "fr": "principal",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1031,
 "pos": [
 "b",
@@ -8350,7 +8350,7 @@
 "fr": "finalement",
 "app": 3,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 261,
 "pos": [
 "f"
@@ -8363,7 +8363,7 @@
 "fr": "devoirs",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2574,
 "pos": [
 "n",
@@ -8380,7 +8380,7 @@
 "fr": "milieu",
 "app": 3,
 "hsk2": 3,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1889,
 "pos": [
 "f"
@@ -8408,7 +8408,7 @@
 "fr": "week-end",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1269,
 "pos": [
 "t"
@@ -8435,7 +8435,7 @@
 "fr": "vélo",
 "app": 3,
 "hsk2": 2,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3400,
 "pos": [
 "n"
@@ -8450,7 +8450,7 @@
 "fr": "bouche",
 "app": 3,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1059,
 "pos": [
 "n"
@@ -8466,7 +8466,7 @@
 "fr": "récemment",
 "app": 3,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 612,
 "pos": [
 "t"
@@ -8479,7 +8479,7 @@
 "fr": "amour",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1164,
 "pos": [
 "n"
@@ -8494,7 +8494,7 @@
 "fr": "organiser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 900,
 "pos": [
 "v",
@@ -8547,7 +8547,7 @@
 "fr": "garantir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 586,
 "pos": [
 "v",
@@ -8561,7 +8561,7 @@
 "fr": "désolé",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 4909,
 "pos": [
 "a",
@@ -8618,7 +8618,7 @@
 "fr": "norme, standard",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1317,
 "pos": [
 "n",
@@ -8632,7 +8632,7 @@
 "fr": "sécurité, sûr",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 364,
 "pos": [
 "an",
@@ -8648,7 +8648,7 @@
 "fr": "selon",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1378,
 "pos": [
 "p",
@@ -8662,7 +8662,7 @@
 "fr": "génial",
 "app": 4,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1228,
 "pos": [
 "a",
@@ -8677,7 +8677,7 @@
 "fr": "protéger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 536,
 "pos": [
 "v",
@@ -8704,7 +8704,7 @@
 "fr": "s'inscrire",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 4602,
 "pos": [
 "v",
@@ -8718,7 +8718,7 @@
 "fr": "à l'origine",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1093,
 "pos": [
 "d",
@@ -8732,7 +8732,7 @@
 "fr": "par exemple",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1051,
 "pos": [
 "v"
@@ -8745,7 +8745,7 @@
 "fr": "fois (du début à la fin)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1358,
 "pos": [
 "qv",
@@ -8761,7 +8761,7 @@
 "fr": "formulaire, tableau",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 8961,
 "pos": [
 "n"
@@ -8777,7 +8777,7 @@
 "fr": "exprimer",
 "app": 4,
 "hsk2": 3,
-"hsk3": null,
+"hsk3": 4,
 "freq": 854,
 "pos": [
 "v",
@@ -8805,7 +8805,7 @@
 "fr": "et de plus",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 827,
 "pos": [
 "c"
@@ -8818,7 +8818,7 @@
 "fr": "cependant",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 216,
 "pos": [
 "c",
@@ -8847,7 +8847,7 @@
 "fr": "partie",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 513,
 "pos": [
 "n",
@@ -8863,7 +8863,7 @@
 "fr": "deviner",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2168,
 "pos": [
 "v"
@@ -8876,7 +8876,7 @@
 "fr": "visiter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3793,
 "pos": [
 "v",
@@ -8890,7 +8890,7 @@
 "fr": "à peu près",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2024,
 "pos": [
 "l"
@@ -8903,7 +8903,7 @@
 "fr": "la Grande Muraille",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": null,
 "freq": 9599,
 "pos": [
 "ns"
@@ -8916,7 +8916,7 @@
 "fr": "(classificateur des matchs, spectacles, averses : 一场雨)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 286,
 "pos": [
 "qv",
@@ -8944,7 +8944,7 @@
 "fr": "biscuit",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 6412,
 "pos": [
 "n"
@@ -8960,7 +8960,7 @@
 "fr": "docteur (doctorat)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2425,
 "pos": [
 "n"
@@ -8973,7 +8973,7 @@
 "fr": "être obligé de",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1606,
 "pos": [
 "d"
@@ -8986,7 +8986,7 @@
 "fr": "non seulement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1467,
 "pos": [
 "c"
@@ -9025,7 +9025,7 @@
 "fr": "restaurant, salle à manger",
 "app": 4,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3156,
 "pos": [
 "n"
@@ -9041,7 +9041,7 @@
 "fr": "goûter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 3212,
 "pos": [
 "v"
@@ -9067,7 +9067,7 @@
 "fr": "dépasser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1048,
 "pos": [
 "v"
@@ -9080,7 +9080,7 @@
 "fr": "toilettes",
 "app": 4,
 "hsk2": 5,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 3393,
 "pos": [
 "n"
@@ -9096,7 +9096,7 @@
 "fr": "devenir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 267,
 "pos": [
 "v"
@@ -9109,7 +9109,7 @@
 "fr": "prendre (un transport)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 5499,
 "pos": [
 "v"
@@ -9122,7 +9122,7 @@
 "fr": "de nouveau",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 915,
 "pos": [
 "d"
@@ -9135,7 +9135,7 @@
 "fr": "partir en déplacement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 7087,
 "pos": [
 "v",
@@ -9149,7 +9149,7 @@
 "fr": "naître",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2112,
 "pos": [
 "v",
@@ -9163,7 +9163,7 @@
 "fr": "cuisine (pièce)",
 "app": 4,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3076,
 "pos": [
 "n"
@@ -9194,7 +9194,7 @@
 "fr": "toujours (jamais, au négatif)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1222,
 "pos": [
 "d"
@@ -9207,7 +9207,7 @@
 "fr": "déposer, garder",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2114,
 "pos": [
 "v"
@@ -9235,7 +9235,7 @@
 "fr": "réussir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 476,
 "pos": [
 "a",
@@ -9278,7 +9278,7 @@
 "fr": "fumer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": null,
 "freq": 5335,
 "pos": [
 "v"
@@ -9291,7 +9291,7 @@
 "fr": "partir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1714,
 "pos": [
 "v"
@@ -9304,7 +9304,7 @@
 "fr": "apparaître",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 323,
 "pos": [
 "v",
@@ -9318,7 +9318,7 @@
 "fr": "fax",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 6,
 "freq": 6784,
 "pos": [
 "n",
@@ -9332,7 +9332,7 @@
 "fr": "mot, expression",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 10379,
 "pos": [
 "n"
@@ -9359,7 +9359,7 @@
 "fr": "erreur",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1305,
 "pos": [
 "n",
@@ -9375,7 +9375,7 @@
 "fr": "saluer",
 "app": 4,
 "hsk2": 5,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 7931,
 "pos": [
 "v",
@@ -9403,7 +9403,7 @@
 "fr": "déranger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 4800,
 "pos": [
 "v"
@@ -9416,7 +9416,7 @@
 "fr": "imprimer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 8233,
 "pos": [
 "v",
@@ -9457,7 +9457,7 @@
 "fr": "ambassade",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": null,
 "freq": 11530,
 "pos": [
 "n"
@@ -9487,7 +9487,7 @@
 "fr": "servir de, être",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 155,
 "pos": [
 "p",
@@ -9501,7 +9501,7 @@
 "fr": "couteau",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1285,
 "pos": [
 "n",
@@ -9517,7 +9517,7 @@
 "fr": "verser ; à l'envers",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 780,
 "pos": [
 "v",
@@ -9531,7 +9531,7 @@
 "fr": "au juste, finalement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 741,
 "pos": [
 "d",
@@ -9559,7 +9559,7 @@
 "fr": "environ",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2186,
 "pos": [
 "d"
@@ -9572,7 +9572,7 @@
 "fr": "médecin",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 6248,
 "pos": [
 "n"
@@ -9585,7 +9585,7 @@
 "fr": "à ce moment-là",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 505,
 "pos": [
 "t"
@@ -9611,7 +9611,7 @@
 "fr": "partout",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2171,
 "pos": [
 "d"
@@ -9624,7 +9624,7 @@
 "fr": "s'excuser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 3168,
 "pos": [
 "v",
@@ -9666,7 +9666,7 @@
 "fr": "lieu",
 "app": 4,
 "hsk2": null,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1921,
 "pos": [
 "n"
@@ -9694,7 +9694,7 @@
 "fr": "etc., et ainsi de suite",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 2,
 "freq": 83,
 "pos": [
 "v",
@@ -9737,7 +9737,7 @@
 "fr": "enquête",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 512,
 "pos": [
 "v",
@@ -9751,7 +9751,7 @@
 "fr": "mouvement, geste",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 4,
 "freq": 1418,
 "pos": [
 "n",
@@ -9796,7 +9796,7 @@
 "fr": "en face",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3939,
 "pos": [
 "f",
@@ -9851,7 +9851,7 @@
 "fr": "bas",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 951,
 "pos": [
 "a",
@@ -9866,7 +9866,7 @@
 "fr": "la Terre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1971,
 "pos": [
 "n"
@@ -9881,7 +9881,7 @@
 "fr": "tomber",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 549,
 "pos": [
 "v"
@@ -9894,7 +9894,7 @@
 "fr": "perdre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 1655,
 "pos": [
 "v"
@@ -9921,7 +9921,7 @@
 "fr": "SMS",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1000000,
 "pos": [],
 "cl": []
@@ -9932,7 +9932,7 @@
 "fr": "dialogue",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 3221,
 "pos": [
 "vn",
@@ -9990,7 +9990,7 @@
 "fr": "soucis",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 4038,
 "pos": [
 "an",
@@ -10004,7 +10004,7 @@
 "fr": "s'opposer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1381,
 "pos": [
 "v",
@@ -10018,7 +10018,7 @@
 "fr": "aspect",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 601,
 "pos": [
 "n"
@@ -10033,7 +10033,7 @@
 "fr": "propriétaire",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 9478,
 "pos": [
 "n"
@@ -10057,7 +10057,7 @@
 "fr": "portion, exemplaire",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 608,
 "pos": [
 "q"
@@ -10083,7 +10083,7 @@
 "fr": "riche",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 5,
 "freq": 3016,
 "pos": [
 "g",
@@ -10097,7 +10097,7 @@
 "fr": "père",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 817,
 "pos": [
 "n"
@@ -10112,7 +10112,7 @@
 "fr": "compliqué",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1657,
 "pos": [
 "a"
@@ -10125,7 +10125,7 @@
 "fr": "changer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 551,
 "pos": [
 "v",
@@ -10139,7 +10139,7 @@
 "fr": "méthode",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 577,
 "pos": [
 "n"
@@ -10154,7 +10154,7 @@
 "fr": "direction",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1183,
 "pos": [
 "n"
@@ -10169,7 +10169,7 @@
 "fr": "abandonner",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 994,
 "pos": [
 "v"
@@ -10197,7 +10197,7 @@
 "fr": "riche, abondant",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2739,
 "pos": [
 "a",
@@ -10224,7 +10224,7 @@
 "fr": "payer",
 "app": 4,
 "hsk2": 5,
-"hsk3": 7,
+"hsk3": null,
 "freq": 9045,
 "pos": [
 "v",
@@ -10238,7 +10238,7 @@
 "fr": "photocopier",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 14608,
 "pos": [
 "v",
@@ -10252,7 +10252,7 @@
 "fr": "être responsable",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 876,
 "pos": [
 "v",
@@ -10267,7 +10267,7 @@
 "fr": "santé ! (trinquer)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 14023,
 "pos": [
 "v"
@@ -10280,7 +10280,7 @@
 "fr": "se dépêcher",
 "app": 4,
 "hsk2": null,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2113,
 "pos": [
 "v"
@@ -10293,7 +10293,7 @@
 "fr": "oser",
 "app": 4,
 "hsk2": 3,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 902,
 "pos": [
 "v",
@@ -10307,7 +10307,7 @@
 "fr": "ému",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2676,
 "pos": [
 "v",
@@ -10323,7 +10323,7 @@
 "fr": "sentiment",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1257,
 "pos": [
 "n"
@@ -10339,7 +10339,7 @@
 "fr": "sentir, sensation",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 274,
 "pos": [
 "n",
@@ -10353,7 +10353,7 @@
 "fr": "remercier",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 749,
 "pos": [
 "v",
@@ -10367,7 +10367,7 @@
 "fr": "faire",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 463,
 "pos": [
 "v",
@@ -10381,7 +10381,7 @@
 "fr": "autoroute",
 "app": 4,
 "hsk2": null,
-"hsk3": 3,
+"hsk3": null,
 "freq": 5363,
 "pos": [
 "n"
@@ -10394,7 +10394,7 @@
 "fr": "chaque",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1022,
 "pos": [
 "r"
@@ -10407,7 +10407,7 @@
 "fr": "salaire",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2532,
 "pos": [
 "n"
@@ -10423,7 +10423,7 @@
 "fr": "commun",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1623,
 "pos": [
 "d",
@@ -10451,7 +10451,7 @@
 "fr": "encourager",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2649,
 "pos": [
 "v",
@@ -10465,7 +10465,7 @@
 "fr": "exprès",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2426,
 "pos": [
 "d",
@@ -10479,7 +10479,7 @@
 "fr": "clé, crucial",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1131,
 "pos": [
 "n",
@@ -10495,7 +10495,7 @@
 "fr": "à l'instant",
 "app": 4,
 "hsk2": null,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 436,
 "pos": [
 "d",
@@ -10509,7 +10509,7 @@
 "fr": "bras",
 "app": 4,
 "hsk2": 5,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 5256,
 "pos": [
 "n"
@@ -10525,7 +10525,7 @@
 "fr": "kilomètre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2531,
 "pos": [
 "q",
@@ -10539,7 +10539,7 @@
 "fr": "kung-fu ; temps, effort",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3675,
 "pos": [
 "n"
@@ -10552,7 +10552,7 @@
 "fr": "suffisant",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1173,
 "pos": [
 "v",
@@ -10566,7 +10566,7 @@
 "fr": "estimer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1586,
 "pos": [
 "v",
@@ -10580,7 +10580,7 @@
 "fr": "client",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2706,
 "pos": [
 "n"
@@ -10595,7 +10595,7 @@
 "fr": "accrocher, raccrocher",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1092,
 "pos": [
 "v",
@@ -10609,7 +10609,7 @@
 "fr": "public, spectateurs",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1260,
 "pos": [
 "n"
@@ -10622,7 +10622,7 @@
 "fr": "gérer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1202,
 "pos": [
 "vn",
@@ -10636,7 +10636,7 @@
 "fr": "radio, diffuser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3320,
 "pos": [
 "vn",
@@ -10666,7 +10666,7 @@
 "fr": "international",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1262,
 "pos": [
 "n"
@@ -10679,7 +10679,7 @@
 "fr": "jus de fruit",
 "app": 4,
 "hsk2": 3,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 7765,
 "pos": [
 "n"
@@ -10692,7 +10692,7 @@
 "fr": "océan",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 4121,
 "pos": [
 "n"
@@ -10733,7 +10733,7 @@
 "fr": "on dirait que",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 738,
 "pos": [
 "v"
@@ -10746,7 +10746,7 @@
 "fr": "qualifié, conforme",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 5048,
 "pos": [
 "v",
@@ -10760,7 +10760,7 @@
 "fr": "boîte",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 6250,
 "pos": [
 "n"
@@ -10773,7 +10773,7 @@
 "fr": "lumière ; épuisé",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 800,
 "pos": [
 "n",
@@ -10791,7 +10791,7 @@
 "fr": "publicité",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1122,
 "pos": [
 "n"
@@ -10806,7 +10806,7 @@
 "fr": "règle, stipuler",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1151,
 "pos": [
 "n",
@@ -10820,7 +10820,7 @@
 "fr": "nationalité",
 "app": 4,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 15414,
 "pos": [
 "n"
@@ -10833,7 +10833,7 @@
 "fr": "processus",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1002,
 "pos": [
 "n"
@@ -10848,7 +10848,7 @@
 "fr": "timide",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 6831,
 "pos": [
 "a"
@@ -10861,7 +10861,7 @@
 "fr": "sueur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 4310,
 "pos": [
 "n"
@@ -10874,7 +10874,7 @@
 "fr": "avantage",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2534,
 "pos": [
 "n"
@@ -10887,7 +10887,7 @@
 "fr": "numéro",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 2110,
 "pos": [
 "n"
@@ -10903,7 +10903,7 @@
 "fr": "approprié",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2104,
 "pos": [
 "a"
@@ -10929,7 +10929,7 @@
 "fr": "regretter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2667,
 "pos": [
 "v",
@@ -10944,7 +10944,7 @@
 "fr": "Internet",
 "app": 4,
 "hsk2": 6,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 4872,
 "pos": [
 "n"
@@ -10971,7 +10971,7 @@
 "fr": "activité",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 605,
 "pos": [
 "vn",
@@ -10985,7 +10985,7 @@
 "fr": "feu",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1181,
 "pos": [
 "n",
@@ -11000,7 +11000,7 @@
 "fr": "base",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2135,
 "pos": [
 "n"
@@ -11013,7 +11013,7 @@
 "fr": "actif, positif",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2212,
 "pos": [
 "a",
@@ -11027,7 +11027,7 @@
 "fr": "à temps",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2280,
 "pos": [
 "ad",
@@ -11054,7 +11054,7 @@
 "fr": "plan, projet",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 403,
 "pos": [
 "n",
@@ -11071,7 +11071,7 @@
 "fr": "technique",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 758,
 "pos": [
 "n"
@@ -11102,7 +11102,7 @@
 "fr": "mutuellement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2091,
 "pos": [
 "d",
@@ -11116,7 +11116,7 @@
 "fr": "souvenir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2055,
 "pos": [
 "v",
@@ -11130,7 +11130,7 @@
 "fr": "vif, plein d'entrain",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 8011,
 "pos": [
 "a"
@@ -11185,7 +11185,7 @@
 "fr": "même si",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1004,
 "pos": [
 "c"
@@ -11198,7 +11198,7 @@
 "fr": "journaliste",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 844,
 "pos": [
 "n"
@@ -11226,7 +11226,7 @@
 "fr": "continuer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 285,
 "pos": [
 "v"
@@ -11239,7 +11239,7 @@
 "fr": "meubles",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 4188,
 "pos": [
 "n"
@@ -11268,7 +11268,7 @@
 "fr": "prix",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1783,
 "pos": [
 "n"
@@ -11283,7 +11283,7 @@
 "fr": "maigrir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": 5,
 "freq": 3988,
 "pos": [
 "v",
@@ -11297,7 +11297,7 @@
 "fr": "proposer, conseil",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 782,
 "pos": [
 "n",
@@ -11341,7 +11341,7 @@
 "fr": "échanger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1828,
 "pos": [
 "vn",
@@ -11355,7 +11355,7 @@
 "fr": "banlieue",
 "app": 4,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 7855,
 "pos": [
 "s"
@@ -11368,7 +11368,7 @@
 "fr": "raviolis chinois",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 1,
 "freq": 11834,
 "pos": [
 "n"
@@ -11384,7 +11384,7 @@
 "fr": "éducation",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1197,
 "pos": [
 "vn",
@@ -11412,7 +11412,7 @@
 "fr": "faux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1053,
 "pos": [
 "a",
@@ -11455,7 +11455,7 @@
 "fr": "l'avenir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2601,
 "pos": [
 "t"
@@ -11482,7 +11482,7 @@
 "fr": "remettre, se faire (des amis)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 715,
 "pos": [
 "v",
@@ -11496,7 +11496,7 @@
 "fr": "circulation, transports",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1688,
 "pos": [
 "n"
@@ -11509,7 +11509,7 @@
 "fr": "fier, orgueilleux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 3023,
 "pos": [
 "an",
@@ -11540,7 +11540,7 @@
 "fr": "accepter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 465,
 "pos": [
 "v",
@@ -11554,7 +11554,7 @@
 "fr": "ensuite",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1329,
 "pos": [
 "c",
@@ -11568,7 +11568,7 @@
 "fr": "(classificateur des cours)",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1196,
 "pos": [
 "n",
@@ -11598,7 +11598,7 @@
 "fr": "stressé, tendu",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1073,
 "pos": [
 "a",
@@ -11626,7 +11626,7 @@
 "fr": "économie",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1376,
 "pos": [
 "n"
@@ -11639,7 +11639,7 @@
 "fr": "expérience",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1269,
 "pos": [
 "n",
@@ -11653,7 +11653,7 @@
 "fr": "policier",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1128,
 "pos": [
 "n"
@@ -11697,7 +11697,7 @@
 "fr": "lever",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2311,
 "pos": [
 "v",
@@ -11711,7 +11711,7 @@
 "fr": "résultat",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 364,
 "pos": [
 "n",
@@ -11727,7 +11727,7 @@
 "fr": "économiser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 7912,
 "pos": [
 "v",
@@ -11741,7 +11741,7 @@
 "fr": "bien que",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1014,
 "pos": [
 "c",
@@ -11755,7 +11755,7 @@
 "fr": "procéder, mener",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 299,
 "pos": [
 "v",
@@ -11769,7 +11769,7 @@
 "fr": "excellent, captivant",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1320,
 "pos": [
 "a"
@@ -11782,7 +11782,7 @@
 "fr": "vécu, traverser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1047,
 "pos": [
 "v",
@@ -11799,7 +11799,7 @@
 "fr": "opéra de Pékin",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 40061,
 "pos": [
 "n"
@@ -11815,7 +11815,7 @@
 "fr": "paysage",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 8954,
 "pos": [
 "n"
@@ -11828,7 +11828,7 @@
 "fr": "concurrence",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1584,
 "pos": [
 "vn",
@@ -11856,7 +11856,7 @@
 "fr": "organiser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2669,
 "pos": [
 "v",
@@ -11870,7 +11870,7 @@
 "fr": "tenir (un événement)",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1431,
 "pos": [
 "v"
@@ -11899,7 +11899,7 @@
 "fr": "plaisanter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 4,
 "freq": 3878,
 "pos": [
 "v"
@@ -11912,7 +11912,7 @@
 "fr": "point de vue",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2435,
 "pos": [
 "n"
@@ -11927,7 +11927,7 @@
 "fr": "canard laqué",
 "app": 4,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": null,
 "freq": 28090,
 "pos": [
 "n"
@@ -11940,7 +11940,7 @@
 "fr": "science",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1299,
 "pos": [
 "n",
@@ -11958,7 +11958,7 @@
 "fr": "pauvre, pitoyable",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 6,
 "freq": 1942,
 "pos": [
 "v",
@@ -11973,7 +11973,7 @@
 "fr": "dommage",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2035,
 "pos": [
 "v",
@@ -11987,7 +11987,7 @@
 "fr": "certainement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 494,
 "pos": [
 "d",
@@ -12003,7 +12003,7 @@
 "fr": "air",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2055,
 "pos": [
 "n"
@@ -12032,7 +12032,7 @@
 "fr": "refuser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1443,
 "pos": [
 "v",
@@ -12060,7 +12060,7 @@
 "fr": "joyeux",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 667,
 "pos": [
 "a",
@@ -12102,7 +12102,7 @@
 "fr": "tousser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 7020,
 "pos": [
 "v"
@@ -12115,7 +12115,7 @@
 "fr": "mais",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 404,
 "pos": [
 "c",
@@ -12130,7 +12130,7 @@
 "fr": "salon",
 "app": 4,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 5646,
 "pos": [
 "n"
@@ -12145,7 +12145,7 @@
 "fr": "vide",
 "app": 4,
 "hsk2": null,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1345,
 "pos": [
 "a",
@@ -12161,7 +12161,7 @@
 "fr": "je crains que",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2245,
 "pos": [
 "d"
@@ -12174,7 +12174,7 @@
 "fr": "eau minérale",
 "app": 4,
 "hsk2": 5,
-"hsk3": 4,
+"hsk3": 3,
 "freq": 13110,
 "pos": [
 "n"
@@ -12190,7 +12190,7 @@
 "fr": "avoir sommeil",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1868,
 "pos": [
 "v",
@@ -12206,7 +12206,7 @@
 "fr": "tirer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 484,
 "pos": [
 "v",
@@ -12248,7 +12248,7 @@
 "fr": "paresseux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 6238,
 "pos": [
 "a"
@@ -12261,7 +12261,7 @@
 "fr": "romantique",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2439,
 "pos": [
 "a",
@@ -12290,7 +12290,7 @@
 "fr": "comprendre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 884,
 "pos": [
 "v",
@@ -12304,7 +12304,7 @@
 "fr": "politesse",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 6337,
 "pos": [
 "an",
@@ -12319,7 +12319,7 @@
 "fr": "redoutable, fort",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1925,
 "pos": [
 "a",
@@ -12333,7 +12333,7 @@
 "fr": "par exemple",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3486,
 "pos": [
 "v"
@@ -12346,7 +12346,7 @@
 "fr": "difficulté",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1141,
 "pos": [
 "a",
@@ -12373,7 +12373,7 @@
 "fr": "venir de",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 644,
 "pos": [
 "v"
@@ -12399,7 +12399,7 @@
 "fr": "gaspiller",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1924,
 "pos": [
 "v",
@@ -12413,7 +12413,7 @@
 "fr": "tigre",
 "app": 4,
 "hsk2": 4,
-"hsk3": null,
+"hsk3": 4,
 "freq": 5451,
 "pos": [
 "n"
@@ -12428,7 +12428,7 @@
 "fr": "se faire couper les cheveux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 13406,
 "pos": [
 "v",
@@ -12442,7 +12442,7 @@
 "fr": "idéal",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2661,
 "pos": [
 "n",
@@ -12497,7 +12497,7 @@
 "fr": "même ; relier",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 406,
 "pos": [
 "u",
@@ -12513,7 +12513,7 @@
 "fr": "frais (agréable)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 19483,
 "pos": [
 "a"
@@ -12526,7 +12526,7 @@
 "fr": "en outre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 725,
 "pos": [
 "r",
@@ -12541,7 +12541,7 @@
 "fr": "couramment",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 17449,
 "pos": [
 "a",
@@ -12555,7 +12555,7 @@
 "fr": "en désordre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1206,
 "pos": [
 "d",
@@ -12583,7 +12583,7 @@
 "fr": "négligent",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 6,
 "freq": 20190,
 "pos": [
 "a",
@@ -12597,7 +12597,7 @@
 "fr": "poil ; 0,1 yuan",
 "app": 4,
 "hsk2": 5,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1319,
 "pos": [
 "nr",
@@ -12612,7 +12612,7 @@
 "fr": "beau",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1262,
 "pos": [
 "a",
@@ -12626,7 +12626,7 @@
 "fr": "se perdre",
 "app": 4,
 "hsk2": 5,
-"hsk3": 7,
+"hsk3": 5,
 "freq": 8871,
 "pos": [
 "v",
@@ -12654,7 +12654,7 @@
 "fr": "contacter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 667,
 "pos": [
 "v",
@@ -12668,7 +12668,7 @@
 "fr": "petite monnaie",
 "app": 4,
 "hsk2": 5,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 13354,
 "pos": [
 "n"
@@ -12681,7 +12681,7 @@
 "fr": "rester, laisser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 705,
 "pos": [
 "v"
@@ -12694,7 +12694,7 @@
 "fr": "à la mode",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2724,
 "pos": [
 "v",
@@ -12708,7 +12708,7 @@
 "fr": "voyager",
 "app": 4,
 "hsk2": null,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2385,
 "pos": [
 "v",
@@ -12722,7 +12722,7 @@
 "fr": "ennuyeux ; déranger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1492,
 "pos": [
 "an",
@@ -12738,7 +12738,7 @@
 "fr": "plein",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 961,
 "pos": [
 "a",
@@ -12799,7 +12799,7 @@
 "fr": "seconde",
 "app": 4,
 "hsk2": 5,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1034,
 "pos": [
 "t",
@@ -12813,7 +12813,7 @@
 "fr": "ethnie, nation",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3724,
 "pos": [
 "n"
@@ -12828,7 +12828,7 @@
 "fr": "but",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1260,
 "pos": [
 "n"
@@ -12843,7 +12843,7 @@
 "fr": "est-ce que vraiment…",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1147,
 "pos": [
 "d"
@@ -12856,7 +12856,7 @@
 "fr": "intérieur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 319,
 "pos": [
 "f"
@@ -12869,7 +12869,7 @@
 "fr": "capacité",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 534,
 "pos": [
 "n"
@@ -12884,7 +12884,7 @@
 "fr": "faire, arranger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 952,
 "pos": [
 "v"
@@ -12897,7 +12897,7 @@
 "fr": "de temps en temps",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3731,
 "pos": [
 "d",
@@ -12911,7 +12911,7 @@
 "fr": "ranger, disposer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": 5,
 "freq": 8340,
 "pos": [
 "v",
@@ -12925,7 +12925,7 @@
 "fr": "accompagner",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1090,
 "pos": [
 "v"
@@ -12938,7 +12938,7 @@
 "fr": "peau",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1922,
 "pos": [
 "n"
@@ -12954,7 +12954,7 @@
 "fr": "(classificateur des textes)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1691,
 "pos": [
 "q",
@@ -12968,7 +12968,7 @@
 "fr": "mère",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 983,
 "pos": [
 "n"
@@ -12983,7 +12983,7 @@
 "fr": "patient",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3844,
 "pos": [
 "a",
@@ -12998,7 +12998,7 @@
 "fr": "mal à l'aise",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3699,
 "pos": [
 "a"
@@ -13011,7 +13011,7 @@
 "fr": "contenu",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1246,
 "pos": [
 "n"
@@ -13027,7 +13027,7 @@
 "fr": "âge",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2013,
 "pos": [
 "n"
@@ -13043,7 +13043,7 @@
 "fr": "doux, agréablement chaud",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 8118,
 "pos": [
 "a",
@@ -13057,7 +13057,7 @@
 "fr": "faire la queue",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 4300,
 "pos": [
 "v",
@@ -13071,7 +13071,7 @@
 "fr": "juger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2480,
 "pos": [
 "v",
@@ -13086,7 +13086,7 @@
 "fr": "critiquer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3504,
 "pos": [
 "v",
@@ -13100,7 +13100,7 @@
 "fr": "caractère, humeur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 4017,
 "pos": [
 "n"
@@ -13129,7 +13129,7 @@
 "fr": "ping-pong",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 10217,
 "pos": [
 "n"
@@ -13144,7 +13144,7 @@
 "fr": "cassé, déchiré",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1272,
 "pos": [
 "v",
@@ -13158,7 +13158,7 @@
 "fr": "répandu",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 5800,
 "pos": [
 "a",
@@ -13172,7 +13172,7 @@
 "fr": "ensuite, en second lieu",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3998,
 "pos": [
 "c",
@@ -13186,7 +13186,7 @@
 "fr": "climat",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 6570,
 "pos": [
 "n"
@@ -13201,7 +13201,7 @@
 "fr": "visa",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 8073,
 "pos": [
 "n"
@@ -13214,7 +13214,7 @@
 "fr": "pont",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2120,
 "pos": [
 "n"
@@ -13229,7 +13229,7 @@
 "fr": "parent (famille)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 5076,
 "pos": [
 "n"
@@ -13259,7 +13259,7 @@
 "fr": "pauvre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": 5,
 "freq": 4355,
 "pos": [
 "a",
@@ -13274,7 +13274,7 @@
 "fr": "retirer, prendre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1198,
 "pos": [
 "v"
@@ -13287,7 +13287,7 @@
 "fr": "d'habitude",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 2780,
 "pos": [
 "t"
@@ -13300,7 +13300,7 @@
 "fr": "raisin",
 "app": 4,
 "hsk2": 3,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 6422,
 "pos": [
 "n"
@@ -13313,7 +13313,7 @@
 "fr": "mandarin standard",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 14869,
 "pos": [
 "n"
@@ -13326,7 +13326,7 @@
 "fr": "parmi eux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 470,
 "pos": [
 "r"
@@ -13339,7 +13339,7 @@
 "fr": "surtout (ne pas)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1708,
 "pos": [
 "m",
@@ -13353,7 +13353,7 @@
 "fr": "frapper",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 4007,
 "pos": [
 "v"
@@ -13381,7 +13381,7 @@
 "fr": "léger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1814,
 "pos": [
 "a",
@@ -13397,7 +13397,7 @@
 "fr": "situation",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 245,
 "pos": [
 "n"
@@ -13413,7 +13413,7 @@
 "fr": "différence",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2566,
 "pos": [
 "n",
@@ -13429,7 +13429,7 @@
 "fr": "totalité",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 718,
 "pos": [
 "m"
@@ -13442,7 +13442,7 @@
 "fr": "défaut",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 5178,
 "pos": [
 "n"
@@ -13483,7 +13483,7 @@
 "fr": "n'importe quel",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 356,
 "pos": [
 "r"
@@ -13496,7 +13496,7 @@
 "fr": "jeter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2405,
 "pos": [
 "v"
@@ -13525,7 +13525,7 @@
 "fr": "se promener",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 6153,
 "pos": [
 "v",
@@ -13555,7 +13555,7 @@
 "fr": "triste",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2543,
 "pos": [
 "a"
@@ -13568,7 +13568,7 @@
 "fr": "cuillère",
 "app": 4,
 "hsk2": 5,
-"hsk3": null,
+"hsk3": 3,
 "freq": 15680,
 "pos": [
 "n"
@@ -13583,7 +13583,7 @@
 "fr": "profond",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1014,
 "pos": [
 "a",
@@ -13599,7 +13599,7 @@
 "fr": "manquer de",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 4326,
 "pos": [
 "v"
@@ -13612,7 +13612,7 @@
 "fr": "vraiment",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 850,
 "pos": [
 "ad",
@@ -13640,7 +13640,7 @@
 "fr": "mission, tâche",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 664,
 "pos": [
 "n"
@@ -13656,7 +13656,7 @@
 "fr": "toujours, encore",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1029,
 "pos": [
 "d"
@@ -13669,7 +13669,7 @@
 "fr": "entrée",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 5927,
 "pos": [
 "n",
@@ -13683,7 +13683,7 @@
 "fr": "forêt",
 "app": 4,
 "hsk2": 4,
-"hsk3": null,
+"hsk3": 4,
 "freq": 3183,
 "pos": [
 "n"
@@ -13698,7 +13698,7 @@
 "fr": "discuter, consulter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 4232,
 "pos": [
 "v"
@@ -13711,7 +13711,7 @@
 "fr": "un peu",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 4305,
 "pos": [
 "d"
@@ -13724,7 +13724,7 @@
 "fr": "société",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 836,
 "pos": [
 "n"
@@ -13770,7 +13770,7 @@
 "fr": "vie",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 705,
 "pos": [
 "n"
@@ -13786,7 +13786,7 @@
 "fr": "province ; économiser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1081,
 "pos": [
 "n",
@@ -13814,7 +13814,7 @@
 "fr": "maître (artisan)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 4911,
 "pos": [
 "n"
@@ -13830,7 +13830,7 @@
 "fr": "réel",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1981,
 "pos": [
 "n",
@@ -13845,7 +13845,7 @@
 "fr": "rendre, faire que",
 "app": 4,
 "hsk2": 3,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 400,
 "pos": [
 "v"
@@ -13871,7 +13871,7 @@
 "fr": "s'adapter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2147,
 "pos": [
 "v",
@@ -13885,7 +13885,7 @@
 "fr": "recevoir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 834,
 "pos": [
 "v"
@@ -13898,7 +13898,7 @@
 "fr": "ranger",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3266,
 "pos": [
 "v"
@@ -13911,7 +13911,7 @@
 "fr": "vie, vivre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 203,
 "pos": [
 "vn",
@@ -13925,7 +13925,7 @@
 "fr": "affaires",
 "app": 4,
 "hsk2": null,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2112,
 "pos": [
 "n"
@@ -13938,7 +13938,7 @@
 "fr": "rester (en surplus)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2453,
 "pos": [
 "v"
@@ -13966,7 +13966,7 @@
 "fr": "très",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1086,
 "pos": [
 "d"
@@ -13979,7 +13979,7 @@
 "fr": "vraiment",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1340,
 "pos": [
 "d",
@@ -13993,7 +13993,7 @@
 "fr": "utiliser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 641,
 "pos": [
 "v",
@@ -14007,7 +14007,7 @@
 "fr": "convenir à",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1211,
 "pos": [
 "v"
@@ -14020,7 +14020,7 @@
 "fr": "siècle",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1599,
 "pos": [
 "n"
@@ -14035,7 +14035,7 @@
 "fr": "revenus",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2243,
 "pos": [
 "n",
@@ -14052,7 +14052,7 @@
 "fr": "capitale",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 4483,
 "pos": [
 "n"
@@ -14067,7 +14067,7 @@
 "fr": "tout d'abord",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 878,
 "pos": [
 "d",
@@ -14081,7 +14081,7 @@
 "fr": "recevoir, subir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 858,
 "pos": [
 "v"
@@ -14094,7 +14094,7 @@
 "fr": "perdre (un match)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1403,
 "pos": [
 "v"
@@ -14107,7 +14107,7 @@
 "fr": "quantité",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2916,
 "pos": [
 "n"
@@ -14136,7 +14136,7 @@
 "fr": "sans encombre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1475,
 "pos": [
 "a",
@@ -14150,7 +14150,7 @@
 "fr": "expliquer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 968,
 "pos": [
 "v",
@@ -14180,7 +14180,7 @@
 "fr": "vendeur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": null,
 "freq": 19954,
 "pos": [
 "n"
@@ -14195,7 +14195,7 @@
 "fr": "connaître bien",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2070,
 "pos": [
 "v",
@@ -14210,7 +14210,7 @@
 "fr": "chiffre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1670,
 "pos": [
 "n"
@@ -14225,7 +14225,7 @@
 "fr": "au passage",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 3796,
 "pos": [
 "d"
@@ -14251,7 +14251,7 @@
 "fr": "master",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 9229,
 "pos": [
 "n"
@@ -14264,7 +14264,7 @@
 "fr": "mourir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 177,
 "pos": [
 "v",
@@ -14280,7 +14280,7 @@
 "fr": "vitesse",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1337,
 "pos": [
 "n"
@@ -14295,7 +14295,7 @@
 "fr": "sac plastique",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": null,
 "freq": 12101,
 "pos": [
 "n"
@@ -14308,7 +14308,7 @@
 "fr": "comme tu veux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2071,
 "pos": [
 "ad",
@@ -14351,7 +14351,7 @@
 "fr": "au fur et à mesure",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3104,
 "pos": [
 "p"
@@ -14364,7 +14364,7 @@
 "fr": "tous",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 238,
 "pos": [
 "b",
@@ -14378,7 +14378,7 @@
 "fr": "(classificateur des machines)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 696,
 "pos": [
 "q",
@@ -14393,7 +14393,7 @@
 "fr": "attitude",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1647,
 "pos": [
 "n"
@@ -14435,7 +14435,7 @@
 "fr": "(classificateur des trajets)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 3174,
 "pos": [
 "qv",
@@ -14449,7 +14449,7 @@
 "fr": "soulever",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3574,
 "pos": [
 "v"
@@ -14462,7 +14462,7 @@
 "fr": "discuter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 862,
 "pos": [
 "v",
@@ -14476,7 +14476,7 @@
 "fr": "soupe",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2237,
 "pos": [
 "n",
@@ -14503,7 +14503,7 @@
 "fr": "discuter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1047,
 "pos": [
 "v",
@@ -14517,7 +14517,7 @@
 "fr": "détester",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1401,
 "pos": [
 "v"
@@ -14530,7 +14530,7 @@
 "fr": "caractéristique",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 4039,
 "pos": [
 "n"
@@ -14545,7 +14545,7 @@
 "fr": "porter (à la main) ; mentionner",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 919,
 "pos": [
 "v"
@@ -14558,7 +14558,7 @@
 "fr": "à l'avance",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2206,
 "pos": [
 "v",
@@ -14572,7 +14572,7 @@
 "fr": "remplir les blancs",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": null,
 "freq": 42424,
 "pos": [
 "v"
@@ -14585,7 +14585,7 @@
 "fr": "arrêter, garer",
 "app": 4,
 "hsk2": null,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 768,
 "pos": [
 "v"
@@ -14625,7 +14625,7 @@
 "fr": "condition",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1104,
 "pos": [
 "n"
@@ -14640,7 +14640,7 @@
 "fr": "assez, plutôt",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 737,
 "pos": [
 "d",
@@ -14656,7 +14656,7 @@
 "fr": "à travers ; réussir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 343,
 "pos": [
 "p",
@@ -14671,7 +14671,7 @@
 "fr": "avertir, avis",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1246,
 "pos": [
 "n",
@@ -14687,7 +14687,7 @@
 "fr": "en même temps",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 566,
 "pos": [
 "c",
@@ -14702,7 +14702,7 @@
 "fr": "pousser",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1277,
 "pos": [
 "v"
@@ -14728,7 +14728,7 @@
 "fr": "complètement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 393,
 "pos": [
 "ad",
@@ -14742,7 +14742,7 @@
 "fr": "tennis",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 5430,
 "pos": [
 "n"
@@ -14757,7 +14757,7 @@
 "fr": "dangereux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1201,
 "pos": [
 "a",
@@ -14772,7 +14772,7 @@
 "fr": "compatir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": 5,
 "freq": 4665,
 "pos": [
 "v",
@@ -14815,7 +14815,7 @@
 "fr": "souvent",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 4050,
 "pos": [
 "d"
@@ -14828,7 +14828,7 @@
 "fr": "site web",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1965,
 "pos": [
 "n"
@@ -14841,7 +14841,7 @@
 "fr": "goût",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1705,
 "pos": [
 "n"
@@ -14869,7 +14869,7 @@
 "fr": "température",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3440,
 "pos": [
 "n"
@@ -14884,7 +14884,7 @@
 "fr": "article",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1958,
 "pos": [
 "n"
@@ -14900,7 +14900,7 @@
 "fr": "pollution",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3379,
 "pos": [
 "vn",
@@ -14940,7 +14940,7 @@
 "fr": "tomate",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 10725,
 "pos": [
 "n"
@@ -15009,7 +15009,7 @@
 "fr": "envier",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 4551,
 "pos": [
 "v",
@@ -15037,7 +15037,7 @@
 "fr": "détaillé",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2875,
 "pos": [
 "a",
@@ -15051,7 +15051,7 @@
 "fr": "gomme",
 "app": 4,
 "hsk2": 5,
-"hsk3": 7,
+"hsk3": 5,
 "freq": 17575,
 "pos": [
 "n"
@@ -15081,7 +15081,7 @@
 "fr": "roman",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2624,
 "pos": [
 "n"
@@ -15097,7 +15097,7 @@
 "fr": "effet",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1352,
 "pos": [
 "n"
@@ -15110,7 +15110,7 @@
 "fr": "humeur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1302,
 "pos": [
 "n"
@@ -15125,7 +15125,7 @@
 "fr": "information",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 612,
 "pos": [
 "n"
@@ -15153,7 +15153,7 @@
 "fr": "argent liquide",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2030,
 "pos": [
 "n"
@@ -15166,7 +15166,7 @@
 "fr": "parfumé, qui sent bon",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1953,
 "pos": [
 "n",
@@ -15183,7 +15183,7 @@
 "fr": "identique",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2110,
 "pos": [
 "a"
@@ -15196,7 +15196,7 @@
 "fr": "sonner",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2237,
 "pos": [
 "v",
@@ -15211,7 +15211,7 @@
 "fr": "nouvelle",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 448,
 "pos": [
 "n"
@@ -15241,7 +15241,7 @@
 "fr": "blague",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 4078,
 "pos": [
 "n"
@@ -15256,7 +15256,7 @@
 "fr": "pénible, dur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2449,
 "pos": [
 "a",
@@ -15272,7 +15272,7 @@
 "fr": "enveloppe",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 5,
 "freq": 10268,
 "pos": [
 "n"
@@ -15287,7 +15287,7 @@
 "fr": "confiance",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2405,
 "pos": [
 "n"
@@ -15302,7 +15302,7 @@
 "fr": "d'accord, ça marche",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 272,
 "pos": [
 "v",
@@ -15334,7 +15334,7 @@
 "fr": "caractère",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3053,
 "pos": [
 "n"
@@ -15363,7 +15363,7 @@
 "fr": "semestre",
 "app": 4,
 "hsk2": 5,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 5859,
 "pos": [
 "n"
@@ -15378,7 +15378,7 @@
 "fr": "dentifrice",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 9450,
 "pos": [
 "n"
@@ -15393,7 +15393,7 @@
 "fr": "sexe, genre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 6513,
 "pos": [
 "n"
@@ -15406,7 +15406,7 @@
 "fr": "bonheur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 928,
 "pos": [
 "a",
@@ -15421,7 +15421,7 @@
 "fr": "beaucoup de",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 969,
 "pos": [
 "m"
@@ -15434,7 +15434,7 @@
 "fr": "pression, stress",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 981,
 "pos": [
 "n"
@@ -15447,7 +15447,7 @@
 "fr": "Asie",
 "app": 4,
 "hsk2": 4,
-"hsk3": null,
+"hsk3": 4,
 "freq": 3164,
 "pos": [
 "ns"
@@ -15460,7 +15460,7 @@
 "fr": "(particule d'exclamation)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 4,
+"hsk3": 5,
 "freq": 432,
 "pos": [
 "y"
@@ -15517,7 +15517,7 @@
 "fr": "acteur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1643,
 "pos": [
 "n"
@@ -15533,7 +15533,7 @@
 "fr": "soleil (lumière)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2043,
 "pos": [
 "n",
@@ -15547,7 +15547,7 @@
 "fr": "apparence",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1140,
 "pos": [
 "n"
@@ -15574,7 +15574,7 @@
 "fr": "représentation",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1568,
 "pos": [
 "v",
@@ -15617,7 +15617,7 @@
 "fr": "inviter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1683,
 "pos": [
 "v",
@@ -15631,7 +15631,7 @@
 "fr": "si",
 "app": 4,
 "hsk2": 5,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1413,
 "pos": [
 "c",
@@ -15645,7 +15645,7 @@
 "fr": "peut-être",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 601,
 "pos": [
 "d"
@@ -15674,7 +15674,7 @@
 "fr": "avec, par",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 5,
 "freq": 166,
 "pos": [
 "p",
@@ -15689,7 +15689,7 @@
 "fr": "avis",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 995,
 "pos": [
 "n"
@@ -15705,7 +15705,7 @@
 "fr": "par conséquent",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 668,
 "pos": [
 "c"
@@ -15718,7 +15718,7 @@
 "fr": "impression",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2109,
 "pos": [
 "n"
@@ -15731,7 +15731,7 @@
 "fr": "gagner",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 952,
 "pos": [
 "v"
@@ -15744,7 +15744,7 @@
 "fr": "pour toujours",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 599,
 "pos": [
 "d",
@@ -15771,7 +15771,7 @@
 "fr": "par, de",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 353,
 "pos": [
 "p",
@@ -15785,7 +15785,7 @@
 "fr": "clé",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 3354,
 "pos": [
 "n"
@@ -15800,7 +15800,7 @@
 "fr": "page",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 2404,
 "pos": [
 "q",
@@ -15814,7 +15814,7 @@
 "fr": "tout",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 350,
 "pos": [
 "r"
@@ -15827,7 +15827,7 @@
 "fr": "croire (à tort)",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 567,
 "pos": [
 "v"
@@ -15840,7 +15840,7 @@
 "fr": "art",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1488,
 "pos": [
 "n"
@@ -15866,7 +15866,7 @@
 "fr": "postuler",
 "app": 4,
 "hsk2": 5,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 12946,
 "pos": [
 "v",
@@ -15895,7 +15895,7 @@
 "fr": "qualité",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 5641,
 "pos": [
 "n"
@@ -15911,7 +15911,7 @@
 "fr": "humour, drôle",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 4810,
 "pos": [
 "a",
@@ -15925,7 +15925,7 @@
 "fr": "en raison de",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 982,
 "pos": [
 "p",
@@ -15939,7 +15939,7 @@
 "fr": "bureau de poste",
 "app": 4,
 "hsk2": 5,
-"hsk3": 4,
+"hsk3": 5,
 "freq": 11689,
 "pos": [
 "n"
@@ -15968,7 +15968,7 @@
 "fr": "amitié",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3801,
 "pos": [
 "n"
@@ -16007,7 +16007,7 @@
 "fr": "badminton",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 3,
 "freq": 16966,
 "pos": [
 "n"
@@ -16022,7 +16022,7 @@
 "fr": "à l'origine ; en fait",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 790,
 "pos": [
 "d",
@@ -16036,7 +16036,7 @@
 "fr": "raison, cause",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 441,
 "pos": [
 "n"
@@ -16065,7 +16065,7 @@
 "fr": "permettre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 1611,
 "pos": [
 "v",
@@ -16079,7 +16079,7 @@
 "fr": "nous (inclusif)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1405,
 "pos": [
 "r"
@@ -16092,7 +16092,7 @@
 "fr": "surtout",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2400,
 "pos": [
 "d"
@@ -16105,7 +16105,7 @@
 "fr": "amical",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3210,
 "pos": [
 "a",
@@ -16119,7 +16119,7 @@
 "fr": "agréable",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 2823,
 "pos": [
 "a",
@@ -16134,7 +16134,7 @@
 "fr": "et, avec",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 147,
 "pos": [
 "p",
@@ -16148,7 +16148,7 @@
 "fr": "langue",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 1948,
 "pos": [
 "n"
@@ -16164,7 +16164,7 @@
 "fr": "préparer (une leçon)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 36044,
 "pos": [
 "v",
@@ -16178,7 +16178,7 @@
 "fr": "pardonner",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 2754,
 "pos": [
 "v",
@@ -16210,7 +16210,7 @@
 "fr": "nuage",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3335,
 "pos": [
 "n",
@@ -16225,7 +16225,7 @@
 "fr": "magazine",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1627,
 "pos": [
 "n"
@@ -16241,7 +16241,7 @@
 "fr": "temporairement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2209,
 "pos": [
 "d",
@@ -16255,7 +16255,7 @@
 "fr": "sale",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 4623,
 "pos": [
 "a",
@@ -16269,7 +16269,7 @@
 "fr": "augmenter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1419,
 "pos": [
 "v",
@@ -16283,7 +16283,7 @@
 "fr": "recruter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 8004,
 "pos": [
 "v",
@@ -16297,7 +16297,7 @@
 "fr": "véritable",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 544,
 "pos": [
 "b",
@@ -16311,7 +16311,7 @@
 "fr": "normal",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 722,
 "pos": [
 "a",
@@ -16325,7 +16325,7 @@
 "fr": "correct",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1163,
 "pos": [
 "a",
@@ -16339,7 +16339,7 @@
 "fr": "prouver",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 838,
 "pos": [
 "v",
@@ -16356,7 +16356,7 @@
 "fr": "soutenir",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 546,
 "pos": [
 "v",
@@ -16370,7 +16370,7 @@
 "fr": "valoir la peine",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1037,
 "pos": [
 "v"
@@ -16398,7 +16398,7 @@
 "fr": "montrer du doigt",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 639,
 "pos": [
 "v",
@@ -16412,7 +16412,7 @@
 "fr": "responsabilité",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 935,
 "pos": [
 "n"
@@ -16427,7 +16427,7 @@
 "fr": "(ligne) occupée",
 "app": 4,
 "hsk2": 5,
-"hsk3": null,
+"hsk3": 5,
 "freq": 38012,
 "pos": [
 "v",
@@ -16457,7 +16457,7 @@
 "fr": "mettre en ordre",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2737,
 "pos": [
 "v",
@@ -16471,7 +16471,7 @@
 "fr": "justement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2469,
 "pos": [
 "z"
@@ -16484,7 +16484,7 @@
 "fr": "officiel",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1215,
 "pos": [
 "ad",
@@ -16498,7 +16498,7 @@
 "fr": "de (écrit)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 7,
+"hsk3": 4,
 "freq": 160,
 "pos": [
 "u",
@@ -16513,7 +16513,7 @@
 "fr": "connaissances",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 4,
 "freq": 2284,
 "pos": [
 "n"
@@ -16528,7 +16528,7 @@
 "fr": "direct",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 588,
 "pos": [
 "ad",
@@ -16542,7 +16542,7 @@
 "fr": "profession",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1317,
 "pos": [
 "n"
@@ -16555,7 +16555,7 @@
 "fr": "n'avoir d'autre choix que",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3132,
 "pos": [
 "d"
@@ -16568,7 +16568,7 @@
 "fr": "pourvu que",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 3,
 "freq": 452,
 "pos": [
 "c"
@@ -16581,7 +16581,7 @@
 "fr": "au moins",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 868,
 "pos": [
 "d"
@@ -16594,7 +16594,7 @@
 "fr": "point clé",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 1381,
 "pos": [
 "n",
@@ -16608,7 +16608,7 @@
 "fr": "alentours",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1649,
 "pos": [
 "f"
@@ -16621,7 +16621,7 @@
 "fr": "féliciter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 3501,
 "pos": [
 "v",
@@ -16635,7 +16635,7 @@
 "fr": "spécialement",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2288,
 "pos": [
 "d",
@@ -16649,7 +16649,7 @@
 "fr": "tourner, transférer",
 "app": 4,
 "hsk2": null,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 508,
 "pos": [
 "v"
@@ -16662,7 +16662,7 @@
 "fr": "précis",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2864,
 "pos": [
 "a",
@@ -16676,7 +16676,7 @@
 "fr": "minutieux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 2274,
 "pos": [
 "ad",
@@ -16706,7 +16706,7 @@
 "fr": "louer",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 2332,
 "pos": [
 "v",
@@ -16733,7 +16733,7 @@
 "fr": "lourd",
 "app": 4,
 "hsk2": 5,
-"hsk3": 1,
+"hsk3": 4,
 "freq": 608,
 "pos": [
 "a",
@@ -16750,7 +16750,7 @@
 "fr": "accorder de l'importance",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3506,
 "pos": [
 "v",
@@ -16764,7 +16764,7 @@
 "fr": "idée",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 3584,
 "pos": [
 "n"
@@ -16790,7 +16790,7 @@
 "fr": "spécialité, filière",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1146,
 "pos": [
 "n"
@@ -16806,7 +16806,7 @@
 "fr": "gagner (de l'argent)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 6,
+"hsk3": 4,
 "freq": 2163,
 "pos": [
 "v"
@@ -16834,7 +16834,7 @@
 "fr": "nature, naturel",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 929,
 "pos": [
 "n",
@@ -16849,7 +16849,7 @@
 "fr": "résumer, bilan",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 4753,
 "pos": [
 "v",
@@ -16863,7 +16863,7 @@
 "fr": "il vaut mieux",
 "app": 4,
 "hsk2": 4,
-"hsk3": 1,
+"hsk3": 3,
 "freq": 1704,
 "pos": [
 "d"
@@ -16876,7 +16876,7 @@
 "fr": "respecter",
 "app": 4,
 "hsk2": 4,
-"hsk3": 5,
+"hsk3": 4,
 "freq": 1926,
 "pos": [
 "v",
@@ -16890,7 +16890,7 @@
 "fr": "(classificateur des montagnes, bâtiments)",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 751,
 "pos": [
 "q",
@@ -16904,7 +16904,7 @@
 "fr": "place assise",
 "app": 4,
 "hsk2": 4,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 4477,
 "pos": [
 "n"
@@ -16919,7 +16919,7 @@
 "fr": "auteur",
 "app": 4,
 "hsk2": 4,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 2796,
 "pos": [
 "n"
@@ -16932,7 +16932,7 @@
 "fr": "environ",
 "app": 4,
 "hsk2": 6,
-"hsk3": 3,
+"hsk3": 4,
 "freq": 1351,
 "pos": [
 "m",
@@ -16947,7 +16947,7 @@
 "fr": "écrivain",
 "app": 4,
 "hsk2": null,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 3034,
 "pos": [
 "n"
@@ -16963,7 +16963,7 @@
 "fr": "rôle, effet",
 "app": 4,
 "hsk2": 3,
-"hsk3": 2,
+"hsk3": 4,
 "freq": 955,
 "pos": [
 "n",
