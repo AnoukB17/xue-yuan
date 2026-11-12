@@ -3,7 +3,10 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Figtree:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500;700&display=swap">
+<!-- Polices : chargées sans bloquer l'affichage (le texte apparaît d'abord en police système).
+     Graisses limitées à celles utilisées : Unbounded 600/700, Noto Serif SC 500. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Figtree:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Figtree:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&display=swap"></noscript>
 <style>
 /* Layout : barre latérale encre (desktop) / barre d'onglets en bas (mobile) ; accueil en mosaïque ;
    chaque section a sa couleur, ses glyphes au pinceau ; les tons du pinyin sont codés en couleur */
@@ -609,7 +612,9 @@ const examplesReady = fetch('data/sentences-hsk2.json').then(r => r.ok ? r.json(
 const exampleHTML = (e, h) => `<div class="ex">${speakBtn(e[0], 'la phrase')}<div class="stack" style="gap:2px"><span class="zh">${esc(e[0]).split(esc(h)).join(`<mark>${esc(h)}</mark>`)}</span><span class="pyx ex-py">${pyHTML(e[1])}</span><span class="muted">${esc(e[2])}</span></div></div>`;
 const writerMissing = '<p class="muted" style="text-align:center;padding:24px">L\'outil d\'écriture n\'a pas pu se charger (connexion). Réessaie un peu plus tard.</p>';
 // Le fichier du niveau de l'apprenant est préparé pendant un temps mort
-setTimeout(() => strokePack(String(Math.min(4, S?.level || 1))).catch(() => {}), 2500);
+// (quand le téléphone ne fait rien d'autre, et jamais en mode « économie de données »)
+const whenIdle = fn => 'requestIdleCallback' in window ? requestIdleCallback(fn, {timeout: 8000}) : setTimeout(fn, 4000);
+setTimeout(() => { if (!navigator.connection?.saveData) whenIdle(() => strokePack(String(Math.min(4, S?.level || 1))).catch(() => {})); }, 4000);
 // Vocabulaire : hanzi|pinyin|français — HSK 2.0, niveaux 1 à 4 complets (3 et 4 dans hsk34.js)
 const RAW = {
 1: `爱|ài|aimer
