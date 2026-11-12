@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xué Yuán"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0F0F16" media="(prefers-color-scheme: dark)"><meta name="description" content="Apprendre le chinois du HSK 1 au HSK 6 : vocabulaire, tons, écriture et origine des caractères."></head><body>
 <title>Xué Yuán 学园</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3714,6 +3714,15 @@ function vGoals() {
       <div class="row"><button class="btn primary" id="ics">Ajouter le rappel à mon agenda</button></div>
       <pre class="ai-out" id="icsout" hidden style="font-size:.78rem;overflow-x:auto"></pre>
     </div>
+    ${canSW ? `<div class="card stack" id="appli">
+      <h2>Sur ton téléphone</h2>
+      ${standalone() ? '<p class="muted">Xué Yuán est installée sur cet appareil.</p>'
+        : installPrompt ? '<p class="muted">Installe Xué Yuán comme une appli : icône sur l\'écran d\'accueil, plein écran, utilisable sans connexion.</p><div class="row"><button class="btn primary" id="install">Installer l\'appli</button></div>'
+        : isIOS() ? '<p class="muted">Pour l\'installer : dans Safari, touche le bouton Partager (le carré avec une flèche), puis « Sur l\'écran d\'accueil ».</p>'
+        : '<p class="muted">Pour l\'installer : dans le menu de ton navigateur, choisis « Installer l\'application » ou « Ajouter à l\'écran d\'accueil ».</p>'}
+      <p class="muted">Hors connexion, l'appli s'ouvre et tes leçons, quiz et révisions fonctionnent. Pour écrire n'importe quel caractère sans réseau, télécharge leurs tracés (2,8 Mo).</p>
+      <div class="row"><button class="btn" id="offline-all" ${S.offlineAll ? 'disabled' : ''}>${S.offlineAll ? '✓ Tracés téléchargés' : 'Télécharger les tracés (2,8 Mo)'}</button></div>
+    </div>` : ''}
     <div class="card stack">
       <h2>Mon profil</h2>
       <p class="muted">${S.profile?.reasons?.length ? 'J\'apprends pour : ' + S.profile.reasons.map(k => lc((REASONS.find(r => r[0] === k) || [, , k])[2])).join(', ') + '.' : 'Questionnaire pas encore rempli.'}
@@ -3760,6 +3769,12 @@ function vGoals() {
     toast('Copie ce texte dans un fichier .ics pour l\'importer.');
   });
   $('#redo-onb', s).addEventListener('click', () => onboarding(0));
+  $('#install', s)?.addEventListener('click', async () => { const p = installPrompt; installPrompt = null; if (!p) return; p.prompt(); await p.userChoice.catch(() => {}); render('objectifs'); });
+  $('#offline-all', s)?.addEventListener('click', async e => {
+    e.target.disabled = true; e.target.textContent = 'Téléchargement…';
+    try { (await navigator.serviceWorker.ready).active.postMessage({type: 'offline-all'}); }
+    catch { e.target.disabled = false; e.target.textContent = 'Télécharger les tracés (2,8 Mo)'; toast('Le téléchargement n\'a pas pu démarrer.'); }
+  });
   $('#reset', s).addEventListener('click', () => { $('#resetc', s).hidden = false; });
   $('#resetn', s).addEventListener('click', () => { $('#resetc', s).hidden = true; });
   $('#resety', s).addEventListener('click', () => { S = structuredClone(DEFAULT); save(); header(); go('accueil'); toast('Progression effacée.'); });
@@ -3802,6 +3817,17 @@ function migrateUnits() {
   save();
 }
 migrateUnits();
+// ---------- Application installable et hors ligne (GitHub Pages ; pas dans l'aperçu claude.ai) ----------
+const canSW = 'serviceWorker' in navigator && window.top === window && !/claude|anthropic/.test(location.hostname)
+  && (location.protocol === 'https:' || /^(localhost|127\.)/.test(location.hostname));
+if (canSW) navigator.serviceWorker.register('sw.js').catch(() => {});
+let installPrompt = null;
+addEventListener('beforeinstallprompt', e => { e.preventDefault(); installPrompt = e; if (current === 'objectifs') render('objectifs'); });
+const standalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+const isIOS = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+if (canSW) navigator.serviceWorker.addEventListener('message', e => {
+  if (e.data?.type === 'offline-all-done') { S.offlineAll = e.data.ok === e.data.total; save(); toast(S.offlineAll ? 'C\'est prêt : tu peux écrire tous les caractères sans connexion.' : 'Une partie des tracés n\'a pas pu être téléchargée, réessaie avec une meilleure connexion.'); if (current === 'objectifs') render('objectifs'); }
+});
 header(); route();
 if (!S.onboarded) onboarding(0);
 addEventListener('keydown', e => { if (e.key === 'Enter' && document.activeElement?.tagName !== 'INPUT') $('#cont')?.click(); });

@@ -1,0 +1,19 @@
+{
+  "name": "Xué Yuán 学园 · Apprendre le chinois",
+  "short_name": "Xué Yuán",
+  "description": "Apprendre le chinois du HSK 1 au HSK 6 : vocabulaire, tons, écriture des caractères et leur origine.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F2F2F7",
+  "theme_color": "#F2F2F7",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
