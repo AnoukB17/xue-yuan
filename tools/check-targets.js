@@ -1,6 +1,6 @@
 // Mesure les zones tactiles sur un téléphone (écran tactile, 360 px) : tout bouton, lien ou champ
 // doit faire au moins 44 × 44 px (recommandation iOS ; Android : 48 dp). Usage : node tools/check-targets.js [fichier.html]
-const { chromium } = require('playwright'); const path = require('path'); const fs = require('fs');
+const { chromium } = require('playwright'); const { urlFor } = require('./serve'); const path = require('path'); const fs = require('fs');
 const FILE = path.resolve(process.argv[2] || 'index.html'), MIN = 44;
 const HW = fs.readFileSync(path.join(__dirname, 'node_modules/hanzi-writer/dist/hanzi-writer.min.js'), 'utf8');
 const VIEWS = ['accueil', 'apprendre', 'pratiquer', 'lecons', 'quiz', 'ecriture', 'origines', 'memo', 'actus', 'chansons', 'devinettes', 'detective', 'confusions', 'test', 'objectifs'];
@@ -9,7 +9,7 @@ const VIEWS = ['accueil', 'apprendre', 'pratiquer', 'lecons', 'quiz', 'ecriture'
   const p = await (await b.newContext({ viewport: { width: 360, height: 780 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1 })).newPage();
   await p.route('**/*', r => r.request().url().includes('hanzi-writer@') ? r.fulfill({ body: HW, contentType: 'application/javascript' }) : /fonts/.test(r.request().url()) ? r.abort() : r.continue());
   await p.addInitScript(() => { localStorage.setItem('hsk-jardin-v1', JSON.stringify({ onboarded: true, level: 1, conf: { '买|卖': 2 } })); Object.defineProperty(window, 'speechSynthesis', { value: { speak() {}, cancel() {}, getVoices: () => [] } }); window.SpeechSynthesisUtterance = function () {}; });
-  await p.goto('file://' + FILE);
+  await p.goto(await urlFor(FILE));
   console.log('pointeur grossier (tactile) :', await p.evaluate(() => matchMedia('(pointer: coarse)').matches));
   const small = new Map();
   const scan = async name => {

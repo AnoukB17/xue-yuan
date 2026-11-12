@@ -1,6 +1,6 @@
 // Vérifie que tout le texte chinois visible est dans un élément lang="zh-CN", écran par écran.
 // Usage : node tools/check-lang.js [fichier.html]
-const { chromium } = require('playwright'); const path = require('path'); const fs = require('fs');
+const { chromium } = require('playwright'); const { urlFor } = require('./serve'); const path = require('path'); const fs = require('fs');
 const HW = fs.readFileSync(path.join(__dirname, 'node_modules/hanzi-writer/dist/hanzi-writer.min.js'), 'utf8');
 const FILE = path.resolve(process.argv[2] || 'index.html');
 const VIEWS = ['accueil', 'apprendre', 'pratiquer', 'lecons', 'quiz', 'ecriture', 'origines', 'memo', 'actus', 'chansons', 'devinettes', 'detective', 'confusions', 'test', 'objectifs'];
@@ -9,7 +9,7 @@ const VIEWS = ['accueil', 'apprendre', 'pratiquer', 'lecons', 'quiz', 'ecriture'
   const errs = []; p.on('pageerror', e => errs.push(e.message));
   await p.route('**/*', r => r.request().url().includes('hanzi-writer@') ? r.fulfill({ body: HW, contentType: 'application/javascript' }) : /fonts/.test(r.request().url()) ? r.abort() : r.continue());
   await p.addInitScript(() => { localStorage.setItem('hsk-jardin-v1', JSON.stringify({ onboarded: true, level: 1 })); Object.defineProperty(window, 'speechSynthesis', { value: { speak() {}, cancel() {}, getVoices: () => [] } }); window.SpeechSynthesisUtterance = function () {}; });
-  await p.goto('file://' + FILE);
+  await p.goto(await urlFor(FILE));
   console.log('langue de la page :', await p.evaluate(() => document.documentElement.lang));
   let total = 0;
   const check = async name => {

@@ -1,6 +1,6 @@
 // Parcours automatisés de Xué Yuán : questionnaire, séance, quiz, leçon, écriture, test de niveau.
 // Usage : node tools/smoke.js [fichier.html] [dossier de sortie]
-const { chromium } = require('playwright');
+const { chromium } = require('playwright'); const { urlFor } = require('./serve');
 const fs = require('fs');
 const path = require('path');
 
@@ -155,7 +155,7 @@ async function testRun(page, log) {
     const { ctx, page, errors } = await newPage(browser, vp);
     const log = [];
     const t0 = Date.now();
-    await page.goto('file://' + FILE);
+    await page.goto(await urlFor(FILE));
     log.push(`chargement : ${Date.now() - t0} ms`);
     try {
       await onboarding(page, log);

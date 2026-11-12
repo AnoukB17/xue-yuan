@@ -1,7 +1,7 @@
 // Mesure le contraste de chaque texte visible avec son fond réel, écran par écran, en clair et en sombre.
 // Seuils WCAG AA : 4,5:1 pour le texte normal, 3:1 pour le grand texte (≥ 24 px, ou ≥ 18,66 px en gras).
 // Usage : node tools/check-contrast.js [fichier.html]
-const { chromium } = require('playwright'); const path = require('path'); const fs = require('fs');
+const { chromium } = require('playwright'); const { urlFor } = require('./serve'); const path = require('path'); const fs = require('fs');
 const FILE = path.resolve(process.argv[2] || 'index.html');
 const HW = fs.readFileSync(path.join(__dirname, 'node_modules/hanzi-writer/dist/hanzi-writer.min.js'), 'utf8');
 
@@ -63,7 +63,7 @@ const STATES = {
       const ctx = await b.newContext({ viewport: { width, height: 900 }, colorScheme: scheme, reducedMotion: 'reduce' }); const p = await ctx.newPage();
       await p.route('**/*', r => r.request().url().includes('hanzi-writer@') ? r.fulfill({ body: HW, contentType: 'application/javascript' }) : /fonts/.test(r.request().url()) ? r.abort() : r.continue());
       await p.addInitScript(() => { localStorage.setItem('hsk-jardin-v1', JSON.stringify({ onboarded: true, level: 1, profile: { reasons: ['voyage'], goal: 'hsk2', horizon: 'libre', start: 'zero' }, srs: { '你好': { b: 2, due: 0 }, '妈妈': { b: 1, due: 0 } } })); Object.defineProperty(window, 'speechSynthesis', { value: { speak() {}, cancel() {}, getVoices: () => [] } }); window.SpeechSynthesisUtterance = function (t) { this.text = t; }; });
-      await p.goto('file://' + FILE);
+      await p.goto(await urlFor(FILE));
       for (const [name, fn] of Object.entries(STATES)) {
         try { await fn(p); await p.waitForTimeout(150); } catch (e) { console.log(`[${scheme}] ${name} : état non atteint (${e.message.split('\n')[0]})`); continue; }
         const bad = await p.evaluate(SCAN);
