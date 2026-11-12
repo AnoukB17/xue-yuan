@@ -136,7 +136,7 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .btn.ghost:hover{color:var(--ink);background:var(--sunk)}
 .btn.small{padding:7px 13px;font-size:.88rem}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
-.speak{appearance:none;border:0;background:color-mix(in oklab,var(--c,var(--indigo)) 16%,var(--surface));color:var(--c-text,var(--indigo));width:40px;height:40px;border-radius:50%;display:inline-grid;place-items:center;cursor:pointer;flex:none;transition:transform .12s}
+.speak{appearance:none;border:0;background:color-mix(in oklab,var(--c,var(--indigo)) 16%,var(--surface));color:var(--c-text,var(--indigo));width:44px;height:44px;border-radius:50%;display:inline-grid;place-items:center;cursor:pointer;flex:none;transition:transform .12s}
 .speak:hover{background:var(--c,var(--indigo));color:var(--c-ink,#fff)}
 .speak:active{transform:scale(.92)}
 .speak svg{width:18px;height:18px}
@@ -492,6 +492,14 @@ details.card summary{font-family:var(--f-display);font-weight:600}
 @media (max-width:760px){.hubs{grid-template-columns:1fr}.choices.three{grid-template-columns:1fr}.duel{grid-template-columns:1fr}.duel .vs{text-align:center}.duel-side .dh{font-size:3.2rem}}
 @media (max-width:900px){.st-py-short{font-size:.78rem}}
 @media (max-width:400px){.mtop .logo b{display:none}}
+/* Écrans tactiles : toute zone à toucher fait au moins 44 × 44 px (recommandation iOS) */
+@media (pointer:coarse){
+  .btn.small,.chip,.seg button,.vchip,.pill,.pybtn{min-height:44px}
+  .mtop .logo{min-height:44px;min-width:44px}
+  .ogc{min-width:44px;height:44px}
+  input[type=range]{min-height:44px}
+  details>summary{padding-block:12px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
