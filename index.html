@@ -226,6 +226,10 @@ main{min-width:0;padding-block:40px 80px;padding-left:max(40px,env(safe-area-ins
 .ex mark{background:var(--c-soft,var(--sunk));color:inherit;border-radius:4px;padding:0 2px;box-shadow:inset 0 -2px 0 var(--c,var(--teal))}
 .ex .ex-py{font-weight:600;font-size:.9rem}
 .ex .muted{font-size:.9rem}
+.vhelp{margin:6px 0 0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px;font-size:.92rem}
+.b-novoice{background:color-mix(in oklab,var(--gold) 22%,var(--surface));box-shadow:inset 0 0 0 2px var(--gold);gap:8px}
+.b-novoice .btn{align-self:flex-start}
+#vsel{max-width:100%}
 .tipbox{background:var(--gold);color:var(--gold-ink);border-radius:20px;padding:18px 20px}
 .tipbox .label{color:inherit;opacity:.7}
 
@@ -2390,8 +2394,14 @@ function onboarding(stepStart = 0) {
     if (win === 0) {
       el.innerHTML = `<span class="label">1 · Écoute</span><strong class="ttl">Quel mot entends-tu ? (indice : on le dit pour saluer)</strong>
         <button class="btn primary" data-say="你好" style="align-self:flex-start">${SPEAK_ICON} Écouter</button>
-        <div class="options">${shuffle(['你好', '谢谢', '再见']).map(o => `<button class="opt hanopt" data-o="${o}">${o}</button>`).join('')}</div><p role="status" class="feedback" id="wfb"></p>`;
+        <div class="options">${shuffle(['你好', '谢谢', '再见']).map(o => `<button class="opt hanopt" data-o="${o}">${o}</button>`).join('')}</div><p role="status" class="feedback" id="wfb"></p>
+        <button class="btn ghost small" id="nohear" style="align-self:flex-start">Je n'entends rien</button>`;
       setTimeout(() => speak('你好'), 300);
+      $('#nohear', el).addEventListener('click', () => {
+        $$('.opt', el).forEach(x => { x.disabled = true; if (x.dataset.o === '你好') x.classList.add('ok'); });
+        $('#wfb', el).className = 'feedback'; $('#wfb', el).innerHTML = `C'était <span class="han">${hanHTML('你好', 'nǐ hǎo')}</span> nǐ hǎo, « bonjour ». ${zhVoice ? 'Vérifie que le son de ton appareil est activé (et le mode silencieux coupé).' : 'Ton appareil n\'a sans doute pas de voix chinoise : l\'écran « Moi » explique comment en installer une.'}`;
+        $('#nohear', el).replaceWith(Object.assign(document.createElement('button'), {className: 'btn primary small', id: 'nohear-next', textContent: 'Continuer →', onclick: () => { win = 1; firstWin(el); }}));
+      });
       $$('.opt', el).forEach(b => b.addEventListener('click', () => {
         if (b.dataset.o === '你好') { b.classList.add('ok'); grade('你好', true); save(); $('#wfb', el).className = 'feedback ok'; $('#wfb', el).innerHTML = `Bravo : <span class="han">${hanHTML('你好', 'nǐ hǎo')}</span> nǐ hǎo, bonjour !`; speak('你好'); setTimeout(() => { win = 1; firstWin(el); }, 1300); }
         else { b.classList.add('ko'); b.disabled = true; speak('你好'); }
@@ -3108,20 +3118,36 @@ const dueWords = () => learned().filter(id => S.srs[id].due <= dayNum()).map(id 
 const mastered = () => learned().filter(id => S.srs[id].b >= 4).length;
 
 // ---------- Audio (synthèse vocale du navigateur) ----------
-let zhVoice = null;
+let zhVoice = null, ZH_VOICES = [], voicesKnown = false;
+// Voix connues des principaux systèmes (l'API ne donne pas le genre)
+const VOICE_GENDER = {tingting: 'femme', meijia: 'femme', lili: 'femme', limu: 'homme', yushu: 'femme', sinji: 'femme', shasha: 'femme', yue: 'femme', xiaoxiao: 'femme', xiaoyi: 'femme', xiaohan: 'femme', xiaomo: 'femme', yunxi: 'homme', yunjian: 'homme', yunyang: 'homme', yunxia: 'homme', kangkang: 'homme', huihui: 'femme', yaoyao: 'femme', hanhan: 'femme', zhiwei: 'homme', '普通话': 'femme'};
+const voiceGender = v => { const n = v.name.toLowerCase().replace(/[\s-]/g, ''); const k = Object.keys(VOICE_GENDER).find(k => n.includes(k)); return k ? VOICE_GENDER[k] : ''; };
+const voiceLabel = v => `${v.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*\(.*\)$/, '')}${voiceGender(v) ? ' · ' + voiceGender(v) : ''}${/TW/i.test(v.lang) ? ' · Taïwan' : ''}`;
 function loadVoice() {
-  if (!('speechSynthesis' in window)) return;
-  const vs = speechSynthesis.getVoices();
-  zhVoice = vs.find(v => /zh[-_]CN/i.test(v.lang)) || vs.find(v => /^zh/i.test(v.lang)) || null;
+  if (!('speechSynthesis' in window)) { voicesKnown = true; return; }
+  // Mandarin seulement (zh-HK et yue = cantonais) ; Chine continentale et voix de l'appareil d'abord
+  ZH_VOICES = speechSynthesis.getVoices().filter(v => /^(zh|cmn)/i.test(v.lang) && !/HK|yue/i.test(v.lang))
+    .sort((a, b) => (/CN/i.test(b.lang) - /CN/i.test(a.lang)) || (b.localService - a.localService));
+  zhVoice = ZH_VOICES.find(v => v.voiceURI === S.voice) || ZH_VOICES[0] || null;
+  if (ZH_VOICES.length || speechSynthesis.getVoices().length) voicesKnown = true;
+  $('#novoice')?.toggleAttribute('hidden', !!zhVoice || !voicesKnown);
 }
 if ('speechSynthesis' in window) { loadVoice(); speechSynthesis.onvoiceschanged = loadVoice; }
+setTimeout(() => { voicesKnown = true; loadVoice(); }, 1500); // certains navigateurs ne signalent jamais la liste
+// Comment installer une voix chinoise, selon l'appareil
+const VOICE_HELP = `<ul class="vhelp">
+  <li><strong>iPhone, iPad</strong> : Réglages → Accessibilité → Contenu énoncé → Voix → Chinois (Chine continentale) → télécharge une voix (par exemple Tingting ou Li-mu).</li>
+  <li><strong>Android</strong> : Paramètres → Accessibilité (ou Langue et saisie) → Synthèse vocale → moteur Google → Installer les données vocales → Chinois (Chine continentale). Le chemin varie selon les marques.</li>
+  <li><strong>Windows</strong> : Paramètres → Heure et langue → Langue et région → Ajouter une langue → Chinois (simplifié, Chine), avec l'option « Synthèse vocale ».</li>
+  <li><strong>Mac</strong> : Réglages Système → Accessibilité → Contenu énoncé → Voix du système → Gérer les voix → Chinois.</li>
+</ul><p class="muted" style="font-size:.88rem">Ferme puis rouvre l'appli après l'installation.</p>`;
 function speak(t) {
   if (!('speechSynthesis' in window)) { toast("L'audio n'est pas disponible sur ce navigateur."); return; }
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(t);
   u.lang = 'zh-CN'; if (zhVoice) u.voice = zhVoice; u.rate = S.rate;
   speechSynthesis.speak(u);
-  if (!zhVoice && !speak.warned) { speak.warned = true; toast('Aucune voix chinoise installée : ajoute-la dans les réglages de langue de ton appareil.'); }
+  if (!zhVoice && !speak.warned) { speak.warned = true; toast('Aucune voix chinoise sur cet appareil : l\'écran « Moi » explique comment en installer une.'); }
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-say]'); if (b) speak(b.dataset.say); });
 
@@ -3202,6 +3228,7 @@ function vHome() {
         <div class="stack" style="gap:3px"><span class="label">Mot du jour · HSK ${w.l}</span><span class="py pyx">${esc(w.p)}</span><span style="font-weight:600">${esc(w.f)}</span>${MNEMO[w.h] ? `<span style="font-size:.88rem">${esc(MNEMO[w.h])}</span>` : ''}</div>
         ${speakBtn(w.h)}
       </div>
+      <div class="b w4 b-novoice" id="novoice" ${zhVoice || !voicesKnown ? 'hidden' : ''}><span class="label">Son</span><strong class="ttl">Pas de voix chinoise sur cet appareil</strong><span class="muted">Sans elle, l'appli ne peut pas prononcer les mots. Elle s'installe en deux minutes dans les réglages.</span><button class="btn small" id="novoice-go">Comment l'installer →</button></div>
       ${pl ? `<div class="b b-mini ${S.placement ? 'w4' : 'w2'}">
         <span class="label">Ton plan</span>
         <strong class="ttl">${pl.known >= pl.total ? `Vocabulaire du HSK ${pl.target} couvert !` : `HSK ${pl.target} vers le ${pl.date.toLocaleDateString('fr-FR', {day: 'numeric', month: 'long', year: 'numeric'})}`}</strong>
@@ -3217,6 +3244,7 @@ function vHome() {
     </div>
   `);
   wire(s);
+  $('#novoice-go', s)?.addEventListener('click', () => { go('objectifs'); setTimeout(() => $('#voix')?.scrollIntoView({block: 'start'}), 60); });
 }
 function wire(s) {
   $$('[data-go]', s).forEach(b => b.addEventListener('click', e => { e.preventDefault(); go(b.dataset.go); }));
@@ -3670,6 +3698,11 @@ function vGoals() {
         <span class="muted" style="font-size:.88rem">Le style manuscrit (楷书) montre les caractères tels qu'on les écrit à la main : quelques traits diffèrent de la forme imprimée (令, 言, 糸). L'atelier d'écriture l'utilise toujours.</span></div>` : ''}
       <div class="field"><span class="label">Taille du texte</span><div class="seg" role="group" aria-label="Taille du texte">${[[1, 'Normale'], [1.15, 'Grande'], [1.3, 'Très grande']].map(([v, t]) => `<button type="button" data-ts="${v}" aria-pressed="${(S.textScale || 1) === v}">${t}</button>`).join('')}</div>
         <span class="muted" style="font-size:.88rem">Agrandit tout le texte de l'appli, caractères chinois compris.</span></div>
+      <div class="field" id="voix"><span class="label">Voix chinoise</span>
+        ${ZH_VOICES.length ? `<div class="row"><select id="vsel" aria-label="Voix chinoise">${ZH_VOICES.map(v => `<option value="${esc(v.voiceURI)}" ${v === zhVoice ? 'selected' : ''}>${esc(voiceLabel(v))}</option>`).join('')}</select><button type="button" class="btn small" id="vtest">${SPEAK_ICON} Écouter</button></div>
+          <span class="muted" style="font-size:.88rem">${ZH_VOICES.length} voix mandarin sur cet appareil. Les voix « améliorées » ou « premium » se téléchargent dans les réglages, et sont bien plus naturelles.</span>`
+          : `<strong>Aucune voix chinoise sur cet appareil.</strong>${VOICE_HELP}`}
+        ${ZH_VOICES.length ? `<details><summary>Installer une autre voix</summary>${VOICE_HELP}</details>` : ''}</div>
       <div class="field"><label class="label" for="rate">Vitesse de la voix : <span id="ratev">${S.rate}</span>×</label><input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="${S.rate}"></div>
     </form>
     <div class="card stack">
@@ -3701,6 +3734,8 @@ function vGoals() {
   $$('[data-tc]', s).forEach(b => b.addEventListener('click', () => { S.tones = b.dataset.tc; save(); header(); render('objectifs'); }));
   $$('[data-py]', s).forEach(b => b.addEventListener('click', () => { S.pinyin = b.dataset.py; save(); header(); render('objectifs'); }));
   $$('[data-ts]', s).forEach(b => b.addEventListener('click', () => { S.textScale = +b.dataset.ts; save(); header(); render('objectifs'); }));
+  $('#vsel', s)?.addEventListener('change', e => { S.voice = e.target.value; save(); loadVoice(); speak('你好，我们开始学习吧'); });
+  $('#vtest', s)?.addEventListener('click', () => speak('你好，我们开始学习吧'));
   $$('[data-kai]', s).forEach(b => b.addEventListener('click', () => { S.kai = b.dataset.kai === '1'; save(); header(); render('objectifs'); }));
   $('#gm', s).addEventListener('input', e => { g.minutes = +e.target.value; $('#gmv', s).textContent = g.minutes; });
   $('#gm', s).addEventListener('change', () => { save(); render('objectifs'); });
