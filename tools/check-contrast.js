@@ -39,6 +39,8 @@ const STATES = {
   'accueil': p => p.evaluate(() => go('accueil')),
   'leçon : découvrir': p => p.evaluate(() => { current = 'lecons'; render('lecons', '1a#0'); }),
   'leçon : erreur de pinyin': async p => { await p.evaluate(() => { current = 'lecons'; render('lecons', '1h#0'); }); for (let k = 0; k < 5; k++) await p.click('#nx'); for (let k = 0; k < 5; k++) { const w = await p.$eval('[data-say]', b => b.dataset.say); await p.click(`.opt[data-o="${w}"]`); await p.waitForTimeout(950); } await p.fill('#ti', 'zzz'); await p.press('#ti', 'Enter'); await p.waitForSelector('.errcard'); },
+  'leçon HSK 2 : découvrir (exemple)': async p => { await p.evaluate(() => { current = 'lecons'; render('lecons', '2e#0'); }); await p.waitForTimeout(300); },
+  'leçon HSK 2 : liste des mots': async p => { await p.evaluate(() => { current = 'lecons'; render('lecons', '2e'); }); await p.waitForTimeout(300); await p.click('details summary'); },
   'quiz : pinyin': p => p.evaluate(() => { current = 'quiz'; app.innerHTML = ''; runQuiz(WORDS.filter(w => w.l === 1), { title: 'Quiz', n: 5, kinds: ['pinyin'] }); }),
   'quiz : ton': p => p.evaluate(() => { current = 'quiz'; app.innerHTML = ''; runQuiz(WORDS.filter(w => w.l === 1 && w.h.length === 1 && toneOf(w.p) === 3), { title: 'Tons', n: 5, kinds: ['tone'] }); }),
   'séance : écriture': p => p.evaluate(() => { seance = { steps: [{ k: 'write', t: 'Écriture', d: '', c: '中' }], back: false, i: 0, res: [] }; go('seance'); }),
