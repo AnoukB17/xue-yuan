@@ -53,9 +53,28 @@ def enrich(rows):
     for r in rows: r['app'] = r['hsk3'] if r.get('hsk3') and 1 <= r['hsk3'] <= 6 else r['app20']
     return missing
 
-def js_block(rows):
+SPLIT = 5  # les mots enseignés à partir de ce niveau vont dans data/vocab-avance.json, chargé après le premier affichage
+
+def compact(r):
     # Ligne compacte : [caractères, pinyin, français, niveau appli, niveau 3.0, niveau 2.0, fréquence, classificateurs, thème]
-    data = [[r['h'], r['p'], r['fr'], r['app'], r['hsk3'] or 0, r['hsk2'] or 0, r['freq'] or 99999, ''.join(r['cl']), r.get('th', 'idees')] for r in rows]
+    return [r['h'], r['p'], r['fr'], r['app'], r['hsk3'] or 0, r['hsk2'] or 0, r['freq'] or 99999, ''.join(r['cl']), r.get('th', 'idees')]
+
+def sense_ids(rows):  # même règle que l'appli : 1er sens = caractères seuls, suivants = caractères#n
+    n, out = {}, []
+    for r in rows:
+        n[r['h']] = n.get(r['h'], 0) + 1; out.append(r['h'] if n[r['h']] == 1 else f"{r['h']}#{n[r['h']]}")
+    return out
+
+def split(rows):
+    core = [r for r in rows if r['app'] < SPLIT]; adv = [r for r in rows if r['app'] >= SPLIT]
+    # L'appli numérote les sens dans l'ordre core puis avancé : ces identifiants (clés de la progression) ne doivent pas changer
+    full = dict(zip(map(id, rows), sense_ids(rows)))
+    if [full[id(r)] for r in core + adv] != sense_ids(core + adv):
+        sys.exit('Découpage impossible : il changerait l\'identifiant d\'un sens (un mot à plusieurs sens a son premier sens au niveau ' + str(SPLIT) + ' ou plus).')
+    return core, adv
+
+def js_block(rows):
+    data = [compact(r) for r in rows]
     # Les données sont embarquées comme chaîne JSON lue par JSON.parse : le moteur JavaScript l'analyse bien plus vite
     # qu'un grand tableau littéral (recommandation de l'équipe V8 pour les données de plus de 10 Ko). Une ligne par mot.
     esc = lambda t: t.replace('\\', '\\\\').replace("'", "\\'").replace('</', '<\\/')  # chaîne JS entre apostrophes
@@ -88,13 +107,15 @@ def main():
     if missing: print('Absents des listes officielles (gardés, sans niveau officiel) :', ' '.join(missing))
     json.dump(rows, open(VOCAB, 'w', encoding='utf8'), ensure_ascii=False, indent=0)
     html = open(HTML, encoding='utf8').read()
-    block = js_block(rows)
+    core, adv = split(rows)
+    block = js_block(core)
+    json.dump([compact(r) for r in adv], open(os.path.join(ROOT, 'data', 'vocab-avance.json'), 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
     if '// <vocab>' in html: html = re.sub(r'// <vocab>.*?// </vocab>', lambda m: block, html, flags=re.S)
     else:  # première fois : remplace l'ancien bloc RAW
         start = html.index('const RAW = {'); end = html.index('const WORDS = [];')
         html = html[:start] + block + '\n' + html[end:]
     open(HTML, 'w', encoding='utf8').write(html)
-    print(f'{len(rows)} sens → data/vocab.json et index.html')
+    print(f'{len(rows)} sens → data/vocab.json ; {len(core)} dans index.html (niveaux 1 à {SPLIT - 1}), {len(adv)} dans data/vocab-avance.json')
     # Liste officielle des niveaux 1 à 6 (programme 2025) pour l'écran « Listes » : [n°, niveau, mot, pinyin], ordre officiel
     off = []
     for line in open(os.path.join(ROOT, 'tools', 'content', 'hsk30-vocabulaire.tsv'), encoding='utf8'):
