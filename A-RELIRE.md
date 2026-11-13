@@ -47,3 +47,5 @@ Source : `tools/content/grammaire.py` (contrôlé automatiquement : points offic
   - [ ] À vérifier par un natif en priorité : explications de 了 (fiches « Action accomplie » et « Changement de situation ») et de 呢 ; une seule bonne réponse possible pour chacune des 68 questions.
 - [x] Grammaire HSK 2 (`docs/grammaire/hsk2.md`) : 36 fiches, validées le 13/11/2026, intégrées.
   - [ ] À vérifier par un natif en priorité : fiches sur 得 et 地, fiche « Petits mots de fin » (呢, 的, 啊) ; une seule bonne réponse possible pour chacune des 72 questions ; mots admis hors liste (常, 步, 泳, 游, 跳, 高高兴兴).
+- [x] Grammaire HSK 3 (`docs/grammaire/hsk3.md`) : 48 fiches, validées le 13/11/2026, intégrées.
+  - [ ] À vérifier par un natif en priorité : fiches 把 et 被, 才 / 就, compléments potentiels et sens dérivés de 起来 / 下去 ; une seule bonne réponse possible pour chacune des 96 questions ; mots admis hors liste (不必, 假, 谢).
