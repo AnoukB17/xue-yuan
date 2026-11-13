@@ -56,9 +56,12 @@ def enrich(rows):
 def js_block(rows):
     # Ligne compacte : [caractères, pinyin, français, niveau appli, niveau 3.0, niveau 2.0, fréquence, classificateurs, thème]
     data = [[r['h'], r['p'], r['fr'], r['app'], r['hsk3'] or 0, r['hsk2'] or 0, r['freq'] or 99999, ''.join(r['cl']), r.get('th', 'idees')] for r in rows]
-    body = ',\n'.join(json.dumps(d, ensure_ascii=False, separators=(',', ':')) for d in data)
+    # Les données sont embarquées comme chaîne JSON lue par JSON.parse : le moteur JavaScript l'analyse bien plus vite
+    # qu'un grand tableau littéral (recommandation de l'équipe V8 pour les données de plus de 10 Ko). Une ligne par mot.
+    esc = lambda t: t.replace('\\', '\\\\').replace("'", "\\'").replace('</', '<\\/')  # chaîne JS entre apostrophes
+    body = ',\\\n'.join(esc(json.dumps(d, ensure_ascii=False, separators=(',', ':'))) for d in data)  # \ en fin de ligne : continuation
     return ('// <vocab> (généré par tools/build-vocab.py depuis data/vocab.json : ne pas modifier à la main)\n'
-            'const VOCAB = [\n' + body + '\n];\n'
+            "const VOCAB = JSON.parse('[\\\n" + body + "]');\n"
             'const THEMES = ' + json.dumps([list(t) for t in THEMES], ensure_ascii=False) + ';\n// </vocab>')
 
 def report(rows):
