@@ -23,7 +23,7 @@ const SCAN = () => {
     while (w.nextNode()) {
       const t = w.currentNode; if (!t.textContent.trim()) continue;
       const el = t.parentElement, cs = getComputedStyle(el), r = el.getBoundingClientRect();
-      if (el.closest('[aria-hidden="true"]') || !r.width || cs.visibility === 'hidden' || +cs.opacity === 0 || el.closest('[hidden]') || cs.webkitTextStroke?.startsWith('1')) continue;
+      if (el.closest('[aria-hidden="true"]') || !r.width || cs.visibility === 'hidden' || +cs.opacity === 0 || el.closest('[hidden]') || el.closest(':disabled') /* WCAG 1.4.3 : commandes inactives exemptées */ || cs.webkitTextStroke?.startsWith('1')) continue;
       let op = 1; for (let e = el; e; e = e.parentElement) op *= +getComputedStyle(e).opacity;
       const fg0 = parse(cs.color), bg = bgOf(el); if (!fg0) continue; const fg = blend({ ...fg0, a: fg0.a * op }, bg);
       const L1 = lum(fg), L2 = lum(bg), ratio = (Math.max(L1, L2) + .05) / (Math.min(L1, L2) + .05);
@@ -56,6 +56,9 @@ const STATES = {
   'actus': p => p.evaluate(() => go('actus')),
   'listes (A à Z)': async p => { await p.evaluate(() => { listMode = 'az'; go('listes'); }); await p.waitForSelector('.lgrid'); },
   'listes (thèmes)': async p => { await p.evaluate(() => { listMode = 'theme'; go('listes'); }); await p.waitForSelector('.lth'); },
+  'examen (accueil)': async p => { await p.evaluate(() => go('examen')); await p.waitForSelector('[data-run]'); },
+  'examen (question)': async p => { await p.evaluate(() => go('examen', '2:court')); await p.click('#xs'); await p.waitForSelector('#xb .opt'); },
+  'examen (ordre des mots)': async p => { await p.evaluate(() => go('examen', '2:court')); for (let k = 0; k < 2; k++) { await p.click('#xs'); for (let n = 0; n < 8; n++) await p.click('#xn'); } await p.click('#xs'); await p.waitForSelector('[data-i]'); },
   'leçons HSK 3': p => p.evaluate(() => { lessonLevel = 3; go('lecons'); }),
   'questionnaire': p => p.evaluate(() => { onboarding(0); document.querySelectorAll('#onb .ch').forEach((b, i) => i % 2 && b.click()); }),
 };
