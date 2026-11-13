@@ -3,7 +3,7 @@
 // - Phrases, manifeste, icônes, polices, outil d'écriture : copie locale, rafraîchie en arrière-plan.
 // - Tracés des caractères (gros fichiers) : copie locale dès qu'un niveau a été utilisé, ou tout télécharger depuis « Moi ».
 // Changer VERSION à chaque modification de ce fichier ou de la liste ci-dessous.
-const VERSION = 'xy-2026-11-13-3';
+const VERSION = 'xy-2026-11-13-4';
 const CORE = ['./', 'index.html', 'manifest.webmanifest', 'data/sentences-hsk2.json', 'data/hsk-officiel.json',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'icons/favicon-32.png',
   'https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.2/dist/hanzi-writer.min.js'];

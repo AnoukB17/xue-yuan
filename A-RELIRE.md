@@ -2,7 +2,7 @@
 
 Chaque lot ajoute ici ce qui a été écrit ou corrigé sans relecture native.
 
-**État au 13/11/2026 :** les contenus des lots 1 et 2 et les paquets 1 à 3 ont été **validés par la propriétaire du projet**, sans relecture par un locuteur natif. Les cases ci-dessous restent ouvertes : elles indiquent ce qu'un natif devrait vérifier en priorité le jour où une relecture est possible.
+**État au 13/11/2026 :** les contenus des lots 1 et 2 et les paquets 1 à 5 ont été **validés par la propriétaire du projet**, sans relecture par un locuteur natif. Les cases ci-dessous restent ouvertes : elles indiquent ce qu'un natif devrait vérifier en priorité le jour où une relecture est possible.
 
 ## Lot 1 (validé par la propriétaire, sans relecture native)
 
@@ -36,3 +36,5 @@ Source unique : `tools/content/hsk2.py` (contrôlé automatiquement : vocabulair
   - [ ] À vérifier par un natif en priorité : 不好意思, 打, 红茶, 间, 考, 面, 名, 时, 正.
 - [x] Paquet 3 (`docs/paquets/paquet-03.md`) : 197 mots du niveau 3, validé le 13/11/2026, intégré.
   - [ ] À vérifier par un natif en priorité : 爱人, 半天, 不见, 东北, 懂得, 该, 刮, 可, 牛, 起, 一块儿, 总.
+- [x] Paquets 4 et 5 (`docs/paquets/paquet-04.md`, `paquet-05.md`) : 475 mots du niveau 4, validés le 13/11/2026, intégrés.
+  - [ ] À vérifier par un natif en priorité : 背, 表, 并, 待, 单位, 活, 将, 就是, 量 ; 嗯, 气, 生, 熟, 数, 算, 通, 土, 吸, 血, 约.
