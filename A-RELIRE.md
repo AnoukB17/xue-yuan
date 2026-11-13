@@ -63,3 +63,5 @@ Source : `tools/content/grammaire.py` (contrôlé automatiquement : points offic
   - [ ] À vérifier par un natif en priorité : fiches 把 et 被, 才 / 就, compléments potentiels et sens dérivés de 起来 / 下去 ; une seule bonne réponse possible pour chacune des 96 questions ; mots admis hors liste (不必, 假, 谢).
 - [x] Grammaire HSK 4 (`docs/grammaire/hsk4.md`) : 54 fiches (85 points officiels), validées le 13/11/2026, intégrées.
   - [ ] À vérifier par un natif en priorité : tournures orales (还X呢, 你X你的吧, X也得X), fiches « Nuances » (才 / 就 / 并 / 还) et 却 / 不过 ; une seule bonne réponse possible pour chacune des 108 questions ; mots admis hors liste (一模一样, 一心一意, 无忧无虑, 无忧).
+- [x] Grammaire HSK 5 (`docs/grammaire/hsk5.md`) : 42 fiches (68 points officiels), validées le 13/11/2026, intégrées.
+  - [ ] À vérifier par un natif en priorité : expressions de l'oral (真有你的, X什么X, 什么X不X的, 不X白不X, X着也是X着, X也不是Y也不是) ; une seule bonne réponse possible pour chacune des 84 questions ; formes admises hors liste (要不然, 话, 一下午, expressions modèles comme 没完没了).
