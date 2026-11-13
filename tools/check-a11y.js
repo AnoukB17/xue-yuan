@@ -24,6 +24,8 @@ const STATES = {
   'dictionnaire': async p => { await p.evaluate(() => go('dico')); await p.fill('#dq', 'gare'); },
   'listes (A à Z)': async p => { await p.evaluate(() => { listMode = 'az'; go('listes'); }); await p.waitForSelector('.lgrid'); },
   'listes (thèmes)': async p => { await p.evaluate(() => { listMode = 'theme'; go('listes'); }); await p.waitForSelector('.lth'); },
+  'grammaire (liste)': async p => { await p.evaluate(() => go('grammaire')); await p.waitForSelector('[data-g]'); },
+  'grammaire (fiche)': async p => { await p.evaluate(() => go('grammaire', '1-le2')); await p.waitForSelector('#gq .opt'); },
   'examen (accueil)': async p => { await p.evaluate(() => go('examen')); await p.waitForSelector('[data-run]'); },
   'examen (question)': async p => { await p.evaluate(() => go('examen', '2:court')); await p.click('#xs'); await p.waitForSelector('#xb .opt'); },
   'examen (ordre des mots)': async p => { await p.evaluate(() => go('examen', '2:court')); for (let k = 0; k < 2; k++) { await p.click('#xs'); for (let n = 0; n < 8; n++) await p.click('#xn'); } await p.click('#xs'); await p.waitForSelector('[data-i]'); },

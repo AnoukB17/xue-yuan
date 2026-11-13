@@ -38,3 +38,10 @@ Source unique : `tools/content/hsk2.py` (contrôlé automatiquement : vocabulair
   - [ ] À vérifier par un natif en priorité : 爱人, 半天, 不见, 东北, 懂得, 该, 刮, 可, 牛, 起, 一块儿, 总.
 - [x] Paquets 4 et 5 (`docs/paquets/paquet-04.md`, `paquet-05.md`) : 475 mots du niveau 4, validés le 13/11/2026, intégrés.
   - [ ] À vérifier par un natif en priorité : 背, 表, 并, 待, 单位, 活, 将, 就是, 量 ; 嗯, 气, 生, 熟, 数, 算, 通, 土, 吸, 血, 约.
+
+## Lot 6 : fiches de grammaire (validées par la propriétaire, sans relecture native)
+
+Source : `tools/content/grammaire.py` (contrôlé automatiquement : points officiels couverts, vocabulaire du niveau, pinyin).
+
+- [x] Grammaire HSK 1 (`docs/grammaire/hsk1.md`) : 34 fiches, validées le 13/11/2026, intégrées (Apprendre › Grammaire).
+  - [ ] À vérifier par un natif en priorité : explications de 了 (fiches « Action accomplie » et « Changement de situation ») et de 呢 ; une seule bonne réponse possible pour chacune des 68 questions.

@@ -3,7 +3,7 @@
 const { chromium } = require('playwright'); const { urlFor } = require('./serve'); const path = require('path'); const fs = require('fs');
 const HW = fs.readFileSync(path.join(__dirname, 'node_modules/hanzi-writer/dist/hanzi-writer.min.js'), 'utf8');
 const FILE = path.resolve(process.argv[2] || 'index.html');
-const VIEWS = ['accueil', 'apprendre', 'pratiquer', 'lecons', 'quiz', 'ecriture', 'origines', 'memo', 'actus', 'chansons', 'devinettes', 'detective', 'confusions', 'test', 'objectifs', 'dico', 'listes', 'examen'];
+const VIEWS = ['accueil', 'apprendre', 'pratiquer', 'lecons', 'quiz', 'ecriture', 'origines', 'memo', 'actus', 'chansons', 'devinettes', 'detective', 'confusions', 'test', 'objectifs', 'dico', 'listes', 'examen', 'grammaire'];
 (async () => {
   const b = await chromium.launch(); const p = await (await b.newContext()).newPage();
   const errs = []; p.on('pageerror', e => errs.push(e.message));
