@@ -162,7 +162,7 @@ async function testRun(page, log) {
       await page.screenshot({ path: path.join(OUT, `${name}-accueil.png`), fullPage: true });
       await seanceRun(page, log);
       await quizRun(page, log);
-      await lessonRun(page, log, '3-1');
+      await lessonRun(page, log, await page.evaluate(() => LESSONS.find(l => l.l === 3).id));
       await writeRun(page, log);
       await page.screenshot({ path: path.join(OUT, `${name}-ecriture.png`) });
       await testRun(page, log);

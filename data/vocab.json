@@ -13,7 +13,8 @@
 "b"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 1
 },
 {
 "h": "八",
@@ -28,7 +29,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "爸爸",
@@ -45,7 +47,8 @@
 "个",
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "杯子",
@@ -62,7 +65,8 @@
 "个",
 "只"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 1
 },
 {
 "h": "北京",
@@ -76,7 +80,8 @@
 "ns"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 1
 },
 {
 "h": "本",
@@ -93,7 +98,8 @@
 "n"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "不",
@@ -107,7 +113,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "不客气",
@@ -119,7 +126,8 @@
 "freq": 16723,
 "pos": [],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "菜",
@@ -136,7 +144,8 @@
 "盘",
 "道"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "茶",
@@ -154,7 +163,8 @@
 "杯",
 "壶"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "吃",
@@ -168,7 +178,8 @@
 "v"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "出租车",
@@ -182,7 +193,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 1
 },
 {
 "h": "打电话",
@@ -196,7 +208,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "大",
@@ -213,7 +226,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 1
 },
 {
 "h": "的",
@@ -228,7 +242,8 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "点",
@@ -245,7 +260,8 @@
 "v"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "电脑",
@@ -261,7 +277,8 @@
 "cl": [
 "台"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 1
 },
 {
 "h": "电视",
@@ -278,7 +295,8 @@
 "台",
 "个"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 1
 },
 {
 "h": "电影",
@@ -295,7 +313,8 @@
 "部",
 "片"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 1
 },
 {
 "h": "东西",
@@ -311,7 +330,8 @@
 "nr"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 1
 },
 {
 "h": "都",
@@ -326,7 +346,8 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "读",
@@ -340,7 +361,8 @@
 "v"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "对不起",
@@ -354,7 +376,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "多",
@@ -373,7 +396,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 1
 },
 {
 "h": "多少",
@@ -387,7 +411,8 @@
 "r"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "儿子",
@@ -401,7 +426,8 @@
 "n"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "二",
@@ -416,7 +442,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "饭店",
@@ -433,7 +460,8 @@
 "家",
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 1
 },
 {
 "h": "飞机",
@@ -449,7 +477,8 @@
 "cl": [
 "架"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 1
 },
 {
 "h": "分钟",
@@ -463,7 +492,8 @@
 "qt"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "高兴",
@@ -478,7 +508,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 1
 },
 {
 "h": "个",
@@ -493,7 +524,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "工作",
@@ -512,7 +544,8 @@
 "个",
 "份"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 1
 },
 {
 "h": "狗",
@@ -529,7 +562,8 @@
 "只",
 "条"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 1
 },
 {
 "h": "汉语",
@@ -543,7 +577,8 @@
 "nz"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "好",
@@ -559,7 +594,8 @@
 "v"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 1
 },
 {
 "h": "号",
@@ -577,7 +613,8 @@
 "cl": [
 "个"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "喝",
@@ -592,7 +629,8 @@
 "vn"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "和",
@@ -611,7 +649,8 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "很",
@@ -625,13 +664,14 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "后面",
 "p": "hòumiàn",
 "fr": "derrière",
-"app": 1,
+"app": 2,
 "hsk2": 1,
 "hsk3": 2,
 "freq": 1300,
@@ -639,7 +679,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 1
 },
 {
 "h": "回",
@@ -654,7 +695,8 @@
 "qv"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "会",
@@ -669,7 +711,8 @@
 "n"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "几",
@@ -684,7 +727,8 @@
 "d"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "家",
@@ -699,7 +743,8 @@
 "q"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 1
 },
 {
 "h": "叫",
@@ -715,7 +760,8 @@
 "n"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "今天",
@@ -729,7 +775,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "九",
@@ -745,7 +792,8 @@
 "b"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "开",
@@ -760,7 +808,8 @@
 "q"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "看",
@@ -775,7 +824,8 @@
 "u"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "看见",
@@ -789,7 +839,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "块",
@@ -804,7 +855,8 @@
 "g"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 1
 },
 {
 "h": "来",
@@ -822,7 +874,8 @@
 "y"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "老师",
@@ -839,7 +892,8 @@
 "个",
 "位"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "了",
@@ -855,7 +909,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "冷",
@@ -871,7 +926,8 @@
 "g"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 1
 },
 {
 "h": "里",
@@ -886,7 +942,8 @@
 "q"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 1
 },
 {
 "h": "六",
@@ -901,7 +958,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "妈妈",
@@ -918,7 +976,8 @@
 "个",
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "吗",
@@ -932,7 +991,8 @@
 "y"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "买",
@@ -946,7 +1006,8 @@
 "v"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 1
 },
 {
 "h": "猫",
@@ -963,7 +1024,8 @@
 "cl": [
 "只"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 1
 },
 {
 "h": "没关系",
@@ -977,7 +1039,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "没有",
@@ -992,7 +1055,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "米饭",
@@ -1006,7 +1070,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "名字",
@@ -1022,7 +1087,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "明天",
@@ -1036,7 +1102,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "哪",
@@ -1051,7 +1118,8 @@
 "y"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "哪儿",
@@ -1065,7 +1133,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "那",
@@ -1080,7 +1149,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "呢",
@@ -1094,7 +1164,8 @@
 "y"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "能",
@@ -1109,7 +1180,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "你",
@@ -1123,7 +1195,8 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "年",
@@ -1141,7 +1214,8 @@
 "cl": [
 "个"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "女儿",
@@ -1155,7 +1229,8 @@
 "n"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "朋友",
@@ -1172,7 +1247,8 @@
 "个",
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "漂亮",
@@ -1186,7 +1262,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 1
 },
 {
 "h": "苹果",
@@ -1203,7 +1280,8 @@
 "个",
 "颗"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "七",
@@ -1218,7 +1296,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "钱",
@@ -1235,13 +1314,14 @@
 "cl": [
 "笔"
 ],
-"th": "argent"
+"th": "argent",
+"app20": 1
 },
 {
 "h": "前面",
 "p": "qiánmiàn",
 "fr": "devant",
-"app": 1,
+"app": 2,
 "hsk2": 1,
 "hsk3": 2,
 "freq": 1789,
@@ -1249,7 +1329,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 1
 },
 {
 "h": "请",
@@ -1263,7 +1344,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "去",
@@ -1277,7 +1359,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "热",
@@ -1296,7 +1379,8 @@
 "an"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 1
 },
 {
 "h": "人",
@@ -1313,7 +1397,8 @@
 "个",
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "认识",
@@ -1329,7 +1414,8 @@
 "vn"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "三",
@@ -1344,7 +1430,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "商店",
@@ -1361,7 +1448,8 @@
 "家",
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 1
 },
 {
 "h": "上",
@@ -1377,7 +1465,8 @@
 "g"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 1
 },
 {
 "h": "上午",
@@ -1391,7 +1480,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "少",
@@ -1409,7 +1499,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 1
 },
 {
 "h": "谁",
@@ -1423,7 +1514,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "什么",
@@ -1437,7 +1529,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "十",
@@ -1452,7 +1545,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "时候",
@@ -1466,7 +1560,8 @@
 "n"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "是",
@@ -1480,7 +1575,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "书",
@@ -1498,7 +1594,8 @@
 "本",
 "册"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "水",
@@ -1512,7 +1609,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "水果",
@@ -1528,7 +1626,8 @@
 "cl": [
 "个"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 1
 },
 {
 "h": "睡觉",
@@ -1542,7 +1641,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "说",
@@ -1557,7 +1657,8 @@
 "g"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "四",
@@ -1572,7 +1673,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "岁",
@@ -1586,7 +1688,8 @@
 "qt"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "他",
@@ -1600,7 +1703,8 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "她",
@@ -1614,7 +1718,8 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "太",
@@ -1629,7 +1734,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "天气",
@@ -1643,7 +1749,8 @@
 "n"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 1
 },
 {
 "h": "听",
@@ -1657,7 +1764,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "同学",
@@ -1674,7 +1782,8 @@
 "位",
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "喂",
@@ -1689,7 +1798,8 @@
 "e"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "我",
@@ -1703,7 +1813,8 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "我们",
@@ -1717,7 +1828,8 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "五",
@@ -1732,7 +1844,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "喜欢",
@@ -1747,7 +1860,8 @@
 "vn"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 1
 },
 {
 "h": "下",
@@ -1764,7 +1878,8 @@
 "g"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 1
 },
 {
 "h": "下午",
@@ -1778,7 +1893,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "下雨",
@@ -1792,7 +1908,8 @@
 "v"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 1
 },
 {
 "h": "先生",
@@ -1808,7 +1925,8 @@
 "cl": [
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "现在",
@@ -1822,7 +1940,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "想",
@@ -1836,7 +1955,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "小",
@@ -1851,13 +1971,14 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 1
 },
 {
 "h": "小姐",
 "p": "xiǎojiě",
 "fr": "mademoiselle (à éviter pour appeler quelqu'un en Chine continentale)",
-"app": 1,
+"app": 5,
 "hsk2": 1,
 "hsk3": 5,
 "freq": 1575,
@@ -1868,7 +1989,8 @@
 "个",
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 1
 },
 {
 "h": "些",
@@ -1882,7 +2004,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "写",
@@ -1896,7 +2019,8 @@
 "v"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "谢谢",
@@ -1910,7 +2034,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "星期",
@@ -1926,7 +2051,8 @@
 "cl": [
 "个"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "学生",
@@ -1940,7 +2066,8 @@
 "n"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "学习",
@@ -1955,7 +2082,8 @@
 "vn"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "学校",
@@ -1971,7 +2099,8 @@
 "cl": [
 "所"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "一",
@@ -1987,7 +2116,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 1
 },
 {
 "h": "衣服",
@@ -2004,7 +2134,8 @@
 "件",
 "套"
 ],
-"th": "vetements"
+"th": "vetements",
+"app20": 1
 },
 {
 "h": "医生",
@@ -2021,7 +2152,8 @@
 "个",
 "位"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 1
 },
 {
 "h": "医院",
@@ -2038,7 +2170,8 @@
 "所",
 "家"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 1
 },
 {
 "h": "椅子",
@@ -2055,7 +2188,8 @@
 "把",
 "套"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 1
 },
 {
 "h": "有",
@@ -2069,7 +2203,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "月",
@@ -2087,7 +2222,8 @@
 "个",
 "轮"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "在",
@@ -2103,7 +2239,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "再见",
@@ -2117,7 +2254,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 1
 },
 {
 "h": "怎么",
@@ -2131,7 +2269,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "怎么样",
@@ -2145,7 +2284,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "这",
@@ -2159,7 +2299,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 1
 },
 {
 "h": "中国",
@@ -2173,7 +2314,8 @@
 "ns"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 1
 },
 {
 "h": "中午",
@@ -2187,7 +2329,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "住",
@@ -2201,7 +2344,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "桌子",
@@ -2218,7 +2362,8 @@
 "张",
 "套"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 1
 },
 {
 "h": "字",
@@ -2234,7 +2379,8 @@
 "cl": [
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 1
 },
 {
 "h": "昨天",
@@ -2248,7 +2394,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 1
 },
 {
 "h": "坐",
@@ -2262,7 +2409,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "做",
@@ -2276,13 +2424,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 1
 },
 {
 "h": "吧",
 "p": "ba",
 "fr": "(particule de suggestion)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 58,
@@ -2290,13 +2439,14 @@
 "y"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "白",
 "p": "bái",
 "fr": "blanc",
-"app": 2,
+"app": 5,
 "hsk2": 2,
 "hsk3": 5,
 "freq": 930,
@@ -2309,13 +2459,14 @@
 "g"
 ],
 "cl": [],
-"th": "couleurs"
+"th": "couleurs",
+"app20": 2
 },
 {
 "h": "百",
 "p": "bǎi",
 "fr": "cent",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2455,
@@ -2324,13 +2475,14 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 2
 },
 {
 "h": "帮助",
 "p": "bāngzhù",
 "fr": "aider",
-"app": 2,
+"app": 3,
 "hsk2": 2,
 "hsk3": 3,
 "freq": 499,
@@ -2339,13 +2491,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "报纸",
 "p": "bàozhǐ",
 "fr": "journal",
-"app": 2,
+"app": 3,
 "hsk2": 2,
 "hsk3": 3,
 "freq": 2232,
@@ -2356,7 +2509,8 @@
 "份",
 "期"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 2
 },
 {
 "h": "比",
@@ -2373,7 +2527,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "别",
@@ -2390,13 +2545,14 @@
 "vn"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "宾馆",
 "p": "bīnguǎn",
 "fr": "hôtel",
-"app": 2,
+"app": 3,
 "hsk2": 3,
 "hsk3": 3,
 "freq": 4994,
@@ -2407,7 +2563,8 @@
 "个",
 "家"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 2
 },
 {
 "h": "长",
@@ -2424,7 +2581,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 2
 },
 {
 "h": "唱歌",
@@ -2439,7 +2597,8 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "出",
@@ -2454,13 +2613,14 @@
 "q"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "穿",
 "p": "chuān",
 "fr": "porter (un vêtement)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 430,
@@ -2468,7 +2628,8 @@
 "v"
 ],
 "cl": [],
-"th": "vetements"
+"th": "vetements",
+"app20": 2
 },
 {
 "h": "次",
@@ -2484,7 +2645,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 2
 },
 {
 "h": "从",
@@ -2499,7 +2661,8 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "错",
@@ -2514,7 +2677,8 @@
 "n"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 2
 },
 {
 "h": "打篮球",
@@ -2526,13 +2690,14 @@
 "freq": 1000000,
 "pos": [],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "大家",
 "p": "dàjiā",
 "fr": "tout le monde",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 189,
@@ -2541,7 +2706,8 @@
 "n"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "但是",
@@ -2555,13 +2721,14 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "到",
 "p": "dào",
 "fr": "arriver",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 29,
@@ -2570,7 +2737,8 @@
 "p"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "得",
@@ -2585,7 +2753,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "等",
@@ -2600,13 +2769,14 @@
 "u"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "弟弟",
 "p": "dìdi",
 "fr": "petit frère",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2424,
@@ -2617,7 +2787,8 @@
 "个",
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "第一",
@@ -2631,7 +2802,8 @@
 "m"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 2
 },
 {
 "h": "懂",
@@ -2645,13 +2817,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "房间",
 "p": "fángjiān",
 "fr": "chambre, pièce",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1357,
@@ -2662,13 +2835,14 @@
 "间",
 "个"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 2
 },
 {
 "h": "非常",
 "p": "fēicháng",
 "fr": "extrêmement",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 194,
@@ -2677,7 +2851,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "服务员",
@@ -2694,7 +2869,8 @@
 "个",
 "位"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 2
 },
 {
 "h": "高",
@@ -2711,7 +2887,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 2
 },
 {
 "h": "告诉",
@@ -2725,13 +2902,14 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 2
 },
 {
 "h": "哥哥",
 "p": "gēge",
 "fr": "grand frère",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1655,
@@ -2742,13 +2920,14 @@
 "个",
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "给",
 "p": "gěi",
 "fr": "donner, pour",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 46,
@@ -2758,7 +2937,8 @@
 "u"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "公共汽车",
@@ -2770,13 +2950,14 @@
 "freq": 13591,
 "pos": [],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 2
 },
 {
 "h": "公司",
 "p": "gōngsī",
 "fr": "entreprise",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 220,
@@ -2786,13 +2967,14 @@
 "cl": [
 "家"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 2
 },
 {
 "h": "贵",
 "p": "guì",
 "fr": "cher",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2239,
@@ -2803,13 +2985,14 @@
 "g"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 2
 },
 {
 "h": "还",
 "p": "hái",
 "fr": "encore",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 37,
@@ -2818,13 +3001,14 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "孩子",
 "p": "háizi",
 "fr": "enfant",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 207,
@@ -2832,13 +3016,14 @@
 "n"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "好吃",
 "p": "hǎochī",
 "fr": "délicieux",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2484,
@@ -2846,13 +3031,14 @@
 "a"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 2
 },
 {
 "h": "黑",
 "p": "hēi",
 "fr": "noir",
-"app": 2,
+"app": 5,
 "hsk2": 2,
 "hsk3": 5,
 "freq": 724,
@@ -2862,13 +3048,14 @@
 "b"
 ],
 "cl": [],
-"th": "couleurs"
+"th": "couleurs",
+"app20": 2
 },
 {
 "h": "红",
 "p": "hóng",
 "fr": "rouge",
-"app": 2,
+"app": 5,
 "hsk2": 2,
 "hsk3": 5,
 "freq": 794,
@@ -2878,7 +3065,8 @@
 "g"
 ],
 "cl": [],
-"th": "couleurs"
+"th": "couleurs",
+"app20": 2
 },
 {
 "h": "火车站",
@@ -2892,7 +3080,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 2
 },
 {
 "h": "机场",
@@ -2909,13 +3098,14 @@
 "家",
 "处"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 2
 },
 {
 "h": "鸡蛋",
 "p": "jīdàn",
 "fr": "œuf",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 3501,
@@ -2926,13 +3116,14 @@
 "个",
 "打"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 2
 },
 {
 "h": "件",
 "p": "jiàn",
 "fr": "(classificateur des vêtements du haut et des affaires : 一件事)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 292,
@@ -2941,7 +3132,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 2
 },
 {
 "h": "教室",
@@ -2957,13 +3149,14 @@
 "cl": [
 "间"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 2
 },
 {
 "h": "姐姐",
 "p": "jiějie",
 "fr": "grande sœur",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1513,
@@ -2973,7 +3166,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "介绍",
@@ -2988,7 +3182,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 2
 },
 {
 "h": "进",
@@ -3002,7 +3197,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "近",
@@ -3017,7 +3213,8 @@
 "v"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 2
 },
 {
 "h": "就",
@@ -3034,13 +3231,14 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "觉得",
 "p": "juéde",
 "fr": "trouver, penser",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 161,
@@ -3048,7 +3246,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "咖啡",
@@ -3064,7 +3263,8 @@
 "cl": [
 "杯"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 2
 },
 {
 "h": "开始",
@@ -3079,7 +3279,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "考试",
@@ -3094,7 +3295,8 @@
 "v"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 2
 },
 {
 "h": "可能",
@@ -3111,13 +3313,14 @@
 "cl": [
 "个"
 ],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "可以",
 "p": "kěyǐ",
 "fr": "pouvoir (permission)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 58,
@@ -3125,13 +3328,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "课",
 "p": "kè",
 "fr": "cours, leçon",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1517,
@@ -3142,7 +3346,8 @@
 "门",
 "堂"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 2
 },
 {
 "h": "快",
@@ -3158,7 +3363,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 2
 },
 {
 "h": "快乐",
@@ -3173,7 +3379,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 2
 },
 {
 "h": "累",
@@ -3189,7 +3396,8 @@
 "an"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 2
 },
 {
 "h": "离",
@@ -3204,13 +3412,14 @@
 "p"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 2
 },
 {
 "h": "两",
 "p": "liǎng",
 "fr": "deux (quantité)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 81,
@@ -3219,7 +3428,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 2
 },
 {
 "h": "路",
@@ -3236,7 +3446,8 @@
 "cl": [
 "条"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 2
 },
 {
 "h": "旅游",
@@ -3251,13 +3462,14 @@
 "v"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 2
 },
 {
 "h": "卖",
 "p": "mài",
 "fr": "vendre",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 590,
@@ -3265,7 +3477,8 @@
 "v"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 2
 },
 {
 "h": "慢",
@@ -3280,13 +3493,14 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 2
 },
 {
 "h": "忙",
 "p": "máng",
 "fr": "occupé",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 859,
@@ -3298,7 +3512,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 2
 },
 {
 "h": "每",
@@ -3312,13 +3527,14 @@
 "r"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 2
 },
 {
 "h": "妹妹",
 "p": "mèimei",
 "fr": "petite sœur",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2093,
@@ -3328,7 +3544,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "门",
@@ -3346,13 +3563,14 @@
 "扇",
 "个"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 2
 },
 {
 "h": "男人",
 "p": "nánrén",
 "fr": "homme",
-"app": 2,
+"app": 3,
 "hsk2": 2,
 "hsk3": 3,
 "freq": 415,
@@ -3362,13 +3580,14 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "您",
 "p": "nín",
 "fr": "vous (politesse)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 357,
@@ -3376,13 +3595,14 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "牛奶",
 "p": "niúnǎi",
 "fr": "lait",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2986,
@@ -3393,13 +3613,14 @@
 "瓶",
 "杯"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 2
 },
 {
 "h": "女人",
 "p": "nǚrén",
 "fr": "femme",
-"app": 2,
+"app": 3,
 "hsk2": 2,
 "hsk3": 3,
 "freq": 383,
@@ -3407,7 +3628,8 @@
 "n"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "跑步",
@@ -3421,13 +3643,14 @@
 "v"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "便宜",
 "p": "piányi",
 "fr": "bon marché",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2814,
@@ -3437,7 +3660,8 @@
 "an"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 2
 },
 {
 "h": "票",
@@ -3454,13 +3678,14 @@
 "cl": [
 "张"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 2
 },
 {
 "h": "起床",
 "p": "qǐchuáng",
 "fr": "se lever",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 2645,
@@ -3468,13 +3693,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "千",
 "p": "qiān",
 "fr": "mille",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1728,
@@ -3483,7 +3709,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 2
 },
 {
 "h": "晴",
@@ -3497,13 +3724,14 @@
 "v"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 2
 },
 {
 "h": "去年",
 "p": "qùnián",
 "fr": "l'an dernier",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 933,
@@ -3511,7 +3739,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 2
 },
 {
 "h": "让",
@@ -3525,13 +3754,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "上班",
 "p": "shàngbān",
 "fr": "aller au travail",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1495,
@@ -3540,7 +3770,8 @@
 "vn"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 2
 },
 {
 "h": "身体",
@@ -3557,13 +3788,14 @@
 "具",
 "个"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 2
 },
 {
 "h": "生病",
 "p": "shēngbìng",
 "fr": "tomber malade",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 4336,
@@ -3571,7 +3803,8 @@
 "v"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 2
 },
 {
 "h": "生日",
@@ -3587,13 +3820,14 @@
 "cl": [
 "个"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 2
 },
 {
 "h": "时间",
 "p": "shíjiān",
 "fr": "temps",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 127,
@@ -3603,7 +3837,8 @@
 "cl": [
 "段"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 2
 },
 {
 "h": "事情",
@@ -3620,7 +3855,8 @@
 "件",
 "桩"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 2
 },
 {
 "h": "手表",
@@ -3637,13 +3873,14 @@
 "块",
 "只"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 2
 },
 {
 "h": "手机",
 "p": "shǒujī",
 "fr": "téléphone portable",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 857,
@@ -3654,7 +3891,8 @@
 "部",
 "支"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 2
 },
 {
 "h": "送",
@@ -3668,7 +3906,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "所以",
@@ -3682,13 +3921,14 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "它",
 "p": "tā",
 "fr": "il, elle (objet, animal)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 114,
@@ -3696,7 +3936,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "踢足球",
@@ -3708,7 +3949,8 @@
 "freq": null,
 "pos": [],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "题",
@@ -3726,7 +3968,8 @@
 "个",
 "道"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 2
 },
 {
 "h": "跳舞",
@@ -3741,13 +3984,14 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "外",
 "p": "wài",
 "fr": "dehors",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 489,
@@ -3755,7 +3999,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 2
 },
 {
 "h": "完",
@@ -3769,13 +4014,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "玩",
 "p": "wán",
 "fr": "jouer, s'amuser",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 415,
@@ -3783,13 +4029,14 @@
 "v"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "晚上",
 "p": "wǎnshang",
 "fr": "soir",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 502,
@@ -3797,7 +4044,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 2
 },
 {
 "h": "为什么",
@@ -3811,13 +4059,14 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "问",
 "p": "wèn",
 "fr": "demander",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 246,
@@ -3827,13 +4076,14 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 2
 },
 {
 "h": "问题",
 "p": "wèntí",
 "fr": "question, problème",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 109,
@@ -3843,13 +4093,14 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 2
 },
 {
 "h": "西瓜",
 "p": "xīguā",
 "fr": "pastèque",
-"app": 2,
+"app": 3,
 "hsk2": 2,
 "hsk3": 3,
 "freq": 9098,
@@ -3860,7 +4111,8 @@
 "颗",
 "个"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 2
 },
 {
 "h": "希望",
@@ -3878,7 +4130,8 @@
 "cl": [
 "个"
 ],
-"th": "emotions"
+"th": "emotions",
+"app20": 2
 },
 {
 "h": "洗",
@@ -3892,13 +4145,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "小时",
 "p": "xiǎoshí",
 "fr": "heure (durée)",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 389,
@@ -3909,7 +4163,8 @@
 "cl": [
 "个"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 2
 },
 {
 "h": "笑",
@@ -3924,13 +4179,14 @@
 "vn"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 2
 },
 {
 "h": "新",
 "p": "xīn",
 "fr": "nouveau",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 150,
@@ -3940,7 +4196,8 @@
 "b"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 2
 },
 {
 "h": "姓",
@@ -3957,13 +4214,14 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "休息",
 "p": "xiūxi",
 "fr": "se reposer",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1225,
@@ -3972,13 +4230,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "雪",
 "p": "xuě",
 "fr": "neige",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1971,
@@ -3988,7 +4247,8 @@
 "cl": [
 "场"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 2
 },
 {
 "h": "颜色",
@@ -4002,7 +4262,8 @@
 "n"
 ],
 "cl": [],
-"th": "couleurs"
+"th": "couleurs",
+"app20": 2
 },
 {
 "h": "眼睛",
@@ -4019,7 +4280,8 @@
 "只",
 "双"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 2
 },
 {
 "h": "羊肉",
@@ -4033,7 +4295,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 2
 },
 {
 "h": "药",
@@ -4047,13 +4310,14 @@
 "n"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 2
 },
 {
 "h": "要",
 "p": "yào",
 "fr": "vouloir, devoir",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 19,
@@ -4061,13 +4325,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "也",
 "p": "yě",
 "fr": "aussi",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 23,
@@ -4078,7 +4343,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "已经",
@@ -4092,7 +4358,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "一起",
@@ -4108,7 +4375,8 @@
 "nr"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "意思",
@@ -4125,7 +4393,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 2
 },
 {
 "h": "阴",
@@ -4142,7 +4411,8 @@
 "b"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 2
 },
 {
 "h": "因为",
@@ -4157,7 +4427,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "游泳",
@@ -4172,7 +4443,8 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "右边",
@@ -4186,7 +4458,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 2
 },
 {
 "h": "鱼",
@@ -4203,7 +4476,8 @@
 "条",
 "尾"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 2
 },
 {
 "h": "远",
@@ -4218,7 +4492,8 @@
 "ad"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 2
 },
 {
 "h": "运动",
@@ -4236,13 +4511,14 @@
 "cl": [
 "场"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 2
 },
 {
 "h": "再",
 "p": "zài",
 "fr": "à nouveau",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 91,
@@ -4251,13 +4527,14 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "早上",
 "p": "zǎoshang",
 "fr": "le matin",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 1092,
@@ -4265,7 +4542,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 2
 },
 {
 "h": "丈夫",
@@ -4281,13 +4559,14 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 2
 },
 {
 "h": "找",
 "p": "zhǎo",
 "fr": "chercher",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 152,
@@ -4295,7 +4574,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "着",
@@ -4312,13 +4592,14 @@
 "q"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "真",
 "p": "zhēn",
 "fr": "vraiment",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 76,
@@ -4328,13 +4609,14 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "正在",
 "p": "zhèngzài",
 "fr": "en train de",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 420,
@@ -4342,13 +4624,14 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "知道",
 "p": "zhīdào",
 "fr": "savoir",
-"app": 2,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 105,
@@ -4356,7 +4639,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "准备",
@@ -4371,7 +4655,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "走",
@@ -4385,7 +4670,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 2
 },
 {
 "h": "最",
@@ -4400,7 +4686,8 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 2
 },
 {
 "h": "左边",
@@ -4414,7 +4701,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 2
 },
 {
 "h": "阿姨",
@@ -4430,13 +4718,14 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "啊",
 "p": "a",
 "fr": "ah ! (particule)",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 47,
@@ -4445,13 +4734,14 @@
 "e"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "爱好",
 "p": "àihào",
 "fr": "passe-temps",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 4902,
@@ -4462,7 +4752,8 @@
 "cl": [
 "个"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "把",
@@ -4479,7 +4770,8 @@
 "m"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "搬",
@@ -4493,7 +4785,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "矮",
@@ -4508,7 +4801,8 @@
 "v"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "安静",
@@ -4522,13 +4816,14 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "班",
 "p": "bān",
 "fr": "classe",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 1238,
@@ -4540,13 +4835,14 @@
 "cl": [
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "半",
 "p": "bàn",
 "fr": "moitié",
-"app": 3,
+"app": 1,
 "hsk2": 3,
 "hsk3": 1,
 "freq": 727,
@@ -4554,7 +4850,8 @@
 "m"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "办法",
@@ -4571,13 +4868,14 @@
 "条",
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "帮忙",
 "p": "bāngmáng",
 "fr": "donner un coup de main",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 1860,
@@ -4586,7 +4884,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "饱",
@@ -4602,7 +4901,8 @@
 "v"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "办公室",
@@ -4618,13 +4918,14 @@
 "cl": [
 "间"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 3
 },
 {
 "h": "包",
 "p": "bāo",
 "fr": "sac, envelopper",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 755,
@@ -4637,7 +4938,8 @@
 "个",
 "只"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "北方",
@@ -4652,7 +4954,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 3
 },
 {
 "h": "被",
@@ -4668,7 +4971,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "比较",
@@ -4684,7 +4988,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "笔记本",
@@ -4700,13 +5005,14 @@
 "cl": [
 "本"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "鼻子",
 "p": "bízi",
 "fr": "nez",
-"app": 3,
+"app": 4,
 "hsk2": 3,
 "hsk3": 4,
 "freq": 3484,
@@ -4717,7 +5023,8 @@
 "个",
 "只"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "比赛",
@@ -4732,7 +5039,8 @@
 "v"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "必须",
@@ -4746,7 +5054,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "变化",
@@ -4761,7 +5070,8 @@
 "v"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "冰箱",
@@ -4778,7 +5088,8 @@
 "台",
 "个"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "参加",
@@ -4792,7 +5103,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "层",
@@ -4807,13 +5119,14 @@
 "n"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "超市",
 "p": "chāoshì",
 "fr": "supermarché",
-"app": 3,
+"app": 1,
 "hsk2": 3,
 "hsk3": 1,
 "freq": 4427,
@@ -4823,7 +5136,8 @@
 "cl": [
 "家"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "成绩",
@@ -4840,7 +5154,8 @@
 "项",
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "迟到",
@@ -4855,7 +5170,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "船",
@@ -4869,7 +5185,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 3
 },
 {
 "h": "词典",
@@ -4886,7 +5203,8 @@
 "部",
 "本"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "打扫",
@@ -4900,7 +5218,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "带",
@@ -4914,7 +5233,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "别人",
@@ -4928,7 +5248,8 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "菜单",
@@ -4945,7 +5266,8 @@
 "份",
 "张"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "草",
@@ -4959,7 +5281,8 @@
 "n"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "差",
@@ -4975,7 +5298,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "衬衫",
@@ -4991,7 +5315,8 @@
 "cl": [
 "件"
 ],
-"th": "vetements"
+"th": "vetements",
+"app20": 3
 },
 {
 "h": "城市",
@@ -5007,7 +5332,8 @@
 "cl": [
 "座"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "除了",
@@ -5021,7 +5347,8 @@
 "p"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "春",
@@ -5035,7 +5362,8 @@
 "tg"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "聪明",
@@ -5050,7 +5378,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "打算",
@@ -5068,7 +5397,8 @@
 "cl": [
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "担心",
@@ -5083,7 +5413,8 @@
 "vn"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "蛋糕",
@@ -5100,13 +5431,14 @@
 "块",
 "个"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "地",
 "p": "de",
 "fr": "(particule adverbiale)",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 132,
@@ -5115,7 +5447,8 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "地方",
@@ -5129,7 +5462,8 @@
 "n"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "地图",
@@ -5146,7 +5480,8 @@
 "张",
 "本"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 3
 },
 {
 "h": "当然",
@@ -5161,7 +5496,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "灯",
@@ -5177,13 +5513,14 @@
 "cl": [
 "盏"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "地铁",
 "p": "dìtiě",
 "fr": "métro",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 3046,
@@ -5191,7 +5528,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 3
 },
 {
 "h": "电梯",
@@ -5208,7 +5546,8 @@
 "台",
 "部"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "电子邮件",
@@ -5220,7 +5559,8 @@
 "freq": 9822,
 "pos": [],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 3
 },
 {
 "h": "冬",
@@ -5234,7 +5574,8 @@
 "tg"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "短",
@@ -5248,7 +5589,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "锻炼",
@@ -5263,7 +5605,8 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "饿",
@@ -5278,7 +5621,8 @@
 "a"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "东",
@@ -5293,7 +5637,8 @@
 "b"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 3
 },
 {
 "h": "动物",
@@ -5310,7 +5655,8 @@
 "只",
 "群"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "段",
@@ -5325,13 +5671,14 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "多么",
 "p": "duōme",
 "fr": "comme, combien (exclamation)",
-"app": 3,
+"app": 4,
 "hsk2": 3,
 "hsk3": 4,
 "freq": 1940,
@@ -5340,7 +5687,8 @@
 "a"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "不但",
@@ -5354,7 +5702,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "而且",
@@ -5368,7 +5717,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "耳朵",
@@ -5385,7 +5735,8 @@
 "只",
 "个"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "发",
@@ -5400,7 +5751,8 @@
 "q"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "发烧",
@@ -5416,7 +5768,8 @@
 "b"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "发现",
@@ -5431,7 +5784,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "方便",
@@ -5447,7 +5801,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "放心",
@@ -5462,7 +5817,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "附近",
@@ -5476,7 +5832,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 3
 },
 {
 "h": "干净",
@@ -5491,7 +5848,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "感冒",
@@ -5506,13 +5864,14 @@
 "vn"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "个子",
 "p": "gèzi",
 "fr": "taille (d'une personne)",
-"app": 3,
+"app": 2,
 "hsk2": 4,
 "hsk3": 2,
 "freq": 10888,
@@ -5520,7 +5879,8 @@
 "n"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "根据",
@@ -5538,7 +5898,8 @@
 "cl": [
 "个"
 ],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "公斤",
@@ -5552,7 +5913,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "故事",
@@ -5566,7 +5928,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "关",
@@ -5582,7 +5945,8 @@
 "nr"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "关心",
@@ -5597,7 +5961,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "放",
@@ -5611,13 +5976,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "分",
 "p": "fēn",
 "fr": "point, centime",
-"app": 3,
+"app": 1,
 "hsk2": 3,
 "hsk3": 1,
 "freq": 372,
@@ -5630,7 +5996,8 @@
 "d"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "复习",
@@ -5645,7 +6012,8 @@
 "vn"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "感兴趣",
@@ -5659,7 +6027,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "刚才",
@@ -5673,13 +6042,14 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "跟",
 "p": "gēn",
 "fr": "avec, suivre",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 135,
@@ -5688,7 +6058,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "更",
@@ -5702,7 +6073,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "公园",
@@ -5719,7 +6091,8 @@
 "个",
 "座"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "刮风",
@@ -5733,7 +6106,8 @@
 "v"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "关系",
@@ -5750,7 +6124,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "关于",
@@ -5764,7 +6139,8 @@
 "p"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "国家",
@@ -5780,13 +6156,14 @@
 "cl": [
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "过",
 "p": "guò",
 "fr": "passer, traverser",
-"app": 3,
+"app": 2,
 "hsk2": 4,
 "hsk3": 2,
 "freq": 60,
@@ -5797,7 +6174,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "害怕",
@@ -5812,7 +6190,8 @@
 "vn"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "后来",
@@ -5826,13 +6205,14 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "花",
 "p": "huā",
 "fr": "dépenser",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 435,
@@ -5845,13 +6225,14 @@
 "朵",
 "支"
 ],
-"th": "argent"
+"th": "argent",
+"app20": 3
 },
 {
 "h": "画",
 "p": "huà",
 "fr": "dessiner, peinture",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 1119,
@@ -5864,7 +6245,8 @@
 "幅",
 "张"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "欢迎",
@@ -5879,7 +6261,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 3
 },
 {
 "h": "环境",
@@ -5895,7 +6278,8 @@
 "cl": [
 "个"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "黄河",
@@ -5907,7 +6291,8 @@
 "freq": null,
 "pos": [],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "会议",
@@ -5924,7 +6309,8 @@
 "场",
 "届"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 3
 },
 {
 "h": "几乎",
@@ -5938,13 +6324,14 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "过去",
 "p": "guòqù",
 "fr": "le passé",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 353,
@@ -5953,13 +6340,14 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "还是",
 "p": "háishi",
 "fr": "ou bien (question)",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 160,
@@ -5969,7 +6357,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "黑板",
@@ -5986,7 +6375,8 @@
 "块",
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "护照",
@@ -6003,13 +6393,14 @@
 "本",
 "个"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 3
 },
 {
 "h": "花",
 "p": "huā",
 "fr": "fleur",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 435,
@@ -6022,13 +6413,14 @@
 "朵",
 "支"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "坏",
 "p": "huài",
 "fr": "mauvais, cassé",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 1239,
@@ -6037,13 +6429,14 @@
 "v"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "还",
 "p": "huán",
 "fr": "rendre",
-"app": 3,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 37,
@@ -6052,7 +6445,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "换",
@@ -6066,7 +6460,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "回答",
@@ -6081,7 +6476,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 3
 },
 {
 "h": "或者",
@@ -6096,7 +6492,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "机会",
@@ -6112,7 +6509,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "极",
@@ -6127,7 +6525,8 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "季节",
@@ -6143,7 +6542,8 @@
 "cl": [
 "个"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "简单",
@@ -6158,7 +6558,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "见面",
@@ -6172,13 +6573,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "教",
 "p": "jiāo",
 "fr": "enseigner",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 988,
@@ -6187,7 +6589,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "脚",
@@ -6205,13 +6608,14 @@
 "双",
 "只"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "街道",
 "p": "jiēdào",
 "fr": "rue",
-"app": 3,
+"app": 4,
 "hsk2": 3,
 "hsk3": 4,
 "freq": 3604,
@@ -6221,7 +6625,8 @@
 "cl": [
 "条"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "结束",
@@ -6236,7 +6641,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "节日",
@@ -6252,7 +6658,8 @@
 "cl": [
 "个"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "借",
@@ -6267,7 +6674,8 @@
 "p"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "经过",
@@ -6285,13 +6693,14 @@
 "cl": [
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "记得",
 "p": "jìde",
 "fr": "se souvenir",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 699,
@@ -6299,7 +6708,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "检查",
@@ -6314,7 +6724,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "健康",
@@ -6330,7 +6741,8 @@
 "ad"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "讲",
@@ -6344,7 +6756,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 3
 },
 {
 "h": "角",
@@ -6362,7 +6775,8 @@
 "cl": [
 "个"
 ],
-"th": "argent"
+"th": "argent",
+"app20": 3
 },
 {
 "h": "接",
@@ -6376,7 +6790,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "结婚",
@@ -6391,7 +6806,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "节目",
@@ -6408,7 +6824,8 @@
 "台",
 "个"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "解决",
@@ -6423,13 +6840,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "经常",
 "p": "jīngcháng",
 "fr": "souvent",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 940,
@@ -6438,7 +6856,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "经理",
@@ -6455,7 +6874,8 @@
 "个",
 "位"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 3
 },
 {
 "h": "久",
@@ -6471,7 +6891,8 @@
 "ad"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "句子",
@@ -6487,7 +6908,8 @@
 "cl": [
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "渴",
@@ -6502,7 +6924,8 @@
 "v"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "刻",
@@ -6517,7 +6940,8 @@
 "qt"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "空调",
@@ -6533,7 +6957,8 @@
 "cl": [
 "台"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "旧",
@@ -6548,7 +6973,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "决定",
@@ -6566,7 +6992,8 @@
 "个",
 "项"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "可爱",
@@ -6580,7 +7007,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "客人",
@@ -6596,13 +7024,14 @@
 "cl": [
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "口",
 "p": "kǒu",
 "fr": "bouche ; (classificateur des membres d'une famille : 三口人)",
-"app": 3,
+"app": 1,
 "hsk2": 3,
 "hsk3": 1,
 "freq": 637,
@@ -6611,7 +7040,8 @@
 "n"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "哭",
@@ -6625,13 +7055,14 @@
 "v"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "裤子",
 "p": "kùzi",
 "fr": "pantalon",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 3765,
@@ -6639,7 +7070,8 @@
 "n"
 ],
 "cl": [],
-"th": "vetements"
+"th": "vetements",
+"app20": 3
 },
 {
 "h": "筷子",
@@ -6656,7 +7088,8 @@
 "对",
 "根"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "老",
@@ -6672,7 +7105,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "礼物",
@@ -6689,7 +7123,8 @@
 "件",
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "脸",
@@ -6707,7 +7142,8 @@
 "张",
 "个"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "练习",
@@ -6722,7 +7158,8 @@
 "vn"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "蓝",
@@ -6737,7 +7174,8 @@
 "g"
 ],
 "cl": [],
-"th": "couleurs"
+"th": "couleurs",
+"app20": 3
 },
 {
 "h": "离开",
@@ -6751,7 +7189,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "历史",
@@ -6768,7 +7207,8 @@
 "门",
 "段"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "聊天",
@@ -6783,7 +7223,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 3
 },
 {
 "h": "辆",
@@ -6797,7 +7238,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "了解",
@@ -6812,7 +7254,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "留学",
@@ -6827,7 +7270,8 @@
 "vn"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "绿",
@@ -6842,7 +7286,8 @@
 "an"
 ],
 "cl": [],
-"th": "couleurs"
+"th": "couleurs",
+"app20": 3
 },
 {
 "h": "马上",
@@ -6857,13 +7302,14 @@
 "s"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "帽子",
 "p": "màozi",
 "fr": "chapeau",
-"app": 3,
+"app": 4,
 "hsk2": 3,
 "hsk3": 4,
 "freq": 3553,
@@ -6873,13 +7319,14 @@
 "cl": [
 "顶"
 ],
-"th": "vetements"
+"th": "vetements",
+"app20": 3
 },
 {
 "h": "面包",
 "p": "miànbāo",
 "fr": "pain",
-"app": 3,
+"app": 1,
 "hsk2": 3,
 "hsk3": 1,
 "freq": 4138,
@@ -6890,13 +7337,14 @@
 "片",
 "袋"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "拿",
 "p": "ná",
 "fr": "prendre, tenir",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 287,
@@ -6904,7 +7352,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "南",
@@ -6919,7 +7368,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 3
 },
 {
 "h": "难过",
@@ -6933,7 +7383,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "年轻",
@@ -6947,7 +7398,8 @@
 "a"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "努力",
@@ -6963,7 +7415,8 @@
 "a"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "邻居",
@@ -6979,13 +7432,14 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "楼",
 "p": "lóu",
 "fr": "bâtiment, étage",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 765,
@@ -6996,7 +7450,8 @@
 "层",
 "座"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "马",
@@ -7014,7 +7469,8 @@
 "cl": [
 "匹"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "满意",
@@ -7029,7 +7485,8 @@
 "vn"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "米",
@@ -7046,7 +7503,8 @@
 "cl": [
 "粒"
 ],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "明白",
@@ -7062,13 +7520,14 @@
 "an"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "奶奶",
 "p": "nǎinai",
 "fr": "grand-mère (paternelle)",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 2809,
@@ -7078,7 +7537,8 @@
 "cl": [
 "位"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "难",
@@ -7095,7 +7555,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "年级",
@@ -7111,13 +7572,14 @@
 "cl": [
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "鸟",
 "p": "niǎo",
 "fr": "oiseau",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 1593,
@@ -7128,7 +7590,8 @@
 "只",
 "群"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "爬山",
@@ -7143,7 +7606,8 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "盘子",
@@ -7159,7 +7623,8 @@
 "cl": [
 "个"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "啤酒",
@@ -7176,7 +7641,8 @@
 "杯",
 "瓶"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "瓶子",
@@ -7192,7 +7658,8 @@
 "cl": [
 "个"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "其他",
@@ -7206,7 +7673,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "奇怪",
@@ -7221,7 +7689,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "起飞",
@@ -7236,7 +7705,8 @@
 "vn"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 3
 },
 {
 "h": "请假",
@@ -7250,7 +7720,8 @@
 "v"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 3
 },
 {
 "h": "裙子",
@@ -7266,7 +7737,8 @@
 "cl": [
 "条"
 ],
-"th": "vetements"
+"th": "vetements",
+"app20": 3
 },
 {
 "h": "热情",
@@ -7282,7 +7754,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "认真",
@@ -7297,7 +7770,8 @@
 "ad"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "如果",
@@ -7312,7 +7786,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "胖",
@@ -7326,13 +7801,14 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "皮鞋",
 "p": "píxié",
 "fr": "chaussures en cuir",
-"app": 3,
+"app": 4,
 "hsk2": 5,
 "hsk3": 4,
 "freq": 11265,
@@ -7340,7 +7816,8 @@
 "n"
 ],
 "cl": [],
-"th": "vetements"
+"th": "vetements",
+"app20": 3
 },
 {
 "h": "其实",
@@ -7354,7 +7831,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "骑",
@@ -7368,13 +7846,14 @@
 "v"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 3
 },
 {
 "h": "起来",
 "p": "qǐlai",
 "fr": "se lever",
-"app": 3,
+"app": 2,
 "hsk2": 4,
 "hsk3": 2,
 "freq": 172,
@@ -7382,7 +7861,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "清楚",
@@ -7398,7 +7878,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "秋",
@@ -7413,7 +7894,8 @@
 "g"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "然后",
@@ -7427,7 +7909,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "认为",
@@ -7441,7 +7924,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "容易",
@@ -7456,7 +7940,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "伞",
@@ -7472,13 +7957,14 @@
 "cl": [
 "把"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "上网",
 "p": "shàngwǎng",
 "fr": "aller sur Internet",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 4061,
@@ -7487,7 +7973,8 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "声音",
@@ -7503,7 +7990,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "世界",
@@ -7519,13 +8007,14 @@
 "cl": [
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "舒服",
 "p": "shūfu",
 "fr": "confortable",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 2343,
@@ -7533,7 +8022,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "树",
@@ -7550,7 +8040,8 @@
 "cl": [
 "棵"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "刷牙",
@@ -7564,7 +8055,8 @@
 "v"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "水平",
@@ -7578,7 +8070,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "太阳",
@@ -7594,13 +8087,14 @@
 "cl": [
 "个"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "疼",
 "p": "téng",
 "fr": "avoir mal",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 1641,
@@ -7609,7 +8103,8 @@
 "a"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "体育",
@@ -7623,13 +8118,14 @@
 "n"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "条",
 "p": "tiáo",
 "fr": "(classificateur des objets longs : rue, pantalon, poisson)",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 277,
@@ -7637,7 +8133,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "生气",
@@ -7654,7 +8151,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "试",
@@ -7669,7 +8167,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "瘦",
@@ -7683,7 +8182,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "叔叔",
@@ -7699,7 +8199,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "数学",
@@ -7713,7 +8214,8 @@
 "n"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "双",
@@ -7728,7 +8230,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "司机",
@@ -7742,7 +8245,8 @@
 "n"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 3
 },
 {
 "h": "特别",
@@ -7757,7 +8261,8 @@
 "a"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "提高",
@@ -7772,7 +8277,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "甜",
@@ -7786,7 +8292,8 @@
 "a"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "同事",
@@ -7803,7 +8310,8 @@
 "个",
 "位"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 3
 },
 {
 "h": "同意",
@@ -7818,7 +8326,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "突然",
@@ -7833,7 +8342,8 @@
 "a"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "腿",
@@ -7849,7 +8359,8 @@
 "cl": [
 "条"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "碗",
@@ -7864,7 +8375,8 @@
 "q"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "忘记",
@@ -7878,7 +8390,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "为了",
@@ -7893,7 +8406,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "文化",
@@ -7910,7 +8424,8 @@
 "个",
 "种"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 3
 },
 {
 "h": "习惯",
@@ -7927,7 +8442,8 @@
 "cl": [
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "洗澡",
@@ -7942,7 +8458,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "先",
@@ -7957,7 +8474,8 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "相信",
@@ -7971,7 +8489,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "头发",
@@ -7985,7 +8504,8 @@
 "n"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "图书馆",
@@ -8002,7 +8522,8 @@
 "家",
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "完成",
@@ -8017,13 +8538,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "万",
 "p": "wàn",
 "fr": "dix mille",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 557,
@@ -8032,7 +8554,8 @@
 "t"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "为",
@@ -8047,13 +8570,14 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "位",
 "p": "wèi",
 "fr": "(classificateur poli des personnes)",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 177,
@@ -8062,7 +8586,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "西",
@@ -8077,13 +8602,14 @@
 "b"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 3
 },
 {
 "h": "洗手间",
 "p": "xǐshǒujiān",
 "fr": "toilettes",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 9674,
@@ -8091,7 +8617,8 @@
 "n"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "夏",
@@ -8107,7 +8634,8 @@
 "nr"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "香蕉",
@@ -8124,7 +8652,8 @@
 "枝",
 "根"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "向",
@@ -8140,7 +8669,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "像",
@@ -8157,7 +8687,8 @@
 "d"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "校长",
@@ -8174,7 +8705,8 @@
 "个",
 "位"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "新鲜",
@@ -8188,7 +8720,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "行李箱",
@@ -8202,7 +8735,8 @@
 "n"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "需要",
@@ -8218,7 +8752,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "要求",
@@ -8235,7 +8770,8 @@
 "cl": [
 "点"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "一定",
@@ -8250,13 +8786,14 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "一会儿",
 "p": "yíhuìr",
 "fr": "un moment",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 2207,
@@ -8264,7 +8801,8 @@
 "mq"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "以前",
@@ -8278,7 +8816,8 @@
 "f"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "一边",
@@ -8293,7 +8832,8 @@
 "f"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "音乐",
@@ -8310,7 +8850,8 @@
 "张",
 "曲"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "小心",
@@ -8326,7 +8867,8 @@
 "ad"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "新闻",
@@ -8343,7 +8885,8 @@
 "条",
 "个"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 3
 },
 {
 "h": "信用卡",
@@ -8357,7 +8900,8 @@
 "n"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 3
 },
 {
 "h": "熊猫",
@@ -8374,7 +8918,8 @@
 "cl": [
 "只"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "选择",
@@ -8389,13 +8934,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "爷爷",
 "p": "yéye",
 "fr": "grand-père (paternel)",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 3099,
@@ -8405,7 +8951,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "一共",
@@ -8419,7 +8966,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "一样",
@@ -8435,7 +8983,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "一般",
@@ -8451,7 +9000,8 @@
 "u"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "一直",
@@ -8465,7 +9015,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "银行",
@@ -8482,7 +9033,8 @@
 "家",
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 3
 },
 {
 "h": "饮料",
@@ -8496,7 +9048,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 3
 },
 {
 "h": "影响",
@@ -8511,7 +9064,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "游戏",
@@ -8528,7 +9082,8 @@
 "cl": [
 "场"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "又",
@@ -8543,13 +9098,14 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "元",
 "p": "yuán",
 "fr": "yuan",
-"app": 3,
+"app": 1,
 "hsk2": 2,
 "hsk3": 1,
 "freq": 744,
@@ -8558,7 +9114,8 @@
 "tg"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 3
 },
 {
 "h": "月亮",
@@ -8572,7 +9129,8 @@
 "n"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 3
 },
 {
 "h": "应该",
@@ -8586,7 +9144,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "用",
@@ -8602,7 +9161,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "有名",
@@ -8616,7 +9176,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "遇到",
@@ -8630,7 +9191,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "愿意",
@@ -8644,7 +9206,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "越",
@@ -8660,13 +9223,14 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "站",
 "p": "zhàn",
 "fr": "se tenir debout ; station",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 399,
@@ -8676,13 +9240,14 @@
 "q"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "长",
 "p": "zhǎng",
 "fr": "grandir, pousser",
-"app": 3,
+"app": 2,
 "hsk2": 2,
 "hsk3": 2,
 "freq": 246,
@@ -8693,7 +9258,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "照顾",
@@ -8708,7 +9274,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "照相机",
@@ -8725,13 +9292,14 @@
 "个",
 "架"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 3
 },
 {
 "h": "只",
 "p": "zhǐ",
 "fr": "seulement",
-"app": 3,
+"app": 1,
 "hsk2": 3,
 "hsk3": 1,
 "freq": 98,
@@ -8740,7 +9308,8 @@
 "q"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "张",
@@ -8757,7 +9326,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "着急",
@@ -8772,7 +9342,8 @@
 "ad"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 3
 },
 {
 "h": "照片",
@@ -8789,13 +9360,14 @@
 "张",
 "套"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 3
 },
 {
 "h": "只",
 "p": "zhī",
 "fr": "(classificateur des animaux, et d'un objet d'une paire : 一只手)",
-"app": 3,
+"app": 1,
 "hsk2": 3,
 "hsk3": 1,
 "freq": 98,
@@ -8804,7 +9376,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "只有",
@@ -8820,7 +9393,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "才",
@@ -8836,13 +9410,14 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "中文",
 "p": "Zhōngwén",
 "fr": "chinois (la langue)",
-"app": 3,
+"app": 1,
 "hsk2": 4,
 "hsk3": 1,
 "freq": 6459,
@@ -8850,7 +9425,8 @@
 "nz"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 3
 },
 {
 "h": "终于",
@@ -8864,7 +9440,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "重要",
@@ -8878,7 +9455,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "主要",
@@ -8893,13 +9471,14 @@
 "d"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 3
 },
 {
 "h": "自己",
 "p": "zìjǐ",
 "fr": "soi-même",
-"app": 3,
+"app": 2,
 "hsk2": 3,
 "hsk3": 2,
 "freq": 56,
@@ -8908,7 +9487,8 @@
 "v"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 3
 },
 {
 "h": "总是",
@@ -8923,7 +9503,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 3
 },
 {
 "h": "最后",
@@ -8937,7 +9518,8 @@
 "f"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "作业",
@@ -8955,7 +9537,8 @@
 "cl": [
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 3
 },
 {
 "h": "中间",
@@ -8969,7 +9552,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 3
 },
 {
 "h": "种",
@@ -8985,7 +9569,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 3
 },
 {
 "h": "周末",
@@ -8999,7 +9584,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "注意",
@@ -9014,7 +9600,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 3
 },
 {
 "h": "自行车",
@@ -9030,7 +9617,8 @@
 "cl": [
 "辆"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 3
 },
 {
 "h": "嘴",
@@ -9047,7 +9635,8 @@
 "张",
 "个"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 3
 },
 {
 "h": "最近",
@@ -9061,7 +9650,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 3
 },
 {
 "h": "爱情",
@@ -9077,7 +9667,8 @@
 "cl": [
 "份"
 ],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "安排",
@@ -9092,7 +9683,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "按时",
@@ -9106,7 +9698,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "百分之",
@@ -9118,13 +9711,14 @@
 "freq": null,
 "pos": [],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "包子",
 "p": "bāozi",
 "fr": "brioche farcie",
-"app": 4,
+"app": 1,
 "hsk2": 5,
 "hsk3": 1,
 "freq": 16315,
@@ -9134,7 +9728,8 @@
 "cl": [
 "个"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "保证",
@@ -9149,7 +9744,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "抱歉",
@@ -9165,7 +9761,8 @@
 "ad"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "倍",
@@ -9180,7 +9777,8 @@
 "d"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "笨",
@@ -9195,7 +9793,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "毕业",
@@ -9210,7 +9809,8 @@
 "vn"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "标准",
@@ -9225,13 +9825,14 @@
 "a"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "安全",
 "p": "ānquán",
 "fr": "sécurité, sûr",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 364,
@@ -9242,7 +9843,8 @@
 "n"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "按照",
@@ -9257,7 +9859,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "棒",
@@ -9273,7 +9876,8 @@
 "q"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "保护",
@@ -9288,7 +9892,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "抱",
@@ -9302,7 +9907,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "报名",
@@ -9317,7 +9923,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "本来",
@@ -9332,13 +9939,14 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "比如",
 "p": "bǐrú",
 "fr": "par exemple",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 1051,
@@ -9346,13 +9954,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "遍",
 "p": "biàn",
 "fr": "fois (du début à la fin)",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1358,
@@ -9363,7 +9972,8 @@
 "a"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "表格",
@@ -9380,7 +9990,8 @@
 "张",
 "份"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "表示",
@@ -9395,7 +10006,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "表扬",
@@ -9410,7 +10022,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "并且",
@@ -9424,7 +10037,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "不过",
@@ -9440,7 +10054,8 @@
 "u"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "不管",
@@ -9455,7 +10070,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "部分",
@@ -9472,7 +10088,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "猜",
@@ -9486,7 +10103,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "参观",
@@ -9501,13 +10119,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "差不多",
 "p": "chàbuduō",
 "fr": "à peu près",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 2024,
@@ -9515,7 +10134,8 @@
 "l"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "长城",
@@ -9529,7 +10149,8 @@
 "ns"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "场",
@@ -9544,13 +10165,14 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "表演",
 "p": "biǎoyǎn",
 "fr": "spectacle, jouer",
-"app": 4,
+"app": 3,
 "hsk2": 3,
 "hsk3": 3,
 "freq": 1127,
@@ -9559,7 +10181,8 @@
 "v"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "饼干",
@@ -9576,7 +10199,8 @@
 "片",
 "块"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "博士",
@@ -9590,7 +10214,8 @@
 "n"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "不得不",
@@ -9604,7 +10229,8 @@
 "d"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "不仅",
@@ -9618,7 +10244,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "擦",
@@ -9632,7 +10259,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "材料",
@@ -9646,7 +10274,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "餐厅",
@@ -9663,13 +10292,14 @@
 "间",
 "家"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "尝",
 "p": "cháng",
 "fr": "goûter",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 3212,
@@ -9677,7 +10307,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "长江",
@@ -9691,7 +10322,8 @@
 "ns"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "超过",
@@ -9705,7 +10337,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "厕所",
@@ -9722,7 +10355,8 @@
 "间",
 "处"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "成为",
@@ -9736,7 +10370,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "乘坐",
@@ -9750,7 +10385,8 @@
 "v"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "重新",
@@ -9764,7 +10400,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "出差",
@@ -9779,13 +10416,14 @@
 "vn"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "出生",
 "p": "chūshēng",
 "fr": "naître",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 2112,
@@ -9794,7 +10432,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "厨房",
@@ -9810,7 +10449,8 @@
 "cl": [
 "间"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "窗户",
@@ -9827,7 +10467,8 @@
 "个",
 "扇"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "从来",
@@ -9841,7 +10482,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "存",
@@ -9855,7 +10497,8 @@
 "v"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "答案",
@@ -9871,7 +10514,8 @@
 "cl": [
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "成功",
@@ -9887,7 +10531,8 @@
 "ad"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "诚实",
@@ -9903,7 +10548,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "吃惊",
@@ -9917,7 +10563,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "抽烟",
@@ -9931,13 +10578,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "出发",
 "p": "chūfā",
 "fr": "partir",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1714,
@@ -9945,7 +10593,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "出现",
@@ -9960,13 +10609,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "传真",
 "p": "chuánzhēn",
 "fr": "fax",
-"app": 4,
+"app": 6,
 "hsk2": 4,
 "hsk3": 6,
 "freq": 6784,
@@ -9975,7 +10625,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "词语",
@@ -9989,7 +10640,8 @@
 "n"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "粗心",
@@ -10004,7 +10656,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "错误",
@@ -10021,7 +10674,8 @@
 "cl": [
 "个"
 ],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "打招呼",
@@ -10036,13 +10690,14 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "打扮",
 "p": "dǎban",
 "fr": "s'habiller, se faire beau",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 4394,
@@ -10051,7 +10706,8 @@
 "n"
 ],
 "cl": [],
-"th": "vetements"
+"th": "vetements",
+"app20": 4
 },
 {
 "h": "打扰",
@@ -10065,7 +10721,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "打印",
@@ -10080,7 +10737,8 @@
 "vn"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "打折",
@@ -10095,7 +10753,8 @@
 "vn"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "打针",
@@ -10109,7 +10768,8 @@
 "v"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "大使馆",
@@ -10126,7 +10786,8 @@
 "座",
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "戴",
@@ -10141,7 +10802,8 @@
 "nr"
 ],
 "cl": [],
-"th": "vetements"
+"th": "vetements",
+"app20": 4
 },
 {
 "h": "当",
@@ -10156,7 +10818,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "刀",
@@ -10173,7 +10836,8 @@
 "cl": [
 "把"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "倒",
@@ -10188,7 +10852,8 @@
 "d"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "到底",
@@ -10203,13 +10868,14 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "大概",
 "p": "dàgài",
 "fr": "probablement",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1611,
@@ -10218,7 +10884,8 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "大约",
@@ -10232,7 +10899,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "大夫",
@@ -10246,7 +10914,8 @@
 "n"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "当时",
@@ -10260,7 +10929,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "导游",
@@ -10274,13 +10944,14 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "到处",
 "p": "dàochù",
 "fr": "partout",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 2171,
@@ -10288,7 +10959,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "道歉",
@@ -10303,7 +10975,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "得意",
@@ -10318,13 +10991,14 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "得",
 "p": "děi",
 "fr": "devoir, falloir",
-"app": 4,
+"app": 2,
 "hsk2": 2,
 "hsk3": 2,
 "freq": 58,
@@ -10333,13 +11007,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "地点",
 "p": "dìdiǎn",
 "fr": "lieu",
-"app": 4,
+"app": 3,
 "hsk2": null,
 "hsk3": 3,
 "freq": 1921,
@@ -10349,7 +11024,8 @@
 "cl": [
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "登机牌",
@@ -10363,13 +11039,14 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "等",
 "p": "děng",
 "fr": "etc., et ainsi de suite",
-"app": 4,
+"app": 2,
 "hsk2": 4,
 "hsk3": 2,
 "freq": 83,
@@ -10378,7 +11055,8 @@
 "u"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "底",
@@ -10393,7 +11071,8 @@
 "n"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "地址",
@@ -10409,7 +11088,8 @@
 "cl": [
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "调查",
@@ -10424,7 +11104,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "动作",
@@ -10441,7 +11122,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "肚子",
@@ -10458,7 +11140,8 @@
 "cl": [
 "个"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "对于",
@@ -10472,7 +11155,8 @@
 "p"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "对面",
@@ -10488,7 +11172,8 @@
 "v"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 4
 },
 {
 "h": "儿童",
@@ -10504,13 +11189,14 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "发展",
 "p": "fāzhǎn",
 "fr": "développer",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 859,
@@ -10519,7 +11205,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "翻译",
@@ -10531,7 +11218,8 @@
 "freq": 4025,
 "pos": [],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "低",
@@ -10547,7 +11235,8 @@
 "v"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "地球",
@@ -10563,7 +11252,8 @@
 "cl": [
 "个"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "掉",
@@ -10577,13 +11267,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "丢",
 "p": "diū",
 "fr": "perdre",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1655,
@@ -10591,7 +11282,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "堵车",
@@ -10606,7 +11298,8 @@
 "vn"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "短信",
@@ -10618,13 +11311,14 @@
 "freq": 1000000,
 "pos": [],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "对话",
 "p": "duìhuà",
 "fr": "dialogue",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 3221,
@@ -10633,7 +11327,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "而",
@@ -10648,13 +11343,14 @@
 "u"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "发生",
 "p": "fāshēng",
 "fr": "se produire",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 211,
@@ -10663,7 +11359,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "法律",
@@ -10680,7 +11377,8 @@
 "条",
 " 套"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "烦恼",
@@ -10695,7 +11393,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "反对",
@@ -10710,7 +11409,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "方面",
@@ -10726,7 +11426,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "房东",
@@ -10740,7 +11441,8 @@
 "n"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "放暑假",
@@ -10752,7 +11454,8 @@
 "freq": 1000000,
 "pos": [],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "份",
@@ -10766,7 +11469,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "否则",
@@ -10780,13 +11484,14 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "富",
 "p": "fù",
 "fr": "riche",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 3016,
@@ -10795,7 +11500,8 @@
 "a"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "父亲",
@@ -10811,7 +11517,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "复杂",
@@ -10825,7 +11532,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "改变",
@@ -10840,13 +11548,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "方法",
 "p": "fāngfǎ",
 "fr": "méthode",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 577,
@@ -10856,13 +11565,14 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "方向",
 "p": "fāngxiàng",
 "fr": "direction",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1183,
@@ -10872,7 +11582,8 @@
 "cl": [
 "个"
 ],
-"th": "position"
+"th": "position",
+"app20": 4
 },
 {
 "h": "放弃",
@@ -10886,7 +11597,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "放松",
@@ -10902,7 +11614,8 @@
 "a"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "丰富",
@@ -10917,7 +11630,8 @@
 "v"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "符合",
@@ -10931,7 +11645,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "付款",
@@ -10946,7 +11661,8 @@
 "vn"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "复印",
@@ -10961,7 +11677,8 @@
 "vn"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "负责",
@@ -10977,7 +11694,8 @@
 "a"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "干杯",
@@ -10991,7 +11709,8 @@
 "v"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "赶",
@@ -11005,7 +11724,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "敢",
@@ -11020,7 +11740,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "感动",
@@ -11037,7 +11758,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "感情",
@@ -11054,7 +11776,8 @@
 "个",
 "种"
 ],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "感觉",
@@ -11069,7 +11792,8 @@
 "v"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "感谢",
@@ -11084,13 +11808,14 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "干",
 "p": "gàn",
 "fr": "faire",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 463,
@@ -11099,7 +11824,8 @@
 "a"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "高速公路",
@@ -11113,7 +11839,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "各",
@@ -11127,7 +11854,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "工资",
@@ -11144,7 +11872,8 @@
 "个",
 "份"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "共同",
@@ -11159,7 +11888,8 @@
 "b"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "购物",
@@ -11174,7 +11904,8 @@
 "vn"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "鼓励",
@@ -11189,7 +11920,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "故意",
@@ -11204,7 +11936,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "关键",
@@ -11221,13 +11954,14 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "刚",
 "p": "gāng",
 "fr": "à l'instant",
-"app": 4,
+"app": 3,
 "hsk2": null,
 "hsk3": 3,
 "freq": 436,
@@ -11236,7 +11970,8 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "胳膊",
@@ -11253,7 +11988,8 @@
 "只",
 "条"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "公里",
@@ -11268,7 +12004,8 @@
 "n"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "功夫",
@@ -11282,7 +12019,8 @@
 "n"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "够",
@@ -11297,7 +12035,8 @@
 "d"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "估计",
@@ -11312,7 +12051,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "顾客",
@@ -11328,7 +12068,8 @@
 "cl": [
 "位"
 ],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "挂",
@@ -11343,7 +12084,8 @@
 "q"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "观众",
@@ -11357,7 +12099,8 @@
 "n"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "管理",
@@ -11372,7 +12115,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "广播",
@@ -11390,7 +12134,8 @@
 "cl": [
 "个"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "逛",
@@ -11404,7 +12149,8 @@
 "v"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "国际",
@@ -11418,7 +12164,8 @@
 "n"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "果汁",
@@ -11432,7 +12179,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "海洋",
@@ -11448,7 +12196,8 @@
 "cl": [
 "个"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "寒假",
@@ -11462,7 +12211,8 @@
 "t"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "航班",
@@ -11476,13 +12226,14 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "好像",
 "p": "hǎoxiàng",
 "fr": "on dirait que",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 738,
@@ -11490,7 +12241,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "合格",
@@ -11505,7 +12257,8 @@
 "vn"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "盒子",
@@ -11519,7 +12272,8 @@
 "n"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "光",
@@ -11538,7 +12292,8 @@
 "cl": [
 "道"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "广告",
@@ -11554,7 +12309,8 @@
 "cl": [
 "项"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "规定",
@@ -11569,7 +12325,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "国籍",
@@ -11583,7 +12340,8 @@
 "n"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "过程",
@@ -11599,7 +12357,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "害羞",
@@ -11613,7 +12372,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "汗",
@@ -11627,7 +12387,8 @@
 "n"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "好处",
@@ -11641,13 +12402,14 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "号码",
 "p": "hàomǎ",
 "fr": "numéro",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 2110,
@@ -11658,13 +12420,14 @@
 "堆",
 "个"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "合适",
 "p": "héshì",
 "fr": "approprié",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 2104,
@@ -11672,7 +12435,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "厚",
@@ -11686,7 +12450,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "后悔",
@@ -11702,7 +12467,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "互联网",
@@ -11716,7 +12482,8 @@
 "n"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "怀疑",
@@ -11731,7 +12498,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "活动",
@@ -11746,7 +12514,8 @@
 "v"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "火",
@@ -11762,7 +12531,8 @@
 "v"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "基础",
@@ -11776,7 +12546,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "积极",
@@ -11791,7 +12562,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "及时",
@@ -11806,7 +12578,8 @@
 "a"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "寄",
@@ -11820,7 +12593,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "计划",
@@ -11838,7 +12612,8 @@
 "个",
 "项"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "技术",
@@ -11855,7 +12630,8 @@
 "门",
 "种"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "护士",
@@ -11871,7 +12647,8 @@
 "cl": [
 "个"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "互相",
@@ -11886,7 +12663,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "回忆",
@@ -11901,7 +12679,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "活泼",
@@ -11915,7 +12694,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "获得",
@@ -11929,7 +12709,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "激动",
@@ -11944,7 +12725,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "积累",
@@ -11960,7 +12742,8 @@
 "n"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "即使",
@@ -11974,7 +12757,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "记者",
@@ -11990,7 +12774,8 @@
 "cl": [
 "个"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "既然",
@@ -12004,7 +12789,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "继续",
@@ -12018,7 +12804,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "家具",
@@ -12035,7 +12822,8 @@
 "件",
 "套"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "加油站",
@@ -12049,7 +12837,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "价格",
@@ -12065,13 +12854,14 @@
 "cl": [
 "个"
 ],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "减肥",
 "p": "jiǎnféi",
 "fr": "maigrir",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 3988,
@@ -12080,7 +12870,8 @@
 "vn"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "建议",
@@ -12098,7 +12889,8 @@
 "个",
 "点"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "奖金",
@@ -12112,7 +12904,8 @@
 "n"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "降落",
@@ -12127,7 +12920,8 @@
 "vn"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "交流",
@@ -12142,7 +12936,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "郊区",
@@ -12156,13 +12951,14 @@
 "s"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "饺子",
 "p": "jiǎozi",
 "fr": "raviolis chinois",
-"app": 4,
+"app": 1,
 "hsk2": 4,
 "hsk3": 1,
 "freq": 11834,
@@ -12173,7 +12969,8 @@
 "个",
 "只"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "教育",
@@ -12188,7 +12985,8 @@
 "v"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "加班",
@@ -12203,7 +13001,8 @@
 "vn"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "假",
@@ -12220,13 +13019,14 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "坚持",
 "p": "jiānchí",
 "fr": "persévérer",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 751,
@@ -12234,7 +13034,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "减少",
@@ -12249,7 +13050,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "将来",
@@ -12263,7 +13065,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "降低",
@@ -12278,7 +13081,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "交",
@@ -12293,7 +13097,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "交通",
@@ -12307,7 +13112,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "骄傲",
@@ -12322,7 +13128,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "教授",
@@ -12340,7 +13147,8 @@
 "个",
 "位"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "接受",
@@ -12355,7 +13163,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "接着",
@@ -12370,13 +13179,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "节",
 "p": "jié",
 "fr": "(classificateur des cours)",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 1196,
@@ -12387,7 +13197,8 @@
 "v"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "解释",
@@ -12402,7 +13213,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "紧张",
@@ -12418,7 +13230,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "禁止",
@@ -12432,7 +13245,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "经济",
@@ -12446,7 +13260,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "经验",
@@ -12461,7 +13276,8 @@
 "v"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "警察",
@@ -12477,7 +13293,8 @@
 "cl": [
 "个"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "竟然",
@@ -12491,7 +13308,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "镜子",
@@ -12508,7 +13326,8 @@
 "面",
 "个"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "举",
@@ -12523,7 +13342,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "结果",
@@ -12540,7 +13360,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "节约",
@@ -12555,7 +13376,8 @@
 "vn"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "尽管",
@@ -12570,7 +13392,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "进行",
@@ -12585,7 +13408,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "精彩",
@@ -12599,7 +13423,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "经历",
@@ -12617,7 +13442,8 @@
 "个",
 "次"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "京剧",
@@ -12634,7 +13460,8 @@
 "场",
 "出"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "景色",
@@ -12648,7 +13475,8 @@
 "n"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "竞争",
@@ -12663,7 +13491,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "究竟",
@@ -12678,7 +13507,8 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "举办",
@@ -12693,7 +13523,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "举行",
@@ -12707,7 +13538,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "距离",
@@ -12724,7 +13556,8 @@
 "cl": [
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "开玩笑",
@@ -12738,7 +13571,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "看法",
@@ -12754,7 +13588,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "烤鸭",
@@ -12768,7 +13603,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "科学",
@@ -12787,13 +13623,14 @@
 "门",
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "可怜",
 "p": "kělián",
 "fr": "pauvre, pitoyable",
-"app": 4,
+"app": 6,
 "hsk2": 4,
 "hsk3": 6,
 "freq": 1942,
@@ -12803,7 +13640,8 @@
 "vn"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "可惜",
@@ -12818,7 +13656,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "肯定",
@@ -12835,7 +13674,8 @@
 "a"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "空气",
@@ -12849,7 +13689,8 @@
 "n"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "苦",
@@ -12866,7 +13707,8 @@
 "v"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "拒绝",
@@ -12881,7 +13723,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "聚会",
@@ -12896,13 +13739,14 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "开心",
 "p": "kāixīn",
 "fr": "joyeux",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 667,
@@ -12912,7 +13756,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "考虑",
@@ -12927,7 +13772,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "棵",
@@ -12941,7 +13787,8 @@
 "q"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "咳嗽",
@@ -12955,13 +13802,14 @@
 "v"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "可是",
 "p": "kěshì",
 "fr": "mais",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 404,
@@ -12971,7 +13819,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "客厅",
@@ -12987,7 +13836,8 @@
 "cl": [
 "间"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "空",
@@ -13004,7 +13854,8 @@
 "d"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "恐怕",
@@ -13018,13 +13869,14 @@
 "d"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "矿泉水",
 "p": "kuàngquánshuǐ",
 "fr": "eau minérale",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 13110,
@@ -13035,7 +13887,8 @@
 "瓶",
 "杯"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "困",
@@ -13052,7 +13905,8 @@
 "vn"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "拉",
@@ -13067,7 +13921,8 @@
 "b"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "辣",
@@ -13083,7 +13938,8 @@
 "v"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "来不及",
@@ -13097,7 +13953,8 @@
 "v"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "懒",
@@ -13111,7 +13968,8 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "浪漫",
@@ -13126,7 +13984,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "冷静",
@@ -13142,7 +14001,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "理解",
@@ -13157,7 +14017,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "礼貌",
@@ -13173,7 +14034,8 @@
 "ad"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "厉害",
@@ -13188,7 +14050,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "例如",
@@ -13202,7 +14065,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "困难",
@@ -13217,7 +14081,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "垃圾桶",
@@ -13231,13 +14096,14 @@
 "n"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "来自",
 "p": "láizì",
 "fr": "venir de",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 644,
@@ -13245,7 +14111,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "来得及",
@@ -13259,7 +14126,8 @@
 "v"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "浪费",
@@ -13274,7 +14142,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "老虎",
@@ -13290,7 +14159,8 @@
 "cl": [
 "只"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "理发",
@@ -13305,7 +14175,8 @@
 "vn"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "理想",
@@ -13320,7 +14191,8 @@
 "a"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "礼拜天",
@@ -13334,7 +14206,8 @@
 "t"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "力气",
@@ -13350,7 +14223,8 @@
 "cl": [
 "把"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "俩",
@@ -13364,7 +14238,8 @@
 "m"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "连",
@@ -13381,13 +14256,14 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "凉快",
 "p": "liángkuai",
 "fr": "frais (agréable)",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 19483,
@@ -13395,7 +14271,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "另外",
@@ -13411,7 +14288,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "流利",
@@ -13426,7 +14304,8 @@
 "ad"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "乱",
@@ -13442,7 +14321,8 @@
 "v"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "律师",
@@ -13456,13 +14336,14 @@
 "n"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "马虎",
 "p": "mǎhu",
 "fr": "négligent",
-"app": 4,
+"app": 6,
 "hsk2": 4,
 "hsk3": 6,
 "freq": 20190,
@@ -13471,13 +14352,14 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "毛",
 "p": "máo",
 "fr": "poil ; 0,1 yuan",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 1319,
@@ -13487,7 +14369,8 @@
 "q"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "美丽",
@@ -13502,13 +14385,14 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "迷路",
 "p": "mílù",
 "fr": "se perdre",
-"app": 4,
+"app": 5,
 "hsk2": 5,
 "hsk3": 5,
 "freq": 8871,
@@ -13517,7 +14401,8 @@
 "n"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "免费",
@@ -13532,7 +14417,8 @@
 "vn"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "联系",
@@ -13547,7 +14433,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "零钱",
@@ -13561,7 +14448,8 @@
 "n"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "留",
@@ -13575,7 +14463,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "流行",
@@ -13590,7 +14479,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "旅行",
@@ -13605,7 +14495,8 @@
 "vn"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "麻烦",
@@ -13622,7 +14513,8 @@
 "n"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "满",
@@ -13639,7 +14531,8 @@
 "b"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "毛巾",
@@ -13655,7 +14548,8 @@
 "cl": [
 "条"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "梦",
@@ -13673,7 +14567,8 @@
 "场",
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "密码",
@@ -13687,7 +14582,8 @@
 "n"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "秒",
@@ -13702,7 +14598,8 @@
 "qt"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "民族",
@@ -13718,7 +14615,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "目的",
@@ -13734,7 +14632,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "难道",
@@ -13748,7 +14647,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "内",
@@ -13762,7 +14662,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 4
 },
 {
 "h": "能力",
@@ -13778,7 +14679,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "弄",
@@ -13792,7 +14694,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "偶尔",
@@ -13807,13 +14710,14 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "排列",
 "p": "páiliè",
 "fr": "ranger, disposer",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 8340,
@@ -13822,7 +14726,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "陪",
@@ -13836,7 +14741,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "皮肤",
@@ -13853,7 +14759,8 @@
 "层",
 "块"
 ],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "篇",
@@ -13868,7 +14775,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "母亲",
@@ -13884,7 +14792,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "耐心",
@@ -13900,7 +14809,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "难受",
@@ -13914,7 +14824,8 @@
 "a"
 ],
 "cl": [],
-"th": "corps"
+"th": "corps",
+"app20": 4
 },
 {
 "h": "内容",
@@ -13931,7 +14842,8 @@
 "个",
 "项"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "年龄",
@@ -13948,7 +14860,8 @@
 "把",
 "个"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "暖和",
@@ -13963,7 +14876,8 @@
 "v"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "排队",
@@ -13978,7 +14892,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "判断",
@@ -13994,7 +14909,8 @@
 "n"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "批评",
@@ -14009,7 +14925,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "脾气",
@@ -14025,13 +14942,14 @@
 "cl": [
 "个"
 ],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "骗",
 "p": "piàn",
 "fr": "tromper",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 1935,
@@ -14040,7 +14958,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "乒乓球",
@@ -14056,7 +14975,8 @@
 "cl": [
 "个"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "破",
@@ -14071,7 +14991,8 @@
 "a"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "普遍",
@@ -14086,7 +15007,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "其次",
@@ -14101,7 +15023,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "气候",
@@ -14117,7 +15040,8 @@
 "cl": [
 "种"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "签证",
@@ -14131,7 +15055,8 @@
 "n"
 ],
 "cl": [],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "桥",
@@ -14147,7 +15072,8 @@
 "cl": [
 "座"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "亲戚",
@@ -14164,7 +15090,8 @@
 "门",
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "轻松",
@@ -14179,13 +15106,14 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "穷",
 "p": "qióng",
 "fr": "pauvre",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 4355,
@@ -14195,7 +15123,8 @@
 "g"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "取",
@@ -14209,13 +15138,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "平时",
 "p": "píngshí",
 "fr": "d'habitude",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 2780,
@@ -14223,7 +15153,8 @@
 "t"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "葡萄",
@@ -14237,7 +15168,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "普通话",
@@ -14251,7 +15183,8 @@
 "n"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "其中",
@@ -14265,7 +15198,8 @@
 "r"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "千万",
@@ -14280,7 +15214,8 @@
 "t"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "敲",
@@ -14294,7 +15229,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "巧克力",
@@ -14310,7 +15246,8 @@
 "cl": [
 "块"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "轻",
@@ -14327,7 +15264,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "情况",
@@ -14344,7 +15282,8 @@
 "个",
 "种"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "区别",
@@ -14361,7 +15300,8 @@
 "cl": [
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "全部",
@@ -14375,7 +15315,8 @@
 "m"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "缺点",
@@ -14391,7 +15332,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "却",
@@ -14405,7 +15347,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "然而",
@@ -14419,7 +15362,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "任何",
@@ -14433,7 +15377,8 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "扔",
@@ -14447,7 +15392,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "日记",
@@ -14464,7 +15410,8 @@
 "则",
 "本"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "散步",
@@ -14479,13 +15426,14 @@
 "vn"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "沙发",
 "p": "shāfā",
 "fr": "canapé",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 3832,
@@ -14496,7 +15444,8 @@
 "条",
 "张"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "伤心",
@@ -14510,13 +15459,14 @@
 "a"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "勺子",
 "p": "sháozi",
 "fr": "cuillère",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 15680,
@@ -14526,7 +15476,8 @@
 "cl": [
 "把"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "深",
@@ -14543,7 +15494,8 @@
 "b"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "缺少",
@@ -14557,7 +15509,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "确实",
@@ -14573,7 +15526,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "热闹",
@@ -14587,7 +15541,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "任务",
@@ -14604,7 +15559,8 @@
 "项",
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "仍然",
@@ -14618,7 +15574,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "入口",
@@ -14633,7 +15590,8 @@
 "v"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "森林",
@@ -14649,7 +15607,8 @@
 "cl": [
 "片"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "商量",
@@ -14663,7 +15622,8 @@
 "v"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "稍微",
@@ -14677,7 +15637,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "社会",
@@ -14693,7 +15654,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "申请",
@@ -14711,7 +15673,8 @@
 "cl": [
 "份"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "甚至",
@@ -14726,7 +15689,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "生命",
@@ -14743,7 +15707,8 @@
 "个",
 "条"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "省",
@@ -14758,7 +15723,8 @@
 "v"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "失败",
@@ -14773,7 +15739,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "师傅",
@@ -14790,7 +15757,8 @@
 "个",
 "位"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "实际",
@@ -14806,7 +15774,8 @@
 "ad"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "使",
@@ -14820,7 +15789,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "是否",
@@ -14834,7 +15804,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "适应",
@@ -14849,13 +15820,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "收",
 "p": "shōu",
 "fr": "recevoir",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 834,
@@ -14863,7 +15835,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "收拾",
@@ -14877,13 +15850,14 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "生活",
 "p": "shēnghuó",
 "fr": "vie, vivre",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 203,
@@ -14892,7 +15866,8 @@
 "v"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "生意",
@@ -14906,7 +15881,8 @@
 "n"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "剩",
@@ -14920,7 +15896,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "失望",
@@ -14936,7 +15913,8 @@
 "ad"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "十分",
@@ -14950,7 +15928,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "实在",
@@ -14965,7 +15944,8 @@
 "a"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "使用",
@@ -14980,7 +15960,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "适合",
@@ -14994,7 +15975,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "世纪",
@@ -15010,7 +15992,8 @@
 "cl": [
 "个"
 ],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "收入",
@@ -15028,7 +16011,8 @@
 "笔",
 "个"
 ],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "首都",
@@ -15044,7 +16028,8 @@
 "cl": [
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "首先",
@@ -15059,13 +16044,14 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "受到",
 "p": "shòudào",
 "fr": "recevoir, subir",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 858,
@@ -15073,7 +16059,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "输",
@@ -15087,7 +16074,8 @@
 "v"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "数量",
@@ -15103,7 +16091,8 @@
 "cl": [
 "个"
 ],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "帅",
@@ -15118,7 +16107,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "顺利",
@@ -15133,7 +16123,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "说明",
@@ -15151,7 +16142,8 @@
 "cl": [
 "个"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "受不了",
@@ -15165,7 +16157,8 @@
 "l"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "售货员",
@@ -15181,7 +16174,8 @@
 "cl": [
 "个"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "熟悉",
@@ -15197,7 +16191,8 @@
 "a"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "数字",
@@ -15213,7 +16208,8 @@
 "cl": [
 "个"
 ],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "顺便",
@@ -15227,7 +16223,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "顺序",
@@ -15241,7 +16238,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "硕士",
@@ -15255,7 +16253,8 @@
 "n"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "死",
@@ -15272,7 +16271,8 @@
 "d"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "速度",
@@ -15288,7 +16288,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "塑料袋",
@@ -15302,7 +16303,8 @@
 "n"
 ],
 "cl": [],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "随便",
@@ -15318,7 +16320,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "孙子",
@@ -15333,7 +16336,8 @@
 "nr"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "酸",
@@ -15348,7 +16352,8 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "随着",
@@ -15362,7 +16367,8 @@
 "p"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "所有",
@@ -15377,7 +16383,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "台",
@@ -15393,7 +16400,8 @@
 "b"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "态度",
@@ -15409,7 +16417,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "弹钢琴",
@@ -15421,13 +16430,14 @@
 "freq": null,
 "pos": [],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "糖",
 "p": "táng",
 "fr": "sucre, bonbon",
-"app": 4,
+"app": 3,
 "hsk2": 3,
 "hsk3": 3,
 "freq": 2036,
@@ -15438,7 +16448,8 @@
 "颗",
 "块"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "趟",
@@ -15453,7 +16464,8 @@
 "v"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "抬",
@@ -15467,7 +16479,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "谈",
@@ -15482,7 +16495,8 @@
 "g"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "汤",
@@ -15497,7 +16511,8 @@
 "nr"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "躺",
@@ -15511,7 +16526,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "讨论",
@@ -15526,7 +16542,8 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "讨厌",
@@ -15540,7 +16557,8 @@
 "v"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "特点",
@@ -15556,7 +16574,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "提",
@@ -15570,7 +16589,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "提前",
@@ -15585,7 +16605,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "填空",
@@ -15599,7 +16620,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "停",
@@ -15613,7 +16635,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "提供",
@@ -15627,7 +16650,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "提醒",
@@ -15642,7 +16666,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "条件",
@@ -15658,13 +16683,14 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "挺",
 "p": "tǐng",
 "fr": "assez, plutôt",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 737,
@@ -15675,7 +16701,8 @@
 "q"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "通过",
@@ -15691,7 +16718,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "通知",
@@ -15708,7 +16736,8 @@
 "cl": [
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "同时",
@@ -15724,7 +16753,8 @@
 "d"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "推",
@@ -15738,7 +16768,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "脱",
@@ -15752,7 +16783,8 @@
 "v"
 ],
 "cl": [],
-"th": "vetements"
+"th": "vetements",
+"app20": 4
 },
 {
 "h": "完全",
@@ -15767,13 +16799,14 @@
 "a"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "网球",
 "p": "wǎngqiú",
 "fr": "tennis",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 5430,
@@ -15783,7 +16816,8 @@
 "cl": [
 "个"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "危险",
@@ -15799,13 +16833,14 @@
 "n"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "同情",
 "p": "tóngqíng",
 "fr": "compatir",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 4665,
@@ -15814,7 +16849,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "推迟",
@@ -15828,7 +16864,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "袜子",
@@ -15845,7 +16882,8 @@
 "只",
 "对"
 ],
-"th": "vetements"
+"th": "vetements",
+"app20": 4
 },
 {
 "h": "往往",
@@ -15859,13 +16897,14 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "网站",
 "p": "wǎngzhàn",
 "fr": "site web",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1965,
@@ -15873,7 +16912,8 @@
 "n"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "味道",
@@ -15887,13 +16927,14 @@
 "n"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "卫生间",
 "p": "wèishēngjiān",
 "fr": "salle de bain",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 7314,
@@ -15903,7 +16944,8 @@
 "cl": [
 "间"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "温度",
@@ -15919,7 +16961,8 @@
 "cl": [
 "个"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "文章",
@@ -15936,7 +16979,8 @@
 "篇",
 "段"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "污染",
@@ -15951,7 +16995,8 @@
 "v"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "无",
@@ -15965,7 +17010,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "无论",
@@ -15979,7 +17025,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "西红柿",
@@ -15995,7 +17042,8 @@
 "cl": [
 "只"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "无聊",
@@ -16010,7 +17058,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "误会",
@@ -16025,7 +17074,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "吸引",
@@ -16039,7 +17089,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "咸",
@@ -16053,7 +17104,8 @@
 "a"
 ],
 "cl": [],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "羡慕",
@@ -16068,7 +17120,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "相反",
@@ -16083,7 +17136,8 @@
 "vn"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "详细",
@@ -16098,13 +17152,14 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "橡皮",
 "p": "xiàngpí",
 "fr": "gomme",
-"app": 4,
+"app": 5,
 "hsk2": 5,
 "hsk3": 5,
 "freq": 17575,
@@ -16114,7 +17169,8 @@
 "cl": [
 "块"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "小吃",
@@ -16130,7 +17186,8 @@
 "cl": [
 "家"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "小说",
@@ -16147,7 +17204,8 @@
 "本",
 "部"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "效果",
@@ -16161,7 +17219,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "心情",
@@ -16177,7 +17236,8 @@
 "cl": [
 "个"
 ],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "信息",
@@ -16191,7 +17251,8 @@
 "n"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "兴奋",
@@ -16207,7 +17268,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "现金",
@@ -16221,7 +17283,8 @@
 "n"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "香",
@@ -16239,7 +17302,8 @@
 "cl": [
 "根"
 ],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "相同",
@@ -16253,7 +17317,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "响",
@@ -16269,7 +17334,8 @@
 "q"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "消息",
@@ -16285,7 +17351,8 @@
 "cl": [
 "条"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "小伙子",
@@ -16301,7 +17368,8 @@
 "cl": [
 "个"
 ],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "笑话",
@@ -16317,7 +17385,8 @@
 "cl": [
 "个"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "辛苦",
@@ -16334,13 +17403,14 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "信封",
 "p": "xìnfēng",
 "fr": "enveloppe",
-"app": 4,
+"app": 5,
 "hsk2": 5,
 "hsk3": 5,
 "freq": 10268,
@@ -16350,7 +17420,8 @@
 "cl": [
 "个"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "信心",
@@ -16366,13 +17437,14 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "行",
 "p": "xíng",
 "fr": "d'accord, ça marche",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 272,
@@ -16384,7 +17456,8 @@
 "n"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "醒",
@@ -16400,7 +17473,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "性格",
@@ -16416,7 +17490,8 @@
 "cl": [
 "个"
 ],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "修理",
@@ -16431,13 +17506,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "学期",
 "p": "xuéqī",
 "fr": "semestre",
-"app": 4,
+"app": 3,
 "hsk2": 5,
 "hsk3": 3,
 "freq": 5859,
@@ -16447,7 +17523,8 @@
 "cl": [
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "牙膏",
@@ -16463,7 +17540,8 @@
 "cl": [
 "管"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "性别",
@@ -16477,7 +17555,8 @@
 "n"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "幸福",
@@ -16493,7 +17572,8 @@
 "nz"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "许多",
@@ -16507,7 +17587,8 @@
 "m"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "压力",
@@ -16521,7 +17602,8 @@
 "n"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "亚洲",
@@ -16535,13 +17617,14 @@
 "ns"
 ],
 "cl": [],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "呀",
 "p": "ya",
 "fr": "(particule d'exclamation)",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 432,
@@ -16549,7 +17632,8 @@
 "y"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "盐",
@@ -16565,7 +17649,8 @@
 "cl": [
 "粒"
 ],
-"th": "nourriture"
+"th": "nourriture",
+"app20": 4
 },
 {
 "h": "严格",
@@ -16581,7 +17666,8 @@
 "v"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "研究",
@@ -16596,7 +17682,8 @@
 "v"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "演员",
@@ -16613,7 +17700,8 @@
 "个",
 "位"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "阳光",
@@ -16628,7 +17716,8 @@
 "nz"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "样子",
@@ -16642,7 +17731,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "严重",
@@ -16657,7 +17747,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "演出",
@@ -16672,7 +17763,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "眼镜",
@@ -16688,7 +17780,8 @@
 "cl": [
 "副"
 ],
-"th": "vetements"
+"th": "vetements",
+"app20": 4
 },
 {
 "h": "养成",
@@ -16703,7 +17796,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "邀请",
@@ -16718,7 +17812,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "要是",
@@ -16733,7 +17828,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "也许",
@@ -16747,7 +17843,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "叶子",
@@ -16764,13 +17861,14 @@
 "cl": [
 "片"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "以",
 "p": "yǐ",
 "fr": "avec, par",
-"app": 4,
+"app": 5,
 "hsk2": 4,
 "hsk3": 5,
 "freq": 166,
@@ -16780,7 +17878,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "意见",
@@ -16797,7 +17896,8 @@
 "点",
 "条"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "因此",
@@ -16811,7 +17911,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "印象",
@@ -16825,7 +17926,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "赢",
@@ -16839,7 +17941,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "永远",
@@ -16854,7 +17957,8 @@
 "b"
 ],
 "cl": [],
-"th": "temps"
+"th": "temps",
+"app20": 4
 },
 {
 "h": "优秀",
@@ -16868,7 +17972,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "由",
@@ -16883,7 +17988,8 @@
 "v"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "钥匙",
@@ -16899,13 +18005,14 @@
 "cl": [
 "把"
 ],
-"th": "maison"
+"th": "maison",
+"app20": 4
 },
 {
 "h": "页",
 "p": "yè",
 "fr": "page",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 2404,
@@ -16914,7 +18021,8 @@
 "g"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "一切",
@@ -16928,13 +18036,14 @@
 "r"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "以为",
 "p": "yǐwéi",
 "fr": "croire (à tort)",
-"app": 4,
+"app": 3,
 "hsk2": 3,
 "hsk3": 3,
 "freq": 567,
@@ -16942,7 +18051,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "艺术",
@@ -16956,7 +18066,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "引起",
@@ -16970,7 +18081,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "应聘",
@@ -16985,7 +18097,8 @@
 "vn"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "勇敢",
@@ -17001,7 +18114,8 @@
 "an"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "优点",
@@ -17018,7 +18132,8 @@
 "个",
 "项"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "幽默",
@@ -17033,7 +18148,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "由于",
@@ -17048,13 +18164,14 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "邮局",
 "p": "yóujú",
 "fr": "bureau de poste",
-"app": 4,
+"app": 5,
 "hsk2": 5,
 "hsk3": 5,
 "freq": 11689,
@@ -17065,7 +18182,8 @@
 "家",
 "个"
 ],
-"th": "ville"
+"th": "ville",
+"app20": 4
 },
 {
 "h": "有趣",
@@ -17079,7 +18197,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "友谊",
@@ -17093,7 +18212,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "于是",
@@ -17107,7 +18227,8 @@
 "cc"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "语法",
@@ -17121,13 +18242,14 @@
 "n"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "羽毛球",
 "p": "yǔmáoqiú",
 "fr": "badminton",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 16966,
@@ -17137,7 +18259,8 @@
 "cl": [
 "个"
 ],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "原来",
@@ -17152,7 +18275,8 @@
 "b"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "原因",
@@ -17168,7 +18292,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "阅读",
@@ -17183,7 +18308,8 @@
 "vn"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "允许",
@@ -17198,13 +18324,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "咱们",
 "p": "zánmen",
 "fr": "nous (inclusif)",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1405,
@@ -17212,7 +18339,8 @@
 "r"
 ],
 "cl": [],
-"th": "personnes"
+"th": "personnes",
+"app20": 4
 },
 {
 "h": "尤其",
@@ -17226,7 +18354,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "友好",
@@ -17241,7 +18370,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "愉快",
@@ -17257,7 +18387,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "与",
@@ -17272,13 +18403,14 @@
 "cc"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "语言",
 "p": "yǔyán",
 "fr": "langue",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1948,
@@ -17289,7 +18421,8 @@
 "门",
 "种"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "预习",
@@ -17304,7 +18437,8 @@
 "vn"
 ],
 "cl": [],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "原谅",
@@ -17319,7 +18453,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "约会",
@@ -17338,7 +18473,8 @@
 "次",
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "云",
@@ -17354,7 +18490,8 @@
 "b"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "杂志",
@@ -17371,7 +18508,8 @@
 "本",
 "份"
 ],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "暂时",
@@ -17386,13 +18524,14 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "脏",
 "p": "zāng",
 "fr": "sale",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 4623,
@@ -17401,7 +18540,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "增加",
@@ -17416,7 +18556,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "招聘",
@@ -17431,7 +18572,8 @@
 "vn"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "真正",
@@ -17446,7 +18588,8 @@
 "d"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "正常",
@@ -17461,7 +18604,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "正确",
@@ -17476,7 +18620,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "证明",
@@ -17494,7 +18639,8 @@
 "cl": [
 "个"
 ],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "支持",
@@ -17509,7 +18655,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "值得",
@@ -17523,7 +18670,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "植物",
@@ -17539,7 +18687,8 @@
 "cl": [
 "种"
 ],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "指",
@@ -17554,7 +18703,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "责任",
@@ -17570,13 +18720,14 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "占线",
 "p": "zhànxiàn",
 "fr": "(ligne) occupée",
-"app": 4,
+"app": 5,
 "hsk2": 5,
 "hsk3": 5,
 "freq": 38012,
@@ -17585,13 +18736,14 @@
 "vn"
 ],
 "cl": [],
-"th": "communication"
+"th": "communication",
+"app20": 4
 },
 {
 "h": "照",
 "p": "zhào",
 "fr": "photographier ; selon",
-"app": 4,
+"app": 3,
 "hsk2": null,
 "hsk3": 3,
 "freq": 1165,
@@ -17602,7 +18754,8 @@
 "d"
 ],
 "cl": [],
-"th": "loisirs"
+"th": "loisirs",
+"app20": 4
 },
 {
 "h": "整理",
@@ -17617,7 +18770,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "正好",
@@ -17631,7 +18785,8 @@
 "z"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "正式",
@@ -17646,7 +18801,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "之",
@@ -17662,7 +18818,8 @@
 "g"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "知识",
@@ -17678,7 +18835,8 @@
 "cl": [
 "门"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "直接",
@@ -17693,7 +18851,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "职业",
@@ -17707,7 +18866,8 @@
 "n"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "只好",
@@ -17721,13 +18881,14 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "只要",
 "p": "zhǐyào",
 "fr": "pourvu que",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 452,
@@ -17735,7 +18896,8 @@
 "c"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "至少",
@@ -17749,7 +18911,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "重点",
@@ -17764,7 +18927,8 @@
 "d"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "周围",
@@ -17778,7 +18942,8 @@
 "f"
 ],
 "cl": [],
-"th": "position"
+"th": "position",
+"app20": 4
 },
 {
 "h": "祝贺",
@@ -17793,7 +18958,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "专门",
@@ -17808,7 +18974,8 @@
 "b"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "转",
@@ -17822,7 +18989,8 @@
 "v"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "准确",
@@ -17837,7 +19005,8 @@
 "ad"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "仔细",
@@ -17852,7 +19021,8 @@
 "a"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "自信",
@@ -17869,7 +19039,8 @@
 "vn"
 ],
 "cl": [],
-"th": "emotions"
+"th": "emotions",
+"app20": 4
 },
 {
 "h": "租",
@@ -17884,7 +19055,8 @@
 "g"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "质量",
@@ -17898,7 +19070,8 @@
 "n"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "重",
@@ -17916,7 +19089,8 @@
 "g"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "重视",
@@ -17931,7 +19105,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "主意",
@@ -17947,7 +19122,8 @@
 "cl": [
 "个"
 ],
-"th": "idees"
+"th": "idees",
+"app20": 4
 },
 {
 "h": "著名",
@@ -17959,7 +19135,8 @@
 "freq": 1436,
 "pos": [],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "专业",
@@ -17976,7 +19153,8 @@
 "门",
 "个"
 ],
-"th": "ecole"
+"th": "ecole",
+"app20": 4
 },
 {
 "h": "赚",
@@ -17990,7 +19168,8 @@
 "v"
 ],
 "cl": [],
-"th": "argent"
+"th": "argent",
+"app20": 4
 },
 {
 "h": "准时",
@@ -18006,7 +19185,8 @@
 "an"
 ],
 "cl": [],
-"th": "description"
+"th": "description",
+"app20": 4
 },
 {
 "h": "自然",
@@ -18022,7 +19202,8 @@
 "a"
 ],
 "cl": [],
-"th": "nature"
+"th": "nature",
+"app20": 4
 },
 {
 "h": "总结",
@@ -18037,13 +19218,14 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "最好",
 "p": "zuìhǎo",
 "fr": "il vaut mieux",
-"app": 4,
+"app": 3,
 "hsk2": 4,
 "hsk3": 3,
 "freq": 1704,
@@ -18051,7 +19233,8 @@
 "d"
 ],
 "cl": [],
-"th": "outils"
+"th": "outils",
+"app20": 4
 },
 {
 "h": "尊重",
@@ -18066,7 +19249,8 @@
 "vn"
 ],
 "cl": [],
-"th": "actions"
+"th": "actions",
+"app20": 4
 },
 {
 "h": "座",
@@ -18081,7 +19265,8 @@
 "g"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "座位",
@@ -18097,7 +19282,8 @@
 "cl": [
 "个"
 ],
-"th": "transports"
+"th": "transports",
+"app20": 4
 },
 {
 "h": "作者",
@@ -18111,7 +19297,8 @@
 "n"
 ],
 "cl": [],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "左右",
@@ -18127,7 +19314,8 @@
 "v"
 ],
 "cl": [],
-"th": "nombres"
+"th": "nombres",
+"app20": 4
 },
 {
 "h": "作家",
@@ -18144,7 +19332,8 @@
 "个",
 "位"
 ],
-"th": "travail"
+"th": "travail",
+"app20": 4
 },
 {
 "h": "作用",
@@ -18159,6 +19348,1556 @@
 "v"
 ],
 "cl": [],
-"th": "idees"
+"th": "idees",
+"app20": 4
+},
+{
+"h": "白天",
+"p": "báitiān",
+"fr": "journée, le jour (opposé à la nuit)",
+"app": 1,
+"n": 5,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3645,
+"pos": [
+"t"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "边",
+"p": "biān",
+"fr": "côté, bord (suffixe de lieu : 左边, 外边)",
+"app": 1,
+"n": 11,
+"th": "position",
+"hsk2": null,
+"hsk3": 1,
+"freq": 803,
+"pos": [
+"k",
+"d",
+"n"
+],
+"cl": [
+"个"
+],
+"app20": 1
+},
+{
+"h": "病",
+"p": "bìng",
+"fr": "maladie ; être malade",
+"app": 1,
+"n": 12,
+"th": "corps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 827,
+"pos": [
+"n",
+"v"
+],
+"cl": [
+"场"
+],
+"app20": 1
+},
+{
+"h": "不要",
+"p": "búyào",
+"fr": "ne… pas (pour interdire : 不要说话 !, ne parle pas !)",
+"app": 1,
+"n": 15,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 221,
+"pos": [
+"d"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "唱",
+"p": "chàng",
+"fr": "chanter",
+"app": 1,
+"n": 18,
+"th": "loisirs",
+"hsk2": null,
+"hsk3": 1,
+"freq": 813,
+"pos": [
+"v"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "车",
+"p": "chē",
+"fr": "voiture, véhicule",
+"app": 1,
+"n": 20,
+"th": "transports",
+"hsk2": null,
+"hsk3": 1,
+"freq": 186,
+"pos": [
+"n",
+"q"
+],
+"cl": [
+"辆"
+],
+"app20": 1
+},
+{
+"h": "大学",
+"p": "dàxué",
+"fr": "université",
+"app": 1,
+"n": 27,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 814,
+"pos": [
+"n"
+],
+"cl": [
+"所"
+],
+"app20": 1
+},
+{
+"h": "大学生",
+"p": "dàxuéshēng",
+"fr": "étudiant, étudiante (à l'université)",
+"app": 1,
+"n": 28,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 4422,
+"pos": [
+"n"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "第",
+"p": "dì",
+"fr": "(préfixe des nombres ordinaux : 第一, premier)",
+"app": 1,
+"n": 32,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 962,
+"pos": [
+"m"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "电话",
+"p": "diànhuà",
+"fr": "téléphone ; appel",
+"app": 1,
+"n": 34,
+"th": "communication",
+"hsk2": null,
+"hsk3": 1,
+"freq": 359,
+"pos": [
+"n"
+],
+"cl": [
+"部",
+"通"
+],
+"app20": 1
+},
+{
+"h": "电影院",
+"p": "diànyǐngyuàn",
+"fr": "cinéma (la salle)",
+"app": 1,
+"n": 38,
+"th": "ville",
+"hsk2": null,
+"hsk3": 1,
+"freq": 7945,
+"pos": [
+"n"
+],
+"cl": [
+"家",
+"座"
+],
+"app20": 1
+},
+{
+"h": "店",
+"p": "diàn",
+"fr": "magasin, boutique",
+"app": 1,
+"n": 39,
+"th": "ville",
+"hsk2": null,
+"hsk3": 1,
+"freq": 732,
+"pos": [
+"n"
+],
+"cl": [
+"家"
+],
+"app20": 1
+},
+{
+"h": "读书",
+"p": "dúshū",
+"fr": "lire ; faire des études",
+"app": 1,
+"n": 43,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3285,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "对",
+"p": "duì",
+"fr": "juste, correct ; envers, pour (对身体好, bon pour la santé)",
+"app": 1,
+"n": 44,
+"th": "corps",
+"hsk2": 4,
+"hsk3": 1,
+"freq": 28,
+"pos": [
+"p",
+"v",
+"q",
+"a"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "饭",
+"p": "fàn",
+"fr": "repas ; riz cuit",
+"app": 1,
+"n": 50,
+"th": "nourriture",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1529,
+"pos": [
+"n"
+],
+"cl": [
+"碗",
+"顿"
+],
+"app20": 1
+},
+{
+"h": "歌",
+"p": "gē",
+"fr": "chanson",
+"app": 1,
+"n": 59,
+"th": "loisirs",
+"hsk2": null,
+"hsk3": 1,
+"freq": 702,
+"pos": [
+"n",
+"g"
+],
+"cl": [
+"支",
+"首"
+],
+"app20": 1
+},
+{
+"h": "国",
+"p": "guó",
+"fr": "pays",
+"app": 1,
+"n": 66,
+"th": "ville",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1527,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+],
+"app20": 1
+},
+{
+"h": "汉字",
+"p": "Hànzì",
+"fr": "caractère chinois",
+"app": 1,
+"n": 70,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 19725,
+"pos": [
+"nz",
+"n"
+],
+"cl": [
+"个"
+],
+"app20": 1
+},
+{
+"h": "好看",
+"p": "hǎokàn",
+"fr": "beau, joli ; (film, livre) bien",
+"app": 1,
+"n": 73,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1877,
+"pos": [
+"a"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "好听",
+"p": "hǎotīng",
+"fr": "agréable à entendre (voix, musique)",
+"app": 1,
+"n": 74,
+"th": "loisirs",
+"hsk2": null,
+"hsk3": 1,
+"freq": 4355,
+"pos": [
+"a"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "好玩儿",
+"p": "hǎowánr",
+"fr": "amusant",
+"app": 1,
+"n": 75,
+"th": "description",
+"hsk2": null,
+"hsk3": 1,
+"freq": 23411,
+"pos": [
+"a"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "后",
+"p": "hòu",
+"fr": "derrière ; après",
+"app": 1,
+"n": 80,
+"th": "position",
+"hsk2": null,
+"hsk3": 1,
+"freq": 115,
+"pos": [
+"f",
+"g",
+"t"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "火车",
+"p": "huǒchē",
+"fr": "train",
+"app": 1,
+"n": 83,
+"th": "transports",
+"hsk2": null,
+"hsk3": 1,
+"freq": 2791,
+"pos": [
+"n"
+],
+"cl": [
+"列",
+"节"
+],
+"app20": 1
+},
+{
+"h": "家人",
+"p": "jiārén",
+"fr": "famille, proches",
+"app": 1,
+"n": 87,
+"th": "personnes",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1562,
+"pos": [
+"n",
+"nr"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "见",
+"p": "jiàn",
+"fr": "voir ; rencontrer",
+"app": 1,
+"n": 88,
+"th": "actions",
+"hsk2": null,
+"hsk3": 1,
+"freq": 178,
+"pos": [
+"v",
+"g"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "今年",
+"p": "jīnnián",
+"fr": "cette année",
+"app": 1,
+"n": 93,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 851,
+"pos": [
+"t"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "开车",
+"p": "kāichē",
+"fr": "conduire (une voiture)",
+"app": 1,
+"n": 98,
+"th": "transports",
+"hsk2": null,
+"hsk3": 1,
+"freq": 2670,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "看病",
+"p": "kànbìng",
+"fr": "aller chez le médecin ; (médecin) examiner un malade",
+"app": 1,
+"n": 100,
+"th": "corps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 7705,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "零",
+"p": "líng",
+"fr": "zéro",
+"app": 1,
+"n": 112,
+"th": "nombres",
+"hsk2": 1,
+"hsk3": 1,
+"freq": 3623,
+"pos": [
+"m",
+"t",
+"g"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "没事",
+"p": "méishì",
+"fr": "ce n'est rien, pas de souci ; ne rien avoir à faire",
+"app": 1,
+"n": 121,
+"th": "position",
+"hsk2": null,
+"hsk3": 1,
+"freq": null,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "们",
+"p": "men",
+"fr": "(marque du pluriel des personnes : 我们, 老师们)",
+"app": 1,
+"n": 124,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 457,
+"pos": [
+"k"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "面条儿",
+"p": "miàntiáor",
+"fr": "nouilles",
+"app": 1,
+"n": 127,
+"th": "nourriture",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1000000,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "明年",
+"p": "míngnián",
+"fr": "l'année prochaine",
+"app": 1,
+"n": 129,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 2487,
+"pos": [
+"t"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "哪个",
+"p": "nǎge",
+"fr": "lequel, laquelle",
+"app": 1,
+"n": 132,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": null,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "哪里",
+"p": "nǎlǐ",
+"fr": "où (= 哪儿)",
+"app": 1,
+"n": 133,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 750,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "哪些",
+"p": "nǎxiē",
+"fr": "lesquels, lesquelles",
+"app": 1,
+"n": 135,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3741,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "那边",
+"p": "nàbiān",
+"fr": "là-bas, de ce côté-là",
+"app": 1,
+"n": 137,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 2415,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "那个",
+"p": "nàge",
+"fr": "ce…-là, celui-là",
+"app": 1,
+"n": 138,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": null,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "那里",
+"p": "nàlǐ",
+"fr": "là, là-bas (= 那儿)",
+"app": 1,
+"n": 139,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 770,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "那儿",
+"p": "nàr",
+"fr": "là, là-bas",
+"app": 1,
+"n": 140,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3421,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "那些",
+"p": "nàxiē",
+"fr": "ces…-là, ceux-là",
+"app": 1,
+"n": 141,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 326,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "男",
+"p": "nán",
+"fr": "masculin, homme (男老师, un professeur)",
+"app": 1,
+"n": 142,
+"th": "personnes",
+"hsk2": null,
+"hsk3": 1,
+"freq": 587,
+"pos": [
+"b",
+"g"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "男朋友",
+"p": "nánpéngyou",
+"fr": "petit ami, copain",
+"app": 1,
+"n": 143,
+"th": "personnes",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3176,
+"pos": [
+"n"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "你好",
+"p": "nǐ hǎo",
+"fr": "bonjour",
+"app": 1,
+"n": 147,
+"th": "communication",
+"hsk2": null,
+"hsk3": 1,
+"freq": null,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "你们",
+"p": "nǐmen",
+"fr": "vous (pluriel)",
+"app": 1,
+"n": 148,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 127,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "女",
+"p": "nǚ",
+"fr": "féminin, femme (女老师, une professeure)",
+"app": 1,
+"n": 152,
+"th": "personnes",
+"hsk2": null,
+"hsk3": 1,
+"freq": 368,
+"pos": [
+"b",
+"g"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "女朋友",
+"p": "nǚpéngyou",
+"fr": "petite amie, copine",
+"app": 1,
+"n": 154,
+"th": "personnes",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3004,
+"pos": [
+"n"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "女士",
+"p": "nǚshì",
+"fr": "madame (forme polie)",
+"app": 1,
+"n": 155,
+"th": "personnes",
+"hsk2": 5,
+"hsk3": 1,
+"freq": 2155,
+"pos": [
+"n"
+],
+"cl": [
+"个",
+"位"
+],
+"app20": 1
+},
+{
+"h": "前",
+"p": "qián",
+"fr": "devant ; avant",
+"app": 1,
+"n": 163,
+"th": "position",
+"hsk2": null,
+"hsk3": 1,
+"freq": 127,
+"pos": [
+"f",
+"v"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "请问",
+"p": "qǐngwèn",
+"fr": "excusez-moi, s'il vous plaît (pour poser une question)",
+"app": 1,
+"n": 166,
+"th": "actions",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3689,
+"pos": [
+"v"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "日",
+"p": "rì",
+"fr": "jour (dans les dates écrites : 5月1日) ; soleil",
+"app": 1,
+"n": 172,
+"th": "nombres",
+"hsk2": 1,
+"hsk3": 1,
+"freq": 395,
+"pos": [
+"t",
+"g",
+"b",
+"qt"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "上课",
+"p": "shàngkè",
+"fr": "avoir cours, aller en cours ; faire cours",
+"app": 1,
+"n": 177,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3042,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "上学",
+"p": "shàngxué",
+"fr": "aller à l'école",
+"app": 1,
+"n": 179,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 2965,
+"pos": [
+"v"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "事",
+"p": "shì",
+"fr": "affaire, chose (à faire)",
+"app": 1,
+"n": 187,
+"th": "idees",
+"hsk2": null,
+"hsk3": 1,
+"freq": 113,
+"pos": [
+"n",
+"g"
+],
+"cl": [
+"件",
+"桩"
+],
+"app20": 1
+},
+{
+"h": "书店",
+"p": "shūdiàn",
+"fr": "librairie",
+"app": 1,
+"n": 191,
+"th": "ville",
+"hsk2": null,
+"hsk3": 1,
+"freq": 7174,
+"pos": [
+"n"
+],
+"cl": [
+"家"
+],
+"app20": 1
+},
+{
+"h": "睡",
+"p": "shuì",
+"fr": "dormir",
+"app": 1,
+"n": 194,
+"th": "actions",
+"hsk2": null,
+"hsk3": 1,
+"freq": 464,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "说话",
+"p": "shuōhuà",
+"fr": "parler",
+"app": 1,
+"n": 197,
+"th": "communication",
+"hsk2": 1,
+"hsk3": 1,
+"freq": 880,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "他们",
+"p": "tāmen",
+"fr": "ils, eux",
+"app": 1,
+"n": 201,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 49,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "它们",
+"p": "tāmen",
+"fr": "ils, elles (choses, animaux)",
+"app": 1,
+"n": 203,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 793,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "她们",
+"p": "tāmen",
+"fr": "elles",
+"app": 1,
+"n": 205,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 836,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "天",
+"p": "tiān",
+"fr": "jour ; ciel",
+"app": 1,
+"n": 207,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 83,
+"pos": [
+"qt",
+"n"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "听见",
+"p": "tīngjiàn",
+"fr": "entendre",
+"app": 1,
+"n": 210,
+"th": "actions",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3114,
+"pos": [
+"v"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "外边",
+"p": "wàibian",
+"fr": "dehors, l'extérieur",
+"app": 1,
+"n": 213,
+"th": "position",
+"hsk2": null,
+"hsk3": 1,
+"freq": 12319,
+"pos": [
+"f"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "晚",
+"p": "wǎn",
+"fr": "tard, en retard ; le soir",
+"app": 1,
+"n": 215,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 558,
+"pos": [
+"tg",
+"a",
+"ad"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "晚饭",
+"p": "wǎnfàn",
+"fr": "dîner (repas du soir)",
+"app": 1,
+"n": 216,
+"th": "nourriture",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3794,
+"pos": [
+"n"
+],
+"cl": [
+"份",
+"顿"
+],
+"app20": 1
+},
+{
+"h": "午饭",
+"p": "wǔfàn",
+"fr": "déjeuner (repas de midi)",
+"app": 1,
+"n": 224,
+"th": "nourriture",
+"hsk2": null,
+"hsk3": 1,
+"freq": 4986,
+"pos": [
+"n"
+],
+"cl": [
+"份",
+"顿"
+],
+"app20": 1
+},
+{
+"h": "下班",
+"p": "xiàbān",
+"fr": "finir le travail, sortir du travail",
+"app": 1,
+"n": 227,
+"th": "travail",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3207,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "下课",
+"p": "xiàkè",
+"fr": "finir les cours ; le cours est fini",
+"app": 1,
+"n": 228,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 9694,
+"pos": [
+"v",
+"vn"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "小朋友",
+"p": "xiǎopéngyǒu",
+"fr": "enfant (aussi pour s'adresser à un enfant)",
+"app": 1,
+"n": 235,
+"th": "personnes",
+"hsk2": null,
+"hsk3": 1,
+"freq": 4536,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+],
+"app20": 1
+},
+{
+"h": "小学",
+"p": "xiǎoxué",
+"fr": "école primaire",
+"app": 1,
+"n": 237,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 3819,
+"pos": [
+"n"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "小学生",
+"p": "xiǎoxuéshēng",
+"fr": "écolier, écolière",
+"app": 1,
+"n": 238,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 12165,
+"pos": [
+"n"
+],
+"cl": [
+"个",
+"名"
+],
+"app20": 1
+},
+{
+"h": "星期日",
+"p": "xīngqīrì",
+"fr": "dimanche (plutôt écrit)",
+"app": 1,
+"n": 244,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 12997,
+"pos": [
+"t"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "星期天",
+"p": "xīngqītiān",
+"fr": "dimanche (plutôt oral)",
+"app": 1,
+"n": 245,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 7577,
+"pos": [
+"t"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "学",
+"p": "xué",
+"fr": "apprendre, étudier",
+"app": 1,
+"n": 247,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 524,
+"pos": [
+"v",
+"g"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "一半",
+"p": "yíbàn",
+"fr": "la moitié",
+"app": 1,
+"n": 255,
+"th": "nombres",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1554,
+"pos": [
+"m"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "一点儿",
+"p": "yìdiǎnr",
+"fr": "un peu",
+"app": 1,
+"n": 256,
+"th": "nombres",
+"hsk2": null,
+"hsk3": 1,
+"freq": 6921,
+"pos": [
+"mq"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "一下",
+"p": "yíxià",
+"fr": "un instant ; (après un verbe) un peu, rapidement : 看一下, jeter un œil",
+"app": 1,
+"n": 257,
+"th": "nombres",
+"hsk2": null,
+"hsk3": 1,
+"freq": null,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "一些",
+"p": "yìxiē",
+"fr": "quelques, un peu de",
+"app": 1,
+"n": 258,
+"th": "nombres",
+"hsk2": null,
+"hsk3": 1,
+"freq": 187,
+"pos": [
+"mq"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "有的",
+"p": "yǒude",
+"fr": "certains, certaines",
+"app": 1,
+"n": 264,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1300,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "有点儿",
+"p": "yǒudiǎnr",
+"fr": "un peu (souvent pour une gêne : 有点儿累, un peu fatigué)",
+"app": 1,
+"n": 265,
+"th": "idees",
+"hsk2": null,
+"hsk3": 1,
+"freq": 11175,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "有些",
+"p": "yǒuxiē",
+"fr": "certains ; quelques",
+"app": 1,
+"n": 266,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 394,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "雨",
+"p": "yǔ",
+"fr": "pluie",
+"app": 1,
+"n": 267,
+"th": "nature",
+"hsk2": null,
+"hsk3": 1,
+"freq": 1929,
+"pos": [
+"n",
+"g"
+],
+"cl": [
+"阵",
+"场"
+],
+"app20": 1
+},
+{
+"h": "早",
+"p": "zǎo",
+"fr": "tôt ; bonjour (le matin)",
+"app": 1,
+"n": 273,
+"th": "temps",
+"hsk2": null,
+"hsk3": 1,
+"freq": 445,
+"pos": [
+"ad",
+"a",
+"tg"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "早饭",
+"p": "zǎofàn",
+"fr": "petit-déjeuner",
+"app": 1,
+"n": 274,
+"th": "nourriture",
+"hsk2": null,
+"hsk3": 1,
+"freq": 6748,
+"pos": [
+"n"
+],
+"cl": [
+"份",
+"顿"
+],
+"app20": 1
+},
+{
+"h": "这边",
+"p": "zhèbiān",
+"fr": "ici, de ce côté-ci",
+"app": 1,
+"n": 280,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 2774,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "这个",
+"p": "zhège",
+"fr": "ce…-ci, celui-ci",
+"app": 1,
+"n": 281,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": null,
+"pos": [],
+"cl": [],
+"app20": 1
+},
+{
+"h": "这里",
+"p": "zhèlǐ",
+"fr": "ici (= 这儿)",
+"app": 1,
+"n": 282,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 209,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "这儿",
+"p": "zhèr",
+"fr": "ici",
+"app": 1,
+"n": 283,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 2522,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "这些",
+"p": "zhèxiē",
+"fr": "ces…-ci, ceux-ci",
+"app": 1,
+"n": 284,
+"th": "outils",
+"hsk2": null,
+"hsk3": 1,
+"freq": 132,
+"pos": [
+"r"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "中学",
+"p": "zhōngxué",
+"fr": "collège et lycée (enseignement secondaire)",
+"app": 1,
+"n": 292,
+"th": "ecole",
+"hsk2": null,
+"hsk3": 1,
+"freq": 4042,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+],
+"app20": 1
+},
+{
+"h": "中学生",
+"p": "zhōngxuéshēng",
+"fr": "collégien, lycéen",
+"app": 1,
+"n": 293,
+"th": "idees",
+"hsk2": null,
+"hsk3": 1,
+"freq": 12707,
+"pos": [
+"n"
+],
+"cl": [],
+"app20": 1
+},
+{
+"h": "做饭",
+"p": "zuò fàn",
+"fr": "faire la cuisine, préparer le repas",
+"app": 1,
+"n": 300,
+"th": "nourriture",
+"hsk2": null,
+"hsk3": 1,
+"freq": 5512,
+"pos": [
+"v"
+],
+"cl": [],
+"app20": 1
 }
 ]

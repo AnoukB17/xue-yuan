@@ -6,7 +6,8 @@ Lancer : python3 tools/build-vocab.py            (après toute modification de d
 
 data/vocab.json : une entrée par sens, dans l'ordre d'apprentissage de l'appli :
   h    caractères simplifiés            p   pinyin (convention de l'appli : 一 et 不 notés tels qu'on les prononce)
-  fr   traduction française             app niveau où l'appli l'enseigne aujourd'hui (HSK 2.0, 1 à 4)
+  fr   traduction française             app niveau où l'appli l'enseigne : celui du nouvel HSK (1-6) s'il existe, sinon app20
+  app20 niveau où l'appli l'enseignait avant le passage au nouvel HSK (HSK 2.0, 1 à 4)
   hsk2 niveau officiel HSK 2.0 (1-6)    hsk3 niveau du nouvel HSK (1-6, 7 = niveaux 7-9), programme officiel 2025
   freq rang de fréquence (1 = le plus courant, SUBTLEX-CH)    cl classificateurs usuels (CC-CEDICT)
   pos  catégories grammaticales (codes ICTCLAS : n nom, v verbe, a adjectif, d adverbe, q classificateur…)
@@ -44,10 +45,12 @@ def migrate_from_html():  # une seule fois : lit l'ancien bloc RAW de index.html
 def enrich(rows):
     missing = []
     for r in rows:
+        r.setdefault('app20', r['app'])
         ref = REF.get(r['h'])
         if not ref: missing.append(r['h']); r.update(hsk2=None, hsk3=OFFICIAL.get(r['h']), freq=None, pos=[], cl=[]); continue
         rd = next((x for x in ref['r'] if bare(x['y']) == bare(r['p'])), ref['r'][0] if ref['r'] else {'c': []})
         r.update(hsk2=ref['o'], hsk3=OFFICIAL.get(r['h']), freq=ref['q'], pos=ref['pos'], cl=rd['c'][:2] if 'n' in ref['pos'] else [])
+    for r in rows: r['app'] = r['hsk3'] if r.get('hsk3') and 1 <= r['hsk3'] <= 6 else r['app20']
     return missing
 
 def js_block(rows):
