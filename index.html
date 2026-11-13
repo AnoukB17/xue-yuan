@@ -2208,29 +2208,42 @@ const CULTURE = [
   {h:'高铁', p:'gāotiě', f:'TGV chinois', d:'Le plus grand réseau de trains à grande vitesse au monde. Pékin–Shanghai en un peu plus de 4 heures.'},
 ];
 
-// Test de niveau : questions rédigées à la main, 5 par niveau
-const PLACEMENT = [
-  {l:1, k:'mean', q:'你好', o:['Bonjour','Merci','Au revoir','Pardon']},
-  {l:1, k:'mean', q:'水', o:['Eau','Feu','Thé','Riz']},
-  {l:1, k:'pick', q:'Comment dit-on « demain » ?', o:['明天','今天','昨天','星期']},
-  {l:1, k:'listen', q:'谢谢', o:['谢谢','再见','对不起','没关系']},
-  {l:1, k:'sent', q:'我___学生。 (Je suis étudiant.)', o:['是','有','在','叫']},
-  {l:2, k:'mean', q:'已经', o:['Déjà','Encore','Toujours','Bientôt']},
-  {l:2, k:'mean', q:'便宜', o:['Bon marché','Pratique','Cher','Lent']},
-  {l:2, k:'pick', q:'Comment dit-on « parce que » ?', o:['因为','所以','但是','可能']},
-  {l:2, k:'listen', q:'旅游', o:['旅游','游泳','运动','跳舞']},
-  {l:2, k:'sent', q:'他比我___。 (Il est plus grand que moi.)', o:['高','很高','太高','高了']},
-  {l:3, k:'mean', q:'担心', o:['S\'inquiéter','Se marier','Décider','Participer']},
-  {l:3, k:'mean', q:'环境', o:['Environnement','Ascenseur','Changement','Intérêt']},
-  {l:3, k:'pick', q:'Comment dit-on « résoudre » ?', o:['解决','决定','选择','需要']},
-  {l:3, k:'listen', q:'干净', o:['干净','简单','健康','安静']},
-  {l:3, k:'sent', q:'我的手机___弟弟弄坏了。 (Mon portable a été cassé par mon petit frère.)', o:['被','把','给','让']},
-  {l:4, k:'mean', q:'鼓励', o:['Encourager','Féliciter','Respecter','Pardonner']},
-  {l:4, k:'mean', q:'否则', o:['Sinon','Bien sûr','Complètement','Ponctuel']},
-  {l:4, k:'pick', q:'Comment dit-on « gratuit » ?', o:['免费','随便','积极','理想']},
-  {l:4, k:'listen', q:'竞争', o:['竞争','经验','尊重','成功']},
-  {l:4, k:'sent', q:'你要准时到，___会错过火车。 (Arrive à l\'heure, sinon tu rateras le train.)', o:['否则','因为','所以','而且']},
-];
+// Test de niveau : 5 questions par niveau du nouvel HSK, tirées à chaque passage parmi les 80 mots les plus fréquents
+// du niveau (sens, mot à trouver, écoute, deux phrases à compléter quand il y en a). Format : {l, k, q, o: [bonne réponse, …]}
+let PLACEMENT = [];
+const firstSense = w => { const t = w.f.split(/[;,(]/)[0].trim() || w.f.replace(/[()]/g, '').trim(); return t ? t[0].toUpperCase() + t.slice(1) : w.h; };
+// Phrases disponibles pour les questions « à compléter » : exemples des mots et phrases modèles des leçons
+function sentenceBank() {
+  const out = [];
+  for (const [id, exs] of Object.entries(EXAMPLES)) if (W[id]) exs.forEach(([zh, py, fr]) => out.push({zh, fr, w: W[id]}));
+  for (const L of LESSONS) (L.g || []).forEach(([zh, py, fr]) => (L.ws || []).forEach(w => { if (zh.includes(w.h)) out.push({zh, fr, w}); }));
+  return out;
+}
+function placementFor(l) {
+  const seen = new Set(), pool = WORDS.filter(w => w.l === l && w.l3 === l && !/^\(/.test(w.f)).sort((a, b) => a.q - b.q)
+    .filter(w => !seen.has(w.h) && seen.add(w.h)).slice(0, 80); // une entrée par caractère (homographes : 长, 还, 花…)
+  if (pool.length < 12) return [];
+  const used = new Set(), take = () => { const w = pick(pool.filter(x => !used.has(x.h)), 1)[0]; used.add(w.h); return w; };
+  const others = (w, n, same) => { const fs = new Set(); return pick(pool.filter(x => { const k = firstSense(x); return !fs.has(k) && fs.add(k); }).filter(x => x.h !== w.h && firstSense(x) !== firstSense(w) && normPy(x.p) !== normPy(w.p) && (!same || same(x))), n) };
+  const qs = [];
+  let w = take(); qs.push({l, k: 'mean', q: w.h, o: [firstSense(w), ...others(w, 3).map(firstSense)]});
+  w = take(); qs.push({l, k: 'pick', q: `Comment dit-on « ${firstSense(w).toLowerCase()} » ?`, o: [w.h, ...others(w, 3).map(x => x.h)]});
+  w = take(); qs.push({l, k: 'listen', q: w.h, o: [w.h, ...others(w, 3).map(x => x.h)]});
+  const sents = shuffle(sentenceBank().filter(x => x.w.l === l && x.zh.split(x.w.h).length === 2));
+  for (let k = 0; k < 2; k++) {
+    const st = sents.find(x => !used.has(x.w.h));
+    if (st && !/^\(/.test(st.w.f)) {
+      used.add(st.w.h);
+      const d = others(st.w, 3, x => !st.zh.includes(x.h) && [...x.h].length === [...st.w.h].length);
+      if (d.length === 3) { qs.push({l, k: 'sent', q: `${st.zh.replace(st.w.h, '___')} (${st.fr.replace(/[()]/g, '')})`, o: [st.w.h, ...d.map(x => x.h)]}); continue; }
+    }
+    w = take(); qs.push({l, k: k ? 'listen' : 'mean', q: w.h, o: k ? [w.h, ...others(w, 3).map(x => x.h)] : [firstSense(w), ...others(w, 3).map(firstSense)]});
+  }
+  return qs;
+}
+// Niveaux testés : ceux qui ont assez de mots traduits
+const TEST_LEVELS = () => LEVELS.filter(l => WORDS.filter(w => w.l === l).length >= 100);
+function buildPlacement() { PLACEMENT = TEST_LEVELS().flatMap(placementFor); return PLACEMENT; }
 
 // Origines des caractères : 六书, esquisses des formes anciennes, familles de sons, clés, histoire de l'écriture
 
@@ -2546,7 +2559,7 @@ function onboarding(stepStart = 0) {
   // Mini test adaptatif : 5 questions, arrêt après 2 erreurs
   const miniTest = el => {
     if (mini?.done) { el.innerHTML = `<strong>Niveau estimé : HSK ${S.level}</strong><span class="muted"> · ${mini.ok} bonne${mini.ok > 1 ? 's' : ''} réponse${mini.ok > 1 ? 's' : ''}</span>`; return; }
-    mini = mini || {i: 0, ok: 0, ko: 0, qs: [PLACEMENT[0], PLACEMENT[1], PLACEMENT[5], PLACEMENT[10], PLACEMENT[15]], top: 0};
+    if (!mini) { const P = buildPlacement(), at = l => P.filter(q => q.l === l); mini = {i: 0, ok: 0, ko: 0, top: 0, qs: [at(1)[0], at(1)[1], ...TEST_LEVELS().slice(1).map(l => at(l)[0])].filter(Boolean)}; }
     const q = mini.qs[mini.i];
     el.innerHTML = `<span class="label">Question ${mini.i + 1} sur 5 · HSK ${q.l}</span><strong class="ttl">${q.k === 'mean' ? `Que signifie <span class="han" style="font-size:1.4rem">${q.q}</span> ?` : esc(q.q)}</strong>
       <div class="options">${shuffle(q.o).map(o => `<button class="opt ${/[一-鿿]/.test(o) ? 'hanopt' : ''}" data-o="${esc(o)}">${esc(o)}</button>`).join('')}</div>`;
@@ -2555,7 +2568,7 @@ function onboarding(stepStart = 0) {
       if (right) { mini.ok++; mini.top = Math.max(mini.top, q.l); } else mini.ko++;
       mini.i++;
       if (mini.i >= mini.qs.length || mini.ko >= 2) {
-        mini.done = true; S.level = Math.min(4, Math.max(1, mini.top >= 2 ? mini.top : 1));
+        mini.done = true; S.level = Math.max(1, mini.top >= 2 ? mini.top : 1);
         S.placement = {date: Date.now(), mini: true, ok: mini.ok}; save(); draw();
       } else miniTest(el);
     }));
@@ -3621,6 +3634,7 @@ function wire(s) {
 // ---------- Test de niveau ----------
 function vTest() {
   let lvl = 1, i = 0, score = 0, answers = [];
+  buildPlacement(); const LV = TEST_LEVELS(), maxL = LV[LV.length - 1];
   flow(true);
   const s = view(`<button class="btn ghost small quit" data-go="accueil">✕ Quitter</button><div class="head"><span class="label">Test de niveau</span><h1>Où en es-tu ?</h1><p>5 questions par niveau. Avec 4 bonnes réponses sur 5, tu passes au niveau suivant. Pas de stress : « Je ne sais pas » est une réponse honnête.</p></div><div class="quiz" id="tq"></div>`);
   const box = $('#tq', s); wire(s);
@@ -3628,13 +3642,13 @@ function vTest() {
     const qs = PLACEMENT.filter(q => q.l === lvl);
     if (i >= qs.length) {
       answers.push({l: lvl, score});
-      if (score >= 4 && lvl < 4) { lvl++; i = 0; score = 0; return step(); }
-      return finish(score >= 4 && lvl === 4);
+      if (score >= 4 && lvl < maxL) { lvl++; i = 0; score = 0; return step(); }
+      return finish(score >= 4 && lvl === maxL);
     }
     const q = qs[i]; const opts = shuffle(q.o);
     const title = {mean: 'Que signifie ce mot ?', pick: q.q, listen: 'Écoute et choisis ce que tu entends', sent: 'Complète la phrase'}[q.k];
     box.innerHTML = `
-      <div class="row" style="justify-content:space-between"><span class="label">HSK ${lvl} · question ${i + 1} sur 5</span><span class="label">${answers.reduce((n, a) => n + 5, 0) + i + 1} / 20 max</span></div>
+      <div class="row" style="justify-content:space-between"><span class="label">HSK ${lvl} · question ${i + 1} sur 5</span><span class="label">${answers.reduce((n, a) => n + 5, 0) + i + 1} / ${LV.length * 5} max</span></div>
       <div class="progress"><i style="width:${(i) / 5 * 100}%"></i></div>
       <div class="card prompt">
         <span class="q">${esc(title)}</span>
@@ -3657,9 +3671,9 @@ function vTest() {
   const finish = allPassed => {
     const passed = answers.filter(a => a.score >= 4).map(a => a.l);
     const top = passed.length ? Math.max(...passed) : 0;
-    const rec = Math.min(4, top + 1);
+    const rec = Math.min(maxL, top + 1);
     S.level = rec; S.placement = {date: Date.now(), answers}; addXP(30);
-    const msg = allPassed ? 'Tu maîtrises les bases du HSK 4. Les leçons HSK 4 te permettront de consolider, et l\'onglet Actus te propose de vraies lectures.'
+    const msg = allPassed ? `Tu maîtrises les bases du HSK ${maxL}. Les leçons du HSK ${maxL} te permettront de consolider, et l'onglet Actus te propose de vraies lectures.`
       : top === 0 ? 'Tu démarres : parfait, les leçons HSK 1 sont faites pour toi. Commence par « Saluer et se présenter ».'
       : `Tu as validé le HSK ${top}. On continue avec le HSK ${rec}, et le quiz de révision gardera ton acquis en mémoire.`;
     box.innerHTML = `
