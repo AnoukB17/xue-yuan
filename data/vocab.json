@@ -20899,5 +20899,1529 @@
 ],
 "cl": [],
 "app20": 1
+},
+{
+"h": "白色",
+"p": "báisè",
+"fr": "blanc (la couleur)",
+"app": 2,
+"n": 303,
+"th": "couleurs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2643,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "帮",
+"p": "bāng",
+"fr": "aider, donner un coup de main",
+"app": 2,
+"n": 305,
+"th": "corps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 395,
+"pos": [
+"v",
+"q"
+],
+"cl": []
+},
+{
+"h": "本子",
+"p": "běnzi",
+"fr": "cahier, carnet",
+"app": 2,
+"n": 308,
+"th": "ecole",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 12849,
+"pos": [
+"n"
+],
+"cl": [
+"本"
+]
+},
+{
+"h": "笔",
+"p": "bǐ",
+"fr": "stylo, crayon",
+"app": 2,
+"n": 310,
+"th": "maison",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1245,
+"pos": [
+"q",
+"n"
+],
+"cl": [
+"支",
+"枝"
+]
+},
+{
+"h": "不错",
+"p": "búcuò",
+"fr": "pas mal, bien",
+"app": 2,
+"n": 312,
+"th": "corps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 384,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "不好意思",
+"p": "bù hǎoyìsi",
+"fr": "désolé, excuse-moi ; être gêné",
+"app": 2,
+"n": 313,
+"th": "emotions",
+"app20": 2,
+"hsk2": 5,
+"hsk3": 2,
+"freq": 2805,
+"pos": [
+"v",
+"a"
+],
+"cl": []
+},
+{
+"h": "车站",
+"p": "chēzhàn",
+"fr": "arrêt, station (bus, train)",
+"app": 2,
+"n": 315,
+"th": "transports",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 4480,
+"pos": [
+"n"
+],
+"cl": [
+"处",
+"个"
+]
+},
+{
+"h": "出国",
+"p": "chūguó",
+"fr": "partir à l'étranger",
+"app": 2,
+"n": 317,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 6997,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "出来",
+"p": "chūlái",
+"fr": "sortir (vers celui qui parle)",
+"app": 2,
+"n": 318,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 254,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "出门",
+"p": "chūmén",
+"fr": "sortir (de chez soi)",
+"app": 2,
+"n": 319,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2997,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "出去",
+"p": "chūqù",
+"fr": "sortir (en s'éloignant de celui qui parle)",
+"app": 2,
+"n": 320,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 784,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "床",
+"p": "chuáng",
+"fr": "lit",
+"app": 2,
+"n": 321,
+"th": "maison",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 961,
+"pos": [
+"n",
+"q"
+],
+"cl": [
+"张"
+]
+},
+{
+"h": "词",
+"p": "cí",
+"fr": "mot",
+"app": 2,
+"n": 322,
+"th": "communication",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1572,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "从小",
+"p": "cóngxiǎo",
+"fr": "depuis l'enfance",
+"app": 2,
+"n": 325,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 4653,
+"pos": [
+"d"
+],
+"cl": []
+},
+{
+"h": "打",
+"p": "dǎ",
+"fr": "frapper ; (avec un nom) faire, jouer : 打电话, 打球",
+"app": 2,
+"n": 327,
+"th": "loisirs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 153,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "打车",
+"p": "dǎchē",
+"fr": "prendre un taxi",
+"app": 2,
+"n": 328,
+"th": "transports",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 15698,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "打开",
+"p": "dǎkāi",
+"fr": "ouvrir ; allumer",
+"app": 2,
+"n": 329,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1199,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "但",
+"p": "dàn",
+"fr": "mais",
+"app": 2,
+"n": 330,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 55,
+"pos": [
+"c",
+"d"
+],
+"cl": []
+},
+{
+"h": "动",
+"p": "dòng",
+"fr": "bouger",
+"app": 2,
+"n": 338,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 588,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "饭馆",
+"p": "fànguǎn",
+"fr": "restaurant",
+"app": 2,
+"n": 339,
+"th": "ville",
+"app20": 2,
+"hsk2": 1,
+"hsk3": 2,
+"freq": 16449,
+"pos": [
+"n"
+],
+"cl": [
+"家"
+]
+},
+{
+"h": "飞",
+"p": "fēi",
+"fr": "voler (oiseau, avion)",
+"app": 2,
+"n": 340,
+"th": "transports",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 779,
+"pos": [
+"v",
+"g",
+"vn"
+],
+"cl": []
+},
+{
+"h": "高中",
+"p": "gāozhōng",
+"fr": "lycée",
+"app": 2,
+"n": 342,
+"th": "ecole",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2025,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "公交车",
+"p": "gōngjiāochē",
+"fr": "bus",
+"app": 2,
+"n": 346,
+"th": "transports",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1000000,
+"pos": [],
+"cl": []
+},
+{
+"h": "过来",
+"p": "guòlái",
+"fr": "venir (vers celui qui parle), s'approcher",
+"app": 2,
+"n": 348,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 692,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "过年",
+"p": "guònián",
+"fr": "fêter le Nouvel An chinois",
+"app": 2,
+"n": 349,
+"th": "temps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 14490,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "黑色",
+"p": "hēisè",
+"fr": "noir (la couleur)",
+"app": 2,
+"n": 353,
+"th": "couleurs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2362,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "红茶",
+"p": "hóngchá",
+"fr": "thé noir (litt. « thé rouge »)",
+"app": 2,
+"n": 354,
+"th": "nourriture",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 21109,
+"pos": [
+"n"
+],
+"cl": [
+"杯",
+"壶"
+]
+},
+{
+"h": "红色",
+"p": "hóngsè",
+"fr": "rouge (la couleur)",
+"app": 2,
+"n": 355,
+"th": "couleurs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2146,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "回来",
+"p": "huílái",
+"fr": "revenir",
+"app": 2,
+"n": 361,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 480,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "回去",
+"p": "huíqù",
+"fr": "retourner, rentrer (là-bas)",
+"app": 2,
+"n": 362,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1160,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "机票",
+"p": "jīpiào",
+"fr": "billet d'avion",
+"app": 2,
+"n": 364,
+"th": "transports",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 5209,
+"pos": [
+"n"
+],
+"cl": [
+"张"
+]
+},
+{
+"h": "间",
+"p": "jiān",
+"fr": "(classificateur des pièces : 一间教室, une salle de classe)",
+"app": 2,
+"n": 366,
+"th": "nombres",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 546,
+"pos": [
+"q",
+"f",
+"v",
+"g"
+],
+"cl": []
+},
+{
+"h": "进来",
+"p": "jìnlái",
+"fr": "entrer (vers celui qui parle)",
+"app": 2,
+"n": 371,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1870,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "进去",
+"p": "jìnqù",
+"fr": "entrer (en s'éloignant de celui qui parle)",
+"app": 2,
+"n": 372,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1624,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "酒店",
+"p": "jiǔdiàn",
+"fr": "hôtel",
+"app": 2,
+"n": 375,
+"th": "ville",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1680,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "开学",
+"p": "kāixué",
+"fr": "faire sa rentrée",
+"app": 2,
+"n": 379,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 10160,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "考",
+"p": "kǎo",
+"fr": "passer un examen ; interroger",
+"app": 2,
+"n": 380,
+"th": "ecole",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2030,
+"pos": [
+"v",
+"g"
+],
+"cl": []
+},
+{
+"h": "快要",
+"p": "kuàiyào",
+"fr": "être sur le point de (快要下雨了, il va bientôt pleuvoir)",
+"app": 2,
+"n": 386,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 5135,
+"pos": [
+"d"
+],
+"cl": []
+},
+{
+"h": "篮球",
+"p": "lánqiú",
+"fr": "basket-ball",
+"app": 2,
+"n": 387,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 3596,
+"pos": [
+"n"
+],
+"cl": [
+"个",
+"只"
+]
+},
+{
+"h": "里面",
+"p": "lǐmiàn",
+"fr": "dedans, à l'intérieur",
+"app": 2,
+"n": 390,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 648,
+"pos": [
+"f"
+],
+"cl": []
+},
+{
+"h": "路上",
+"p": "lùshang",
+"fr": "en chemin, sur la route",
+"app": 2,
+"n": 393,
+"th": "transports",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1669,
+"pos": [
+"s"
+],
+"cl": []
+},
+{
+"h": "绿茶",
+"p": "lǜchá",
+"fr": "thé vert",
+"app": 2,
+"n": 395,
+"th": "nourriture",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 15567,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "绿色",
+"p": "lǜsè",
+"fr": "vert (la couleur)",
+"app": 2,
+"n": 396,
+"th": "couleurs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2383,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "没意思",
+"p": "méi yìsi",
+"fr": "ennuyeux, sans intérêt",
+"app": 2,
+"n": 398,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 11321,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "门口",
+"p": "ménkǒu",
+"fr": "entrée, devant la porte",
+"app": 2,
+"n": 401,
+"th": "maison",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2762,
+"pos": [
+"s"
+],
+"cl": []
+},
+{
+"h": "门票",
+"p": "ménpiào",
+"fr": "billet d'entrée",
+"app": 2,
+"n": 402,
+"th": "transports",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 5140,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "面",
+"p": "miàn",
+"fr": "côté (suffixe de lieu : 上面, 外面)",
+"app": 2,
+"n": 403,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 604,
+"pos": [
+"n",
+"q",
+"v",
+"g"
+],
+"cl": []
+},
+{
+"h": "名",
+"p": "míng",
+"fr": "nom ; (classificateur du rang ou des personnes : 第一名, premier)",
+"app": 2,
+"n": 404,
+"th": "nombres",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 234,
+"pos": [
+"q",
+"g"
+],
+"cl": []
+},
+{
+"h": "那么",
+"p": "nàme",
+"fr": "si, tellement (那么大) ; alors",
+"app": 2,
+"n": 406,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 164,
+"pos": [
+"r",
+"c"
+],
+"cl": []
+},
+{
+"h": "那样",
+"p": "nàyàng",
+"fr": "comme ça, de cette façon",
+"app": 2,
+"n": 407,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 756,
+"pos": [
+"r"
+],
+"cl": []
+},
+{
+"h": "奶茶",
+"p": "nǎichá",
+"fr": "thé au lait",
+"app": 2,
+"n": 408,
+"th": "nourriture",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 20075,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "男孩儿",
+"p": "nánháir",
+"fr": "garçon",
+"app": 2,
+"n": 410,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1000000,
+"pos": [],
+"cl": []
+},
+{
+"h": "女孩儿",
+"p": "nǚháir",
+"fr": "fille (enfant)",
+"app": 2,
+"n": 412,
+"th": "personnes",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 18271,
+"pos": [],
+"cl": []
+},
+{
+"h": "旁边",
+"p": "pángbiān",
+"fr": "à côté",
+"app": 2,
+"n": 413,
+"th": "position",
+"app20": 2,
+"hsk2": 2,
+"hsk3": 2,
+"freq": 1815,
+"pos": [
+"f"
+],
+"cl": []
+},
+{
+"h": "跑",
+"p": "pǎo",
+"fr": "courir",
+"app": 2,
+"n": 414,
+"th": "loisirs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 553,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "妻子",
+"p": "qīzi",
+"fr": "épouse",
+"app": 2,
+"n": 417,
+"th": "idees",
+"app20": 2,
+"hsk2": 2,
+"hsk3": 2,
+"freq": 1187,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "球",
+"p": "qiú",
+"fr": "balle, ballon",
+"app": 2,
+"n": 421,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 518,
+"pos": [
+"n"
+],
+"cl": [
+"个",
+"场"
+]
+},
+{
+"h": "肉",
+"p": "ròu",
+"fr": "viande",
+"app": 2,
+"n": 423,
+"th": "nourriture",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1215,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "商场",
+"p": "shāngchǎng",
+"fr": "centre commercial",
+"app": 2,
+"n": 424,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 4093,
+"pos": [
+"n"
+],
+"cl": [
+"家"
+]
+},
+{
+"h": "上来",
+"p": "shànglái",
+"fr": "monter (vers celui qui parle)",
+"app": 2,
+"n": 425,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 3160,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "上面",
+"p": "shàngmiàn",
+"fr": "au-dessus, dessus",
+"app": 2,
+"n": 426,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1248,
+"pos": [
+"f"
+],
+"cl": []
+},
+{
+"h": "上去",
+"p": "shàngqù",
+"fr": "monter (en s'éloignant de celui qui parle)",
+"app": 2,
+"n": 427,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2127,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "时",
+"p": "shí",
+"fr": "moment ; (écrit) quand… : 上课时, pendant le cours",
+"app": 2,
+"n": 431,
+"th": "temps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 115,
+"pos": [
+"g",
+"t"
+],
+"cl": []
+},
+{
+"h": "手",
+"p": "shǒu",
+"fr": "main",
+"app": 2,
+"n": 433,
+"th": "corps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 190,
+"pos": [
+"n",
+"q"
+],
+"cl": [
+"双",
+"只"
+]
+},
+{
+"h": "书包",
+"p": "shūbāo",
+"fr": "cartable",
+"app": 2,
+"n": 435,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 11861,
+"pos": [
+"n"
+],
+"cl": [
+"个",
+"只"
+]
+},
+{
+"h": "虽然",
+"p": "suīrán",
+"fr": "bien que, même si",
+"app": 2,
+"n": 438,
+"th": "outils",
+"app20": 2,
+"hsk2": 3,
+"hsk3": 2,
+"freq": 440,
+"pos": [
+"c"
+],
+"cl": []
+},
+{
+"h": "踢",
+"p": "tī",
+"fr": "donner un coup de pied ; jouer (au football)",
+"app": 2,
+"n": 441,
+"th": "corps",
+"app20": 2,
+"hsk2": 2,
+"hsk3": 2,
+"freq": 2330,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "头",
+"p": "tóu",
+"fr": "tête",
+"app": 2,
+"n": 445,
+"th": "corps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 329,
+"pos": [
+"n",
+"q",
+"m",
+"k"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "外国",
+"p": "wàiguó",
+"fr": "pays étranger, l'étranger",
+"app": 2,
+"n": 446,
+"th": "ville",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 4151,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "外面",
+"p": "wàimiàn",
+"fr": "dehors, à l'extérieur",
+"app": 2,
+"n": 447,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1352,
+"pos": [
+"f"
+],
+"cl": []
+},
+{
+"h": "网上",
+"p": "wǎngshang",
+"fr": "en ligne, sur Internet",
+"app": 2,
+"n": 450,
+"th": "loisirs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2474,
+"pos": [
+"s"
+],
+"cl": []
+},
+{
+"h": "往",
+"p": "wǎng",
+"fr": "vers, en direction de",
+"app": 2,
+"n": 451,
+"th": "position",
+"app20": 2,
+"hsk2": 4,
+"hsk3": 2,
+"freq": 760,
+"pos": [
+"p",
+"v"
+],
+"cl": []
+},
+{
+"h": "忘",
+"p": "wàng",
+"fr": "oublier",
+"app": 2,
+"n": 452,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1015,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "下来",
+"p": "xiàlái",
+"fr": "descendre (vers celui qui parle)",
+"app": 2,
+"n": 458,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 628,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "下面",
+"p": "xiàmiàn",
+"fr": "en dessous, dessous ; ensuite",
+"app": 2,
+"n": 459,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1459,
+"pos": [
+"f"
+],
+"cl": []
+},
+{
+"h": "下去",
+"p": "xiàqù",
+"fr": "descendre (en s'éloignant) ; continuer",
+"app": 2,
+"n": 460,
+"th": "actions",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 838,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "小孩儿",
+"p": "xiǎoháir",
+"fr": "enfant",
+"app": 2,
+"n": 461,
+"th": "personnes",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 25607,
+"pos": [],
+"cl": []
+},
+{
+"h": "小时候",
+"p": "xiǎoshíhou",
+"fr": "dans l'enfance, quand on était petit",
+"app": 2,
+"n": 462,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 3067,
+"pos": [
+"t",
+"n"
+],
+"cl": []
+},
+{
+"h": "姓名",
+"p": "xìngmíng",
+"fr": "nom et prénom",
+"app": 2,
+"n": 465,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 4286,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "药店",
+"p": "yàodiàn",
+"fr": "pharmacie",
+"app": 2,
+"n": 469,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 9052,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "游",
+"p": "yóu",
+"fr": "nager",
+"app": 2,
+"n": 477,
+"th": "loisirs",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2164,
+"pos": [
+"v",
+"g",
+"vn"
+],
+"cl": []
+},
+{
+"h": "有时",
+"p": "yǒushí",
+"fr": "parfois",
+"app": 2,
+"n": 479,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1568,
+"pos": [
+"d"
+],
+"cl": []
+},
+{
+"h": "有意思",
+"p": "yǒu yìsi",
+"fr": "intéressant",
+"app": 2,
+"n": 480,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2983,
+"pos": [
+"l"
+],
+"cl": []
+},
+{
+"h": "右",
+"p": "yòu",
+"fr": "droite",
+"app": 2,
+"n": 481,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1481,
+"pos": [
+"f",
+"a"
+],
+"cl": []
+},
+{
+"h": "这么",
+"p": "zhème",
+"fr": "si, tellement (这么大) ; comme ça",
+"app": 2,
+"n": 488,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 166,
+"pos": [
+"r"
+],
+"cl": []
+},
+{
+"h": "这样",
+"p": "zhèyàng",
+"fr": "comme ceci, de cette façon",
+"app": 2,
+"n": 489,
+"th": "outils",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 85,
+"pos": [
+"r"
+],
+"cl": []
+},
+{
+"h": "正",
+"p": "zhèng",
+"fr": "être justement en train de (他正吃饭呢)",
+"app": 2,
+"n": 491,
+"th": "outils",
+"app20": 2,
+"hsk2": 5,
+"hsk3": 2,
+"freq": 294,
+"pos": [
+"d",
+"b",
+"a",
+"v"
+],
+"cl": []
+},
+{
+"h": "周",
+"p": "zhōu",
+"fr": "semaine",
+"app": 2,
+"n": 492,
+"th": "temps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 352,
+"pos": [
+"qt",
+"nr",
+"g",
+"n",
+"tg"
+],
+"cl": []
+},
+{
+"h": "走路",
+"p": "zǒulù",
+"fr": "marcher, aller à pied",
+"app": 2,
+"n": 496,
+"th": "corps",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 4517,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "足球",
+"p": "zúqiú",
+"fr": "football",
+"app": 2,
+"n": 497,
+"th": "idees",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 2550,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "左",
+"p": "zuǒ",
+"fr": "gauche",
+"app": 2,
+"n": 499,
+"th": "position",
+"app20": 2,
+"hsk2": null,
+"hsk3": 2,
+"freq": 1382,
+"pos": [
+"f",
+"a"
+],
+"cl": []
 }
 ]
