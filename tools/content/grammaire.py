@@ -283,6 +283,11 @@ SHEETS = {1: [
    ('___我去北京。', 'Je vais à Pékin demain.', ['明天', '在明天', '明天了'])]),
 ]}
 
+import grammaire_hsk2 as _g2
+OFFICIAL[2] = {p: '' for p in _g2.OFFICIAL}
+SHEETS[2] = _g2.SHEETS
+EXTRA[2] = EXTRA[1] | _g2.EXTRA
+
 def official_vocab(level):
     out = set()
     for line in open(os.path.join(ROOT, 'tools', 'content', 'hsk30-vocabulaire.tsv'), encoding='utf8'):
@@ -302,7 +307,11 @@ def check(level):
     for p in covered - set(OFFICIAL[level]): problems.append(f'point inconnu : {p}')
     for sid, title, struct, expl, pts, ex, qs in sheets:
         if len(ex) != 2 or len(qs) != 2: problems.append(f'{sid} : {len(ex)} exemples, {len(qs)} questions')
-        texts = [zh for zh, py, fr in ex] + [q.replace('___', o) for q, fr, opts in qs for o in opts[:1]] + [o for q, fr, opts in qs for o in opts]
+        texts = [zh for zh, py, fr in ex] + [q.replace('___', opts[0]) for q, fr, opts in qs] + [opts[0] for q, fr, opts in qs]
+        chars = {c for w in vocab for c in w}
+        for q, fr, opts in qs:  # les mauvais choix peuvent être des formes fautives : on vérifie seulement leurs caractères
+            bad = [c for o in opts[1:] for c in o if '\u4e00' <= c <= '\u9fff' and c not in chars]
+            if bad: problems.append(f'{sid} : caractère hors niveau {level} dans les choix de « {q} » : {" ".join(bad)}')
         for t in texts:
             bad = [w for w, ok in segment(t, vocab) if not ok]
             if bad: problems.append(f'{sid} : hors niveau {level} dans « {t} » : {" ".join(bad)}')
