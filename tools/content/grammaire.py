@@ -295,6 +295,10 @@ import grammaire_hsk4 as _g4
 OFFICIAL[4] = {p: '' for p in _g4.OFFICIAL}
 SHEETS[4] = _g4.SHEETS
 EXTRA[4] = EXTRA[3] | _g4.EXTRA
+import grammaire_hsk5 as _g5
+OFFICIAL[5] = {p: '' for p in _g5.OFFICIAL}
+SHEETS[5] = _g5.SHEETS
+EXTRA[5] = EXTRA[4] | _g5.EXTRA
 
 def official_vocab(level):
     out = set()
