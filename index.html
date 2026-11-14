@@ -4028,6 +4028,7 @@ function vPracticeHub() {
       ${hubTile('quiz', 'Révisions et quiz', due ? `${due} mot${due > 1 ? 's' : ''} à réviser, les plus urgents d'abord` : 'Quiz par niveau, écoute, tons, sprint', 'verm', '考')}
       ${hubTile('examen', 'Examen blanc', 'Le format officiel du HSK, minuté, corrigé à la fin. Et la validation de niveau', 'gold', '试')}
       ${hubTile('oral', 'Oral', 'Écouter, répéter, s\'enregistrer et comparer avec le modèle', 'teal', '说')}
+      ${hubTile('conversation', 'Conversation', sampleNs ? 'Discuter en chinois avec Claude, qui corrige tes phrases' : 'Discuter en chinois avec Claude (dans la version claude.ai)', 'indigo', '问')}
       ${hubTile('detective', 'Détective de caractères', detLeft ? `${detLeft} caractères à deviner grâce à leurs indices` : 'Toutes les familles sont résolues, rejoue pour t\'entraîner', 'plum', '探')}
       ${hubTile('confusions', 'Mes confusions', conf.length ? `${conf.length} paire${conf.length > 1 ? 's' : ''} de mots que tu mélanges` : 'Rien pour l\'instant : elles apparaissent quand tu te trompes', 'coral', '辨')}
       ${hubTile('chansons', 'Chansons', `${SONGS.length} chansons avec paroles et traductions`, 'rose', '歌')}
@@ -4307,7 +4308,7 @@ function header() {
   $$('.st-xp').forEach(e => e.textContent = knownChars());
   $$('.st-level').forEach(e => e.textContent = S.level ? `HSK ${S.level}` : 'HSK ?');
 }
-const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar, histoires: vStories, oral: vOral};
+const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar, histoires: vStories, oral: vOral, conversation: vChat};
 let current = 'accueil';
 function go(view, arg) { current = view; render(view, arg); try { history.replaceState(null, '', '#' + view); } catch {} }
 function route() { const h = location.hash.slice(1); go(VIEWS[h] ? h : 'accueil'); }
@@ -4327,7 +4328,7 @@ function render(view, arg) {
 }
 
 addEventListener('hashchange', route);
-const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], histoires: ['coral','读'], oral: ['teal','说'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我']};
+const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], histoires: ['coral','读'], oral: ['teal','说'], conversation: ['indigo','问'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我']};
 const LV_COL = {1: 'teal', 2: 'bamboo', 3: 'gold', 4: 'verm', 5: 'plum', 6: 'indigo'};
 const tint = col => `style="--c:var(--${col});--c-ink:var(--${col}-ink)"`;
 const view = html => {
@@ -4674,6 +4675,97 @@ function vOral() {
   oralSentences(lv).then(l => {
     list = shuffle(l);
     if (!list.length) { box.innerHTML = '<p class="muted">Pas encore de phrases pour ce niveau.</p>'; return; }
+    draw();
+  });
+}
+
+// ---------- Conversation écrite avec Claude (version claude.ai uniquement : capacité « sample ») ----------
+const CHAT_SCENES = [
+  ['libre', 'Discussion libre', 'Parler de tout et de rien'],
+  ['presentation', 'Se présenter', 'Nom, pays, études ou travail, famille'],
+  ['restaurant', 'Au restaurant', 'Commander, demander l\'addition'],
+  ['achats', 'Faire des courses', 'Demander un prix, marchander un peu'],
+  ['chemin', 'Demander son chemin', 'Dans une ville chinoise'],
+  ['loisirs', 'Loisirs et week-end', 'Ce qu\'on aime faire, ses projets'],
+  ['entretien', 'Entretien d\'embauche', 'Parler de son parcours (HSK 4 et plus)'],
+  ['debat', 'Donner son avis', 'Un sujet de société, argumenter (HSK 5 et plus)'],
+];
+let chatState = null;
+function vChat() {
+  const s = view(`<div class="head"><span class="label">Conversation</span><h1>Discuter en chinois</h1><p>Écris en chinois : Claude te répond à ton niveau, avec pinyin et traduction, et corrige tes phrases au passage.</p></div><div id="cb" class="stack"><p class="muted">Chargement…</p></div>`);
+  const box = $('#cb', s);
+  sampleReady.then(sm => {
+    if (!document.body.contains(box)) return;
+    if (!sm) {
+      box.innerHTML = `<div class="card stack" style="align-items:flex-start"><strong class="ttl">Disponible dans la version claude.ai</strong><p class="muted">La conversation passe par Claude : elle fonctionne quand Xué Yuán est ouvert sur claude.ai, pas dans l'appli installée sur le téléphone. Tout le reste (leçons, révisions, histoires, oral) fonctionne partout.</p></div>`;
+      return;
+    }
+    const st = chatState ||= {lv: S.level || 1, scene: 'libre', msgs: []};
+    const draw = () => {
+      box.innerHTML = `<div class="card stack">
+          <div class="row" style="gap:8px">
+            <select id="cl" aria-label="Niveau">${LEVELS.map(n => `<option value="${n}" ${n === st.lv ? 'selected' : ''}>HSK ${n}</option>`).join('')}</select>
+            <select id="cs" aria-label="Situation">${CHAT_SCENES.map(([k, t]) => `<option value="${k}" ${k === st.scene ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select>
+            <button class="btn ghost small" id="cn">Nouvelle conversation</button>
+          </div>
+          <span class="muted" style="font-size:.88rem">${esc(CHAT_SCENES.find(x => x[0] === st.scene)[2])}</span>
+        </div>
+        <div class="stack" id="cm" aria-live="polite">${st.msgs.length ? '' : '<button class="btn primary" id="cgo" style="align-self:flex-start">Commencer la conversation</button>'}</div>
+        ${st.msgs.length ? `<div class="row" style="flex-wrap:nowrap;gap:8px;align-items:flex-end"><textarea id="ci" rows="2" lang="zh-CN" aria-label="Ton message en chinois" placeholder="Écris en chinois…" style="flex:1;font:1.1rem/1.4 var(--f-han);padding:10px;border-radius:16px;border:0;box-shadow:var(--shadow);background:var(--surface);color:var(--ink)"></textarea><button class="btn primary" id="csend">Envoyer</button></div>` : ''}
+        <p class="muted" style="font-size:.82rem">Claude peut se tromper : en cas de doute, vérifie les corrections avec un natif ou les fiches de grammaire.</p>`;
+      const list = $('#cm', box);
+      st.msgs.forEach(m => list.append(bubble(m)));
+      $('#cl', box).addEventListener('change', e => { st.lv = +e.target.value; });
+      $('#cs', box).addEventListener('change', e => { st.scene = e.target.value; st.msgs = []; draw(); });
+      $('#cn', box).addEventListener('click', () => { st.msgs = []; draw(); });
+      $('#cgo', box)?.addEventListener('click', () => turn());
+      const send = () => { const t = $('#ci', box).value.trim(); if (t) turn(t); };
+      $('#csend', box)?.addEventListener('click', send);
+      $('#ci', box)?.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); send(); } });
+      list.lastElementChild?.scrollIntoView({block: 'nearest'});
+    };
+    const bubble = m => {
+      const d = document.createElement('div');
+      if (m.role === 'me') {
+        d.className = 'card stack'; d.style.cssText = 'align-self:flex-end;max-width:85%;background:var(--c-soft,var(--surface))';
+        d.innerHTML = `<span class="label">Toi</span><span class="han" style="font-size:1.2rem"></span>${m.fix ? `<div class="stack" style="gap:2px;border-left:3px solid var(--bad);padding-left:8px"><span class="label">Correction</span><span class="han fixzh"></span><span class="muted fixfr" style="font-size:.9rem"></span></div>` : ''}`;
+        $('.han', d).textContent = m.text;
+        if (m.fix) { $('.fixzh', d).textContent = m.fix.corrige || ''; $('.fixfr', d).textContent = m.fix.explication || ''; }
+      } else {
+        d.className = 'card stack'; d.style.cssText = 'max-width:92%';
+        d.innerHTML = `<div class="row" style="justify-content:space-between;flex-wrap:nowrap"><span class="label">Claude</span>${speakBtn(m.zh, 'la réponse')}</div><span class="han" style="font-size:1.25rem;line-height:1.6"></span><span class="pyx" style="font-size:.95rem">${pyHTML(m.py || '')}</span><details><summary>Traduction</summary><p class="muted fr"></p></details>`;
+        $('.han', d).textContent = m.zh; $('.fr', d).textContent = m.fr;
+      }
+      return d;
+    };
+    const turn = async text => {
+      if (text) st.msgs.push({role: 'me', text});
+      draw();
+      const list = $('#cm', box), wait = document.createElement('p');
+      wait.className = 'muted'; wait.textContent = 'Claude écrit…'; list.append(wait);
+      $$('#csend, #cgo, #ci', box).forEach(x => { x.disabled = true; });
+      const scene = CHAT_SCENES.find(x => x[0] === st.scene);
+      const transcript = st.msgs.slice(-12).map(m => m.role === 'me' ? `Apprenant : ${m.text}` : `Toi : ${m.zh}`).join('\n');
+      const prompt = `Tu es un partenaire de conversation chinois, patient et bienveillant, pour un apprenant francophone de niveau HSK ${st.lv} (nouvel HSK, programme 2025). Situation : « ${scene[1]} » (${scene[2]}). Tu joues le rôle de ton interlocuteur dans cette situation.
+Règles : écris en chinois simplifié, 1 à 3 phrases courtes, avec presque uniquement le vocabulaire des niveaux HSK 1 à ${st.lv} ; relance la conversation, souvent par une question. Si l'apprenant écrit en français ou en pinyin, réponds quand même en chinois simple. Reste dans la situation, sans sujet sensible.
+${text ? `Conversation jusqu'ici :\n${transcript}\n\nAnalyse d'abord le DERNIER message de l'apprenant : s'il contient une erreur de chinois (grammaire, mot, ordre), donne la phrase corrigée et une explication courte en français ; sinon correction = null.` : 'Ouvre la conversation par une première réplique adaptée à la situation. correction = null.'}
+Réponds uniquement en JSON : {"zh":"ta réplique","pinyin":"pinyin avec tons","fr":"traduction française","correction":null ou {"corrige":"phrase corrigée","explication":"explication en français"}}`;
+      try {
+        const r = await sm.json(prompt, {modelTier: 'default', cache: false});
+        const str = v => typeof v === 'string' ? v : '';
+        if (text && r?.correction && str(r.correction.corrige)) st.msgs[st.msgs.length - 1].fix = {corrige: str(r.correction.corrige), explication: str(r.correction.explication)};
+        if (!str(r?.zh)) throw new Error('vide');
+        st.msgs.push({role: 'claude', zh: str(r.zh), py: str(r.pinyin), fr: str(r.fr)});
+        addXP(2); draw(); $('#ci', box)?.focus();
+      } catch (err) {
+        if (text) st.msgs.pop(); // le message n'est pas parti : il revient dans la zone de saisie
+        draw();
+        const p = document.createElement('p'); p.className = 'muted';
+        p.textContent = err?.code === 'not_granted' ? 'L\'accès à Claude n\'a pas été autorisé pour cette page.' : err?.code === 'rate_limited' ? 'Trop de messages d\'un coup : réessaie dans une minute.' : 'La réponse n\'a pas pu être obtenue. Réessaie.';
+        $('#cm', box).append(p);
+        if (text) $('#ci', box) && ($('#ci', box).value = text);
+      }
+    };
     draw();
   });
 }
@@ -5204,7 +5296,7 @@ function vNews() {
       <p class="muted">Choisis un thème : Claude écrit un court texte au niveau HSK choisi, avec pinyin, traduction et vocabulaire. C'est un exercice de lecture sur la Chine d'aujourd'hui, pas une dépêche : pour l'actualité vérifiée, utilise les sources ci-dessus.</p>
       <div class="row">
         <select id="rt" aria-label="Thème">${['La vie quotidienne à Pékin','Le train à grande vitesse','Les applications de paiement mobile','La fête de la mi-automne','La cuisine du Sichuan','Les voitures électriques','Le tourisme en Chine','Les jeunes et le travail','Le panda géant','La protection de l\'environnement'].map(t => `<option>${t}</option>`).join('')}</select>
-        <select id="rl" aria-label="Niveau">${[1,2,3,4].map(n => `<option value="${n}" ${n === (S.level || 1) ? 'selected' : ''}>HSK ${n}</option>`).join('')}</select>
+        <select id="rl" aria-label="Niveau">${LEVELS.map(n => `<option value="${n}" ${n === (S.level || 1) ? 'selected' : ''}>HSK ${n}</option>`).join('')}</select>
         <button class="btn primary" id="rb">Générer le texte</button>
       </div>
       <div id="ro" class="stack"></div>
@@ -5218,7 +5310,7 @@ function vNews() {
       const t = $('#rt', s).value, l = $('#rl', s).value, out = $('#ro', s), btn = $('#rb', s);
       btn.disabled = true; out.innerHTML = '<p class="muted">Claude écrit le texte…</p>';
       try {
-        const r = await sm.json(`Écris un court texte informatif en chinois simplifié sur le thème « ${t} », pour un apprenant francophone de niveau HSK ${l} (2.0). Utilise presque uniquement le vocabulaire des niveaux HSK 1 à ${l}. Longueur : ${[0,50,80,120,180][l]} caractères environ. Ne cite aucun chiffre, date ou événement précis : reste sur des faits généraux et durables. Réponds uniquement en JSON : {"titre_zh":"…","titre_fr":"…","texte":"…","pinyin":"…","traduction":"…","vocab":[{"h":"…","p":"…","f":"…"}]} avec 5 à 8 mots de vocabulaire utiles.`, {modelTier: 'default'});
+        const r = await sm.json(`Écris un court texte informatif en chinois simplifié sur le thème « ${t} », pour un apprenant francophone de niveau HSK ${l} (nouvel HSK, programme 2025). Utilise presque uniquement le vocabulaire des niveaux HSK 1 à ${l}. Longueur : ${[0,50,80,120,180,240,300][l]} caractères environ. Ne cite aucun chiffre, date ou événement précis : reste sur des faits généraux et durables. Réponds uniquement en JSON : {"titre_zh":"…","titre_fr":"…","texte":"…","pinyin":"…","traduction":"…","vocab":[{"h":"…","p":"…","f":"…"}]} avec 5 à 8 mots de vocabulaire utiles.`, {modelTier: 'default'});
         out.innerHTML = '';
         const h = document.createElement('div'); h.className = 'stack'; h.style.gap = '10px';
         h.innerHTML = `<div class="row" style="justify-content:space-between;flex-wrap:nowrap"><h3 class="han" style="font-size:1.4rem"></h3><span class="say"></span></div><p class="muted tfr"></p><p class="zh"></p><details><summary>Pinyin</summary><p class="py"></p></details><details><summary>Traduction</summary><p class="tr"></p></details><div class="wordlist voc"></div>`;
@@ -5369,8 +5461,8 @@ function buildICS() {
 }
 
 // Navigation : 4 onglets (barre latérale sur ordinateur avec les sous-rubriques, barre du bas sur mobile)
-const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','histoires','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','oral','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', []]];
-const SUBNAMES = {lecons: 'Leçons', grammaire: 'Grammaire', histoires: 'Histoires', listes: 'Listes HSK', dico: 'Dictionnaire', ecriture: 'Écriture', origines: 'Origines', memo: 'Mémo', actus: 'Actus', quiz: 'Révisions et quiz', examen: 'Examen blanc', oral: 'Oral', detective: 'Détective', confusions: 'Confusions', chansons: 'Chansons', devinettes: 'Devinettes'};
+const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','histoires','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','oral','conversation','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', []]];
+const SUBNAMES = {lecons: 'Leçons', grammaire: 'Grammaire', histoires: 'Histoires', listes: 'Listes HSK', dico: 'Dictionnaire', ecriture: 'Écriture', origines: 'Origines', memo: 'Mémo', actus: 'Actus', quiz: 'Révisions et quiz', examen: 'Examen blanc', oral: 'Oral', conversation: 'Conversation', detective: 'Détective', confusions: 'Confusions', chansons: 'Chansons', devinettes: 'Devinettes'};
 const navItem = ([v, t], cls = 'navlink') => { const [col, g] = SECTION[v]; return `<a class="${cls}" href="#${v}" data-nav="${v}" ${tint(col)}><span class="g" aria-hidden="true">${g}</span>${t}</a>`; };
 $('#sidenav').innerHTML = NAV.map(n => navItem(n) + (n[2].filter(v => SUBNAMES[v]).length ? `<div class="subnav">${n[2].filter(v => SUBNAMES[v]).map(v => `<a href="#${v}" data-nav="${v}" ${tint(SECTION[v][0])}>${SUBNAMES[v]}</a>`).join('')}</div>` : '')).join('');
 $('#bottomnav').innerHTML = NAV.map(n => navItem(n, '')).join('');
