@@ -3424,13 +3424,13 @@ function playSong(song, root, btn) {
 }
 async function readSong(song, root, btn) {
   if (!('speechSynthesis' in window)) { toast("L'audio n'est pas disponible sur ce navigateur."); return; }
-  if (btn.dataset.reading) { speechSynthesis.cancel(); delete btn.dataset.reading; btn.textContent = 'Lire les paroles'; $$('.lyric', root).forEach(e => e.classList.remove('on')); return; }
-  btn.dataset.reading = 1; btn.textContent = '■ Arrêter la lecture';
+  if (btn.dataset.reading) { speechSynthesis.cancel(); delete btn.dataset.reading; btn.innerHTML = btn.dataset.label; $$('.lyric', root).forEach(e => e.classList.remove('on')); return; }
+  btn.dataset.label ||= btn.innerHTML; btn.dataset.reading = 1; btn.textContent = '■ Arrêter la lecture';
   for (let i = 0; i < song.lines.length && btn.dataset.reading; i++) {
     $$('.lyric', root).forEach((e, k) => e.classList.toggle('on', k === i));
     await new Promise(res => { const u = new SpeechSynthesisUtterance(song.lines[i][0]); u.lang = 'zh-CN'; if (zhVoice) u.voice = zhVoice; u.rate = S.rate; u.onend = u.onerror = res; speechSynthesis.speak(u); });
   }
-  delete btn.dataset.reading; btn.textContent = 'Lire les paroles'; $$('.lyric', root).forEach(e => e.classList.remove('on'));
+  delete btn.dataset.reading; btn.innerHTML = btn.dataset.label; $$('.lyric', root).forEach(e => e.classList.remove('on'));
 }
 function hskWordsIn(text) {
   const out = [];
@@ -4010,6 +4010,7 @@ function vLearnHub() {
     <div class="hubs">
       ${hubTile('lecons', 'Leçons', nc ? `Prochain paquet : ${esc(nc.L.t)}` : 'Toutes les leçons du HSK 1 au 4', 'teal', '课')}
       ${hubTile('grammaire', 'Grammaire', 'Les structures du HSK, avec exemples à écouter et questions', 'plum', '法')}
+      ${hubTile('histoires', 'Histoires', 'De courts récits avec les mots de ton niveau, à écouter et à lire', 'coral', '读')}
       ${hubTile('ecriture', 'Écriture', 'Tracer avec le modèle, puis de mémoire', 'indigo', '写')}
       ${hubTile('origines', 'Origines', 'Pourquoi les caractères ont cette forme', 'bronze', '源')}
       ${hubTile('memo', 'Mémo', 'Les tons et des histoires pour retenir', 'gold', '记')}
@@ -4141,7 +4142,7 @@ const DEFAULT = {
   secs: {}, goal: {mode: 'day', minutes: 15, days: [0,1,2,3,4,5,6]},
   reminder: {time: '19:00', days: [0,1,2,3,4]}, rate: 0.8,
   srs: {}, lessons: {}, riddles: {}, written: {},
-  pinyin: 'auto', tones: 'color', textScale: 1, kai: false, sound: true, haptics: true, chunks: {}, conf: {}, detect: {}, recall: {}, profile: null, exams: [], levelOk: {}, gram: {}
+  pinyin: 'auto', tones: 'color', textScale: 1, kai: false, sound: true, haptics: true, chunks: {}, conf: {}, detect: {}, recall: {}, profile: null, exams: [], levelOk: {}, gram: {}, stories: {}
 };
 let S = structuredClone(DEFAULT);
 const LS_KEY = 'hsk-jardin-v1';
@@ -4304,7 +4305,7 @@ function header() {
   $$('.st-xp').forEach(e => e.textContent = knownChars());
   $$('.st-level').forEach(e => e.textContent = S.level ? `HSK ${S.level}` : 'HSK ?');
 }
-const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar};
+const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar, histoires: vStories};
 let current = 'accueil';
 function go(view, arg) { current = view; render(view, arg); try { history.replaceState(null, '', '#' + view); } catch {} }
 function route() { const h = location.hash.slice(1); go(VIEWS[h] ? h : 'accueil'); }
@@ -4324,7 +4325,7 @@ function render(view, arg) {
 }
 
 addEventListener('hashchange', route);
-const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我']};
+const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], histoires: ['coral','读'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我']};
 const LV_COL = {1: 'teal', 2: 'bamboo', 3: 'gold', 4: 'verm', 5: 'plum', 6: 'indigo'};
 const tint = col => `style="--c:var(--${col});--c-ink:var(--${col}-ink)"`;
 const view = html => {
@@ -4511,6 +4512,70 @@ function sheet(s, box, g, lv, next) {
       if (!good) b.classList.add('ko');
       cue(good); $('#gs', qb).textContent = good ? 'Bonne réponse.' : `La bonne réponse : ${q.replace('___', o[0])}`;
       i++; setTimeout(ask, good ? 900 : 2200);
+    }));
+  };
+  ask(); wire(box);
+}
+
+// ---------- Histoires graduées (data/histoires.json, rédigées dans tools/content/histoires.py) ----------
+let storyP = null, storyLevel = null;
+const loadStories = () => storyP ||= fetch('data/histoires.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(e => { storyP = null; throw e; });
+function vStories(id) {
+  S.stories = S.stories || {};
+  const s = view(`<div class="head"><span class="label">Histoires</span><h1 id="sh">Lire en chinois</h1><p id="sp">De courtes histoires écrites avec les seuls mots de ton niveau. Écoute-les, lis-les avec ou sans pinyin, puis vérifie que tu as compris.</p></div><div id="sb" class="stack"><p class="muted">Chargement…</p></div>`);
+  const box = $('#sb', s);
+  loadStories().then(data => {
+    if (!document.body.contains(box)) return;
+    const levels = Object.keys(data).map(Number).sort((a, b) => a - b);
+    if (id) {
+      const lv = levels.find(l => data[l].some(x => x.id === id)), list = lv ? data[lv] : [], k = list.findIndex(x => x.id === id);
+      if (k < 0) return go('histoires');
+      return story(s, box, list[k], lv, list[k + 1]);
+    }
+    const lv = levels.includes(storyLevel) ? storyLevel : levels.includes(S.level) ? S.level : levels[0], list = data[lv];
+    box.innerHTML = `${levels.length > 1 ? `<div class="lvl-tabs" role="group" aria-label="Niveau">${levels.map(n => `<button class="chip" data-l="${n}" aria-pressed="${n === lv}">HSK ${n}</button>`).join('')}</div>` : ''}
+      <div class="grid">${list.map(x => `<button class="card lesson tint" data-st="${x.id}" ${tint(LV_COL[lv])}><span class="label">${S.stories[x.id] ? '✓ Lue · ' : ''}HSK ${lv} · ${x.l.length} phrases</span><strong class="ttl"><span class="han">${esc(x.tz)}</span> · ${esc(x.tf)}</strong><span class="muted">${esc(x.d)}</span></button>`).join('')}</div>
+      <p class="muted" style="font-size:.85rem">Histoires écrites pour Xué Yuán avec le vocabulaire officiel du nouvel HSK (programme 2025), en attente de relecture par un locuteur natif.</p>`;
+    $$('[data-l]', box).forEach(b => b.addEventListener('click', () => { storyLevel = +b.dataset.l; render('histoires'); }));
+    $$('[data-st]', box).forEach(b => b.addEventListener('click', () => go('histoires', b.dataset.st)));
+  }).catch(() => { box.innerHTML = '<div class="card"><p>Les histoires n\'ont pas pu être chargées. Vérifie ta connexion puis réessaie.</p><button class="btn" data-go="histoires">Réessayer</button></div>'; wire(box); });
+}
+function story(s, box, st, lv, next) {
+  $('#sh', s).innerHTML = `<span class="han">${esc(st.tz)}</span>`; $('#sp', s).textContent = `${st.tf} · HSK ${lv}`;
+  // Mots du texte, phrase par phrase ; pour un mot à plusieurs sens (只 zhǐ / zhī), on garde le sens dont le pinyin
+  // figure dans la phrase
+  const flat = t => t.toLowerCase().replace(/[^a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/g, '');
+  const words = uniqBy(st.l.flatMap(([zh, py]) => hskWordsIn(zh).map(w => {
+    const senses = [w]; for (let n = 2; W[`${w.h}#${n}`]; n++) senses.push(W[`${w.h}#${n}`]);
+    return senses.find(x => flat(py).includes(flat(x.p))) || w;
+  })), w => w.id).filter(w => w.l <= lv);
+  box.innerHTML = `<button class="btn ghost small" id="sl" style="align-self:flex-start">← Toutes les histoires</button>
+    <div class="row"><button class="btn primary" id="sr">${SPEAK_ICON} Écouter l'histoire</button><button class="btn" id="st" aria-pressed="false">Afficher les traductions</button></div>
+    <div class="lyrics" ${tint(LV_COL[lv])}>${st.l.map(([zh, py, fr], i) => `<div class="lyric" data-li="${i}"><div class="row" style="flex-wrap:nowrap;gap:8px;align-items:flex-start">${speakBtn(zh, 'la phrase')}<div class="stack" style="gap:2px;min-width:0"><div class="zh">${esc(zh)}</div><div class="py pyx">${pyHTML(py)}</div><div class="fr muted" hidden>${esc(fr)}</div></div></div></div>`).join('')}</div>
+    ${words.length ? `<div class="stack" style="gap:8px"><span class="label">Mots du texte (touche pour la fiche)</span><div class="vocab">${words.map(w => `<button class="vchip" data-word="${esc(w.id)}"><span class="han">${w.h}</span> ${esc(w.p)} · ${esc(w.f.split(/[,;]/)[0])}</button>`).join('')}</div></div>` : ''}
+    <div class="card stack"><h2 class="ttl">As-tu compris ?</h2><div id="sq" class="quiz"></div></div>`;
+  $('#sl', box).addEventListener('click', () => { speechSynthesis?.cancel(); storyLevel = lv; go('histoires'); });
+  $('#st', box).addEventListener('click', e => { const on = e.currentTarget.getAttribute('aria-pressed') !== 'true'; e.currentTarget.setAttribute('aria-pressed', on); e.currentTarget.textContent = on ? 'Masquer les traductions' : 'Afficher les traductions'; $$('.lyric .fr', box).forEach(x => { x.hidden = !on; }); });
+  $('#sr', box).addEventListener('click', e => readSong({lines: st.l}, box, e.currentTarget));
+  const qb = $('#sq', box); let i = 0, ok = 0;
+  const ask = () => {
+    if (i >= st.q.length) {
+      S.stories[st.id] = Date.now(); addXP(5); save();
+      qb.innerHTML = `<p><strong>${ok} / ${st.q.length}</strong> ${ok === st.q.length ? '· tout compris !' : '· relis le passage avec les traductions, puis réessaie.'}</p>
+        <div class="row"><button class="btn" id="sa">Refaire</button>${next ? `<button class="btn primary" id="sn">Histoire suivante : ${esc(next.tf)} →</button>` : `<button class="btn primary" id="sn">Retour aux histoires</button>`}</div>`;
+      $('#sa', qb).addEventListener('click', () => { i = 0; ok = 0; ask(); });
+      $('#sn', qb).addEventListener('click', () => { speechSynthesis?.cancel(); next ? go('histoires', next.id) : (storyLevel = lv, go('histoires')); });
+      return;
+    }
+    const [q, o] = st.q[i];
+    qb.innerHTML = `<span class="label">Question ${i + 1} sur ${st.q.length}</span><p style="margin:.3rem 0;font-weight:600">${esc(q)}</p>
+      <div class="options">${shuffle(o).map(x => `<button class="opt" data-o="${esc(x)}">${esc(x)}</button>`).join('')}</div><p class="muted" role="status" id="ss"></p>`;
+    $$('.opt', qb).forEach(b => b.addEventListener('click', () => {
+      const good = b.dataset.o === o[0]; if (good) ok++;
+      $$('.opt', qb).forEach(x => { x.disabled = true; if (x.dataset.o === o[0]) x.classList.add('ok'); });
+      if (!good) b.classList.add('ko');
+      cue(good); $('#ss', qb).textContent = good ? 'Bonne réponse.' : `La bonne réponse : ${o[0]}`;
+      i++; setTimeout(ask, good ? 900 : 2000);
     }));
   };
   ask(); wire(box);
@@ -5207,8 +5272,8 @@ function buildICS() {
 }
 
 // Navigation : 4 onglets (barre latérale sur ordinateur avec les sous-rubriques, barre du bas sur mobile)
-const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', []]];
-const SUBNAMES = {lecons: 'Leçons', grammaire: 'Grammaire', listes: 'Listes HSK', dico: 'Dictionnaire', ecriture: 'Écriture', origines: 'Origines', memo: 'Mémo', actus: 'Actus', quiz: 'Révisions et quiz', examen: 'Examen blanc', detective: 'Détective', confusions: 'Confusions', chansons: 'Chansons', devinettes: 'Devinettes'};
+const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','histoires','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', []]];
+const SUBNAMES = {lecons: 'Leçons', grammaire: 'Grammaire', histoires: 'Histoires', listes: 'Listes HSK', dico: 'Dictionnaire', ecriture: 'Écriture', origines: 'Origines', memo: 'Mémo', actus: 'Actus', quiz: 'Révisions et quiz', examen: 'Examen blanc', detective: 'Détective', confusions: 'Confusions', chansons: 'Chansons', devinettes: 'Devinettes'};
 const navItem = ([v, t], cls = 'navlink') => { const [col, g] = SECTION[v]; return `<a class="${cls}" href="#${v}" data-nav="${v}" ${tint(col)}><span class="g" aria-hidden="true">${g}</span>${t}</a>`; };
 $('#sidenav').innerHTML = NAV.map(n => navItem(n) + (n[2].filter(v => SUBNAMES[v]).length ? `<div class="subnav">${n[2].filter(v => SUBNAMES[v]).map(v => `<a href="#${v}" data-nav="${v}" ${tint(SECTION[v][0])}>${SUBNAMES[v]}</a>`).join('')}</div>` : '')).join('');
 $('#bottomnav').innerHTML = NAV.map(n => navItem(n, '')).join('');

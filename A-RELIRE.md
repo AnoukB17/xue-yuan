@@ -81,3 +81,10 @@ Source : `tools/content/grammaire.py` (contrôlé automatiquement : points offic
   - [ ] À vérifier par un natif en priorité : expressions de l'oral (真有你的, X什么X, 什么X不X的, 不X白不X, X着也是X着, X也不是Y也不是) ; une seule bonne réponse possible pour chacune des 84 questions ; formes admises hors liste (要不然, 话, 一下午, expressions modèles comme 没完没了).
 - [x] Grammaire HSK 6 (`docs/grammaire/hsk6.md`) : 24 fiches (48 points officiels), validées le 14/11/2026, intégrées. Les fiches des niveaux 1 à 6 sont complètes (238 fiches).
   - [ ] À vérifier par un natif en priorité : tournures orales (好你个X, 看把你…得, 看你说的, X归X Y归Y, 这也不X那也不Y), fiche 把 à sujet non humain ; une seule bonne réponse possible pour chacune des 48 questions.
+
+## Lot 7 : histoires graduées (validées par la propriétaire, sans relecture native)
+
+Source : `tools/content/histoires.py` (contrôlé automatiquement : vocabulaire du niveau, pinyin).
+
+- [x] Histoires HSK 1 (`docs/histoires/hsk1.md`) : 3 histoires, validées le 14/11/2026, intégrées (Apprendre › Histoires).
+  - [ ] À vérifier par un natif : naturel des textes (en particulier 我们还要两杯茶, 吃好了, 它不在桌子下) et justesse des traductions.
