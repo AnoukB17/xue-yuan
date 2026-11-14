@@ -4173,7 +4173,7 @@ if (S.toneColors === false && S.tones === 'color') S.tones = 'off';
 // ---------- Compte : création, connexion vérifiée par e-mail, synchronisation (Firebase) ----------
 // Configuration du projet Firebase (console Firebase › Paramètres du projet › Vos applications › Config). Ces valeurs
 // sont publiques par conception : la sécurité repose sur les règles Firestore (voir docs/FIREBASE.md).
-const FIREBASE_CONFIG = window.__fbConfig || null; // __fbConfig : utilisé seulement par les tests (tools/check-compte.js)
+const FIREBASE_CONFIG = window.__fbConfig || {apiKey: 'AIzaSyD1kdgEIkksHVeUozlAOLgANRGahbxyBiM', authDomain: 'xue-yuan.firebaseapp.com', projectId: 'xue-yuan', storageBucket: 'xue-yuan.firebasestorage.app', messagingSenderId: '472244096532', appId: '1:472244096532:web:15afdf1df296cbe4eee101'}; // __fbConfig : tests (tools/check-compte.js)
 const FB_CDN = 'https://cdn.jsdelivr.net/npm/firebase@10.14.1/';
 const CLOUD_FLAG = 'xy-cloud'; // présent tant qu'une session est ouverte sur cet appareil : on recharge Firebase au démarrage
 const inClaude = () => !!window.claude; // dans l'artifact claude.ai, la progression suit déjà le compte Claude
