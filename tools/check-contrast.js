@@ -60,6 +60,7 @@ const STATES = {
   'grammaire (fiche)': async p => { await p.evaluate(() => go('grammaire', '1-le2')); await p.waitForSelector('#gq .opt'); },
   'histoires (liste)': async p => { await p.evaluate(() => go('histoires')); await p.waitForSelector('[data-st]'); },
   'histoires (lecture)': async p => { await p.evaluate(() => go('histoires', '1-journee')); await p.waitForSelector('#sq .opt'); await p.click('#st'); },
+  'oral': async p => { await p.evaluate(() => go('oral')); await p.waitForSelector('#om'); },
   'examen (accueil)': async p => { await p.evaluate(() => go('examen')); await p.waitForSelector('[data-run]'); },
   'examen (question)': async p => { await p.evaluate(() => go('examen', '2:court')); await p.click('#xs'); await p.waitForSelector('#xb .opt'); },
   'examen (ordre des mots)': async p => { await p.evaluate(() => go('examen', '2:court')); for (let k = 0; k < 2; k++) { await p.click('#xs'); for (let n = 0; n < 8; n++) await p.click('#xn'); } await p.click('#xs'); await p.waitForSelector('[data-i]'); },
