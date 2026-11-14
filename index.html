@@ -3338,7 +3338,7 @@ function onboarding(stepStart = 0) {
     el.innerHTML = `<span class="label">Question ${mini.i + 1} sur 5 · HSK ${q.l}</span><strong class="ttl">${q.k === 'mean' ? `Que signifie <span class="han" style="font-size:1.4rem">${q.q}</span> ?` : esc(q.q)}</strong>
       <div class="options">${shuffle(q.o).map(o => `<button class="opt ${/[一-鿿]/.test(o) ? 'hanopt' : ''}" data-o="${esc(o)}">${esc(o)}</button>`).join('')}</div>`;
     $$('.opt', el).forEach(b => b.addEventListener('click', () => {
-      const right = b.dataset.o === q.o[0];
+      const right = b.dataset.o === q.o[0]; cue(right);
       if (right) { mini.ok++; mini.top = Math.max(mini.top, q.l); } else mini.ko++;
       mini.i++;
       if (mini.i >= mini.qs.length || mini.ko >= 2) {
@@ -3361,8 +3361,8 @@ function onboarding(stepStart = 0) {
         $('#nohear', el).replaceWith(Object.assign(document.createElement('button'), {className: 'btn primary small', id: 'nohear-next', textContent: 'Continuer →', onclick: () => { win = 1; firstWin(el); }}));
       });
       $$('.opt', el).forEach(b => b.addEventListener('click', () => {
-        if (b.dataset.o === '你好') { b.classList.add('ok'); grade('你好', true); save(); $('#wfb', el).className = 'feedback ok'; $('#wfb', el).innerHTML = `Bravo : <span class="han">${hanHTML('你好', 'nǐ hǎo')}</span> nǐ hǎo, bonjour !`; speak('你好'); setTimeout(() => { win = 1; firstWin(el); }, 1300); }
-        else { b.classList.add('ko'); b.disabled = true; speak('你好'); }
+        if (b.dataset.o === '你好') { cue(true); b.classList.add('ok'); grade('你好', true); save(); $('#wfb', el).className = 'feedback ok'; $('#wfb', el).innerHTML = `Bravo : <span class="han">${hanHTML('你好', 'nǐ hǎo')}</span> nǐ hǎo, bonjour !`; speak('你好'); setTimeout(() => { win = 1; firstWin(el); }, 1300); }
+        else { cue(false); b.classList.add('ko'); b.disabled = true; speak('你好'); }
       }));
       return;
     }
@@ -4464,7 +4464,7 @@ function vTest() {
       const ok = b.dataset.o === q.o[0];
       $$('.opt', box).forEach(x => { x.disabled = true; if (x.dataset.o === q.o[0]) x.classList.add('ok'); });
       if (!ok) b.classList.add('ko');
-      next(ok);
+      cue(ok); next(ok);
     }));
     $('#idk', box).addEventListener('click', () => next(false));
   };
@@ -5263,7 +5263,7 @@ function vRiddles() {
     const r = RIDDLES[card.dataset.k];
     $$('.opt', card).forEach(b => b.addEventListener('click', () => {
       const ok = b.dataset.o === r.a;
-      b.classList.add(ok ? 'ok' : 'ko');
+      b.classList.add(ok ? 'ok' : 'ko'); cue(ok);
       if (ok) {
         $$('.opt', card).forEach(x => x.disabled = true);
         const rv = $('.reveal', card); rv.hidden = false; rv.textContent = r.e;
