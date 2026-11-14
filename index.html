@@ -4552,7 +4552,12 @@ function story(s, box, st, lv, next) {
   box.innerHTML = `<button class="btn ghost small" id="sl" style="align-self:flex-start">← Toutes les histoires</button>
     <div class="row"><button class="btn primary" id="sr">${SPEAK_ICON} Écouter l'histoire</button><button class="btn" id="st" aria-pressed="false">Afficher les traductions</button></div>
     <div class="lyrics" ${tint(LV_COL[lv])}>${st.l.map(([zh, py, fr], i) => `<div class="lyric" data-li="${i}"><div class="row" style="flex-wrap:nowrap;gap:8px;align-items:flex-start">${speakBtn(zh, 'la phrase')}<div class="stack" style="gap:2px;min-width:0"><div class="zh">${esc(zh)}</div><div class="py pyx">${pyHTML(py)}</div><div class="fr muted" hidden>${esc(fr)}</div></div></div></div>`).join('')}</div>
-    ${words.length ? `<div class="stack" style="gap:8px"><span class="label">Mots du texte (touche pour la fiche)</span><div class="vocab">${words.map(w => `<button class="vchip" data-word="${esc(w.id)}"><span class="han">${w.h}</span> ${esc(w.p)} · ${esc(w.f.split(/[,;]/)[0])}</button>`).join('')}</div></div>` : ''}
+    ${(() => { // mots du niveau de l'histoire et du précédent en avant ; les autres derrière « Voir tous les mots »
+      const chip = w => `<button class="vchip" data-word="${esc(w.id)}"><span class="han">${w.h}</span> ${esc(w.p)} · ${esc(w.f.split(/[,;]/)[0])}</button>`;
+      const main = words.filter(w => w.l >= lv - 1), rest = words.filter(w => w.l < lv - 1);
+      return words.length ? `<div class="stack" style="gap:8px"><span class="label">${lv > 1 ? `Mots des HSK ${lv - 1} et ${lv}` : 'Mots du HSK 1'} dans le texte (touche pour la fiche)</span><div class="vocab">${main.map(chip).join('')}</div>
+        ${rest.length ? `<details><summary>Voir tous les mots du texte (${words.length})</summary><div class="vocab" style="margin-top:8px">${rest.map(chip).join('')}</div></details>` : ''}</div>` : '';
+    })()}
     <div class="card stack"><h2 class="ttl">As-tu compris ?</h2><div id="sq" class="quiz"></div></div>`;
   $('#sl', box).addEventListener('click', () => { speechSynthesis?.cancel(); storyLevel = lv; go('histoires'); });
   $('#st', box).addEventListener('click', e => { const on = e.currentTarget.getAttribute('aria-pressed') !== 'true'; e.currentTarget.setAttribute('aria-pressed', on); e.currentTarget.textContent = on ? 'Masquer les traductions' : 'Afficher les traductions'; $$('.lyric .fr', box).forEach(x => { x.hidden = !on; }); });
