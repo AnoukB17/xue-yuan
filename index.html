@@ -4422,7 +4422,7 @@ function drawAccount(box) {
 }
 // Lien de confirmation : il ramène dans l'appli (si le domaine est autorisé dans Firebase), sinon page Firebase standard
 async function sendVerify(a, u) {
-  try { await a.sendEmailVerification(u, {url: location.origin + location.pathname}); }
+  try { await a.sendEmailVerification(u, {url: location.origin + location.pathname + '#compte'}); }
   catch (e) { if (e?.code === 'auth/unauthorized-continue-uri' || e?.code === 'auth/invalid-continue-uri') await a.sendEmailVerification(u); else throw e; }
 }
 

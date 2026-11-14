@@ -71,7 +71,7 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
   await p.fill('#apw2', 'motdepasse1'); await p.click('#ago');
   await p.waitForSelector('text=Vérifie ta boîte mail');
   const vlog = await p.evaluate(() => __fb.log.find(x => x[0] === 'verify'));
-  check(vlog && vlog[3] === 'fr' && /index\.html$|\/$/.test(vlog[2]), 'e-mail de vérification envoyé, en français, avec retour vers l\'appli');
+  check(vlog && vlog[3] === 'fr' && /#compte$/.test(vlog[2]), 'e-mail de vérification envoyé, en français, avec retour vers l\'appli');
   check(!(await p.evaluate(() => __fb.log.some(x => x[0] === 'set'))), 'rien n\'est envoyé en ligne avant la vérification');
 
   // Pas encore confirmé
