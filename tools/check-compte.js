@@ -23,7 +23,7 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
         getAuth: () => M.auth, onAuthStateChanged: (a, cb) => { M.cb = cb; setTimeout(() => cb(M.auth.currentUser), 0); },
         createUserWithEmailAndPassword: async (a, e, pw) => { if (M.users[e]) throw {code: 'auth/email-already-in-use'}; M.users[e] = {pw, uid: 'u-new', v: false}; const u = user(e, 'u-new', false); set(u); return {user: u}; },
         sendEmailVerification: async (u, opts) => { M.log.push(['verify', u.email, opts?.url, M.auth.languageCode]); },
-        signInWithEmailAndPassword: async (a, e, pw) => { const r = M.users[e]; if (!r || r.pw !== pw) throw {code: 'auth/invalid-credential'}; set(user(e, r.uid, r.v)); },
+        signInWithEmailAndPassword: async (a, e, pw) => { const r = M.users[e]; if (!r) throw {code: 'auth/user-not-found'}; if (r.pw !== pw) throw {code: 'auth/wrong-password'}; set(user(e, r.uid, r.v)); },
         reload: async u => { const r = M.users[u.email]; if (r) u.emailVerified = r.v; },
         signOut: async () => set(null),
         sendPasswordResetEmail: async (a, e) => M.log.push(['reset', e]),
@@ -38,7 +38,26 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
     });
   });
   await p.goto(await urlFor('index.html') + '#objectifs');
-  await p.waitForSelector('text=Mon compte');
+
+  // Écran d'accueil : se connecter ou créer un compte avant d'entrer
+  await p.waitForSelector('#onb #gab #af');
+  check(await p.locator('#onb h1').textContent() === 'Bienvenue !', 'à l\'ouverture : écran de connexion / création de compte');
+  await p.fill('#aem', 'personne@exemple.fr'); await p.fill('#apw', 'motdepasse99'); await p.click('#ago');
+  await p.waitForFunction(() => document.querySelector('#as').textContent.trim());
+  check(/Aucun compte/.test(await p.textContent('#as')), 'adresse sans compte : « Aucun compte n\'existe avec cette adresse »');
+  await p.click('text=Créer un compte avec cette adresse'); await p.waitForSelector('#apw2');
+  check(await p.inputValue('#aem') === 'personne@exemple.fr', 'bascule vers la création, adresse conservée');
+  check(await p.getAttribute('#apw', 'type') === 'password', 'mot de passe masqué par défaut');
+  await p.click('[data-eye="apw"]');
+  check(await p.getAttribute('#apw', 'type') === 'text' && await p.getAttribute('[data-eye="apw"]', 'aria-label') === 'Masquer le mot de passe', 'œil : affiche le mot de passe');
+  await p.click('[data-eye="apw"]');
+  check(await p.getAttribute('#apw', 'type') === 'password', 'œil barré : masque à nouveau');
+  const lv = async pw => { await p.fill('#apw', pw); return (await p.textContent('#apm .pwlab')).replace('Robustesse : ', '') + ' (' + await p.locator('#apm .pwbar i.on').count() + '/4)'; };
+  const levels = [await lv('abc'), await lv('azerty123'), await lv('chatnoir'), await lv('Chatnoir42'), await lv('Chat-noir-2026'), await lv('Le chat noir dort, 42 !')];
+  console.log('  jauge :', levels.join(' · '));
+  check(/Trop court/.test(levels[0]) && /Faible/.test(levels[1]) && /Robuste/.test(levels[5]) && levels.map(x => +x.match(/\((\d)/)[1]).every((n, i, a) => !i || n >= a[i - 1] || i === 2), 'jauge de robustesse : de « Trop court » à « Robuste »');
+  await p.click('#gskip'); await p.waitForSelector('text=Mon compte');
+  check(await p.evaluate(() => localStorage.getItem('xy-no-account')) === '1' && await p.locator('#onb').isHidden(), '« Continuer sans compte » : l\'appli s\'ouvre, choix mémorisé');
   check(await p.locator('[data-go="compte"]').count() === 1, '« Moi » propose le compte');
   await p.click('[data-go="compte"]'); await p.waitForSelector('#af');
   check(await p.evaluate(() => current) === 'compte', 'écran Compte ouvert');
@@ -92,6 +111,29 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
   await p.evaluate(() => { S = structuredClone(DEFAULT); S.wiped = Date.now(); save(); clearTimeout(cloud.timer); return cloudPush(); });
   await p.evaluate(() => cloudPull());
   check(await p.evaluate(() => Object.keys(S.srs).length) === 0, 'remise à zéro respectée par la synchronisation');
+
+  // Nouvel appareil : connexion depuis l'écran d'accueil, qui se ferme et ouvre l'appli avec la progression du compte
+  const ctx3 = await b.newContext({viewport: {width: 390, height: 844}, serviceWorkers: 'block'});
+  await ctx3.addInitScript(() => { if (!sessionStorage.getItem('seeded')) { sessionStorage.setItem('seeded', 1); localStorage.clear(); } });
+  const p3 = await ctx3.newPage(); p3.on('pageerror', e => errs.push(e.message));
+  await p3.route('**/*', r => /hanzi|fonts/.test(r.request().url()) ? r.abort() : r.continue());
+  await p3.addInitScript(() => {
+    window.__fbConfig = {apiKey: 'test'};
+    const M = window.__fb = {docs: {'users/u9': {s: JSON.stringify({updated: 9, onboarded: true, profile: {}, level: 2, xp: 77, srs: {'三': {b: 2, s: 3, d: 5, last: 90, due: 95}}}), updated: 9}}, cb: null, auth: {currentUser: null}};
+    const set = u => { M.auth.currentUser = u; M.cb && M.cb(u); };
+    window.__fbLoader = async () => ({app: {initializeApp: () => ({})},
+      auth: {getAuth: () => M.auth, onAuthStateChanged: (a, cb) => { M.cb = cb; setTimeout(() => cb(M.auth.currentUser), 0); }, reload: async () => {},
+        signInWithEmailAndPassword: async (a, e, pw) => { if (pw !== 'bonmotdepasse') throw {code: 'auth/wrong-password'}; set({email: e, uid: 'u9', emailVerified: true, getIdToken: async () => 't'}); }},
+      firestore: {getFirestore: () => ({}), doc: (d, c, id) => c + '/' + id, getDoc: async k => ({exists: () => k in M.docs, data: () => M.docs[k]}), setDoc: async (k, v) => { M.docs[k] = v; }}});
+  });
+  await p3.goto(await urlFor('index.html')); await p3.waitForSelector('#onb #af');
+  await p3.fill('#aem', 'moi@exemple.fr'); await p3.fill('#apw', 'mauvais'); await p3.click('#ago');
+  await p3.waitForFunction(() => document.querySelector('#as').textContent.trim());
+  check(/Mot de passe incorrect/.test(await p3.textContent('#as')), 'mauvais mot de passe (compte existant) : « Mot de passe incorrect »');
+  await p3.fill('#apw', 'bonmotdepasse'); await p3.click('#ago');
+  await p3.waitForFunction(() => document.querySelector('#onb').hidden && current === 'accueil', null, {timeout: 8000});
+  check(await p3.evaluate(() => S.xp === 77 && !!S.srs['三']), 'connexion depuis l\'accueil : écran fermé, progression du compte récupérée, pas de questionnaire');
+  await ctx3.close();
 
   // Dans l'artifact claude.ai, pas de compte Xué Yuán
   const p2 = await ctx.newPage();
