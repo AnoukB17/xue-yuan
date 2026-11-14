@@ -4170,12 +4170,200 @@ const LS_KEY = 'hsk-jardin-v1';
 try { const raw = localStorage.getItem(LS_KEY); if (raw) S = {...S, ...JSON.parse(raw)}; } catch {}
 if (S.toneColors === false && S.tones === 'color') S.tones = 'off';
 
+// ---------- Compte : création, connexion vérifiée par e-mail, synchronisation (Firebase) ----------
+// Configuration du projet Firebase (console Firebase › Paramètres du projet › Vos applications › Config). Ces valeurs
+// sont publiques par conception : la sécurité repose sur les règles Firestore (voir docs/FIREBASE.md).
+const FIREBASE_CONFIG = window.__fbConfig || null; // __fbConfig : utilisé seulement par les tests (tools/check-compte.js)
+const FB_CDN = 'https://cdn.jsdelivr.net/npm/firebase@10.14.1/';
+const CLOUD_FLAG = 'xy-cloud'; // présent tant qu'une session est ouverte sur cet appareil : on recharge Firebase au démarrage
+const inClaude = () => !!window.claude; // dans l'artifact claude.ai, la progression suit déjà le compte Claude
+const cloud = {fb: null, ready: null, user: null, key: '', timer: null, last: 0, busy: false, error: ''};
+const cloudOn = () => !!(cloud.user && cloud.user.emailVerified);
+function loadFirebase() {
+  return cloud.ready ||= (window.__fbLoader ? window.__fbLoader() : Promise.all(['app', 'auth', 'firestore'].map(m => import(FB_CDN + m + '/+esm'))).then(([app, auth, firestore]) => ({app, auth, firestore})))
+    .then(m => {
+      const app = m.app.initializeApp(FIREBASE_CONFIG), auth = m.auth.getAuth(app);
+      auth.languageCode = 'fr'; // e-mails de vérification et de réinitialisation en français
+      cloud.fb = {a: m.auth, f: m.firestore, auth, db: m.firestore.getFirestore(app)};
+      m.auth.onAuthStateChanged(auth, u => onCloudUser(u));
+      return cloud.fb;
+    })
+    .catch(e => { cloud.ready = null; throw e; });
+}
+async function onCloudUser(u) {
+  // Adresse confirmée depuis le lien de l'e-mail : on relit le compte, puis on renouvelle le jeton pour que la base
+  // reconnaisse la vérification (les règles Firestore l'exigent)
+  if (u && !u.emailVerified) { try { await cloud.fb.a.reload(u); u = cloud.fb.auth.currentUser || u; if (u.emailVerified) await u.getIdToken(true); } catch {} }
+  // (Firebase modifie l'objet utilisateur sur place lors d'un reload : on compare à une clé mémorisée)
+  const was = cloud.key, key = u ? u.uid + ':' + u.emailVerified : '';
+  cloud.user = u || null; cloud.key = key;
+  if (u) accountTab = 'login'; // après une création de compte, on revient ensuite sur « Se connecter »
+  try { u ? localStorage.setItem(CLOUD_FLAG, '1') : localStorage.removeItem(CLOUD_FLAG); } catch {}
+  if (cloudOn()) await cloudPull();
+  // On ne redessine que si l'état du compte a changé (sinon un message affiché sous les boutons disparaîtrait)
+  if (key !== was && (current === 'compte' || current === 'objectifs')) rerender(current);
+}
+// Fusion de deux progressions : rien n'est perdu. Pour chaque mot, la carte révisée le plus récemment ; pour les
+// compteurs, le maximum ; pour les réglages, ceux de l'appareil utilisé en dernier (un appareil neuf, sans aucune
+// révision, ne passe jamais devant le compte).
+function mergeStates(a, b) {
+  // « Tout remettre à zéro » fait après la dernière activité de l'autre côté : l'effacement l'emporte
+  for (const [x, y] of [[a, b], [b, a]]) if ((x.wiped || 0) > (y.updated || 0)) return {...structuredClone(DEFAULT), ...structuredClone(x)};
+  const fresh = x => !Object.keys(x.srs || {}).length;
+  let [newer, older] = (b.updated || 0) > (a.updated || 0) ? [b, a] : [a, b];
+  if (fresh(newer) && !fresh(older)) [newer, older] = [older, newer];
+  const m = {...structuredClone(DEFAULT), ...structuredClone(older), ...structuredClone(newer)};
+  m.srs = {...(older.srs || {})};
+  for (const [id, c] of Object.entries(newer.srs || {})) { const o = m.srs[id]; if (!o || (c.last ?? -1) >= (o.last ?? -1)) m.srs[id] = c; }
+  for (const k of ['written', 'recall', 'lessons', 'riddles', 'detect', 'gram', 'stories', 'levelOk', 'secs']) {
+    m[k] = {...(older[k] || {}), ...(newer[k] || {})};
+    for (const [id, v] of Object.entries(older[k] || {})) if (typeof v === 'number' && typeof m[k][id] === 'number') m[k][id] = Math.max(v, m[k][id]);
+  }
+  m.chunks = {...(older.chunks || {})};
+  for (const [id, v] of Object.entries(newer.chunks || {})) m.chunks[id] = [...new Set([...(m.chunks[id] || []), ...v])];
+  m.xp = Math.max(a.xp || 0, b.xp || 0);
+  m.oral = {n: Math.max(a.oral?.n || 0, b.oral?.n || 0)};
+  m.exams = uniqBy([...(older.exams || []), ...(newer.exams || [])], x => x.d).sort((x, y) => x.d - y.d).slice(-30);
+  m.onboarded = !!(a.onboarded || b.onboarded);
+  m.updated = Math.max(a.updated || 0, b.updated || 0);
+  return m;
+}
+const cloudRef = () => cloud.fb.f.doc(cloud.fb.db, 'users', cloud.user.uid);
+async function cloudPull() {
+  try {
+    const snap = await cloud.fb.f.getDoc(cloudRef());
+    if (snap.exists()) {
+      const remote = JSON.parse(snap.data().s || '{}');
+      S = mergeStates(S, remote); migrateUnits();
+      try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch {}
+      header(); if (S.onboarded && !$('#onb').hidden) closeOnboarding();
+      if (current === 'accueil') render('accueil');
+    }
+    await cloudPush();
+    cloud.error = '';
+  } catch (e) { cloud.error = 'La synchronisation a échoué : ta progression reste enregistrée sur cet appareil.'; console.warn('Synchronisation impossible', e); }
+}
+async function cloudPush() {
+  if (!cloudOn() || cloud.busy) return;
+  cloud.busy = true;
+  try { await cloud.fb.f.setDoc(cloudRef(), {s: JSON.stringify(S), updated: S.updated || Date.now()}); cloud.last = Date.now(); cloud.error = ''; }
+  catch (e) { cloud.error = 'La dernière sauvegarde en ligne a échoué ; elle sera retentée.'; console.warn('Sauvegarde en ligne impossible', e); }
+  cloud.busy = false;
+}
+function cloudSchedule() { if (!cloudOn()) return; clearTimeout(cloud.timer); cloud.timer = setTimeout(cloudPush, 4000); }
+addEventListener('visibilitychange', () => { if (document.hidden && cloudOn()) { clearTimeout(cloud.timer); cloudPush(); } });
+// Session déjà ouverte sur cet appareil : on reconnecte sans attendre que l'écran Compte soit ouvert
+try { if (FIREBASE_CONFIG && !inClaude() && localStorage.getItem(CLOUD_FLAG)) whenIdle(() => loadFirebase().catch(() => {})); } catch {}
+
+const AUTH_ERR = {
+  'auth/email-already-in-use': 'Un compte existe déjà avec cette adresse : connecte-toi plutôt.',
+  'auth/invalid-email': 'Cette adresse e-mail n\'est pas valide.',
+  'auth/weak-password': 'Mot de passe trop faible : 8 caractères au moins.',
+  'auth/missing-password': 'Indique ton mot de passe.',
+  'auth/invalid-credential': 'Adresse ou mot de passe incorrect.',
+  'auth/wrong-password': 'Adresse ou mot de passe incorrect.',
+  'auth/user-not-found': 'Adresse ou mot de passe incorrect.',
+  'auth/too-many-requests': 'Trop d\'essais : patiente quelques minutes avant de réessayer.',
+  'auth/network-request-failed': 'Pas de connexion internet : réessaie quand tu seras en ligne.',
+  'auth/requires-recent-login': 'Pour cette opération, déconnecte-toi puis reconnecte-toi, et recommence.',
+};
+const authMsg = e => AUTH_ERR[e?.code] || 'Une erreur est survenue. Réessaie dans un instant.';
+let accountTab = 'login', resendAt = 0;
+function vAccount() {
+  const s = view(`<div class="head"><span class="label">Compte</span><h1>Ton compte Xué Yuán</h1><p>Crée un compte pour retrouver ta progression sur tous tes appareils : téléphone, tablette, ordinateur.</p></div><div id="ab" class="stack"><p class="muted">Chargement…</p></div>`);
+  const box = $('#ab', s);
+  if (inClaude()) { box.innerHTML = '<div class="card stack" style="align-items:flex-start"><strong class="ttl">Déjà sauvegardé avec ton compte Claude</strong><p class="muted">Sur claude.ai, ta progression est enregistrée avec ton compte Claude. Le compte Xué Yuán sert à l\'appli installée sur ton téléphone ou ouverte dans un navigateur.</p></div>'; return; }
+  if (!FIREBASE_CONFIG) { box.innerHTML = '<div class="card stack" style="align-items:flex-start"><strong class="ttl">Bientôt disponible</strong><p class="muted">La création de compte arrive très prochainement. En attendant, ta progression est enregistrée sur cet appareil.</p></div>'; return; }
+  loadFirebase().then(({a, auth}) => {
+    if (!document.body.contains(box)) return;
+    const u = cloud.user;
+    const status = (t, ok) => { const p = $('#as', box); if (p) { p.textContent = t; p.className = 'feedback ' + (ok ? 'ok' : t ? 'ko' : ''); } };
+    const busy = (b, on, label) => { b.disabled = on; if (label) b.textContent = label; };
+    if (u && u.emailVerified) {
+      box.innerHTML = `<div class="card stack" style="align-items:flex-start"><span class="label">Connectée · progression synchronisée</span><strong class="ttl" id="ae"></strong>
+          <p class="muted" style="font-size:.92rem">${cloud.error ? esc(cloud.error) : cloud.last ? `Dernière sauvegarde en ligne : ${new Date(cloud.last).toLocaleString('fr-FR', {dateStyle: 'short', timeStyle: 'short'})}.` : 'Ta progression se sauvegarde automatiquement.'}</p>
+          <div class="row"><button class="btn" id="async">Synchroniser maintenant</button><button class="btn ghost" id="aout">Se déconnecter</button></div><p role="status" class="feedback" id="as"></p></div>
+        <details class="card"><summary>Supprimer mon compte</summary><p class="muted" style="font-size:.92rem;margin:.6rem 0">Ton compte et la copie en ligne de ta progression seront effacés. La progression reste sur cet appareil.</p><button class="btn" id="adel" style="color:var(--bad)">Supprimer définitivement mon compte</button></details>`;
+      $('#ae', box).textContent = u.email;
+      $('#async', box).addEventListener('click', async e => { busy(e.currentTarget, true, 'Synchronisation…'); await cloudPull(); rerender('compte'); });
+      $('#aout', box).addEventListener('click', async () => { await cloudPush(); await a.signOut(auth); toast('Déconnectée. Ta progression reste sur cet appareil.'); });
+      $('#adel', box).addEventListener('click', async e => {
+        if (!confirm('Supprimer définitivement ton compte Xué Yuán ?')) return;
+        busy(e.currentTarget, true);
+        try { await cloud.fb.f.deleteDoc(cloudRef()); await a.deleteUser(u); toast('Compte supprimé.'); }
+        catch (err) { status(authMsg(err)); busy(e.currentTarget, false); }
+      });
+      return;
+    }
+    if (u && !u.emailVerified) {
+      box.innerHTML = `<div class="card stack" style="align-items:flex-start"><span class="label">Dernière étape</span><strong class="ttl">Vérifie ta boîte mail</strong>
+          <p>Un e-mail de confirmation a été envoyé à <strong id="ae"></strong>. Ouvre-le et touche le lien, puis reviens ici.</p>
+          <p class="muted" style="font-size:.9rem">Rien reçu ? Regarde dans les courriers indésirables, ou renvoie l'e-mail.</p>
+          <div class="row"><button class="btn primary" id="aok">J'ai confirmé mon adresse</button><button class="btn" id="aresend">Renvoyer l'e-mail</button><button class="btn ghost" id="aout">Changer d'adresse</button></div>
+          <p role="status" class="feedback" id="as"></p></div>`;
+      $('#ae', box).textContent = u.email;
+      $('#aok', box).addEventListener('click', async e => {
+        busy(e.currentTarget, true);
+        try { await onCloudUser(auth.currentUser); if (cloud.user?.emailVerified) { toast('Adresse confirmée : ta progression est synchronisée.'); } else { status('Pas encore confirmée : touche le lien reçu par e-mail, puis réessaie.'); busy(e.currentTarget, false); } }
+        catch (err) { status(authMsg(err)); busy(e.currentTarget, false); }
+      });
+      $('#aresend', box).addEventListener('click', async e => {
+        if (Date.now() < resendAt) return status('Patiente une minute avant de renvoyer l\'e-mail.');
+        busy(e.currentTarget, true);
+        try { await sendVerify(a, u); resendAt = Date.now() + 60000; status('E-mail renvoyé.', true); } catch (err) { status(authMsg(err)); }
+        busy(e.currentTarget, false);
+      });
+      $('#aout', box).addEventListener('click', () => a.signOut(auth));
+      return;
+    }
+    const signup = accountTab === 'signup';
+    box.innerHTML = `<div class="seg" role="group" aria-label="Compte"><button type="button" data-at="login" aria-pressed="${!signup}">Se connecter</button><button type="button" data-at="signup" aria-pressed="${signup}">Créer un compte</button></div>
+      <form class="card stack" id="af" novalidate style="align-items:stretch">
+        <label class="field"><span class="label">Adresse e-mail</span><input class="search" id="aem" type="email" autocomplete="email" inputmode="email" autocapitalize="off" required style="max-width:none"></label>
+        <label class="field"><span class="label">Mot de passe${signup ? ' (8 caractères au moins)' : ''}</span><input class="search" id="apw" type="password" autocomplete="${signup ? 'new-password' : 'current-password'}" minlength="8" required style="max-width:none"></label>
+        ${signup ? '<label class="field"><span class="label">Confirme le mot de passe</span><input class="search" id="apw2" type="password" autocomplete="new-password" required style="max-width:none"></label>' : ''}
+        <button class="btn primary" id="ago">${signup ? 'Créer mon compte' : 'Me connecter'}</button>
+        ${signup ? '' : '<button type="button" class="btn ghost small" id="aforgot" style="align-self:flex-start">Mot de passe oublié ?</button>'}
+        <p role="status" class="feedback" id="as"></p>
+      </form>
+      <p class="muted" style="font-size:.85rem">${signup ? 'Un e-mail de confirmation te sera envoyé. ' : ''}Ton adresse et ta progression sont conservées par Google Firebase pour la synchronisation, et rien d'autre. Tu peux supprimer ton compte à tout moment.</p>`;
+    $$('[data-at]', box).forEach(b => b.addEventListener('click', () => { accountTab = b.dataset.at; rerender('compte'); }));
+    $('#af', box).addEventListener('submit', async e => {
+      e.preventDefault();
+      const em = $('#aem', box).value.trim(), pw = $('#apw', box).value, btn = $('#ago', box);
+      if (!em || !/^\S+@\S+\.\S+$/.test(em)) return status(AUTH_ERR['auth/invalid-email']);
+      if (signup && pw.length < 8) return status(AUTH_ERR['auth/weak-password']);
+      if (signup && pw !== $('#apw2', box).value) return status('Les deux mots de passe ne sont pas identiques.');
+      busy(btn, true, signup ? 'Création…' : 'Connexion…');
+      try {
+        if (signup) { const cred = await a.createUserWithEmailAndPassword(auth, em, pw); await sendVerify(a, cred.user); resendAt = Date.now() + 60000; }
+        else await a.signInWithEmailAndPassword(auth, em, pw);
+      } catch (err) { status(authMsg(err)); busy(btn, false, signup ? 'Créer mon compte' : 'Me connecter'); }
+    });
+    $('#aforgot', box)?.addEventListener('click', async () => {
+      const em = $('#aem', box).value.trim();
+      if (!/^\S+@\S+\.\S+$/.test(em)) return status('Indique d\'abord ton adresse e-mail ci-dessus.');
+      try { await a.sendPasswordResetEmail(auth, em); status('Si un compte existe avec cette adresse, un e-mail pour choisir un nouveau mot de passe vient d\'être envoyé.', true); }
+      catch (err) { status(authMsg(err)); }
+    });
+  }).catch(() => {
+    if (!document.body.contains(box)) return;
+    box.innerHTML = '<div class="card stack" style="align-items:flex-start"><p>Le service de compte n\'a pas pu se charger. Vérifie ta connexion internet, puis réessaie.</p><button class="btn" data-go="compte">Réessayer</button></div>'; wire(box);
+  });
+}
+// Lien de confirmation : il ramène dans l'appli (si le domaine est autorisé dans Firebase), sinon page Firebase standard
+async function sendVerify(a, u) {
+  try { await a.sendEmailVerification(u, {url: location.origin + location.pathname + '#compte'}); }
+  catch (e) { if (e?.code === 'auth/unauthorized-continue-uri' || e?.code === 'auth/invalid-continue-uri') await a.sendEmailVerification(u); else throw e; }
+}
+
 const store = { ref: null, saving: false, again: false, timer: null };
 function save() {
   S.updated = Date.now();
   try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch {}
   clearTimeout(store.timer);
   store.timer = setTimeout(flush, 1500);
+  cloudSchedule();
 }
 async function flush() {
   if (!store.ref) return;
@@ -4326,7 +4514,7 @@ function header() {
   $$('.st-xp').forEach(e => e.textContent = knownChars());
   $$('.st-level').forEach(e => e.textContent = S.level ? `HSK ${S.level}` : 'HSK ?');
 }
-const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar, histoires: vStories, oral: vOral, conversation: vChat};
+const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, compte: vAccount, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar, histoires: vStories, oral: vOral, conversation: vChat};
 let current = 'accueil';
 function go(view, arg) { current = view; render(view, arg); try { history.replaceState(null, '', '#' + view); } catch {} }
 function route() { const h = location.hash.slice(1); go(VIEWS[h] ? h : 'accueil'); }
@@ -4354,7 +4542,7 @@ function render(view, arg) {
 }
 
 addEventListener('hashchange', route);
-const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], histoires: ['coral','读'], oral: ['teal','说'], conversation: ['indigo','问'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我']};
+const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], histoires: ['coral','读'], oral: ['teal','说'], conversation: ['indigo','问'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我'], compte: ['bamboo','户']};
 const LV_COL = {1: 'teal', 2: 'bamboo', 3: 'gold', 4: 'verm', 5: 'plum', 6: 'indigo'};
 const tint = col => `style="--c:var(--${col});--c-ink:var(--${col}-ink)"`;
 const view = html => {
@@ -5440,6 +5628,11 @@ function vGoals() {
       <p class="muted">Hors connexion, l'appli s'ouvre et tes leçons, quiz et révisions fonctionnent. Pour écrire n'importe quel caractère sans réseau, télécharge leurs tracés (2,8 Mo).</p>
       <div class="row"><button class="btn" id="offline-all" ${S.offlineAll ? 'disabled' : ''}>${S.offlineAll ? '✓ Tracés téléchargés' : 'Télécharger les tracés (2,8 Mo)'}</button></div>
     </div>` : ''}
+    ${inClaude() ? '' : `<div class="card stack">
+      <h2>Mon compte</h2>
+      <p class="muted">${cloudOn() ? 'Connectée : ta progression est synchronisée sur tous tes appareils.' : 'Crée un compte (vérifié par e-mail) pour retrouver ta progression sur ton téléphone, ta tablette et ton ordinateur.'}</p>
+      <div class="row"><button class="btn" data-go="compte">${cloudOn() ? 'Gérer mon compte' : 'Créer un compte ou me connecter'}</button></div>
+    </div>`}
     <div class="card stack">
       <h2>Mon profil</h2>
       <p class="muted">${S.profile?.reasons?.length ? 'J\'apprends pour : ' + S.profile.reasons.map(k => lc((REASONS.find(r => r[0] === k) || [, , k])[2])).join(', ') + '.' : 'Questionnaire pas encore rempli.'}
@@ -5496,7 +5689,7 @@ function vGoals() {
   });
   $('#reset', s).addEventListener('click', () => { $('#resetc', s).hidden = false; });
   $('#resetn', s).addEventListener('click', () => { $('#resetc', s).hidden = true; });
-  $('#resety', s).addEventListener('click', () => { S = structuredClone(DEFAULT); save(); header(); go('accueil'); toast('Progression effacée.'); });
+  $('#resety', s).addEventListener('click', () => { S = structuredClone(DEFAULT); S.wiped = Date.now(); save(); if (cloudOn()) { clearTimeout(cloud.timer); cloudPush(); } header(); go('accueil'); toast('Progression effacée.'); });
 }
 function buildICS() {
   const r = S.reminder, by = ['MO','TU','WE','TH','FR','SA','SU'];
@@ -5514,7 +5707,7 @@ function buildICS() {
 }
 
 // Navigation : 4 onglets (barre latérale sur ordinateur avec les sous-rubriques, barre du bas sur mobile)
-const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','histoires','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','oral','conversation','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', []]];
+const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','histoires','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','oral','conversation','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', ['compte']]];
 const SUBNAMES = {lecons: 'Leçons', grammaire: 'Grammaire', histoires: 'Histoires', listes: 'Listes HSK', dico: 'Dictionnaire', ecriture: 'Écriture', origines: 'Origines', memo: 'Mémo', actus: 'Actus', quiz: 'Révisions et quiz', examen: 'Examen blanc', oral: 'Oral', conversation: 'Conversation', detective: 'Détective', confusions: 'Confusions', chansons: 'Chansons', devinettes: 'Devinettes'};
 const navItem = ([v, t], cls = 'navlink') => { const [col, g] = SECTION[v]; return `<a class="${cls}" href="#${v}" data-nav="${v}" ${tint(col)}><span class="g" aria-hidden="true">${g}</span>${t}</a>`; };
 $('#sidenav').innerHTML = NAV.map(n => navItem(n) + (n[2].filter(v => SUBNAMES[v]).length ? `<div class="subnav">${n[2].filter(v => SUBNAMES[v]).map(v => `<a href="#${v}" data-nav="${v}" ${tint(SECTION[v][0])}>${SUBNAMES[v]}</a>`).join('')}</div>` : '')).join('');
