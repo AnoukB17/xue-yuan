@@ -71,7 +71,7 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
   await p.fill('#apw2', 'motdepasse1'); await p.click('#ago');
   await p.waitForSelector('text=Vérifie ta boîte mail');
   const vlog = await p.evaluate(() => __fb.log.find(x => x[0] === 'verify'));
-  check(vlog && vlog[3] === 'fr' && /#compte$/.test(vlog[2]), 'e-mail de vérification envoyé, en français, avec retour vers l\'appli');
+  check(vlog && vlog[3] === 'fr' && /index\.html$|\/$/.test(vlog[2]), 'e-mail de vérification envoyé, en français, avec retour vers l\'appli');
   check(!(await p.evaluate(() => __fb.log.some(x => x[0] === 'set'))), 'rien n\'est envoyé en ligne avant la vérification');
 
   // Pas encore confirmé
@@ -134,6 +134,35 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
   await p3.waitForFunction(() => document.querySelector('#onb').hidden && current === 'accueil', null, {timeout: 8000});
   check(await p3.evaluate(() => S.xp === 77 && !!S.srs['三']), 'connexion depuis l\'accueil : écran fermé, progression du compte récupérée, pas de questionnaire');
   await ctx3.close();
+
+  // Liens des e-mails : page d'action de l'appli (confirmation d'adresse, nouveau mot de passe)
+  const ctx4 = await b.newContext({viewport: {width: 390, height: 844}, serviceWorkers: 'block'});
+  await ctx4.addInitScript(() => {
+    window.__fbConfig = {apiKey: 'test'};
+    const M = window.__fb = {log: []};
+    window.__fbLoader = async () => ({app: {initializeApp: () => ({})},
+      auth: {getAuth: () => ({currentUser: null}), onAuthStateChanged: (a, cb) => setTimeout(() => cb(null), 0),
+        applyActionCode: async (a, c) => { if (c !== 'bon') throw {code: 'auth/invalid-action-code'}; M.log.push(['apply', c]); },
+        verifyPasswordResetCode: async (a, c) => { if (c !== 'bon') throw {code: 'auth/expired-action-code'}; return 'moi@exemple.fr'; },
+        confirmPasswordReset: async (a, c, pw) => M.log.push(['reset', pw])},
+      firestore: {getFirestore: () => ({})}});
+  });
+  const p4 = await ctx4.newPage(); p4.on('pageerror', e => errs.push(e.message));
+  await p4.route('**/*', r => /hanzi|fonts/.test(r.request().url()) ? r.abort() : r.continue());
+  const base = await urlFor('index.html');
+  await p4.goto(base + '?mode=verifyEmail&oobCode=bon&lang=fr'); await p4.waitForSelector('.act h1');
+  check(await p4.textContent('.act h1') === 'Adresse confirmée !' && await p4.evaluate(() => __fb.log.some(x => x[0] === 'apply')) && !/oobCode/.test(await p4.evaluate(() => location.href)), 'lien de confirmation : page Xué Yuán « Adresse confirmée ! », code retiré de l\'adresse');
+  await p4.click('#acont'); await p4.waitForSelector('#onb #af');
+  check(true, '« Ouvrir Xué Yuán » : on arrive sur la connexion');
+  await p4.goto(base + '?mode=verifyEmail&oobCode=vieux'); await p4.waitForSelector('.act h1');
+  check(await p4.textContent('.act h1') === 'Ce lien ne fonctionne plus', 'lien déjà utilisé : message clair');
+  await p4.goto(base + '?mode=resetPassword&oobCode=bon'); await p4.waitForSelector('#arf');
+  check(await p4.textContent('#aem2') === 'moi@exemple.fr', 'lien « mot de passe oublié » : formulaire pour le compte concerné');
+  await p4.fill('#apw', 'Le chat noir dort, 42 !');
+  check(/Robuste/.test(await p4.textContent('#apm .pwlab')), 'nouveau mot de passe : jauge de robustesse');
+  await p4.fill('#apw2', 'Le chat noir dort, 42 !'); await p4.click('#ago'); await p4.waitForSelector('.act h1');
+  check(await p4.textContent('.act h1') === 'Mot de passe changé' && await p4.evaluate(() => __fb.log.some(x => x[0] === 'reset')), 'nouveau mot de passe enregistré');
+  await ctx4.close();
 
   // Dans l'artifact claude.ai, pas de compte Xué Yuán
   const p2 = await ctx.newPage();

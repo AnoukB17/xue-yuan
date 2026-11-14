@@ -392,6 +392,10 @@ body.onb-open{overflow:hidden}
 .pwbar i{height:8px;border-radius:999px;background:var(--sunk)}
 .pwbar i.on{background:var(--pc)}
 .pwlab{font-weight:700}
+.act{padding:40px 24px;gap:14px}
+.act h1{font:700 1.7rem/1.2 var(--f-display)}
+.act-g{font-family:var(--f-brush);font-size:84px;line-height:1;color:var(--teal-ink);background:var(--teal);width:120px;height:120px;border-radius:32px;display:grid;place-items:center}
+.act-g.ko{background:var(--sunk);color:var(--muted);font-family:var(--f-display);font-size:56px}
 .onb-top .logo-mark{width:40px;height:40px;font-size:27px}
 .dotsteps{margin-left:auto;display:flex;gap:6px}
 .dotsteps i{width:34px;height:6px;border-radius:9px;background:var(--sunk)}
@@ -4305,6 +4309,21 @@ const PW_TIP = s => s >= 4 ? 'Excellent : difficile à deviner.' : s === 3 ? 'Bi
 const EYE = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
 const EYE_OFF = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.9 5.2A10 10 0 0 1 12 5c6.5 0 10 7 10 7a17 17 0 0 1-2.6 3.5M6.6 6.6C3.7 8.4 2 12 2 12s3.5 7 10 7a9.8 9.8 0 0 0 5.4-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/><path d="M3 3l18 18"/></svg>';
 const pwField = (id, label, auto, extra = '') => `<label class="field" for="${id}"><span class="label">${label}</span></label><div class="pwbox"><input class="search" id="${id}" type="password" autocomplete="${auto}" required ${extra}><button type="button" class="pweye" data-eye="${id}" aria-label="Afficher le mot de passe" aria-pressed="false">${EYE}</button></div>`;
+// Œil (afficher / masquer) et jauge de robustesse (si le bloc #apm est présent)
+function wirePw(box, getEmail) {
+  $$('[data-eye]', box).forEach(b => b.addEventListener('click', () => {
+    const i = $('#' + b.dataset.eye, box), show = i.type === 'password';
+    i.type = show ? 'text' : 'password'; b.innerHTML = show ? EYE_OFF : EYE;
+    b.setAttribute('aria-pressed', show); b.setAttribute('aria-label', show ? 'Masquer le mot de passe' : 'Afficher le mot de passe');
+  }));
+  const m = $('#apm', box); if (!m) return;
+  $('#apw', box).addEventListener('input', () => {
+    const pw = $('#apw', box).value, sc = pwScore(pw, getEmail() || ''), [t, col] = PW_LEVELS[sc];
+    m.hidden = !pw; m.style.setProperty('--pc', `var(--${col})`);
+    $$('.pwbar i', m).forEach((x, k) => x.classList.toggle('on', k < sc));
+    $('.pwlab', m).textContent = `Robustesse : ${t}`; $('.pwtip', m).textContent = pw.length < 8 ? `Encore ${8 - pw.length} caractère${8 - pw.length > 1 ? 's' : ''} au minimum.` : PW_TIP(sc);
+  });
+}
 function vAccount() {
   const s = view(`<div class="head"><span class="label">Compte</span><h1>Ton compte Xué Yuán</h1><p>Crée un compte pour retrouver ta progression sur tous tes appareils : téléphone, tablette, ordinateur.</p></div><div id="ab" class="stack"><p class="muted">Chargement…</p></div>`);
   drawAccount($('#ab', s));
@@ -4367,22 +4386,8 @@ function drawAccount(box) {
       <p class="muted" style="font-size:.85rem">${signup ? 'Un e-mail de confirmation te sera envoyé. ' : ''}Ton adresse et ta progression sont conservées par Google Firebase pour la synchronisation, et rien d'autre. Tu peux supprimer ton compte à tout moment.</p>`;
     $$('[data-at]', box).forEach(b => b.addEventListener('click', () => { accountEmail = $('#aem', box).value.trim(); accountTab = b.dataset.at; drawAccount(box); $(`[data-at="${accountTab}"]`, box)?.focus(); }));
     $('#aem', box).value = accountEmail;
-    // Œil : afficher ou masquer le mot de passe
-    $$('[data-eye]', box).forEach(b => b.addEventListener('click', () => {
-      const i = $('#' + b.dataset.eye, box), show = i.type === 'password';
-      i.type = show ? 'text' : 'password'; b.innerHTML = show ? EYE_OFF : EYE;
-      b.setAttribute('aria-pressed', show); b.setAttribute('aria-label', show ? 'Masquer le mot de passe' : 'Afficher le mot de passe');
-    }));
-    // Jauge de robustesse pendant la création du mot de passe
-    if (signup) {
-      const meter = () => {
-        const pw = $('#apw', box).value, sc = pwScore(pw, $('#aem', box).value), [t, col] = PW_LEVELS[sc], m = $('#apm', box);
-        m.hidden = !pw; m.style.setProperty('--pc', `var(--${col})`);
-        $$('.pwbar i', m).forEach((x, k) => x.classList.toggle('on', k < sc));
-        $('.pwlab', m).textContent = `Robustesse : ${t}`; $('.pwtip', m).textContent = pw.length < 8 ? `Encore ${8 - pw.length} caractère${8 - pw.length > 1 ? 's' : ''} au minimum.` : PW_TIP(sc);
-      };
-      $('#apw', box).addEventListener('input', meter); $('#aem', box).addEventListener('input', meter);
-    }
+    wirePw(box, () => $('#aem', box).value);
+    $('#aem', box).addEventListener('input', () => $('#apw', box).dispatchEvent(new Event('input')));
     // Après une erreur : passer directement à l'autre onglet avec la même adresse
     const offer = (tab, label) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'btn small'; b.textContent = label; b.style.alignSelf = 'center'; b.addEventListener('click', () => { accountEmail = $('#aem', box).value.trim(); accountTab = tab; drawAccount(box); $(tab === 'signup' ? '#apw' : '#apw', box)?.focus(); }); $('#as', box).after(b); };
     $('#af', box).addEventListener('submit', async e => {
@@ -4417,7 +4422,7 @@ function drawAccount(box) {
 }
 // Lien de confirmation : il ramène dans l'appli (si le domaine est autorisé dans Firebase), sinon page Firebase standard
 async function sendVerify(a, u) {
-  try { await a.sendEmailVerification(u, {url: location.origin + location.pathname + '#compte'}); }
+  try { await a.sendEmailVerification(u, {url: location.origin + location.pathname}); }
   catch (e) { if (e?.code === 'auth/unauthorized-continue-uri' || e?.code === 'auth/invalid-continue-uri') await a.sendEmailVerification(u); else throw e; }
 }
 
@@ -5823,8 +5828,61 @@ function closeGate() {
   closeOnboarding();
   if (!S.onboarded) onboarding(0); else route();
 }
+// Liens des e-mails Firebase (confirmation d'adresse, nouveau mot de passe) : la page d'action est celle de l'appli
+// (Firebase › Authentication › Templates › URL d'action personnalisée = adresse de l'appli)
+function openAction(mode, code) {
+  try { history.replaceState(null, '', location.pathname + '#accueil'); } catch {}
+  const box = $('#onb'); box.hidden = false; document.body.classList.add('onb-open');
+  box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Compte');
+  $$('.shell, #bottomnav').forEach(e => e.inert = true);
+  const frame = inner => { box.innerHTML = `<div class="onb-in gate"><div class="onb-top"><span class="logo-mark" aria-hidden="true">学</span><b>Xué Yuán</b></div>${inner}</div>`; };
+  const done = (glyph, title, text, ok = true) => {
+    frame(`<div class="card stack act" style="align-items:center;text-align:center"><span class="act-g ${ok ? '' : 'ko'}" aria-hidden="true">${glyph}</span><h1>${title}</h1><p class="muted">${text}</p><button class="btn primary" id="acont">Ouvrir Xué Yuán</button></div>`);
+    $('#acont', box).addEventListener('click', () => { closeOnboarding(); if (needGate()) openGate(); else if (!S.onboarded) onboarding(0); else route(); });
+    $('#acont', box).focus();
+  };
+  frame('<p class="muted" role="status" style="text-align:center;padding:40px 0">Un instant…</p>');
+  loadFirebase().then(async ({a, auth}) => {
+    if (mode === 'verifyEmail') {
+      try {
+        await a.applyActionCode(auth, code);
+        // Session ouverte sur cet appareil : on relit le compte pour lancer la synchronisation tout de suite
+        if (auth.currentUser) await onCloudUser(auth.currentUser);
+        done('好', 'Adresse confirmée !', 'Bienvenue sur Xué Yuán. Ton compte est prêt : ta progression sera sauvegardée et synchronisée sur tous tes appareils.' + (auth.currentUser ? '' : ' Connecte-toi pour commencer.'));
+      } catch (e) {
+        done('?', 'Ce lien ne fonctionne plus', e?.code === 'auth/invalid-action-code' || e?.code === 'auth/expired-action-code' ? 'Il a déjà servi ou il a expiré. Si ton adresse n\'est pas encore confirmée, connecte-toi : tu pourras recevoir un nouvel e-mail.' : authMsg(e), false);
+      }
+    } else if (mode === 'resetPassword') {
+      let email;
+      try { email = await a.verifyPasswordResetCode(auth, code); }
+      catch (e) { return done('?', 'Ce lien ne fonctionne plus', 'Il a déjà servi ou il a expiré. Demande un nouvel e-mail avec « Mot de passe oublié ? ».', false); }
+      frame(`<div class="stack" style="gap:8px"><h1>Nouveau mot de passe</h1><p class="muted">Pour le compte <strong id="aem2"></strong>.</p></div>
+        <form class="card stack" id="arf" novalidate style="align-items:stretch">
+          ${pwField('apw', 'Nouveau mot de passe (8 caractères au moins)', 'new-password', 'minlength="8" aria-describedby="apm"')}
+          <div class="pwmeter" id="apm" aria-live="polite" hidden><div class="pwbar" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="pwlab"></span><span class="pwtip muted"></span></div>
+          ${pwField('apw2', 'Confirme le mot de passe', 'new-password')}
+          <button class="btn primary" id="ago">Enregistrer</button>
+          <p role="status" class="feedback" id="as"></p>
+        </form>`);
+      $('#aem2', box).textContent = email;
+      wirePw(box, () => email);
+      $('#arf', box).addEventListener('submit', async ev => {
+        ev.preventDefault();
+        const pw = $('#apw', box).value, st = $('#as', box), btn = $('#ago', box);
+        const ko = t => { st.textContent = t; st.className = 'feedback ko'; };
+        if (pw.length < 8) return ko(AUTH_ERR['auth/weak-password']);
+        if (pw !== $('#apw2', box).value) return ko('Les deux mots de passe ne sont pas identiques.');
+        btn.disabled = true;
+        try { await a.confirmPasswordReset(auth, code, pw); accountEmail = email; accountTab = 'login'; done('好', 'Mot de passe changé', 'Tu peux maintenant te connecter avec ton nouveau mot de passe.'); }
+        catch (e) { ko(authMsg(e)); btn.disabled = false; }
+      });
+    } else done('?', 'Lien non pris en charge', 'Ouvre l\'appli et va dans Moi › Mon compte.', false);
+  }).catch(() => done('?', 'Pas de connexion', 'Le service de compte n\'a pas pu se charger. Vérifie ta connexion internet, puis rouvre le lien de l\'e-mail.', false));
+}
 header();
-if (needGate()) openGate();
+const ACTION = (() => { try { const q = new URLSearchParams(location.search); return q.get('oobCode') && q.get('mode') ? [q.get('mode'), q.get('oobCode')] : null; } catch { return null; } })();
+if (ACTION && FIREBASE_CONFIG && !inClaude()) openAction(...ACTION);
+else if (needGate()) openGate();
 else if (!S.onboarded) onboarding(0); else route();
 addEventListener('keydown', e => { if (e.key === 'Enter' && document.activeElement?.tagName !== 'INPUT') $('#cont')?.click(); });
 
