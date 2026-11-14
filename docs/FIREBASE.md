@@ -65,4 +65,4 @@ Coller le bloc `firebaseConfig` de l'étape 1 dans la conversation. Je le place 
 - **Artifact claude.ai** : pas d'écran Compte, la progression y suit déjà le compte Claude.
 - Le code Firebase (≈ 250 Ko) n'est chargé que sur l'écran Compte ou quand une session est ouverte : la première
   visite reste aussi rapide.
-- Test : `node tools/check-compte.js` (Firebase simulé, 20 vérifications).
+- Test : `node tools/check-compte.js` (Firebase simulé, 19 vérifications).
