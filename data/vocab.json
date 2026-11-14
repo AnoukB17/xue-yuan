@@ -68650,7 +68650,7 @@
 "fr": "sans aucun (écrit : 毫无意义)",
 "app": 6,
 "n": 4130,
-"th": "idees",
+"th": "actions",
 "app20": 6,
 "hsk2": 6,
 "hsk3": 6,
@@ -72362,7 +72362,7 @@
 "fr": "désespérer",
 "app": 6,
 "n": 4356,
-"th": "actions",
+"th": "description",
 "app20": 6,
 "hsk2": 6,
 "hsk3": 6,
@@ -72683,6 +72683,4239 @@
 "pos": [
 "v",
 "vn"
+],
+"cl": []
+},
+{
+"h": "考古",
+"p": "kǎogǔ",
+"fr": "faire des fouilles ; archéologie",
+"app": 6,
+"n": 4376,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 11452,
+"pos": [
+"n",
+"vn"
+],
+"cl": []
+},
+{
+"h": "考核",
+"p": "kǎohé",
+"fr": "évaluer (le travail, les compétences)",
+"app": 6,
+"n": 4377,
+"th": "travail",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 12382,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "考验",
+"p": "kǎoyàn",
+"fr": "mettre à l'épreuve ; épreuve",
+"app": 6,
+"n": 4378,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3850,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "科",
+"p": "kē",
+"fr": "discipline, matière ; service (hospitalier)",
+"app": 6,
+"n": 4379,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 1543,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "科幻",
+"p": "kēhuàn",
+"fr": "science-fiction",
+"app": 6,
+"n": 4380,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 12729,
+"pos": [
+"b",
+"n"
+],
+"cl": []
+},
+{
+"h": "科目",
+"p": "kēmù",
+"fr": "matière (d'examen)",
+"app": 6,
+"n": 4381,
+"th": "ecole",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 14010,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "科普",
+"p": "kēpǔ",
+"fr": "vulgariser la science ; vulgarisation scientifique",
+"app": 6,
+"n": 4382,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 18500,
+"pos": [
+"b"
+],
+"cl": []
+},
+{
+"h": "可口",
+"p": "kěkǒu",
+"fr": "savoureux, appétissant",
+"app": 6,
+"n": 4383,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 13271,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "可行",
+"p": "kěxíng",
+"fr": "faisable, réalisable",
+"app": 6,
+"n": 4385,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 7847,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "渴望",
+"p": "kěwàng",
+"fr": "désirer ardemment",
+"app": 6,
+"n": 4386,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3423,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "客车",
+"p": "kèchē",
+"fr": "autocar",
+"app": 6,
+"n": 4387,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 16300,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "课题",
+"p": "kètí",
+"fr": "sujet de recherche",
+"app": 6,
+"n": 4388,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 9165,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "肯",
+"p": "kěn",
+"fr": "accepter de, être disposé à",
+"app": 6,
+"n": 4389,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3114,
+"pos": [
+"v",
+"b"
+],
+"cl": []
+},
+{
+"h": "恐惧",
+"p": "kǒngjù",
+"fr": "terrifié ; peur",
+"app": 6,
+"n": 4390,
+"th": "emotions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3419,
+"pos": [
+"an",
+"a"
+],
+"cl": []
+},
+{
+"h": "空地",
+"p": "kòngdì",
+"fr": "terrain vague, espace libre",
+"app": 6,
+"n": 4391,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11378,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "空闲",
+"p": "kòngxián",
+"fr": "libre, disponible ; temps libre",
+"app": 6,
+"n": 4392,
+"th": "temps",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 15533,
+"pos": [
+"n",
+"v",
+"a"
+],
+"cl": []
+},
+{
+"h": "口感",
+"p": "kǒugǎn",
+"fr": "texture (en bouche)",
+"app": 6,
+"n": 4393,
+"th": "corps",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 15978,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "口号",
+"p": "kǒuhào",
+"fr": "slogan",
+"app": 6,
+"n": 4394,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 8137,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "口腔",
+"p": "kǒuqiāng",
+"fr": "cavité buccale",
+"app": 6,
+"n": 4395,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 10813,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "口头",
+"p": "kǒutóu",
+"fr": "oral, verbal",
+"app": 6,
+"n": 4396,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 12208,
+"pos": [
+"n",
+"d"
+],
+"cl": []
+},
+{
+"h": "扣",
+"p": "kòu",
+"fr": "boutonner ; retenir, déduire ; bouton",
+"app": 6,
+"n": 4397,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2421,
+"pos": [
+"v",
+"g"
+],
+"cl": []
+},
+{
+"h": "枯燥",
+"p": "kūzào",
+"fr": "ennuyeux, aride",
+"app": 6,
+"n": 4398,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 12915,
+"pos": [
+"a",
+"ad"
+],
+"cl": []
+},
+{
+"h": "酷",
+"p": "kù",
+"fr": "cool, génial (familier)",
+"app": 6,
+"n": 4399,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2111,
+"pos": [
+"g",
+"d"
+],
+"cl": []
+},
+{
+"h": "夸",
+"p": "kuā",
+"fr": "vanter, complimenter",
+"app": 6,
+"n": 4400,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 8011,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "夸奖",
+"p": "kuājiǎng",
+"fr": "louer, féliciter",
+"app": 6,
+"n": 4401,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11773,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "夸张",
+"p": "kuāzhāng",
+"fr": "exagéré",
+"app": 6,
+"n": 4402,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 5029,
+"pos": [
+"v",
+"n",
+"vn"
+],
+"cl": []
+},
+{
+"h": "会计",
+"p": "kuàijì",
+"fr": "comptable ; comptabilité",
+"app": 6,
+"n": 4403,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4284,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "快捷",
+"p": "kuàijié",
+"fr": "rapide et pratique",
+"app": 6,
+"n": 4404,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11376,
+"pos": [
+"z"
+],
+"cl": []
+},
+{
+"h": "款",
+"p": "kuǎn",
+"fr": "somme d'argent ; modèle, style ; (classificateur des modèles)",
+"app": 6,
+"n": 4405,
+"th": "argent",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "款式",
+"p": "kuǎnshì",
+"fr": "modèle, style (vêtement, objet)",
+"app": 6,
+"n": 4406,
+"th": "vetements",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8984,
+"pos": [
+"n"
+],
+"cl": [
+"种"
+]
+},
+{
+"h": "亏损",
+"p": "kuīsǔn",
+"fr": "subir une perte ; déficit",
+"app": 6,
+"n": 4407,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 14787,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "困扰",
+"p": "kùnrǎo",
+"fr": "troubler, préoccuper",
+"app": 6,
+"n": 4408,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4725,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "扩展",
+"p": "kuòzhǎn",
+"fr": "étendre, élargir",
+"app": 6,
+"n": 4409,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 9082,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "辣椒",
+"p": "làjiāo",
+"fr": "piment",
+"app": 6,
+"n": 4411,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 6501,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "啦",
+"p": "la",
+"fr": "(particule : 了 + 啊, ton enjoué)",
+"app": 6,
+"n": 4412,
+"th": "outils",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 246,
+"pos": [
+"y"
+],
+"cl": []
+},
+{
+"h": "来临",
+"p": "láilín",
+"fr": "arriver, approcher (écrit)",
+"app": 6,
+"n": 4413,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4633,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "来往",
+"p": "láiwǎng",
+"fr": "aller et venir ; fréquenter",
+"app": 6,
+"n": 4414,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 8734,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "赖",
+"p": "lài",
+"fr": "mauvais (oral) ; compter sur ; rejeter la faute sur ; traîner",
+"app": 6,
+"n": 4415,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 5777,
+"pos": [
+"v",
+"a"
+],
+"cl": []
+},
+{
+"h": "兰花",
+"p": "lánhuā",
+"fr": "orchidée",
+"app": 6,
+"n": 4416,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "拦",
+"p": "lán",
+"fr": "barrer, intercepter",
+"app": 6,
+"n": 4417,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 5693,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "栏",
+"p": "lán",
+"fr": "balustrade ; rubrique, colonne",
+"app": 6,
+"n": 4418,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7178,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "烂",
+"p": "làn",
+"fr": "pourri, en lambeaux ; très cuit",
+"app": 6,
+"n": 4419,
+"th": "description",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 2387,
+"pos": [
+"a",
+"v"
+],
+"cl": []
+},
+{
+"h": "狼",
+"p": "láng",
+"fr": "loup",
+"app": 6,
+"n": 4420,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 2421,
+"pos": [
+"n"
+],
+"cl": [
+"匹",
+"只"
+]
+},
+{
+"h": "朗读",
+"p": "lǎngdú",
+"fr": "lire à haute voix",
+"app": 6,
+"n": 4421,
+"th": "ecole",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 18517,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "劳动力",
+"p": "láodònglì",
+"fr": "main-d'œuvre",
+"app": 6,
+"n": 4422,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 12496,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "牢",
+"p": "láo",
+"fr": "prison ; solide, ferme",
+"app": 6,
+"n": 4423,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 6012,
+"pos": [
+"a",
+"g"
+],
+"cl": []
+},
+{
+"h": "老实",
+"p": "lǎoshi",
+"fr": "honnête ; sage (enfant)",
+"app": 6,
+"n": 4424,
+"th": "emotions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 5167,
+"pos": [
+"ad",
+"a"
+],
+"cl": []
+},
+{
+"h": "老鼠",
+"p": "lǎoshǔ",
+"fr": "souris, rat",
+"app": 6,
+"n": 4425,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4016,
+"pos": [
+"n"
+],
+"cl": [
+"只"
+]
+},
+{
+"h": "老太太",
+"p": "lǎotàitai",
+"fr": "vieille dame",
+"app": 6,
+"n": 4426,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7407,
+"pos": [
+"n"
+],
+"cl": [
+"位"
+]
+},
+{
+"h": "乐于",
+"p": "lèyú",
+"fr": "être heureux de, prendre plaisir à",
+"app": 6,
+"n": 4427,
+"th": "emotions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "雷",
+"p": "léi",
+"fr": "tonnerre",
+"app": 6,
+"n": 4428,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 1494,
+"pos": [
+"n",
+"nr"
+],
+"cl": []
+},
+{
+"h": "类别",
+"p": "lèibié",
+"fr": "catégorie",
+"app": 6,
+"n": 4429,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 16163,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "理",
+"p": "lǐ",
+"fr": "principe, raison ; mettre en ordre ; faire attention à (理人)",
+"app": 6,
+"n": 4430,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 1714,
+"pos": [
+"v",
+"n"
+],
+"cl": []
+},
+{
+"h": "理财",
+"p": "lǐcái",
+"fr": "gérer ses finances",
+"app": 6,
+"n": 4431,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 9621,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "理科",
+"p": "lǐkē",
+"fr": "filière scientifique",
+"app": 6,
+"n": 4432,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 16024,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "理念",
+"p": "lǐniàn",
+"fr": "concept, philosophie",
+"app": 6,
+"n": 4433,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4867,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "理性",
+"p": "lǐxìng",
+"fr": "rationnel ; raison",
+"app": 6,
+"n": 4434,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 5194,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "力度",
+"p": "lìdù",
+"fr": "force, intensité",
+"app": 6,
+"n": 4435,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7129,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "历经",
+"p": "lìjīng",
+"fr": "traverser, connaître (des épreuves)",
+"app": 6,
+"n": 4436,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 12690,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "历年",
+"p": "lìnián",
+"fr": "au fil des années",
+"app": 6,
+"n": 4437,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "立",
+"p": "lì",
+"fr": "se tenir debout ; dresser, établir",
+"app": 6,
+"n": 4438,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2622,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "立场",
+"p": "lìchǎng",
+"fr": "position, point de vue",
+"app": 6,
+"n": 4439,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4265,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "利息",
+"p": "lìxī",
+"fr": "intérêts (financiers)",
+"app": 6,
+"n": 4440,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 6487,
+"pos": [
+"n"
+],
+"cl": [
+"笔"
+]
+},
+{
+"h": "例外",
+"p": "lìwài",
+"fr": "faire exception ; exception",
+"app": 6,
+"n": 4441,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 5594,
+"pos": [
+"v",
+"n"
+],
+"cl": []
+},
+{
+"h": "粒",
+"p": "lì",
+"fr": "grain ; (classificateur des grains : 一粒米)",
+"app": 6,
+"n": 4442,
+"th": "nombres",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4781,
+"pos": [
+"q",
+"g"
+],
+"cl": []
+},
+{
+"h": "联合国",
+"p": "Liánhéguó",
+"fr": "Nations unies",
+"app": 6,
+"n": 4443,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4037,
+"pos": [
+"nt"
+],
+"cl": []
+},
+{
+"h": "联网",
+"p": "liánwǎng",
+"fr": "connecter en réseau",
+"app": 6,
+"n": 4444,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 16288,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "联想",
+"p": "liánxiǎng",
+"fr": "associer, faire le lien",
+"app": 6,
+"n": 4445,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6895,
+"pos": [
+"v",
+"nz",
+"vn"
+],
+"cl": []
+},
+{
+"h": "链接",
+"p": "liànjiē",
+"fr": "lier ; lien (hypertexte)",
+"app": 6,
+"n": 4446,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "两岸",
+"p": "liǎng'àn",
+"fr": "les deux rives (du détroit de Taïwan)",
+"app": 6,
+"n": 4447,
+"th": "nombres",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 22338,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "两极",
+"p": "liǎngjí",
+"fr": "les deux pôles",
+"app": 6,
+"n": 4448,
+"th": "nombres",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "晾",
+"p": "liàng",
+"fr": "faire sécher (à l'air)",
+"app": 6,
+"n": 4449,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 14630,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "料",
+"p": "liào",
+"fr": "matériau, ingrédient",
+"app": 6,
+"n": 4450,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2626,
+"pos": [
+"n",
+"v"
+],
+"cl": []
+},
+{
+"h": "料",
+"p": "liào",
+"fr": "prévoir, s'attendre à",
+"app": 6,
+"n": 4451,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2626,
+"pos": [
+"n",
+"v"
+],
+"cl": []
+},
+{
+"h": "淋",
+"p": "lín",
+"fr": "asperger, se faire mouiller (par la pluie)",
+"app": 6,
+"n": 4452,
+"th": "nature",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 7448,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "凌晨",
+"p": "língchén",
+"fr": "petit matin (avant l'aube)",
+"app": 6,
+"n": 4453,
+"th": "temps",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 2595,
+"pos": [
+"t"
+],
+"cl": []
+},
+{
+"h": "浏览器",
+"p": "liúlǎnqì",
+"fr": "navigateur (Internet)",
+"app": 6,
+"n": 4454,
+"th": "loisirs",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 28853,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "流程",
+"p": "liúchéng",
+"fr": "processus, procédure",
+"app": 6,
+"n": 4455,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 8987,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "流动",
+"p": "liúdòng",
+"fr": "circuler, couler",
+"app": 6,
+"n": 4456,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 5689,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "流量",
+"p": "liúliàng",
+"fr": "débit ; trafic ; volume de données",
+"app": 6,
+"n": 4457,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 12321,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "流入",
+"p": "liúrù",
+"fr": "affluer, entrer",
+"app": 6,
+"n": 4458,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 13234,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "流通",
+"p": "liútōng",
+"fr": "circuler (marchandises, monnaie)",
+"app": 6,
+"n": 4459,
+"th": "argent",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8541,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "楼道",
+"p": "lóudào",
+"fr": "couloir (d'immeuble)",
+"app": 6,
+"n": 4460,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 22887,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "漏洞",
+"p": "lòudòng",
+"fr": "fuite, faille",
+"app": 6,
+"n": 4461,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7160,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "露",
+"p": "lòu",
+"fr": "montrer, laisser voir (oral : 露脸)",
+"app": 6,
+"n": 4462,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 2700,
+"pos": [
+"v",
+"g"
+],
+"cl": []
+},
+{
+"h": "录像",
+"p": "lùxiàng",
+"fr": "filmer ; enregistrement vidéo",
+"app": 6,
+"n": 4463,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3924,
+"pos": [
+"n",
+"v"
+],
+"cl": [
+"盘"
+]
+},
+{
+"h": "录用",
+"p": "lùyòng",
+"fr": "recruter, embaucher",
+"app": 6,
+"n": 4464,
+"th": "travail",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "录制",
+"p": "lùzhì",
+"fr": "enregistrer (une émission)",
+"app": 6,
+"n": 4465,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 9024,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "路程",
+"p": "lùchéng",
+"fr": "trajet, distance parcourue",
+"app": 6,
+"n": 4466,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 9950,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "路况",
+"p": "lùkuàng",
+"fr": "état de la circulation, des routes",
+"app": 6,
+"n": 4467,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 18760,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "路面",
+"p": "lùmiàn",
+"fr": "chaussée",
+"app": 6,
+"n": 4468,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11207,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "露",
+"p": "lù",
+"fr": "montrer, apparaître ; rosée",
+"app": 6,
+"n": 4469,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 2700,
+"pos": [
+"v",
+"g"
+],
+"cl": []
+},
+{
+"h": "旅程",
+"p": "lǚchéng",
+"fr": "voyage, parcours",
+"app": 6,
+"n": 4470,
+"th": "transports",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7656,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "旅途",
+"p": "lǚtú",
+"fr": "voyage, route",
+"app": 6,
+"n": 4471,
+"th": "transports",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7530,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "履行",
+"p": "lǚxíng",
+"fr": "remplir (un engagement), exécuter",
+"app": 6,
+"n": 4472,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4856,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "率",
+"p": "lǜ",
+"fr": "(suffixe : taux) 效率, 出生率",
+"app": 6,
+"n": 4473,
+"th": "outils",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2786,
+"pos": [
+"v",
+"k"
+],
+"cl": []
+},
+{
+"h": "绿化",
+"p": "lǜhuà",
+"fr": "végétaliser, aménager des espaces verts",
+"app": 6,
+"n": 4474,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 22891,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "轮",
+"p": "lún",
+"fr": "roue ; tour (à tour) ; (classificateur : tour, round)",
+"app": 6,
+"n": 4475,
+"th": "nombres",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 1066,
+"pos": [
+"qv",
+"g",
+"v"
+],
+"cl": []
+},
+{
+"h": "轮船",
+"p": "lúnchuán",
+"fr": "paquebot, bateau à vapeur",
+"app": 6,
+"n": 4476,
+"th": "transports",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 17543,
+"pos": [
+"n"
+],
+"cl": [
+"艘"
+]
+},
+{
+"h": "轮流",
+"p": "lúnliú",
+"fr": "à tour de rôle",
+"app": 6,
+"n": 4477,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 10320,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "轮椅",
+"p": "lúnyǐ",
+"fr": "fauteuil roulant",
+"app": 6,
+"n": 4478,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 10262,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "轮子",
+"p": "lúnzi",
+"fr": "roue",
+"app": 6,
+"n": 4479,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 15530,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "论坛",
+"p": "lùntán",
+"fr": "forum",
+"app": 6,
+"n": 4480,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 7125,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "落地",
+"p": "luòdì",
+"fr": "atterrir ; se concrétiser",
+"app": 6,
+"n": 4481,
+"th": "transports",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 8886,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "落后",
+"p": "luòhòu",
+"fr": "être en retard (développement) ; arriéré",
+"app": 6,
+"n": 4482,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 3824,
+"pos": [
+"a",
+"an"
+],
+"cl": []
+},
+{
+"h": "码头",
+"p": "mǎtóu",
+"fr": "quai, embarcadère",
+"app": 6,
+"n": 4484,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4184,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "蚂蚁",
+"p": "mǎyǐ",
+"fr": "fourmi",
+"app": 6,
+"n": 4485,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "嘛",
+"p": "ma",
+"fr": "(particule : évidence, « voyons ! »)",
+"app": 6,
+"n": 4486,
+"th": "outils",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 614,
+"pos": [
+"y"
+],
+"cl": []
+},
+{
+"h": "埋",
+"p": "mái",
+"fr": "enterrer",
+"app": 6,
+"n": 4487,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2776,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "迈",
+"p": "mài",
+"fr": "faire un pas, enjamber",
+"app": 6,
+"n": 4488,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 5964,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "麦克风",
+"p": "màikèfēng",
+"fr": "microphone",
+"app": 6,
+"n": 4489,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 12308,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "漫长",
+"p": "màncháng",
+"fr": "très long, interminable",
+"app": 6,
+"n": 4490,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 5704,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "漫画",
+"p": "mànhuà",
+"fr": "bande dessinée",
+"app": 6,
+"n": 4491,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4509,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "盲人",
+"p": "mángrén",
+"fr": "aveugle (personne)",
+"app": 6,
+"n": 4492,
+"th": "personnes",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11792,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "冒",
+"p": "mào",
+"fr": "émettre, s'échapper ; braver ; se faire passer pour",
+"app": 6,
+"n": 4493,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2381,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "冒险",
+"p": "màoxiǎn",
+"fr": "prendre des risques",
+"app": 6,
+"n": 4494,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 3841,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "贸易",
+"p": "màoyì",
+"fr": "commerce (échanges)",
+"app": 6,
+"n": 4495,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4129,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "眉毛",
+"p": "méimao",
+"fr": "sourcils",
+"app": 6,
+"n": 4496,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 9070,
+"pos": [
+"n"
+],
+"cl": [
+"根"
+]
+},
+{
+"h": "梅花",
+"p": "méihuā",
+"fr": "fleur de prunier",
+"app": 6,
+"n": 4497,
+"th": "nature",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 19695,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "煤",
+"p": "méi",
+"fr": "charbon",
+"app": 6,
+"n": 4498,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 8197,
+"pos": [
+"n"
+],
+"cl": [
+"块"
+]
+},
+{
+"h": "美观",
+"p": "měiguān",
+"fr": "esthétique, beau",
+"app": 6,
+"n": 4499,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 19793,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "弥补",
+"p": "míbǔ",
+"fr": "compenser, combler",
+"app": 6,
+"n": 4500,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4555,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "迷人",
+"p": "mírén",
+"fr": "charmant, fascinant",
+"app": 6,
+"n": 4501,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4430,
+"pos": [
+"a",
+"v"
+],
+"cl": []
+},
+{
+"h": "密",
+"p": "mì",
+"fr": "dense, serré ; secret",
+"app": 6,
+"n": 4502,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3591,
+"pos": [
+"a",
+"ad"
+],
+"cl": []
+},
+{
+"h": "密度",
+"p": "mìdù",
+"fr": "densité",
+"app": 6,
+"n": 4503,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8534,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "密集",
+"p": "mìjí",
+"fr": "densément peuplé ; concentré",
+"app": 6,
+"n": 4504,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11504,
+"pos": [
+"a",
+"ad"
+],
+"cl": []
+},
+{
+"h": "蜜蜂",
+"p": "mìfēng",
+"fr": "abeille",
+"app": 6,
+"n": 4505,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 8143,
+"pos": [
+"n"
+],
+"cl": [
+"只",
+"群"
+]
+},
+{
+"h": "棉",
+"p": "mián",
+"fr": "coton",
+"app": 6,
+"n": 4506,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 5317,
+"pos": [
+"g",
+"n"
+],
+"cl": []
+},
+{
+"h": "免",
+"p": "miǎn",
+"fr": "exempter, épargner ; éviter",
+"app": 6,
+"n": 4507,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3929,
+"pos": [
+"v",
+"d"
+],
+"cl": []
+},
+{
+"h": "免税",
+"p": "miǎnshuì",
+"fr": "hors taxes, exonéré",
+"app": 6,
+"n": 4508,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "免疫",
+"p": "miǎnyì",
+"fr": "immunité ; être immunisé",
+"app": 6,
+"n": 4509,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4704,
+"pos": [
+"vn",
+"v",
+"b"
+],
+"cl": []
+},
+{
+"h": "勉强",
+"p": "miǎnqiǎng",
+"fr": "forcer ; à contrecœur, tout juste suffisant",
+"app": 6,
+"n": 4510,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6178,
+"pos": [
+"ad",
+"v",
+"a"
+],
+"cl": []
+},
+{
+"h": "面部",
+"p": "miànbù",
+"fr": "visage (partie du corps)",
+"app": 6,
+"n": 4511,
+"th": "corps",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 6606,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "面粉",
+"p": "miànfěn",
+"fr": "farine",
+"app": 6,
+"n": 4512,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11363,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "面子",
+"p": "miànzi",
+"fr": "face, prestige (avoir de la face)",
+"app": 6,
+"n": 4513,
+"th": "position",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 5831,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "描绘",
+"p": "miáohuì",
+"fr": "dépeindre",
+"app": 6,
+"n": 4514,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 9367,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "描写",
+"p": "miáoxiě",
+"fr": "décrire",
+"app": 6,
+"n": 4515,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 9246,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "妙",
+"p": "miào",
+"fr": "merveilleux, ingénieux",
+"app": 6,
+"n": 4516,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4292,
+"pos": [
+"a",
+"ad",
+"an"
+],
+"cl": []
+},
+{
+"h": "灭",
+"p": "miè",
+"fr": "éteindre ; anéantir",
+"app": 6,
+"n": 4517,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4065,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "民歌",
+"p": "míngē",
+"fr": "chanson populaire",
+"app": 6,
+"n": 4518,
+"th": "loisirs",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 18474,
+"pos": [
+"n"
+],
+"cl": [
+"支",
+"首"
+]
+},
+{
+"h": "民间",
+"p": "mínjiān",
+"fr": "populaire, non officiel",
+"app": 6,
+"n": 4519,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 7015,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "民俗",
+"p": "mínsú",
+"fr": "coutumes populaires, folklore",
+"app": 6,
+"n": 4520,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 24358,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "民宿",
+"p": "mínsù",
+"fr": "maison d'hôtes",
+"app": 6,
+"n": 4521,
+"th": "maison",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "民众",
+"p": "mínzhòng",
+"fr": "les masses, le peuple",
+"app": 6,
+"n": 4522,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4219,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "民主",
+"p": "mínzhǔ",
+"fr": "démocratie ; démocratique",
+"app": 6,
+"n": 4523,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 3363,
+"pos": [
+"a",
+"an",
+"ad"
+],
+"cl": []
+},
+{
+"h": "名额",
+"p": "míng'é",
+"fr": "nombre de places, quota",
+"app": 6,
+"n": 4524,
+"th": "nombres",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 10248,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "名气",
+"p": "míngqi",
+"fr": "renommée",
+"app": 6,
+"n": 4525,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 11088,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "名胜",
+"p": "míngshèng",
+"fr": "site célèbre",
+"app": 6,
+"n": 4526,
+"th": "communication",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 29771,
+"pos": [
+"n"
+],
+"cl": [
+"处"
+]
+},
+{
+"h": "明亮",
+"p": "míngliàng",
+"fr": "lumineux, clair",
+"app": 6,
+"n": 4527,
+"th": "description",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 9553,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "明明",
+"p": "míngmíng",
+"fr": "pourtant clairement, de toute évidence",
+"app": 6,
+"n": 4528,
+"th": "outils",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3970,
+"pos": [
+"d"
+],
+"cl": []
+},
+{
+"h": "命令",
+"p": "mìnglìng",
+"fr": "ordonner ; ordre",
+"app": 6,
+"n": 4529,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 2305,
+"pos": [
+"n",
+"v"
+],
+"cl": [
+"道",
+"个"
+]
+},
+{
+"h": "命名",
+"p": "mìngmíng",
+"fr": "nommer, baptiser",
+"app": 6,
+"n": 4530,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 5608,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "模仿",
+"p": "mófǎng",
+"fr": "imiter",
+"app": 6,
+"n": 4531,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4669,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "模拟",
+"p": "mónǐ",
+"fr": "simuler",
+"app": 6,
+"n": 4532,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 5259,
+"pos": [
+"vn",
+"v",
+"b"
+],
+"cl": []
+},
+{
+"h": "模特儿",
+"p": "mótèr",
+"fr": "mannequin",
+"app": 6,
+"n": 4533,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 29610,
+"pos": [],
+"cl": []
+},
+{
+"h": "模型",
+"p": "móxíng",
+"fr": "modèle, maquette",
+"app": 6,
+"n": 4534,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3453,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "摩托车",
+"p": "mótuōchē",
+"fr": "moto",
+"app": 6,
+"n": 4535,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4123,
+"pos": [
+"n"
+],
+"cl": [
+"辆",
+"部"
+]
+},
+{
+"h": "默默",
+"p": "mòmò",
+"fr": "en silence, discrètement",
+"app": 6,
+"n": 4536,
+"th": "outils",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 7639,
+"pos": [
+"d",
+"z"
+],
+"cl": []
+},
+{
+"h": "模样",
+"p": "múyàng",
+"fr": "apparence, allure",
+"app": 6,
+"n": 4537,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 5384,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "母",
+"p": "mǔ",
+"fr": "femelle ; mère",
+"app": 6,
+"n": 4538,
+"th": "personnes",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2351,
+"pos": [
+"b",
+"g"
+],
+"cl": []
+},
+{
+"h": "母语",
+"p": "mǔyǔ",
+"fr": "langue maternelle",
+"app": 6,
+"n": 4539,
+"th": "communication",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 22744,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "木材",
+"p": "mùcái",
+"fr": "bois (de construction)",
+"app": 6,
+"n": 4540,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 10374,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "目录",
+"p": "mùlù",
+"fr": "table des matières, catalogue",
+"app": 6,
+"n": 4541,
+"th": "maison",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 7441,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "奶粉",
+"p": "nǎifěn",
+"fr": "lait en poudre",
+"app": 6,
+"n": 4542,
+"th": "nourriture",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 15404,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "南极洲",
+"p": "Nánjízhōu",
+"fr": "Antarctique",
+"app": 6,
+"n": 4543,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "南美洲",
+"p": "Nánměizhōu",
+"fr": "Amérique du Sud",
+"app": 6,
+"n": 4544,
+"th": "position",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "难点",
+"p": "nándiǎn",
+"fr": "point difficile",
+"app": 6,
+"n": 4545,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 21905,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "难免",
+"p": "nánmiǎn",
+"fr": "inévitable",
+"app": 6,
+"n": 4546,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8428,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "脑袋",
+"p": "nǎodai",
+"fr": "tête (oral)",
+"app": 6,
+"n": 4547,
+"th": "corps",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 2736,
+"pos": [
+"n"
+],
+"cl": [
+"颗",
+"个"
+]
+},
+{
+"h": "脑子",
+"p": "nǎozi",
+"fr": "cerveau, tête (oral)",
+"app": 6,
+"n": 4548,
+"th": "corps",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3025,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "内涵",
+"p": "nèihán",
+"fr": "contenu profond, sens",
+"app": 6,
+"n": 4549,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8756,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "内科",
+"p": "nèikē",
+"fr": "médecine interne",
+"app": 6,
+"n": 4550,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 13792,
+"pos": [
+"n",
+"nr"
+],
+"cl": []
+},
+{
+"h": "内外",
+"p": "nèiwài",
+"fr": "intérieur et extérieur",
+"app": 6,
+"n": 4551,
+"th": "position",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 14977,
+"pos": [
+"f"
+],
+"cl": []
+},
+{
+"h": "内衣",
+"p": "nèiyī",
+"fr": "sous-vêtements",
+"app": 6,
+"n": 4552,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4676,
+"pos": [
+"n"
+],
+"cl": [
+"件"
+]
+},
+{
+"h": "能量",
+"p": "néngliàng",
+"fr": "énergie",
+"app": 6,
+"n": 4553,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 2787,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "能源",
+"p": "néngyuán",
+"fr": "sources d'énergie",
+"app": 6,
+"n": 4554,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 3465,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "泥",
+"p": "ní",
+"fr": "boue",
+"app": 6,
+"n": 4555,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4211,
+"pos": [
+"n",
+"v"
+],
+"cl": []
+},
+{
+"h": "年度",
+"p": "niándù",
+"fr": "année (exercice), annuel",
+"app": 6,
+"n": 4556,
+"th": "temps",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3572,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "年终",
+"p": "niánzhōng",
+"fr": "fin d'année",
+"app": 6,
+"n": 4557,
+"th": "temps",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 17158,
+"pos": [
+"t"
+],
+"cl": []
+},
+{
+"h": "念书",
+"p": "niànshū",
+"fr": "étudier, aller à l'école",
+"app": 6,
+"n": 4558,
+"th": "ecole",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 15989,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "扭",
+"p": "niǔ",
+"fr": "tordre, tourner ; se tortiller",
+"app": 6,
+"n": 4559,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4948,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "农产品",
+"p": "nóngchǎnpǐn",
+"fr": "produits agricoles",
+"app": 6,
+"n": 4560,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 17202,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "农田",
+"p": "nóngtián",
+"fr": "terres cultivées",
+"app": 6,
+"n": 4561,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "浓厚",
+"p": "nónghòu",
+"fr": "épais, prononcé (intérêt, atmosphère)",
+"app": 6,
+"n": 4562,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 17664,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "暖",
+"p": "nuǎn",
+"fr": "chaud, tiède ; réchauffer",
+"app": 6,
+"n": 4563,
+"th": "nature",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3896,
+"pos": [
+"a",
+"v",
+"g"
+],
+"cl": []
+},
+{
+"h": "暖气",
+"p": "nuǎnqì",
+"fr": "chauffage",
+"app": 6,
+"n": 4564,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 10582,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "偶像",
+"p": "ǒuxiàng",
+"fr": "idole",
+"app": 6,
+"n": 4565,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3202,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "排除",
+"p": "páichú",
+"fr": "exclure, éliminer",
+"app": 6,
+"n": 4566,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3583,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "排放",
+"p": "páifàng",
+"fr": "rejeter, émettre (des gaz)",
+"app": 6,
+"n": 4567,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 11477,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "排练",
+"p": "páiliàn",
+"fr": "répéter (un spectacle)",
+"app": 6,
+"n": 4568,
+"th": "loisirs",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7156,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "排名",
+"p": "páimíng",
+"fr": "classer ; classement",
+"app": 6,
+"n": 4569,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4870,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "盘",
+"p": "pán",
+"fr": "assiette, plateau ; (classificateur) ; (niveaux 7-9) enrouler",
+"app": 6,
+"n": 4570,
+"th": "nombres",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 1363,
+"pos": [
+"qv",
+"g",
+"v"
+],
+"cl": []
+},
+{
+"h": "盼望",
+"p": "pànwàng",
+"fr": "espérer, attendre avec impatience",
+"app": 6,
+"n": 4571,
+"th": "emotions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 10303,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "庞大",
+"p": "pángdà",
+"fr": "énorme, colossal",
+"app": 6,
+"n": 4572,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6804,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "抛",
+"p": "pāo",
+"fr": "lancer, jeter ; abandonner",
+"app": 6,
+"n": 4573,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3539,
+"pos": [
+"v",
+"nr"
+],
+"cl": []
+},
+{
+"h": "泡",
+"p": "pào",
+"fr": "bulle ; tremper, infuser (le thé)",
+"app": 6,
+"n": 4574,
+"th": "nourriture",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2258,
+"pos": [
+"v",
+"n",
+"q"
+],
+"cl": []
+},
+{
+"h": "陪同",
+"p": "péitóng",
+"fr": "accompagner",
+"app": 6,
+"n": 4575,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 8559,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "培育",
+"p": "péiyù",
+"fr": "cultiver, élever",
+"app": 6,
+"n": 4576,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 10156,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "赔偿",
+"p": "péicháng",
+"fr": "indemniser",
+"app": 6,
+"n": 4577,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 3939,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "佩服",
+"p": "pèifú",
+"fr": "admirer",
+"app": 6,
+"n": 4578,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 6729,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "配备",
+"p": "pèibèi",
+"fr": "équiper ; équipement",
+"app": 6,
+"n": 4579,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8427,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "配套",
+"p": "pèitào",
+"fr": "assortir, compléter (un ensemble)",
+"app": 6,
+"n": 4580,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 10472,
+"pos": [
+"a",
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "喷",
+"p": "pēn",
+"fr": "vaporiser, jaillir",
+"app": 6,
+"n": 4581,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 3321,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "捧",
+"p": "pěng",
+"fr": "tenir à deux mains ; flatter ; (classificateur : une poignée)",
+"app": 6,
+"n": 4582,
+"th": "nombres",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6144,
+"pos": [
+"v",
+"q"
+],
+"cl": []
+},
+{
+"h": "碰撞",
+"p": "pèngzhuàng",
+"fr": "heurter ; collision",
+"app": 6,
+"n": 4583,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 9019,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "披",
+"p": "pī",
+"fr": "jeter sur les épaules",
+"app": 6,
+"n": 4584,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 5845,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "皮",
+"p": "pí",
+"fr": "peau, cuir ; espiègle",
+"app": 6,
+"n": 4585,
+"th": "corps",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 1409,
+"pos": [
+"n",
+"a"
+],
+"cl": [
+"张"
+]
+},
+{
+"h": "疲劳",
+"p": "píláo",
+"fr": "fatigué ; fatigue",
+"app": 6,
+"n": 4586,
+"th": "description",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 7419,
+"pos": [
+"a",
+"an",
+"ad"
+],
+"cl": []
+},
+{
+"h": "片刻",
+"p": "piànkè",
+"fr": "un instant",
+"app": 6,
+"n": 4587,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6789,
+"pos": [
+"m",
+"t"
+],
+"cl": []
+},
+{
+"h": "片面",
+"p": "piànmiàn",
+"fr": "partial, unilatéral",
+"app": 6,
+"n": 4588,
+"th": "description",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 16993,
+"pos": [
+"a",
+"ad"
+],
+"cl": []
+},
+{
+"h": "骗子",
+"p": "piànzi",
+"fr": "escroc",
+"app": 6,
+"n": 4589,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 4446,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "漂",
+"p": "piāo",
+"fr": "flotter, dériver",
+"app": 6,
+"n": 4590,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 9779,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "飘",
+"p": "piāo",
+"fr": "flotter (au vent), voltiger",
+"app": 6,
+"n": 4591,
+"th": "nature",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4833,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "贫困",
+"p": "pínkùn",
+"fr": "pauvre ; pauvreté",
+"app": 6,
+"n": 4592,
+"th": "argent",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6107,
+"pos": [
+"a",
+"an"
+],
+"cl": []
+},
+{
+"h": "频道",
+"p": "píndào",
+"fr": "chaîne (télévision)",
+"app": 6,
+"n": 4593,
+"th": "maison",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 2941,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "频繁",
+"p": "pínfán",
+"fr": "fréquent",
+"app": 6,
+"n": 4594,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6642,
+"pos": [
+"a",
+"ad"
+],
+"cl": []
+},
+{
+"h": "频率",
+"p": "pínlǜ",
+"fr": "fréquence",
+"app": 6,
+"n": 4595,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4871,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "品尝",
+"p": "pǐncháng",
+"fr": "goûter, savourer",
+"app": 6,
+"n": 4596,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8156,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "平等",
+"p": "píngděng",
+"fr": "égal ; égalité",
+"app": 6,
+"n": 4597,
+"th": "description",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4880,
+"pos": [
+"a",
+"ad",
+"an"
+],
+"cl": []
+},
+{
+"h": "平凡",
+"p": "píngfán",
+"fr": "ordinaire, banal",
+"app": 6,
+"n": 4598,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6747,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "平方",
+"p": "píngfāng",
+"fr": "carré (mathématique) ; mètre carré",
+"app": 6,
+"n": 4599,
+"th": "nombres",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 13429,
+"pos": [
+"q",
+"n"
+],
+"cl": []
+},
+{
+"h": "平方米",
+"p": "píngfāngmǐ",
+"fr": "mètre carré",
+"app": 6,
+"n": 4600,
+"th": "nombres",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 16119,
+"pos": [
+"q"
+],
+"cl": []
+},
+{
+"h": "评估",
+"p": "pínggū",
+"fr": "évaluer ; évaluation",
+"app": 6,
+"n": 4601,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3129,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "评论",
+"p": "pínglùn",
+"fr": "commenter ; commentaire",
+"app": 6,
+"n": 4602,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 2351,
+"pos": [
+"n",
+"v",
+"vn"
+],
+"cl": [
+"篇"
+]
+},
+{
+"h": "评选",
+"p": "píngxuǎn",
+"fr": "élire, sélectionner (par vote)",
+"app": 6,
+"n": 4603,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 10602,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "坡",
+"p": "pō",
+"fr": "pente, côte ; en pente",
+"app": 6,
+"n": 4604,
+"th": "position",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8092,
+"pos": [
+"n"
+],
+"cl": [
+"个"
+]
+},
+{
+"h": "泼",
+"p": "pō",
+"fr": "verser, jeter (un liquide)",
+"app": 6,
+"n": 4605,
+"th": "argent",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8438,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "迫切",
+"p": "pòqiè",
+"fr": "urgent, pressant",
+"app": 6,
+"n": 4606,
+"th": "description",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 8352,
+"pos": [
+"ad",
+"a"
+],
+"cl": []
+},
+{
+"h": "破产",
+"p": "pòchǎn",
+"fr": "faire faillite",
+"app": 6,
+"n": 4607,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 4674,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "扑",
+"p": "pū",
+"fr": "se jeter sur, bondir",
+"app": 6,
+"n": 4608,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4563,
+"pos": [
+"v",
+"o"
+],
+"cl": []
+},
+{
+"h": "扑灭",
+"p": "pūmiè",
+"fr": "éteindre (un incendie)",
+"app": 6,
+"n": 4609,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": null,
+"pos": [],
+"cl": []
+},
+{
+"h": "铺",
+"p": "pū",
+"fr": "étaler, paver, poser",
+"app": 6,
+"n": 4610,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4209,
+"pos": [
+"v"
+],
+"cl": []
+},
+{
+"h": "朴素",
+"p": "pǔsù",
+"fr": "simple, sobre",
+"app": 6,
+"n": 4611,
+"th": "description",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 16787,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "期望",
+"p": "qīwàng",
+"fr": "espérer ; attentes",
+"app": 6,
+"n": 4612,
+"th": "emotions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 3510,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "期限",
+"p": "qīxiàn",
+"fr": "délai, échéance",
+"app": 6,
+"n": 4613,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 5679,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "欺骗",
+"p": "qīpiàn",
+"fr": "tromper",
+"app": 6,
+"n": 4614,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 4109,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "齐全",
+"p": "qíquán",
+"fr": "complet (assortiment)",
+"app": 6,
+"n": 4615,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 10206,
+"pos": [
+"a"
+],
+"cl": []
+},
+{
+"h": "其间",
+"p": "qíjiān",
+"fr": "pendant ce temps",
+"app": 6,
+"n": 4616,
+"th": "temps",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 14903,
+"pos": [
+"f"
+],
+"cl": []
+},
+{
+"h": "棋子",
+"p": "qízǐ",
+"fr": "pion (de jeu d'échecs)",
+"app": 6,
+"n": 4617,
+"th": "loisirs",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 16454,
+"pos": [
+"n"
+],
+"cl": [
+"个",
+"颗"
+]
+},
+{
+"h": "启动",
+"p": "qǐdòng",
+"fr": "démarrer, lancer",
+"app": 6,
+"n": 4618,
+"th": "actions",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 2012,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "启发",
+"p": "qǐfā",
+"fr": "inspirer, éclairer ; inspiration",
+"app": 6,
+"n": 4619,
+"th": "actions",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 7784,
+"pos": [
+"v",
+"vn"
+],
+"cl": []
+},
+{
+"h": "启示",
+"p": "qǐshì",
+"fr": "révéler ; enseignement, leçon",
+"app": 6,
+"n": 4620,
+"th": "ecole",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 9723,
+"pos": [
+"vn",
+"v"
+],
+"cl": []
+},
+{
+"h": "启事",
+"p": "qǐshì",
+"fr": "avis, annonce (affichée)",
+"app": 6,
+"n": 4621,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 20158,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "起初",
+"p": "qǐchū",
+"fr": "au début",
+"app": 6,
+"n": 4622,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 8773,
+"pos": [
+"d",
+"t"
+],
+"cl": []
+},
+{
+"h": "起点",
+"p": "qǐdiǎn",
+"fr": "point de départ",
+"app": 6,
+"n": 4623,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 6901,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "起源",
+"p": "qǐyuán",
+"fr": "provenir de ; origine",
+"app": 6,
+"n": 4624,
+"th": "actions",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 11950,
+"pos": [
+"n",
+"v"
+],
+"cl": []
+},
+{
+"h": "气氛",
+"p": "qìfēn",
+"fr": "atmosphère, ambiance",
+"app": 6,
+"n": 4625,
+"th": "idees",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 3160,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "气体",
+"p": "qìtǐ",
+"fr": "gaz",
+"app": 6,
+"n": 4626,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 6140,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "气味",
+"p": "qìwèi",
+"fr": "odeur",
+"app": 6,
+"n": 4627,
+"th": "idees",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 6948,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "气质",
+"p": "qìzhì",
+"fr": "tempérament, élégance naturelle",
+"app": 6,
+"n": 4628,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 5505,
+"pos": [
+"n"
+],
+"cl": []
+},
+{
+"h": "恰当",
+"p": "qiàdàng",
+"fr": "approprié",
+"app": 6,
+"n": 4629,
+"th": "description",
+"app20": 6,
+"hsk2": 6,
+"hsk3": 6,
+"freq": 7676,
+"pos": [
+"a",
+"ad"
+],
+"cl": []
+},
+{
+"h": "恰好",
+"p": "qiàhǎo",
+"fr": "justement, par chance",
+"app": 6,
+"n": 4630,
+"th": "outils",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 7876,
+"pos": [
+"d"
+],
+"cl": []
+},
+{
+"h": "恰恰",
+"p": "qiàqià",
+"fr": "justement, précisément",
+"app": 6,
+"n": 4631,
+"th": "outils",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 6523,
+"pos": [
+"d"
+],
+"cl": []
+},
+{
+"h": "千家万户",
+"p": "qiānjiā-wànhù",
+"fr": "des milliers de foyers",
+"app": 6,
+"n": 4632,
+"th": "idees",
+"app20": 6,
+"hsk2": null,
+"hsk3": 6,
+"freq": 33124,
+"pos": [
+"l"
+],
+"cl": []
+},
+{
+"h": "牵",
+"p": "qiān",
+"fr": "tenir par la main, tirer",
+"app": 6,
+"n": 4633,
+"th": "corps",
+"app20": 6,
+"hsk2": 5,
+"hsk3": 6,
+"freq": 3847,
+"pos": [
+"v"
 ],
 "cl": []
 }

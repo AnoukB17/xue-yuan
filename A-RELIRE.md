@@ -2,7 +2,7 @@
 
 Chaque lot ajoute ici ce qui a été écrit ou corrigé sans relecture native.
 
-**État au 13/11/2026 :** les contenus des lots 1 et 2 et les paquets 1 à 14 ont été **validés par la propriétaire du projet**, sans relecture par un locuteur natif. Les cases ci-dessous restent ouvertes : elles indiquent ce qu'un natif devrait vérifier en priorité le jour où une relecture est possible.
+**État au 13/11/2026 :** les contenus des lots 1 et 2 et les paquets 1 à 15 ont été **validés par la propriétaire du projet**, sans relecture par un locuteur natif. Les cases ci-dessous restent ouvertes : elles indiquent ce qu'un natif devrait vérifier en priorité le jour où une relecture est possible.
 
 ## Lot 1 (validé par la propriétaire, sans relecture native)
 
@@ -56,6 +56,8 @@ Source unique : `tools/content/hsk2.py` (contrôlé automatiquement : vocabulair
   - [ ] À vérifier par un natif en priorité : 倒是, 得了, 地道 (dìdao / dìdào), 粉, 服, 工夫 / 功夫.
 - [x] Paquet 14 (`docs/paquets/paquet-14.md`) : 255 mots du niveau 6, validé le 14/11/2026, intégré.
   - [ ] À vérifier par un natif en priorité : 好不, 横 (héng / hèng), 回头, 结实, 尽 (jìn / jǐn), 局 (deux entrées), 卷 (juǎn / juàn).
+- [x] Paquet 15 (`docs/paquets/paquet-15.md`) : 255 mots du niveau 6, validé le 14/11/2026, intégré.
+  - [ ] À vérifier par un natif en priorité : 酷 (registre), 会计 (kuàijì), 来往, 两岸 (terme politique), 料 (deux entrées), 露 (lòu / lù), 模样 (múyàng).
 
 ## Lot 6 : fiches de grammaire (validées par la propriétaire, sans relecture native)
 
