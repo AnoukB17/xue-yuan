@@ -456,6 +456,7 @@ body.onb-open{overflow:hidden}
 .fam-row .tag{font-size:.75rem;background:var(--sunk);padding:2px 8px;border-radius:999px;white-space:nowrap}
 .fam-row .muted{font-size:.88rem}
 .rads{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.rads>#radx{grid-column:1/-1;margin:2px 0 6px}
 .rad{appearance:none;border:0;background:var(--surface);box-shadow:var(--shadow);border-radius:16px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;text-align:center;transition:transform .12s}
 .rad .han{font-size:2rem;line-height:1.1;color:var(--c-text)}
 .rad strong{font-size:.8rem}
@@ -3526,8 +3527,7 @@ function vOrigins() {
       <div class="fam-m">${f.m.map(([c, p, r, fr]) => `<button class="fam-row" data-c="${c}"><span class="han">${c}</span><span class="t${toneOf(p)}" style="font-weight:700">${p}</span><span class="tag">${esc(r)}</span><span class="muted">${esc(fr)}</span></button>`).join('')}</div></div>`).join('')}</div>
     <h2>Les clés à connaître <span class="han muted" style="font-weight:500">部首</span></h2>
     <p class="muted" style="margin-top:-12px">Une clé (radical) indique la famille de sens. En reconnaître 24, c'est déjà savoir de quoi parlent des centaines de caractères.</p>
-    <div class="rads">${RADICALS.map(([r, n, m], i) => `<button class="rad" data-r="${i}"><span class="han">${r}</span><strong>${esc(m)}</strong><small class="han">${n}</small></button>`).join('')}</div>
-    <div class="card" id="radx" hidden></div>
+    <div class="rads">${RADICALS.map(([r, n, m], i) => `<button class="rad" data-r="${i}" aria-expanded="false" aria-controls="radx"><span class="han">${r}</span><strong>${esc(m)}</strong><small class="han">${n}</small></button>`).join('')}<div class="card" id="radx" hidden></div></div>
     <h2>3 000 ans d'écriture</h2>
     <ol class="timeline">${SCRIPTS.map(([h, p, d, t, x], i) => `<li style="--i:${i}"><span class="when">${d}</span><span class="han name">${h}</span><strong>${t}</strong><span class="muted">${esc(x)}</span></li>`).join('')}</ol>
     <div class="card stack"><h3>Simplifiés et traditionnels</h3><p class="muted" style="font-size:.92rem">Le HSK utilise les caractères simplifiés. Voici à quoi ils ressemblaient avant 1956 : on y retrouve souvent mieux le dessin d'origine.</p>
@@ -3555,10 +3555,16 @@ function vOrigins() {
   $('#ogf', s).addEventListener('submit', e => { e.preventDefault(); const c = [...$('#ogq', s).value.trim()][0]; if (c) { show(c); $('#ogd', s).scrollIntoView({behavior: 'smooth', block: 'center'}); } });
   $$('.rad', s).forEach(b => b.addEventListener('click', () => {
     const [r, n, m, ex] = RADICALS[b.dataset.r], x = $('#radx', s);
-    $$('.rad', s).forEach(o => o.setAttribute('aria-pressed', o === b));
+    // Deuxième toucher sur la même clé : on referme
+    if (b.getAttribute('aria-pressed') === 'true' && !x.hidden) { x.hidden = true; b.setAttribute('aria-pressed', false); b.setAttribute('aria-expanded', false); return; }
+    $$('.rad', s).forEach(o => { o.setAttribute('aria-pressed', o === b); o.setAttribute('aria-expanded', o === b); });
+    // La fiche s'insère juste après la dernière clé de la ligne touchée (même hauteur à l'écran)
+    const row = $$('.rad', s).filter(o => Math.abs(o.offsetTop - b.offsetTop) < 4);
+    row[row.length - 1].after(x);
     x.hidden = false;
     x.innerHTML = `<div class="row" style="gap:14px"><span class="han" style="font-size:3rem;color:var(--c-text)">${r}</span><div class="stack" style="gap:2px"><strong class="ttl">${esc(m)}</strong><span class="muted han">${n}</span></div></div>
       <div class="og-ex" style="margin-top:12px">${ex.split(' ').map(c => { const w = wordFor(c); return `<button class="ogc wide" data-c="${c}"><span class="han">${c}</span><small>${w ? esc(w.h === c ? w.f.split(/[,;]/)[0] : w.h) : ''}</small></button>`; }).join('')}</div>`;
+    x.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest'});
   }));
   sampleReady.then(sm => {
     if (!sm || !s.isConnected) return;
@@ -4326,6 +4332,14 @@ function go(view, arg) { current = view; render(view, arg); try { history.replac
 function route() { const h = location.hash.slice(1); go(VIEWS[h] ? h : 'accueil'); }
 // Mode exercice : masque la barre du bas sur mobile (remis à zéro à chaque changement d'écran)
 const flow = on => document.body.classList.toggle('in-flow', on);
+// Redessine l'écran courant sans remonter en haut ni perdre le bouton qui avait le focus (écran « Moi »)
+function rerender(view, arg) {
+  const y = window.scrollY, a = document.activeElement;
+  const sel = a && a !== document.body ? (a.id ? '#' + CSS.escape(a.id) : [...a.attributes].filter(x => x.name.startsWith('data-')).map(x => `[${x.name}="${CSS.escape(x.value)}"]`).join('')) : '';
+  render(view, arg);
+  window.scrollTo(0, y);
+  if (sel) { try { document.querySelector(sel)?.focus({preventScroll: true}); } catch {} }
+}
 function render(view, arg) {
   const tab = (NAV.find(([v, , subs]) => v === view || subs.includes(view)) || NAV[0])[0];
   $$('[data-nav]').forEach(a => (a.dataset.nav === tab || a.dataset.nav === view) ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
@@ -4960,12 +4974,31 @@ function runExam(l, mode) {
     S.exams = S.exams.slice(-30); addXP(mode === 'complet' ? 40 : 20); save();
     $('#xt', s).textContent = 'Résultat';
     const wrong = answers.filter(a => !a.ok);
-    const show = a => a.q.k === 'wo' ? `${a.q.o[0]}${a.q.end}` : a.q.k === 'rs' ? a.q.q.replace('___', a.q.o[0]) : a.q.k === 'rm' || a.q.k === 'rp' ? `${a.q.w.h} · ${a.q.w.f}` : a.q.k === 'ls' ? `${a.q.q} · ${a.q.o[0]}` : `${a.q.w.h} · ${a.q.w.f}`;
+    // Explication d'une erreur : la bonne réponse, ce que l'apprenant a choisi, et pourquoi ce n'était pas ça
+    const pool = examPool(l), byH = h => W[h] || pool.find(x => x.h === h), byF = f => pool.find(x => firstSense(x) === f);
+    const wd = w => w ? `<span class="han">${esc(w.h)}</span> ${pyHTML(w.p)} « ${esc(firstSense(w).toLowerCase())} »` : '';
+    const explain = a => {
+      const q = a.q, ans = a.a, good = q.o[0];
+      let main = '', mine = '', why = '';
+      if (q.k === 'lw') { const g = byH(good), m = ans && byH(ans);
+        main = `On entendait ${wd(g)}.`; if (m) { mine = `Tu as choisi ${wd(m)}.`; why = normPy(m.p) === normPy(g.p) ? 'Même syllabe, mais pas le même ton : réécoute la mélodie du mot.' : 'Ce mot ne se prononce pas pareil : compare les deux à l\'oral.'; } }
+      else if (q.k === 'rm') { const m = ans && byF(ans);
+        main = `<span class="han">${esc(q.w.h)}</span> ${pyHTML(q.w.p)} veut dire « ${esc(firstSense(q.w).toLowerCase())} ».`; if (ans) { mine = `Tu as répondu « ${esc(ans)} »${m ? `, qui est le sens de ${wd(m)}` : ''}.`; why = m && [...m.h].some(c => q.w.h.includes(c)) ? 'Les deux mots ont un caractère en commun : regarde ce qui les distingue.' : 'Revois ce mot dans ses phrases d\'exemple.'; } }
+      else if (q.k === 'rp') { const m = ans && byH(ans);
+        main = `« ${esc(q.q.toLowerCase())} » se dit ${wd(q.w)}.`; if (m) { mine = `Tu as choisi ${wd(m)}.`; why = [...m.h].some(c => q.w.h.includes(c)) ? 'Un caractère commun peut tromper : retiens le mot entier.' : 'Associe le sens au mot entier, pas seulement à un caractère.'; } }
+      else if (q.k === 'rs') { const m = ans && byH(ans);
+        main = `<span class="han">${esc(q.q.replace('___', good))}</span>${q.fr ? ` <span class="muted">(${esc(q.fr)})</span>` : ''}`; if (ans) { mine = `Tu as mis ${m ? wd(m) : `<span class="han">${esc(ans)}</span>`} à la place de ${wd(q.w)}.`; why = 'Relis toute la phrase : le mot manquant doit s\'accorder avec son sens et sa construction.'; } }
+      else if (q.k === 'ls') {
+        main = `On entendait <span class="han">${esc(q.q)}</span> : « ${esc(good.replace(/[.。]$/, ''))} ».`; if (ans) { mine = `Tu as compris « ${esc(ans.replace(/[.。]$/, ''))} ».`; why = 'Réécoute la phrase en suivant le texte, puis sans le texte.'; } }
+      else if (q.k === 'wo') {
+        main = `<span class="han">${esc(good + (q.end || ''))}</span>${q.fr ? ` <span class="muted">(${esc(q.fr)})</span>` : ''}`; if (ans) { mine = `Ton ordre : <span class="han">${esc(ans)}</span>.`; why = 'En chinois : sujet, puis moment et lieu, puis verbe et complément.'; } }
+      return `<div class="card stack" style="gap:6px;width:100%"><span class="label">${ans === null ? 'Sans réponse' : 'Erreur'}</span><div class="row" style="flex-wrap:nowrap;gap:8px;align-items:flex-start">${speakBtn(q.k === 'rs' ? q.q.replace('___', good) : q.k === 'wo' ? good : q.k === 'ls' ? q.q : (q.w?.h || good), 'la réponse')}<div class="stack" style="gap:4px"><span>${main}</span>${mine ? `<span>${mine}</span>` : ''}${why ? `<span class="muted" style="font-size:.92rem">${why}</span>` : ''}</div></div></div>`;
+    };
     box.innerHTML = `<div class="card prompt"><span class="label">${pass ? (mode === 'valider' ? 'Niveau validé' : 'Réussi') : 'Pas encore'}</span><span class="h" style="font-family:var(--f-display);font-weight:700">${ok} / ${total}</span>
       <p class="q">${mode === 'valider' ? (pass ? `Bravo : le HSK ${l} est validé. ${added} mot${added > 1 ? 's' : ''} rejoign${added > 1 ? 'ent' : 't'} tes révisions, réparti${added > 1 ? 's' : ''} sur trois semaines.` : `Il faut 16 bonnes réponses. Les mots ratés reviennent dans tes révisions dès aujourd'hui.`)
         : `${pct} % de bonnes réponses. ${pass ? 'Au-dessus des 60 % demandés pour réussir le HSK.' : 'Le HSK se réussit avec 60 % des points : les mots ratés reviennent dans tes révisions.'}`}</p></div>
       ${secs.length > 1 ? `<div class="stack">${secs.map(x => { const k = answers.filter(a => a.s === x.k); return `<div class="row" style="justify-content:space-between"><span>${x.name}</span><strong>${k.filter(a => a.ok).length} / ${k.length}</strong></div>`; }).join('')}</div>` : ''}
-      ${wrong.length ? `<div class="card stack" style="align-items:flex-start"><strong class="ttl">À revoir (${wrong.length})</strong>${wrong.slice(0, 40).map(a => `<div class="row" style="gap:8px;align-items:baseline"><span class="label">${a.a === null ? 'sans réponse' : 'faux'}</span><span>${esc(show(a))}</span></div>`).join('')}</div>` : ''}
+      ${wrong.length ? `<div class="stack" style="align-items:flex-start"><h2 class="ttl">Tes erreurs expliquées (${wrong.length})</h2>${wrong.slice(0, 40).map(explain).join('')}${wrong.length > 40 ? `<p class="muted">… et ${wrong.length - 40} autres, revues dans tes révisions.</p>` : ''}</div>` : ''}
       <div class="row" style="justify-content:center"><button class="btn primary" id="xa">Retour aux examens</button>${pass && mode === 'valider' ? `<button class="btn" id="xl">Voir les leçons</button>` : ''}</div>`;
     $('#xa', box).addEventListener('click', () => go('examen'));
     $('#xl', box)?.addEventListener('click', () => { lessonLevel = l; go('lecons'); });
@@ -5132,7 +5165,7 @@ function vWrite() {
   if (writeCurrent && hasStrokes(writeCurrent) && !chars.includes(writeCurrent)) chars.unshift(writeCurrent);
   writeCurrent = chars.includes(writeCurrent) ? writeCurrent : chars[0];
   const s = view(`
-    <div class="head"><span class="label">Atelier d'écriture</span><h1>Trace les caractères</h1><p>D'abord avec le modèle, puis de mémoire : c'est en le retrouvant sans aide qu'on retient vraiment un caractère. Après deux tracés réussis, l'atelier passe tout seul en mode « de mémoire ».</p></div>
+    <div class="head"><span class="label">Atelier d'écriture</span><h1>Trace les caractères</h1><p>Trace directement dans la case, trait par trait. D'abord avec le modèle, puis de mémoire : c'est en le retrouvant sans aide qu'on retient vraiment un caractère. Après deux tracés réussis, l'atelier passe tout seul en mode « de mémoire ».</p></div>
     <div class="atelier">
       <div class="card pad-wrap">
         <div class="row" style="gap:14px;align-items:center"><span class="han" id="wc-h" style="font-size:1.4rem"></span><span id="wc-info" class="muted"></span><span id="wc-say"></span></div>
@@ -5140,7 +5173,7 @@ function vWrite() {
         <div class="seg" role="group" aria-label="Mode"><button type="button" data-wm="guide">Avec le modèle</button><button type="button" data-wm="memoire">De mémoire</button></div>
         <div class="row" style="justify-content:center">
           <button class="btn" id="w-anim">Voir l'ordre des traits</button>
-          <button class="btn primary" id="w-quiz">À moi d'écrire</button>
+          <button class="btn" id="w-quiz">↻ Recommencer</button>
         </div>
         <p role="status" class="feedback" id="w-fb"></p>
         <p id="wc-mn" class="muted" style="text-align:center;max-width:46ch;font-size:.92rem"></p>
@@ -5178,9 +5211,10 @@ function vWrite() {
       charDataLoader: strokeLoader(() => { if (writeCurrent === c) { pad.innerHTML = writerMissing; writer = null; } }),
       onLoadCharDataSuccess: d => { if (writeCurrent === c && $('#wc-mn', s)) $('#wc-mn', s).textContent = tip(d.strokes.length); }
     });
+    startQuiz();
   };
   $('#cp', s).addEventListener('click', e => { const b = e.target.closest('.cp'); if (b) load(b.dataset.c); });
-  $('#w-anim', s).addEventListener('click', () => writer?.animateCharacter());
+  $('#w-anim', s).addEventListener('click', () => writer?.animateCharacter({onComplete: () => startQuiz()}));
   $$('[data-wm]', s).forEach(b => b.addEventListener('click', () => { setMode(b.dataset.wm); load2(writeCurrent); }));
   const load2 = c => { // recharge sans recalculer le mode automatique
     const m = mode; load(c); setMode(m);
@@ -5188,10 +5222,12 @@ function vWrite() {
     $('#wc-h', s).textContent = w ? (m === 'memoire' ? w.h.replaceAll(c, '？') : w.h) : (m === 'memoire' ? '？' : c);
     $('#wc-mn', s).textContent = m === 'memoire' ? 'Retrouve le caractère à partir du sens et du son. Un indice apparaît après 2 essais ratés.' : (MNEMO[c] || (strokeCache[c] ? `${strokeCache[c].strokes.length} traits.` : ''));
     if (writer) m === 'memoire' ? writer.hideOutline() : writer.showOutline();
+    startQuiz();
   };
-  $('#w-quiz', s).addEventListener('click', () => {
+  // Le tracé est prêt dès qu'un caractère s'affiche (plus besoin de toucher un bouton pour commencer)
+  function startQuiz() {
     if (!writer) return;
-    const fb = $('#w-fb', s); fb.className = 'feedback'; fb.textContent = 'Trace le premier trait…';
+    const fb = $('#w-fb', s); fb.className = 'feedback'; fb.textContent = 'À toi : trace directement dans la case, trait par trait.';
     writer.quiz({
       leniency: 1.8, acceptBackwardsStrokes: true, showHintAfterMisses: mode === 'memoire' ? 2 : 1, markStrokeCorrectAfterMisses: 3,
       onCorrectStroke: d => { fb.textContent = `Trait ${d.strokeNum + 1} sur ${d.strokeNum + 1 + d.strokesRemaining}`; },
@@ -5205,7 +5241,8 @@ function vWrite() {
         speak(c);
       }
     });
-  });
+  }
+  $('#w-quiz', s).addEventListener('click', () => startQuiz());
   if (writeCurrent) load(writeCurrent);
 }
 
@@ -5420,17 +5457,17 @@ function vGoals() {
   $$('[data-mode]', s).forEach(b => b.addEventListener('click', () => {
     const m = b.dataset.mode; if (m === g.mode) return;
     g.mode = m; g.minutes = m === 'day' ? Math.min(90, Math.max(5, Math.round(g.minutes / Math.max(1, g.days.length) / 5) * 5)) : Math.min(600, g.minutes * Math.max(1, g.days.length));
-    save(); render('objectifs');
+    save(); rerender('objectifs');
   }));
-  $$('[data-tc]', s).forEach(b => b.addEventListener('click', () => { S.tones = b.dataset.tc; save(); header(); render('objectifs'); }));
-  $$('[data-py]', s).forEach(b => b.addEventListener('click', () => { S.pinyin = b.dataset.py; save(); header(); render('objectifs'); }));
-  $$('[data-fx]', s).forEach(b => b.addEventListener('click', () => { S.sound = S.haptics = b.dataset.fx === 'on'; save(); if (S.sound) cue(true); render('objectifs'); }));
-  $$('[data-ts]', s).forEach(b => b.addEventListener('click', () => { S.textScale = +b.dataset.ts; save(); header(); render('objectifs'); }));
+  $$('[data-tc]', s).forEach(b => b.addEventListener('click', () => { S.tones = b.dataset.tc; save(); header(); rerender('objectifs'); }));
+  $$('[data-py]', s).forEach(b => b.addEventListener('click', () => { S.pinyin = b.dataset.py; save(); header(); rerender('objectifs'); }));
+  $$('[data-fx]', s).forEach(b => b.addEventListener('click', () => { S.sound = S.haptics = b.dataset.fx === 'on'; save(); if (S.sound) cue(true); rerender('objectifs'); }));
+  $$('[data-ts]', s).forEach(b => b.addEventListener('click', () => { S.textScale = +b.dataset.ts; save(); header(); rerender('objectifs'); }));
   $('#vsel', s)?.addEventListener('change', e => { S.voice = e.target.value; save(); loadVoice(); speak('你好，我们开始学习吧'); });
   $('#vtest', s)?.addEventListener('click', () => speak('你好，我们开始学习吧'));
-  $$('[data-kai]', s).forEach(b => b.addEventListener('click', () => { S.kai = b.dataset.kai === '1'; save(); header(); render('objectifs'); }));
+  $$('[data-kai]', s).forEach(b => b.addEventListener('click', () => { S.kai = b.dataset.kai === '1'; save(); header(); rerender('objectifs'); }));
   $('#gm', s).addEventListener('input', e => { g.minutes = +e.target.value; $('#gmv', s).textContent = g.minutes; });
-  $('#gm', s).addEventListener('change', () => { save(); render('objectifs'); });
+  $('#gm', s).addEventListener('change', () => { save(); rerender('objectifs'); });
   $('#rate', s).addEventListener('input', e => { S.rate = +e.target.value; $('#ratev', s).textContent = S.rate; });
   $('#rate', s).addEventListener('change', () => { save(); speak('你好，我们开始学习吧'); });
   const dayToggle = (sel, arr) => $(sel, s).addEventListener('click', e => {
@@ -5451,7 +5488,7 @@ function vGoals() {
     toast('Copie ce texte dans un fichier .ics pour l\'importer.');
   });
   $('#redo-onb', s).addEventListener('click', () => onboarding(0));
-  $('#install', s)?.addEventListener('click', async () => { const p = installPrompt; installPrompt = null; if (!p) return; p.prompt(); await p.userChoice.catch(() => {}); render('objectifs'); });
+  $('#install', s)?.addEventListener('click', async () => { const p = installPrompt; installPrompt = null; if (!p) return; p.prompt(); await p.userChoice.catch(() => {}); rerender('objectifs'); });
   $('#offline-all', s)?.addEventListener('click', async e => {
     e.target.disabled = true; e.target.textContent = 'Téléchargement…';
     try { (await navigator.serviceWorker.ready).active.postMessage({type: 'offline-all'}); }
@@ -5504,11 +5541,11 @@ const canSW = 'serviceWorker' in navigator && window.top === window && !/claude|
   && (location.protocol === 'https:' || /^(localhost|127\.)/.test(location.hostname));
 if (canSW) navigator.serviceWorker.register('sw.js').catch(() => {});
 let installPrompt = null;
-addEventListener('beforeinstallprompt', e => { e.preventDefault(); installPrompt = e; if (current === 'objectifs') render('objectifs'); });
+addEventListener('beforeinstallprompt', e => { e.preventDefault(); installPrompt = e; if (current === 'objectifs') rerender('objectifs'); });
 const standalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 const isIOS = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 if (canSW) navigator.serviceWorker.addEventListener('message', e => {
-  if (e.data?.type === 'offline-all-done') { S.offlineAll = e.data.ok === e.data.total; save(); toast(S.offlineAll ? 'C\'est prêt : tu peux écrire tous les caractères sans connexion.' : 'Une partie des tracés n\'a pas pu être téléchargée, réessaie avec une meilleure connexion.'); if (current === 'objectifs') render('objectifs'); }
+  if (e.data?.type === 'offline-all-done') { S.offlineAll = e.data.ok === e.data.total; save(); toast(S.offlineAll ? 'C\'est prêt : tu peux écrire tous les caractères sans connexion.' : 'Une partie des tracés n\'a pas pu être téléchargée, réessaie avec une meilleure connexion.'); if (current === 'objectifs') rerender('objectifs'); }
 });
 // Première visite : le questionnaire couvre tout l'écran, inutile de dessiner l'accueil derrière
 header();
