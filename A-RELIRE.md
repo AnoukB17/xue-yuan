@@ -92,3 +92,5 @@ Source : `tools/content/histoires.py` (contrôlé automatiquement : vocabulaire 
   - [ ] À vérifier par un natif : naturel des textes (en particulier 眼睛也很累, 回到家，我吃了药，就去睡觉了).
 - [x] Histoires HSK 3 et 4 (`docs/histoires/hsk3.md`, `hsk4.md`) : 6 histoires, validées le 14/11/2026, intégrées.
   - [ ] À vérifier par un natif : tournures simplifiées pour rester dans le vocabulaire du niveau (我只好把毛衣送回去, 我们等了很长时间, 题不太难).
+- [x] Histoires HSK 5 et 6 (`docs/histoires/hsk5.md`, `hsk6.md`) : 6 histoires, validées le 14/11/2026, intégrées. Les 18 histoires (HSK 1 à 6) sont dans l'appli.
+  - [ ] À vérifier par un natif : passages les plus écrits (向往田园生活, 从重复的工作中解放了出来, 迟到了十年) et traduction de 活到老，学到老.
