@@ -90,3 +90,5 @@ Source : `tools/content/histoires.py` (contrôlé automatiquement : vocabulaire 
   - [ ] À vérifier par un natif : naturel des textes (en particulier 我们还要两杯茶, 吃好了, 它不在桌子下) et justesse des traductions.
 - [x] Histoires HSK 2 (`docs/histoires/hsk2.md`) : 3 histoires, validées le 14/11/2026, intégrées.
   - [ ] À vérifier par un natif : naturel des textes (en particulier 眼睛也很累, 回到家，我吃了药，就去睡觉了).
+- [x] Histoires HSK 3 et 4 (`docs/histoires/hsk3.md`, `hsk4.md`) : 6 histoires, validées le 14/11/2026, intégrées.
+  - [ ] À vérifier par un natif : tournures simplifiées pour rester dans le vocabulaire du niveau (我只好把毛衣送回去, 我们等了很长时间, 题不太难).
