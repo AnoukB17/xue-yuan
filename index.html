@@ -4174,13 +4174,15 @@ if (S.toneColors === false && S.tones === 'color') S.tones = 'off';
 // Configuration du projet Firebase (console Firebase › Paramètres du projet › Vos applications › Config). Ces valeurs
 // sont publiques par conception : la sécurité repose sur les règles Firestore (voir docs/FIREBASE.md).
 const FIREBASE_CONFIG = window.__fbConfig || {apiKey: 'AIzaSyD1kdgEIkksHVeUozlAOLgANRGahbxyBiM', authDomain: 'xue-yuan.firebaseapp.com', projectId: 'xue-yuan', storageBucket: 'xue-yuan.firebasestorage.app', messagingSenderId: '472244096532', appId: '1:472244096532:web:15afdf1df296cbe4eee101'}; // __fbConfig : tests (tools/check-compte.js)
-const FB_CDN = 'https://cdn.jsdelivr.net/npm/firebase@10.14.1/';
+// SDK Firebase 10.14.1 (app, auth, firestore) assemblé en un seul fichier servi par l'appli (tools/build-firebase.sh) :
+// une seule version de chaque module, pas de dépendance à un CDN. Environ 100 Ko compressés, chargés seulement si besoin.
+const FB_SDK = './vendor/firebase-10.14.1.js';
 const CLOUD_FLAG = 'xy-cloud'; // présent tant qu'une session est ouverte sur cet appareil : on recharge Firebase au démarrage
 const inClaude = () => !!window.claude; // dans l'artifact claude.ai, la progression suit déjà le compte Claude
 const cloud = {fb: null, ready: null, user: null, key: '', timer: null, last: 0, busy: false, error: ''};
 const cloudOn = () => !!(cloud.user && cloud.user.emailVerified);
 function loadFirebase() {
-  return cloud.ready ||= (window.__fbLoader ? window.__fbLoader() : Promise.all(['app', 'auth', 'firestore'].map(m => import(FB_CDN + m + '/+esm'))).then(([app, auth, firestore]) => ({app, auth, firestore})))
+  return cloud.ready ||= (window.__fbLoader ? window.__fbLoader() : import(FB_SDK))
     .then(m => {
       const app = m.app.initializeApp(FIREBASE_CONFIG), auth = m.auth.getAuth(app);
       auth.languageCode = 'fr'; // e-mails de vérification et de réinitialisation en français

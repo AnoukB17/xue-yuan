@@ -1,8 +1,12 @@
 # Activer les comptes Xué Yuán (Firebase)
 
 L'écran **Moi › Mon compte** permet de créer un compte (adresse e-mail vérifiée) et de synchroniser la progression
-entre appareils. Tant que la configuration ci-dessous n'est pas faite, l'écran affiche « Bientôt disponible » et
-l'appli fonctionne comme avant (progression sur l'appareil).
+entre appareils.
+
+**État (14/11/2026) : configuré et en service** sur le projet Firebase `xue-yuan` (offre Spark) : appli Web, connexion
+par e-mail et mot de passe, domaine `anoukb17.github.io` autorisé, base Firestore `eur3` (Europe), règles publiées
+(`firestore.rules`). Essai réel réussi : écriture refusée sans adresse confirmée et chez un autre utilisateur,
+connexion, synchronisation, suppression du compte. Les étapes ci-dessous servent à refaire la configuration.
 
 Le service est gratuit à cette échelle (offre Spark de Firebase : 50 000 lectures par jour).
 
@@ -63,6 +67,6 @@ Coller le bloc `firebaseConfig` de l'étape 1 dans la conversation. Je le place 
   compte et la copie en ligne).
 - **« Tout remettre à zéro »** l'emporte sur la copie en ligne.
 - **Artifact claude.ai** : pas d'écran Compte, la progression y suit déjà le compte Claude.
-- Le code Firebase (≈ 250 Ko) n'est chargé que sur l'écran Compte ou quand une session est ouverte : la première
+- Le code Firebase (`vendor/firebase-10.14.1.js`, ≈ 100 Ko compressés, reconstruit par `tools/build-firebase.sh`) n'est chargé que sur l'écran Compte ou quand une session est ouverte : la première
   visite reste aussi rapide.
 - Test : `node tools/check-compte.js` (Firebase simulé, 19 vérifications).
