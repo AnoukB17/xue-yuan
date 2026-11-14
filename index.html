@@ -640,7 +640,7 @@ body.kai{--f-han:var(--f-kai)}
 <dialog id="wsheet" aria-labelledby="ws-title"></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.2/dist/hanzi-writer.min.js"></script>
+<script defer id="hw" src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.2/dist/hanzi-writer.min.js"></script>
 <script>
 // Tracés des caractères : chargés à la demande depuis data/strokes-*.json (voir strokeData). Ici, seulement l'index.
 const STROKE_INDEX = {"1":"一七三上下不东个中么九习书买了二五些京亮人什今他们会住作你候做儿先八六关兴再写冷几出分前北医十午去友叫号吃同名后吗听呢和哪商喂喜喝四回国在坐块多大天太女她好妈姐子字学客家对小少岁工师年店开影很怎想我打时明星昨是月有朋服期本机来杯果校样桌椅欢气水汉没漂点热爱爸狗猫现生电的看睡租米系老能脑苹茶菜衣西见视觉认识话语说请读谁谢起车这那都里钟钱院雨面飞饭高","2":"丈两为乐也事介从以件休但体便公共准别到务动助千卖可右司吧告员咖哥唱啡因场备外夫奶妹始姓孩它完宜室宾就左已希帮常床弟得忙快思息您情意慢懂房所手找报教新旅日早晚晴最望次歌正步每比汽泳洗游火牛玩班球瓜男病白百真眼着睛知票离穿站笑第等篮累红纸绍经给羊考肉舞色药蛋表要让诉试课贵走足跑路跳踢身边运近还进远送道错长门问间阴雪非题颜馆鱼鸡黑","3":"且信健元冒冰决净力办加努包化单参发变口向响图地坏城境姨婚安定实害山市干平康当心必怕感成扫把护担择提搬放故文斤方春极树梯法满炼烧然照物环理用画目相秋种简算箱糕结而聪节被解超趣较过迟选重铁锻闻阳阿附除需静须顾饱饿马鼻万世业主久乎于伞位借假像其典冬刚刮刷刻半南卡历又双叔句只史周哭啊啤嘴园声复夏头奇如季容层居差己带帽应张忘急怪总惯愿戏或才拿换据接数料旧易更末朵李束条板查根检楚楼段求河注清渴澡灯熊爬爷片牙特瓶甜界留疼瘦皮盘直短矮碗礼空突笔答筷级练终绩绿网者耳聊育胖脚脸腿自舒般船花草蓝蕉行街衫衬裙裤角议记讲词该调赛越跟轻辆迎遇邮邻酒银难鞋音风饮香骑鲜鸟黄","4":"丢争估保倒傲免全则功励原反否尊尔展座弄微恼扬抱掉排林森歉死烦福积竞计诚谅费醒键闹随饼骄验鼓与专严丰丽举之乒乓乘乱云互亚交亲仅仍仔付价任份众优伙传伤低何使例供俩修倍值停偶傅允光克入具养内况凉减刀切划列判利剧剩勇勺匙区博占卫印危即却厅厉压厌厕厚厨及取受另台叶各合吸呀味呼命咱咳咸售嗽困围圾址坚垃基堵塑填增士处够失奋奖存孙寄密富寒察导封将尝尤尽局巧巾帅并幸幽广序底度建弃式引弹彩往律忆志怀态怜性恐悉悔惊惜愉慕懒戚戴户扔扮扰批技折抬抽拉拒招拜拾持挂指按挺授推播擦支收改效敢散敲整断族无既普景暂暑暖术杂材松染柿标格案桥桶梦棒棵植概橡款止此母毕毛民永汁汗江污汤沙油泉泼洋洲活流济浪海消深温演漫激烟烤熟父牌猜琴甚由申疑登盐盒省矿码研破础硕确示社祝禁秀科秒程稍究穷窗竟章童符笨签管篇籍粗精糖紧约纪线细绝继续缺美羞羡羽翻耐职联聘聚肚肤肥肯胳脏脱脾膊膏至航艺苦获萄落著葡虎虑袋袜观规言警讨许论证评译详误谈谊象貌负责败货质购贺资赚赢赶趟距躺转输辛辣连迷适通逛速遍邀郊部酸释量金针钢钥镜阅队际降险陪零页顺预餐饺首骗鸭麻默龄","autres":"乞亡亻仙兑冂冫华吉咬品囗土套娜宀宝寸尾屋巴忄愛旁曷木灬玉田竹舌艹讠谜豕辉靠饣丝代刘君國夸學宿形戋扌拍摘攵晶書東枝桠楷氵泡煮甄甲疒痛盖石篆纟绞背腰良芬芳若英茉莉萬衤說访贝車辶邓钅門闪隶雷電青食馥馬骂骨魚麦龍龙"};
@@ -665,6 +665,15 @@ const strokeLoader = onFail => (ch, done) => { strokeData(ch).then(d => { if (d)
 }); };
 // L'outil d'écriture vient d'un CDN : s'il manque (hors ligne, réseau filtré), on le dit au lieu de planter
 const writerReady = () => typeof HanziWriter !== 'undefined';
+// Le script est chargé en « defer » (il ne bloque plus l'affichage) : il arrive après ce script-ci. Tant qu'il n'a ni
+// réussi ni échoué, les écrans d'écriture l'attendent au lieu d'annoncer une erreur.
+let writerDone = false;
+const writerSettled = new Promise(res => {
+  const tag = document.getElementById('hw');
+  if (writerReady() || !tag) return res();
+  tag.addEventListener('load', res, {once: true}); tag.addEventListener('error', res, {once: true});
+}).then(() => { writerDone = true; });
+const writerLoading = '<p class="muted" style="text-align:center;padding:24px">Chargement de l\'outil d\'écriture…</p>';
 // Phrases d'exemple (HSK 2 pour l'instant), chargées au démarrage ; l'appli fonctionne sans
 const EXAMPLES = {};
 const examplesReady = fetch('data/sentences-hsk2.json').then(r => r.ok ? r.json() : {}).then(d => Object.assign(EXAMPLES, d)).catch(() => {});
@@ -3908,7 +3917,10 @@ function writePad(el, c, {memory, onDone}) {
   el.innerHTML = `<div class="pad"><svg class="grid-bg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><g stroke="var(--c)" stroke-width=".4" stroke-dasharray="2 2" opacity=".55"><line x1="0" y1="0" x2="100" y2="100"/><line x1="100" y1="0" x2="0" y2="100"/><line x1="50" y1="0" x2="50" y2="100"/><line x1="0" y1="50" x2="100" y2="50"/></g></svg><div class="target"></div></div>`;
   const t = $('.target', el), size = t.getBoundingClientRect().width || 300;
   const giveUp = () => { t.innerHTML = writerMissing; if ($('#wskip', el)) return; el.insertAdjacentHTML('beforeend', '<button class="btn" id="wskip">Passer cette étape →</button>'); $('#wskip', el).addEventListener('click', () => onDone(false, 0)); };
-  if (!writerReady()) { giveUp(); return null; }
+  if (!writerReady()) {
+    if (!writerDone) { t.innerHTML = writerLoading; writerSettled.then(() => { if (el.isConnected) writePad(el, c, {memory, onDone}); }); return null; }
+    giveUp(); return null;
+  }
   const wr = HanziWriter.create(t, c, {width: size, height: size, padding: 14, showOutline: !memory, showCharacter: false,
     strokeColor: cssVar('--ink'), outlineColor: cssVar('--outline'), drawingColor: cssVar('--c', el), highlightColor: cssVar('--verm'), radicalColor: cssVar('--c', el),
     drawingWidth: 22, charDataLoader: strokeLoader(giveUp)});
@@ -5154,7 +5166,11 @@ function vWrite() {
     $('#w-fb', s).textContent = ''; $('#w-fb', s).className = 'feedback';
     const pad = $('#pad', s); pad.innerHTML = '';
     const size = pad.getBoundingClientRect().width || 300;
-    if (!writerReady()) { writer = null; pad.innerHTML = writerMissing; return; }
+    if (!writerReady()) {
+      writer = null;
+      if (!writerDone) { pad.innerHTML = writerLoading; writerSettled.then(() => { if (writeCurrent === c && pad.isConnected) load(c); }); return; }
+      pad.innerHTML = writerMissing; return;
+    }
     writer = HanziWriter.create(pad, c, {
       width: size, height: size, padding: 14, showOutline: outline, showCharacter: false,
       strokeColor: cssVar('--ink'), outlineColor: cssVar('--outline'), drawingColor: cssVar('--c', s), highlightColor: cssVar('--verm'), radicalColor: cssVar('--c', s),
