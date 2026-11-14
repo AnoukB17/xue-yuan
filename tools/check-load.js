@@ -6,7 +6,8 @@ const FILE = path.resolve(process.argv[2] || 'index.html');
 const HW = fs.readFileSync(path.join(__dirname, 'node_modules/hanzi-writer/dist/hanzi-writer.min.js'), 'utf8');
 const ko = n => (n / 1024).toFixed(0) + ' Ko';
 async function open(b, { cdn = true, data = true } = {}) {
-  const p = await (await b.newContext()).newPage(); const got = []; const errs = [];
+  // Service worker bloqué : ses requêtes échappent à page.route, il récupérerait les fichiers que le test veut rendre inaccessibles
+  const p = await (await b.newContext({ serviceWorkers: 'block' })).newPage(); const got = []; const errs = [];
   p.on('pageerror', e => errs.push(e.message));
   p.on('response', async r => { try { const u = r.url(); if (/fonts/.test(u)) return; got.push({ u: u.split('/').pop(), n: (await r.body()).length }); } catch {} });
   await p.route('**/*', r => { const u = r.request().url();
@@ -40,7 +41,9 @@ async function open(b, { cdn = true, data = true } = {}) {
     await p.goto(await urlFor(FILE)); await p.evaluate(() => go('ecriture')); await p.waitForTimeout(700);
     console.log('Sans les fichiers de tracés : message →', await p.textContent('#toast'), '| erreurs JS :', errs.length, errs.join(' | '));
     await p.evaluate(() => { seance = { steps: [{ k: 'write', t: 'Écriture', d: '', c: '人' }], back: false, i: 0, res: [] }; go('seance'); }); await p.waitForTimeout(700);
-    console.log('  séance, étape d\'écriture → bouton « Passer » :', !!(await p.$('#wskip')), '| erreurs JS :', errs.length, errs.join(' | '));
+    const skip = !!(await p.$('#wskip')); if (skip) { await p.click('#wskip'); await p.waitForTimeout(200); }
+    console.log('  séance, étape d\'écriture → bouton « Passer » :', skip, skip ? '→ ' + (await p.textContent('#wf')).trim() : '', '| erreurs JS :', errs.length, errs.join(' | '));
+    if (!skip) process.exitCode = 1;
   }
   await b.close();
 })();
