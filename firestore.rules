@@ -1,11 +1,19 @@
 rules_version = '2';
-// Chaque personne ne lit et n'écrit que sa propre progression, et seulement après avoir confirmé son adresse e-mail.
+// Chaque personne ne lit et n'écrit que sa propre progression (et ses points de restauration),
+// et seulement après avoir confirmé son adresse e-mail.
 service cloud.firestore {
   match /databases/{database}/documents {
+    function owner(uid) {
+      return request.auth != null
+          && request.auth.uid == uid
+          && request.auth.token.email_verified == true;
+    }
     match /users/{uid} {
-      allow read, write: if request.auth != null
-                         && request.auth.uid == uid
-                         && request.auth.token.email_verified == true;
+      allow read, write: if owner(uid);
+      // Points de restauration : une copie par jour, gardée 30 jours
+      match /backups/{id} {
+        allow read, write: if owner(uid);
+      }
     }
   }
 }

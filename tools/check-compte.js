@@ -30,10 +30,12 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
         deleteUser: async u => { delete M.users[u.email]; set(null); },
       },
       firestore: {
-        getFirestore: () => ({}), doc: (db, c, id) => c + '/' + id,
+        getFirestore: () => ({}), doc: (db, ...p) => p.join('/'), collection: (db, ...p) => p.join('/'),
         getDoc: async k => ({exists: () => k in M.docs, data: () => M.docs[k]}),
-        setDoc: async (k, v) => { M.docs[k] = v; M.log.push(['set', k]); },
+        setDoc: async (k, v) => { M.docs[k] = v; M.log.push(['set', k]); const cb = (M.subs || {})[k]; if (cb) setTimeout(() => cb({metadata: {hasPendingWrites: false}, exists: () => true, data: () => M.docs[k]}), 0); },
         deleteDoc: async k => { delete M.docs[k]; },
+        getDocs: async c => ({docs: Object.keys(M.docs).filter(k => k.startsWith(c + '/') && !k.slice(c.length + 1).includes('/')).map(k => ({id: k.slice(c.length + 1), data: () => M.docs[k]}))}),
+        onSnapshot: (k, cb) => { (M.subs = M.subs || {})[k] = cb; return () => { delete M.subs[k]; }; },
       },
     });
   });
@@ -82,18 +84,39 @@ const check = (ok, msg) => { console.log((ok ? '✓ ' : '✗ ') + msg); if (!ok)
 
   // Confirmation par le lien, puis fusion avec la progression du compte existant (u-old)
   await p.evaluate(() => { __fb.users['moi@exemple.fr'].v = true; __fb.users['moi@exemple.fr'].uid = 'u-old'; __fb.auth.currentUser.uid = 'u-old'; });
-  await p.click('#aok'); await p.waitForSelector('text=progression synchronisée');
+  await p.click('#aok'); await p.waitForSelector('text=synchronisée en direct');
   const st = await p.evaluate(() => ({xp: S.xp, srs: Object.keys(S.srs).sort().join(''), one: S.srs['一'].b, doc: JSON.parse(__fb.docs['users/u-old'].s)}));
   check(st.xp === 40 && st.srs === '一二' && st.one === 1, `fusion : xp max (${st.xp}), mots des deux côtés (${st.srs}), carte la plus récente gardée`);
   check(Object.keys(st.doc.srs).length === 2, 'progression fusionnée renvoyée en ligne');
+
+  // Point de restauration du jour : la progression en ligne d'avant la fusion
+  const bk = await p.evaluate(() => Object.keys(__fb.docs).filter(k => k.startsWith('users/u-old/backups/')));
+  check(bk.length === 1 && await p.evaluate(k => JSON.parse(__fb.docs[k].s).xp, bk[0]) === 40, 'point de restauration du jour créé (progression en ligne d\'avant)');
+
+  // Synchronisation en direct : un autre appareil sauvegarde, la progression arrive ici sans rien toucher
+  await p.evaluate(() => { const k = 'users/u-old', st = JSON.parse(__fb.docs[k].s); st.srs['四'] = {b: 1, s: 1, d: 5, last: 999999, due: 999999}; st.xp = 55; st.updated = Date.now() + 1000; __fb.docs[k] = {s: JSON.stringify(st), updated: st.updated}; __fb.subs[k]({metadata: {hasPendingWrites: false}, exists: () => true, data: () => __fb.docs[k]}); });
+  await p.waitForFunction(() => !!S.srs['四'], null, {timeout: 3000}).catch(() => {});
+  check(await p.evaluate(() => !!S.srs['四'] && S.xp === 55 && !!S.srs['二']), 'en direct : révisions de l\'autre appareil reçues et fusionnées');
+  const nSet = await p.evaluate(() => __fb.log.filter(x => x[0] === 'set' && x[1] === 'users/u-old').length);
+  await p.waitForTimeout(5000);
+  check(await p.evaluate(n => __fb.log.filter(x => x[0] === 'set' && x[1] === 'users/u-old').length - n, nSet) <= 1, 'pas de boucle de sauvegardes entre appareils');
 
   // Sauvegarde automatique après une activité
   const n0 = await p.evaluate(() => __fb.log.filter(x => x[0] === 'set').length);
   await p.evaluate(() => { S.xp += 3; save(); });
   await p.waitForFunction(n => __fb.log.filter(x => x[0] === 'set').length > n, n0, {timeout: 8000});
-  check(await p.evaluate(() => JSON.parse(__fb.docs['users/u-old'].s).xp) === 43, 'chaque sauvegarde part en ligne (après 4 s)');
+  check(await p.evaluate(() => JSON.parse(__fb.docs['users/u-old'].s).xp === S.xp), 'chaque sauvegarde part en ligne (après 4 s)');
 
   check(await p.evaluate(() => localStorage.getItem('xy-cloud') === '1'), 'session mémorisée : Firebase se recharge tout seul au prochain lancement');
+
+  // Restaurer un point de restauration (et l'état actuel est gardé avant)
+  await p.evaluate(() => go('compte')); await p.waitForSelector('#arest');
+  await p.click('#arest summary'); await p.waitForSelector('[data-rb]');
+  p.once('dialog', d => d.accept()); await p.click('[data-rb="0"]');
+  await p.waitForFunction(() => S.xp === 40, null, {timeout: 5000}).catch(() => {});
+  const rs = await p.evaluate(() => ({xp: S.xp, four: !!S.srs['四'], cloud: JSON.parse(__fb.docs['users/u-old'].s).xp, kept: Object.keys(__fb.docs).filter(k => k.includes('/backups/') && k.includes('~')).length}));
+  check(rs.xp === 40 && !rs.four && rs.cloud === 40 && rs.kept === 1, `restauration : progression d'avant remise (xp ${rs.xp}), envoyée en ligne, état précédent gardé (${rs.kept})`);
+  await p.evaluate(() => { S.xp = 43; save(); }); await p.waitForTimeout(4500);
 
   // Déconnexion, mauvais mot de passe, mot de passe oublié
   await p.evaluate(() => go('compte')); await p.waitForSelector('#af, #aout');

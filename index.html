@@ -4227,6 +4227,7 @@ async function onCloudUser(u) {
   cloud.user = u || null; cloud.key = key;
   if (u) accountTab = 'login'; // après une création de compte, on revient ensuite sur « Se connecter »
   try { u ? localStorage.setItem(CLOUD_FLAG, '1') : localStorage.removeItem(CLOUD_FLAG); } catch {}
+  if (!cloudOn()) cloudStop();
   if (cloudOn()) await cloudPull();
   // On ne redessine que si l'état du compte a changé (sinon un message affiché sous les boutons disparaîtrait)
   if (key !== was) { if (cloudOn() && $('#gab')) return closeGate(); redrawAccount(); }
@@ -4261,6 +4262,7 @@ async function cloudPull() {
   try {
     const snap = await cloud.fb.f.getDoc(cloudRef());
     if (snap.exists()) {
+      cloud.remote = snap.data();
       const remote = JSON.parse(snap.data().s || '{}');
       S = mergeStates(S, remote); migrateUnits();
       try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch {}
@@ -4269,16 +4271,83 @@ async function cloudPull() {
     }
     await cloudPush();
     cloud.error = '';
+    cloudListen();
   } catch (e) { cloud.error = 'La synchronisation a échoué : ta progression reste enregistrée sur cet appareil.'; console.warn('Synchronisation impossible', e); }
 }
 async function cloudPush() {
   if (!cloudOn() || cloud.busy) return;
   cloud.busy = true;
-  try { await cloud.fb.f.setDoc(cloudRef(), {s: JSON.stringify(S), updated: S.updated || Date.now()}); cloud.last = Date.now(); cloud.error = ''; }
+  try {
+    await cloudBackup();
+    const str = JSON.stringify(S);
+    cloud.sent = str;
+    await cloud.fb.f.setDoc(cloudRef(), {s: str, updated: S.updated || Date.now()});
+    cloud.remote = {s: str, updated: S.updated || Date.now()}; cloud.last = Date.now(); cloud.error = '';
+  }
   catch (e) { cloud.error = 'La dernière sauvegarde en ligne a échoué ; elle sera retentée.'; console.warn('Sauvegarde en ligne impossible', e); }
   cloud.busy = false;
 }
 function cloudSchedule() { if (!cloudOn()) return; clearTimeout(cloud.timer); cloud.timer = setTimeout(cloudPush, 4000); }
+// Comparaison indépendante de l'ordre des clés
+const canon = x => JSON.stringify(x, (k, v) => v && typeof v === 'object' && !Array.isArray(v) ? Object.fromEntries(Object.entries(v).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)) : v);
+// Synchronisation en direct : dès qu'un autre appareil sauvegarde, sa progression est fusionnée ici (sans perte).
+// Pendant un exercice, l'écran n'est pas redessiné : seuls l'en-tête et les données changent.
+function cloudListen() {
+  if (cloud.unsub || !cloudOn() || !cloud.fb.f.onSnapshot) return;
+  cloud.echo = [];
+  cloud.unsub = cloud.fb.f.onSnapshot(cloudRef(), snap => {
+    if (snap.metadata?.hasPendingWrites || !snap.exists()) return;
+    const d = snap.data();
+    if (!d || d.s === cloud.sent) return; // notre propre sauvegarde qui revient
+    let remote; try { remote = JSON.parse(d.s || '{}'); } catch { return; }
+    cloud.remote = d;
+    const before = canon(S);
+    S = mergeStates(S, remote); migrateUnits();
+    if (canon(S) !== before) {
+      try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch {}
+      cloud.last = Date.now(); header();
+      if (['accueil', 'objectifs', 'compte'].includes(current) && $('#onb').hidden) rerender(current);
+    }
+    // Cet appareil avait des progrès que l'autre n'a pas encore : on les renvoie (avec un garde-fou anti-boucle)
+    if (canon(S) !== canon(mergeStates(remote, remote))) {
+      const now = Date.now(); cloud.echo = cloud.echo.filter(t => now - t < 60000);
+      if (cloud.echo.length < 5) { cloud.echo.push(now); cloudSchedule(); }
+    }
+  }, e => { console.warn('Synchronisation en direct impossible', e); cloud.unsub = null; });
+}
+function cloudStop() {
+  try { cloud.unsub?.(); } catch {}
+  cloud.unsub = null; cloud.remote = null; cloud.sent = null; cloud.backupDay = null;
+}
+// Points de restauration : une copie par jour de la progression en ligne (telle qu'elle était avant la première
+// sauvegarde du jour), gardée 30 jours, dans users/{uid}/backups/{AAAA-MM-JJ}
+const BACKUP_KEEP = 30;
+const backupRef = id => cloud.fb.f.doc(cloud.fb.db, 'users', cloud.user.uid, 'backups', id);
+const backupsCol = () => cloud.fb.f.collection(cloud.fb.db, 'users', cloud.user.uid, 'backups');
+async function cloudBackup(force) {
+  const day = dayKey();
+  if (!force && (cloud.backupDay === day || !cloud.remote?.s)) return;
+  if (!force) cloud.backupDay = day;
+  try {
+    const id = force ? `${day}~${Date.now()}` : day;
+    if (!force && (await cloud.fb.f.getDoc(backupRef(id))).exists()) return;
+    await cloud.fb.f.setDoc(backupRef(id), {s: cloud.remote.s, updated: cloud.remote.updated || 0, at: Date.now(), ...(force ? {note: force} : {})});
+    const ids = (await cloud.fb.f.getDocs(backupsCol())).docs.map(d => d.id).sort();
+    for (const old of ids.slice(0, Math.max(0, ids.length - BACKUP_KEEP))) await cloud.fb.f.deleteDoc(backupRef(old));
+  } catch (e) { console.warn('Point de restauration impossible', e); }
+}
+async function listBackups() {
+  const snap = await cloud.fb.f.getDocs(backupsCol());
+  return snap.docs.map(d => ({id: d.id, ...d.data()})).sort((a, b) => b.at - a.at);
+}
+async function restoreBackup(b) {
+  // Avant de restaurer : un point de restauration de l'état actuel, pour pouvoir revenir en arrière
+  cloud.remote = {s: JSON.stringify(S), updated: S.updated || 0};
+  await cloudBackup('avant restauration');
+  S = {...structuredClone(DEFAULT), ...JSON.parse(b.s || '{}')}; migrateUnits();
+  S.wiped = Date.now(); save(); clearTimeout(cloud.timer); await cloudPush();
+  header();
+}
 addEventListener('visibilitychange', () => { if (document.hidden && cloudOn()) { clearTimeout(cloud.timer); cloudPush(); } });
 // Session déjà ouverte sur cet appareil : on reconnecte sans attendre que l'écran Compte soit ouvert
 try { if (FIREBASE_CONFIG && !inClaude() && localStorage.getItem(CLOUD_FLAG)) whenIdle(() => loadFirebase().catch(() => {})); } catch {}
@@ -4346,17 +4415,39 @@ function drawAccount(box) {
     const status = (t, ok) => { const p = $('#as', box); if (p) { p.textContent = t; p.className = 'feedback ' + (ok ? 'ok' : t ? 'ko' : ''); } };
     const busy = (b, on, label) => { b.disabled = on; if (label) b.textContent = label; };
     if (u && u.emailVerified) {
-      box.innerHTML = `<div class="card stack" style="align-items:flex-start"><span class="label">Connectée · progression synchronisée</span><strong class="ttl" id="ae"></strong>
+      box.innerHTML = `<div class="card stack" style="align-items:flex-start"><span class="label">Connectée · synchronisée en direct</span><strong class="ttl" id="ae"></strong>
           <p class="muted" style="font-size:.92rem">${cloud.error ? esc(cloud.error) : cloud.last ? `Dernière sauvegarde en ligne : ${new Date(cloud.last).toLocaleString('fr-FR', {dateStyle: 'short', timeStyle: 'short'})}.` : 'Ta progression se sauvegarde automatiquement.'}</p>
           <div class="row"><button class="btn" id="async">Synchroniser maintenant</button><button class="btn ghost" id="aout">Se déconnecter</button></div><p role="status" class="feedback" id="as"></p></div>
+        <details class="card" id="arest"><summary>Points de restauration</summary><p class="muted" style="font-size:.92rem;margin:.6rem 0">Une copie de ta progression est gardée chaque jour pendant ${BACKUP_KEEP} jours. Après une mauvaise manipulation, reviens à une date précédente.</p><div class="stack" id="arl" style="gap:8px"><p class="muted">Chargement…</p></div></details>
         <details class="card"><summary>Supprimer mon compte</summary><p class="muted" style="font-size:.92rem;margin:.6rem 0">Ton compte et la copie en ligne de ta progression seront effacés. La progression reste sur cet appareil.</p><button class="btn" id="adel" style="color:var(--bad)">Supprimer définitivement mon compte</button></details>`;
       $('#ae', box).textContent = u.email;
       $('#async', box).addEventListener('click', async e => { busy(e.currentTarget, true, 'Synchronisation…'); await cloudPull(); redrawAccount(); });
       $('#aout', box).addEventListener('click', async () => { await cloudPush(); await a.signOut(auth); toast('Déconnectée. Ta progression reste sur cet appareil.'); });
+      $('#arest', box).addEventListener('toggle', async e => {
+        if (!e.currentTarget.open) return;
+        const l = $('#arl', box);
+        try {
+          const bs = await listBackups();
+          if (!bs.length) { l.innerHTML = '<p class="muted">Pas encore de point de restauration : le premier sera créé demain, à ta première séance.</p>'; return; }
+          l.innerHTML = bs.map((b, i) => { let st = {}; try { st = JSON.parse(b.s); } catch {} const n = Object.keys(st.srs || {}).length;
+            return `<div class="row" style="justify-content:space-between;gap:8px;flex-wrap:nowrap"><span><strong>${esc(new Date(b.at).toLocaleDateString('fr-FR', {weekday: 'long', day: 'numeric', month: 'long'}))}</strong>${b.note ? ` <span class="muted">(${esc(b.note)})</span>` : ''}<br><span class="muted" style="font-size:.88rem">${n} mot${n > 1 ? 's' : ''} vu${n > 1 ? 's' : ''} · ${st.xp || 0} XP</span></span><button class="btn small" data-rb="${i}">Restaurer</button></div>`; }).join('');
+          $$('[data-rb]', l).forEach(btn => btn.addEventListener('click', async () => {
+            const b = bs[+btn.dataset.rb];
+            if (!confirm(`Revenir à ta progression du ${new Date(b.at).toLocaleDateString('fr-FR', {day: 'numeric', month: 'long'})} ? Ta progression actuelle sera gardée comme point de restauration.`)) return;
+            btn.disabled = true;
+            try { await restoreBackup(b); toast('Progression restaurée.'); redrawAccount(); }
+            catch (err) { btn.disabled = false; toast('La restauration a échoué : réessaie dans un instant.'); }
+          }));
+        } catch (err) { l.innerHTML = '<p class="muted">Les points de restauration ne sont pas disponibles pour le moment.</p>'; console.warn(err); }
+      });
       $('#adel', box).addEventListener('click', async e => {
         if (!confirm('Supprimer définitivement ton compte Xué Yuán ?')) return;
         busy(e.currentTarget, true);
-        try { await cloud.fb.f.deleteDoc(cloudRef()); await a.deleteUser(u); toast('Compte supprimé.'); }
+        try {
+          cloudStop();
+          try { for (const d of (await cloud.fb.f.getDocs(backupsCol())).docs) await cloud.fb.f.deleteDoc(backupRef(d.id)); } catch {}
+          await cloud.fb.f.deleteDoc(cloudRef()); await a.deleteUser(u); toast('Compte supprimé.');
+        }
         catch (err) { status(authMsg(err)); busy(e.currentTarget, false); }
       });
       return;
