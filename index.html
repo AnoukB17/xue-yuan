@@ -392,6 +392,7 @@ body.onb-open{overflow:hidden}
 .pwbar i{height:8px;border-radius:999px;background:var(--sunk)}
 .pwbar i.on{background:var(--pc)}
 .pwlab{font-weight:700}
+.pill.dipl{background:var(--gold);color:var(--gold-ink);font-weight:700}
 .act{padding:40px 24px;gap:14px}
 .act h1{font:700 1.7rem/1.2 var(--f-display)}
 .act-g{font-family:var(--f-brush);font-size:84px;line-height:1;color:var(--teal-ink);background:var(--teal);width:120px;height:120px;border-radius:32px;display:grid;place-items:center}
@@ -4189,7 +4190,7 @@ const DEFAULT = {
   secs: {}, goal: {mode: 'day', minutes: 15, days: [0,1,2,3,4,5,6]},
   reminder: {time: '19:00', days: [0,1,2,3,4]}, rate: 0.8,
   srs: {}, lessons: {}, riddles: {}, written: {},
-  pinyin: 'auto', tones: 'color', textScale: 1, kai: false, sound: true, haptics: true, quiet: false, chunks: {}, conf: {}, detect: {}, recall: {}, profile: null, exams: [], levelOk: {}, gram: {}, stories: {}, oral: {n: 0}
+  pinyin: 'auto', tones: 'color', textScale: 1, kai: false, sound: true, haptics: true, quiet: false, chunks: {}, conf: {}, detect: {}, recall: {}, profile: null, exams: [], levelOk: {}, diplomas: [], gram: {}, stories: {}, oral: {n: 0}
 };
 let S = structuredClone(DEFAULT);
 const LS_KEY = 'hsk-jardin-v1';
@@ -4253,6 +4254,7 @@ function mergeStates(a, b) {
   m.xp = Math.max(a.xp || 0, b.xp || 0);
   m.oral = {n: Math.max(a.oral?.n || 0, b.oral?.n || 0)};
   m.exams = uniqBy([...(older.exams || []), ...(newer.exams || [])], x => x.d).sort((x, y) => x.d - y.d).slice(-30);
+  m.diplomas = uniqBy([...(newer.diplomas || []), ...(older.diplomas || [])], d => d.v + '-' + d.l).sort((x, y) => x.l - y.l);
   m.onboarded = !!(a.onboarded || b.onboarded);
   m.updated = Math.max(a.updated || 0, b.updated || 0);
   return m;
@@ -4694,7 +4696,7 @@ function header() {
   $$('.st-xp').forEach(e => e.textContent = knownChars());
   $$('.st-level').forEach(e => e.textContent = S.level ? `HSK ${S.level}` : 'HSK ?');
 }
-const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, compte: vAccount, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar, histoires: vStories, oral: vOral, conversation: vChat};
+const VIEWS = {accueil: vHome, seance: vSeance, apprendre: vLearnHub, pratiquer: vPracticeHub, detective: vDetective, confusions: vConfusions, test: vTest, lecons: vLessons, quiz: vQuiz, ecriture: vWrite, chansons: vSongs, origines: vOrigins, devinettes: vRiddles, memo: vMemo, actus: vNews, objectifs: vGoals, compte: vAccount, diplome: vDiploma, dico: vDico, listes: vListes, examen: vExam, grammaire: vGrammar, histoires: vStories, oral: vOral, conversation: vChat};
 let current = 'accueil';
 function go(view, arg) { current = view; render(view, arg); try { history.replaceState(null, '', '#' + view); } catch {} }
 function route() { const h = location.hash.slice(1); go(VIEWS[h] ? h : 'accueil'); }
@@ -4722,7 +4724,7 @@ function render(view, arg) {
 }
 
 addEventListener('hashchange', route);
-const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], histoires: ['coral','读'], oral: ['teal','说'], conversation: ['indigo','问'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我'], compte: ['bamboo','户']};
+const SECTION = {listes: ['bamboo','表'], dico: ['indigo','典'], accueil: ['teal','今'], seance: ['teal','今'], apprendre: ['teal','学'], pratiquer: ['verm','练'], detective: ['plum','探'], confusions: ['coral','辨'], test: ['verm','测'], grammaire: ['plum','法'], histoires: ['coral','读'], oral: ['teal','说'], conversation: ['indigo','问'], examen: ['gold','试'], lecons: ['teal','课'], quiz: ['verm','考'], ecriture: ['indigo','写'], chansons: ['rose','歌'], origines: ['bronze','源'], devinettes: ['plum','谜'], memo: ['gold','记'], actus: ['coral','报'], objectifs: ['bamboo','我'], compte: ['bamboo','户'], diplome: ['gold','证']};
 const LV_COL = {1: 'teal', 2: 'bamboo', 3: 'gold', 4: 'verm', 5: 'plum', 6: 'indigo'};
 const tint = col => `style="--c:var(--${col});--c-ink:var(--${col}-ink)"`;
 const view = html => {
@@ -5750,6 +5752,71 @@ function vNews() {
 
 // ---------- Objectifs et rappels ----------
 let downloadsNs; const downloadsReady = (async () => { try { downloadsNs = await window.claude?.use?.('downloads'); } catch {} return downloadsNs; })();
+// ---------- Diplôme HSK obtenu ----------
+// L'ancien HSK (2.0, avant 2021) comptait moins de mots que le nouveau (3.0) : on retient le plus haut niveau du
+// nouveau programme dont le vocabulaire cumulé ne dépasse pas celui de l'ancien niveau (150, 300, 600, 1 200, 2 500, 5 000 mots).
+const OLD_HSK_WORDS = [0, 150, 300, 600, 1200, 2500, 5000];
+function diplomaEquiv(l, v) {
+  if (v === '3.0') return l;
+  let eq = 0, cum = 0;
+  for (const n of LEVELS) { cum += new Set(WORDS.filter(w => w.l === n).map(w => w.h)).size; if (cum <= OLD_HSK_WORDS[l] * 1.05) eq = n; } // 5 % de marge : l'ancien HSK 2 (300 mots) vaut le HSK 1 (301)
+  return eq;
+}
+const diplomaLabel = d => `HSK ${d.l}${d.v === '2.0' ? ' (ancien)' : ''}${d.date ? ' · ' + new Date(d.date + '-01').toLocaleDateString('fr-FR', {month: 'long', year: 'numeric'}) : ''}${d.score ? ' · ' + d.score + ' pts' : ''}`;
+let dipForm = {l: 0, v: '3.0', date: '', score: ''};
+function vDiploma() {
+  const s = view(`<div class="head"><span class="label">Diplôme</span><h1>Tu as obtenu un HSK ?</h1><p>Bravo ! Dis-le à l'appli : elle reprend à ton niveau, sans te faire réapprendre ce que tu sais déjà.</p></div><div id="dpb" class="stack"></div>`);
+  const box = $('#dpb', s), f = dipForm;
+  const draw = () => {
+    const eq = f.l ? diplomaEquiv(f.l, f.v) : 0;
+    box.innerHTML = `<form class="card stack" id="dpf" novalidate style="align-items:stretch">
+        <div class="field"><span class="label">Quel niveau ?</span><div class="presets" role="group" aria-label="Niveau obtenu">${LEVELS.map(n => `<button type="button" class="chip" data-dl="${n}" aria-pressed="${f.l === n}">HSK ${n}</button>`).join('')}</div></div>
+        <div class="field"><span class="label">Quelle version de l'examen ?</span><div class="seg" role="group" aria-label="Version"><button type="button" data-dv="3.0" aria-pressed="${f.v === '3.0'}">Nouveau HSK (depuis 2021)</button><button type="button" data-dv="2.0" aria-pressed="${f.v === '2.0'}">Ancien HSK</button></div></div>
+        ${f.l && f.v === '2.0' ? `<p class="muted" style="font-size:.92rem">L'ancien HSK ${f.l} demandait ${OLD_HSK_WORDS[f.l].toLocaleString('fr-FR')} mots, le nouveau programme en compte davantage : ${eq ? `il est compté ici comme le <strong>nouveau HSK ${eq}</strong>` : 'il est compté ici comme un début de HSK 1'}.</p>` : ''}
+        <div class="row" style="gap:16px;align-items:flex-end">
+          <label class="field" style="flex:1;min-width:160px"><span class="label">Obtenu en (facultatif)</span><input class="search" id="dpd" type="month" max="${dayKey().slice(0, 7)}" value="${esc(f.date)}" style="max-width:none"></label>
+          <label class="field" style="flex:1;min-width:140px"><span class="label">Score (facultatif)</span><input class="search" id="dps" type="number" inputmode="numeric" min="0" max="300" value="${esc(String(f.score))}" style="max-width:none"></label>
+        </div>
+        <p class="muted" style="font-size:.92rem">Ensuite, un <strong>contrôle rapide de 20 mots</strong> : on oublie avec le temps ! Les mots ratés partent en révision, les autres sont comptés comme connus.</p>
+        <button class="btn primary" id="dpgo" ${f.l ? '' : 'disabled'}>Faire le contrôle</button>
+      </form>`;
+    $$('[data-dl]', box).forEach(b => b.addEventListener('click', () => { f.l = +b.dataset.dl; keep(); draw(); $(`[data-dl="${f.l}"]`, box).focus(); }));
+    $$('[data-dv]', box).forEach(b => b.addEventListener('click', () => { f.v = b.dataset.dv; keep(); draw(); $(`[data-dv="${f.v}"]`, box).focus(); }));
+    $('#dpf', box).addEventListener('submit', e => { e.preventDefault(); keep(); if (f.l) check(); });
+  };
+  const keep = () => { f.date = $('#dpd', box)?.value || f.date; const sc = $('#dps', box)?.value; f.score = sc === undefined ? f.score : sc; };
+  const check = () => {
+    const eq = diplomaEquiv(f.l, f.v), d = {l: f.l, v: f.v, date: f.date || '', score: f.score ? Math.max(0, Math.min(300, Math.round(+f.score))) : 0, at: Date.now()};
+    if (!eq) return done(d, eq, 0, 0);
+    // 20 mots : 12 du niveau retenu, 8 des niveaux en dessous (s'il y en a)
+    const top = shuffle(WORDS.filter(w => w.l === eq)).slice(0, eq > 1 ? 12 : 20), low = eq > 1 ? shuffle(WORDS.filter(w => w.l < eq)).slice(0, 8) : [];
+    const words = shuffle([...top, ...low]), keepNew = structuredClone(S.newDay || null);
+    flow(true);
+    box.innerHTML = `<div class="row" style="justify-content:space-between"><span class="label">Contrôle · HSK ${eq}</span><button class="btn ghost small" id="dpq">✕ Quitter</button></div><div id="dpz"></div>`;
+    $('#dpq', box).addEventListener('click', () => { flow(false); draw(); });
+    runQuizIn($('#dpz', box), words, {title: 'Contrôle', n: words.length, kinds: ['mean', 'hanzi', 'pinyin'], onDone: (ok, n) => {
+      S.newDay = keepNew; // le contrôle ne compte pas dans le plafond de nouveaux mots du jour
+      flow(false); done(d, eq, ok, n);
+    }});
+  };
+  const done = (d, eq, ok, n) => {
+    const pass = !n || ok / n >= .7, lv = pass ? eq : eq - 1, today = dayNum();
+    let added = 0;
+    if (lv > 0) WORDS.filter(w => w.l <= lv && !S.srs[w.id]).forEach((w, i) => { S.srs[w.id] = {b: 3, s: 7, d: 5, last: today, due: today + 1 + (i % 30)}; added++; });
+    if (pass && eq) S.levelOk[eq] = S.levelOk[eq] || Date.now();
+    S.diplomas = uniqBy([d, ...(S.diplomas || [])], x => x.v + '-' + x.l).sort((x, y) => x.l - y.l);
+    S.level = Math.min(6, Math.max(S.level || 1, eq ? (pass ? eq + (eq < 6) : eq) : 1));
+    addXP(50); save(); header(); cue(true);
+    dipForm = {l: 0, v: '3.0', date: '', score: ''};
+    box.innerHTML = `<div class="card stack act" style="align-items:center;text-align:center"><span class="act-g" aria-hidden="true" style="background:var(--gold);color:var(--gold-ink)">贺</span>
+        <h1>Félicitations pour ton HSK ${d.l} !</h1>
+        ${n ? `<p><strong>Contrôle : ${ok} / ${n}</strong>. ${pass ? 'Tes acquis sont bien là.' : 'Quelques mots se sont envolés : rien de grave, ils reviennent dans tes révisions.'}</p>` : ''}
+        <p class="muted">${added ? `${added.toLocaleString('fr-FR')} mots ${lv > 1 ? `des HSK 1 à ${lv}` : 'du HSK 1'} sont comptés comme connus : ils reviendront de temps en temps, en révision légère. ` : ''}Tu travailles maintenant au <strong>HSK ${S.level}</strong>.</p>
+        <div class="row" style="justify-content:center"><button class="btn primary" data-go="accueil">Continuer</button><button class="btn" data-go="examen">Examen blanc HSK ${S.level}</button></div></div>`;
+    wire(box); window.scrollTo(0, 0); $('.btn.primary', box).focus({preventScroll: true});
+  };
+  draw();
+}
 function vGoals() {
   const g = S.goal, r = S.reminder;
   const keys = weekKeys(), mins = keys.map(minutesOn);
@@ -5823,7 +5890,8 @@ function vGoals() {
       <h2>Ma progression</h2>
       <div class="lvms">${levelMeters()}</div>
       <p class="muted">${S.level ? `Niveau conseillé : HSK ${S.level}. ` : ''}${learned().length} mots vus, ${mastered()} maîtrisés, ${knownChars()} caractères reconnus, ${Object.keys(S.written).length} tracés dont ${Object.keys(S.recall).length} de mémoire.</p>
-      <div class="row"><button class="btn" data-go="test">Refaire le test de niveau</button><button class="btn ghost" id="reset">Tout remettre à zéro</button></div>
+      ${(S.diplomas || []).length ? `<div class="row" style="gap:8px">${S.diplomas.map(d => `<span class="pill dipl">🎓 ${esc(diplomaLabel(d))}</span>`).join('')}</div>` : ''}
+      <div class="row"><button class="btn" data-go="diplome">J'ai obtenu un HSK</button><button class="btn" data-go="test">Refaire le test de niveau</button><button class="btn ghost" id="reset">Tout remettre à zéro</button></div>
       <p class="muted" id="resetc" hidden>Confirmer l'effacement de toute ta progression ? <button class="btn accent small" id="resety">Oui, effacer</button> <button class="btn small" id="resetn">Annuler</button></p>
     </div>`);
   wire(s);
@@ -5887,7 +5955,7 @@ function buildICS() {
 }
 
 // Navigation : 4 onglets (barre latérale sur ordinateur avec les sous-rubriques, barre du bas sur mobile)
-const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','histoires','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','oral','conversation','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', ['compte']]];
+const NAV = [['accueil', "Aujourd'hui", ['seance','test']], ['apprendre', 'Apprendre', ['lecons','grammaire','histoires','listes','dico','ecriture','origines','memo','actus']], ['pratiquer', 'Pratiquer', ['quiz','examen','oral','conversation','detective','confusions','chansons','devinettes']], ['objectifs', 'Moi', ['compte', 'diplome']]];
 const SUBNAMES = {lecons: 'Leçons', grammaire: 'Grammaire', histoires: 'Histoires', listes: 'Listes HSK', dico: 'Dictionnaire', ecriture: 'Écriture', origines: 'Origines', memo: 'Mémo', actus: 'Actus', quiz: 'Révisions et quiz', examen: 'Examen blanc', oral: 'Oral', conversation: 'Conversation', detective: 'Détective', confusions: 'Confusions', chansons: 'Chansons', devinettes: 'Devinettes'};
 const navItem = ([v, t], cls = 'navlink') => { const [col, g] = SECTION[v]; return `<a class="${cls}" href="#${v}" data-nav="${v}" ${tint(col)}><span class="g" aria-hidden="true">${g}</span>${t}</a>`; };
 $('#sidenav').innerHTML = NAV.map(n => navItem(n) + (n[2].filter(v => SUBNAMES[v]).length ? `<div class="subnav">${n[2].filter(v => SUBNAMES[v]).map(v => `<a href="#${v}" data-nav="${v}" ${tint(SECTION[v][0])}>${SUBNAMES[v]}</a>`).join('')}</div>` : '')).join('');
