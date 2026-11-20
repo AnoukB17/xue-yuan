@@ -5937,7 +5937,7 @@ function vGoals() {
   });
   $('#reset', s).addEventListener('click', () => { $('#resetc', s).hidden = false; });
   $('#resetn', s).addEventListener('click', () => { $('#resetc', s).hidden = true; });
-  $('#resety', s).addEventListener('click', () => { S = structuredClone(DEFAULT); S.wiped = Date.now(); save(); if (cloudOn()) { clearTimeout(cloud.timer); cloudPush(); } header(); go('accueil'); toast('Progression effacée.'); });
+  $('#resety', s).addEventListener('click', () => { S = structuredClone(DEFAULT); S.wiped = Date.now(); save(); if (cloudOn()) { clearTimeout(cloud.timer); cloudPush(); } header(); go('accueil'); onboarding(0); toast('Progression effacée : on repart du début.'); }); // comme une première ouverture : questionnaire, test de niveau, objectifs
 }
 function buildICS() {
   const r = S.reminder, by = ['MO','TU','WE','TH','FR','SA','SU'];
